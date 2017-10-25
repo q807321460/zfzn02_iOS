@@ -3,18 +3,18 @@
 //
 #import "SWRevealViewController.h"
 #import <sqlite3.h>
-
+//解析相关
 #import "XMLDictionary.h"
 #import "SwiftyJSON.h"
+//本地socket相关
 #import "GCDAsyncTcpSocket.h"
 #import "GCDAsyncUdpSocket.h"
-
+//wifi的IP获取相关
 #include "MyWifi.h"
 #include "route.h"
-
+//UI相关
 #import "VPImageCropperViewController.h"
 #import "NirKxMenu.h"
-
 //乐橙相关
 #import "LCOpenSDK_Api.h"
 #import "OpenApiService.h"
@@ -25,24 +25,27 @@
 #import "AddDeviceViewController.h"
 #import "UserBindModeViewController.h"
 #import "LiveVideoViewController.h"
-
 //声必可相关
 #include "JDMyDeviceViewController.h"
 #import <JdPlaySdk/JdPlaySdk.h>
-#import "Reachability.h"
 //第三方
-#import <AFNetworking.h>//AFNetworking/
-#import <MJExtension.h>//MJExtension/
+#import "Reachability.h"
+#import "MBProgressHUD.h"
+#import <AFNetworking.h>
+#import <MJExtension.h>
 #import <Masonry.h>
 #import <MJRefresh.h>
-#import "MBProgressHUD.h"
-#import <ReactiveCocoa.h>//ReactiveCocoa/
+#import <ReactiveCocoa.h>
 #import <IQKeyboardManager.h>
-#import <SDWebImageManager.h>//<SDWebImage/>
-#import <UIImageView+WebCache.h>//<SDWebImage/>
+#import <SDWebImageManager.h>
+#import <UIImageView+WebCache.h>
 #import <UIView+Toast.h>
 #import <SocketRocket.h>
 #import <SRWebSocket.h>
+//语音主机配网相关
+#import <SystemConfiguration/CaptiveNetwork.h>
+#import <SmartConfigClient/SmartConfig.h>
+#import <ifaddrs.h>
 
 ////以下都是红卫星的头文件，第一部分是自己用的
 //#import "JSSaveUserMessage.h"
