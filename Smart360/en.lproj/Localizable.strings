@@ -1,0 +1,73 @@
+/*
+ Localizable.strings
+ 测试
+ 
+ Created by new on 16/1/14.
+ Copyright © 2016年 we-smart Co., LTD. All rights reserved.
+ */
+//小智插座
+"Socket" = "Socket";
+"Plug switch" = "Plug switch";
+"On" = "On";
+"Off" = "Off";
+"Delay" = "Delay";
+"Timer" = "Time";
+"Please choose repeat week" = "Please choose repeat week";
+"MON" = "MON";
+"TUE" = "TUE";
+"WED" = "WED";
+"THU" = "THU";
+"FRI" = "FRI";
+"SAT" = "SAT";
+"SUN" = "SUN";
+"Only once" = "Only once";
+"Every day" = "Every day";
+"Add timer" = "Add timer";
+"Add delay" = "Add delay";
+"Save" = "Save";
+"Timer on" = "Timer on";
+"Timer off" = "Timer off";
+"Delay on" = "Delay on";
+"Delay off" = "Delay off";
+"Start time" = "Start time";
+"Set timer" ="Set timer";
+
+"Device name" = "Device name";
+"MAC address" = "MAC address";
+"Network" = "Network";
+"Firmware version" = "Firmware version";
+
+"Save failed" = "Save failed";
+"Save successful" = "Save successful";
+"Saving..." = "Saving...";
+
+"Red socket" = "Red socket";
+"Blue socket" = "Blue socket";
+"Green socket" = "Green socket";
+
+"Start WiFi" = "Start WiFi";
+"WiFi network is not opened" = "WiFi network is not opened";
+"Enter the network password" = "Enter the network password";
+"Add device" = "Add device";
+"Prompt" = "Prompt";
+"Disconnected" = "Disconnected";
+"Connected" = "Connected";
+"Updating..." = "Updating...";
+"Next" = "Next";
+"Cancel" = "Cancel";
+"Setting..." = "Setting...";
+"Stop" = "Stop";
+"Setting Success" = "Setting Success";
+"Timeout" = "Timeout";
+"Settings" = "Settings";
+
+"Open" = "Open";
+"Close" = "Close";
+"Delete" = "Delete";
+"Deleting..." = "Deleting...";
+"Repeat" = "Repeat";
+"Connecting" = "Connecting";
+"Timer in this device is full, please delete some and try!" = "Timer in this device is full, please delete some and try!";
+"Warning" = "Warning";
+"deleted successfully" = "deleted successfully";
+"deleted failed" = "deleted failed";

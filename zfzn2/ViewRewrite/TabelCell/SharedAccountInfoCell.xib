@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="sharedAccountInfoCell" selectionStyle="default" indentationWidth="10" id="ah6-iH-FY4" customClass="SharedAccountInfoCell" customModule="zfzn2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ah6-iH-FY4" id="hRP-fo-ca3">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ki-WV-dPa">
+                        <rect key="frame" x="15" y="11" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="F8s-OY-pbI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYr-5O-1hz">
+                        <rect key="frame" x="103" y="11" width="260" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="导航栏_向前" translatesAutoresizingMaskIntoConstraints="NO" id="60N-EE-suT">
+                        <rect key="frame" x="353" y="12" width="10" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="NlJ-GS-H4l"/>
+                            <constraint firstAttribute="height" constant="20" id="UHi-Yg-bKO"/>
+                        </constraints>
+                    </imageView>
+                    <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXR-ki-wg9">
+                        <rect key="frame" x="314" y="6.5" width="51" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="KDf-sS-SeY"/>
+                            <constraint firstAttribute="height" constant="31" id="KZw-Fg-Vj8"/>
+                        </constraints>
+                        <color key="onTintColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="HXR-ki-wg9" secondAttribute="trailing" constant="4" id="8dC-6Q-W7D"/>
+                    <constraint firstItem="2ki-WV-dPa" firstAttribute="leading" secondItem="hRP-fo-ca3" secondAttribute="leadingMargin" constant="7" id="KaD-pb-Nen"/>
+                    <constraint firstItem="60N-EE-suT" firstAttribute="centerY" secondItem="hRP-fo-ca3" secondAttribute="centerY" id="OFp-cU-I72"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kYr-5O-1hz" secondAttribute="trailing" constant="4" id="hpt-K5-epr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="60N-EE-suT" secondAttribute="trailing" constant="4" id="if1-h9-APJ"/>
+                    <constraint firstItem="HXR-ki-wg9" firstAttribute="centerY" secondItem="hRP-fo-ca3" secondAttribute="centerY" id="lGq-DK-rjK"/>
+                    <constraint firstItem="2ki-WV-dPa" firstAttribute="centerY" secondItem="hRP-fo-ca3" secondAttribute="centerY" id="p7L-Rf-7r9"/>
+                    <constraint firstItem="kYr-5O-1hz" firstAttribute="centerY" secondItem="hRP-fo-ca3" secondAttribute="centerY" id="tZ1-Ld-U1X"/>
+                    <constraint firstItem="kYr-5O-1hz" firstAttribute="leading" secondItem="2ki-WV-dPa" secondAttribute="trailing" constant="8" id="xLc-eV-KMG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="m_imageNavi" destination="60N-EE-suT" id="zZU-5I-8gd"/>
+                <outlet property="m_labelTitle" destination="2ki-WV-dPa" id="wZQ-AS-2CI"/>
+                <outlet property="m_sContent" destination="kYr-5O-1hz" id="VMo-7i-CVm"/>
+                <outlet property="m_switch" destination="HXR-ki-wg9" id="i5L-02-EaO"/>
+            </connections>
+            <point key="canvasLocation" x="-18.5" y="133"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="导航栏_向前" width="8" height="14"/>
+    </resources>
+</document>

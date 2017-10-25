@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="JdDeviceInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2X-Dw-hjM">
+                        <rect key="frame" x="102" y="12" width="205" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Eve-Uw-fnK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxc-Um-vYM">
+                        <rect key="frame" x="102" y="44" width="50" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="SrO-bg-nx7"/>
+                            <constraint firstAttribute="width" constant="50" id="pL0-3C-i27"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker_default_icon" translatesAutoresizingMaskIntoConstraints="NO" id="M4i-cZ-W7g">
+                        <rect key="frame" x="44" y="17" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="F1Q-ow-4dT"/>
+                            <constraint firstAttribute="height" constant="45" id="zdk-Co-3s7"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_nol" translatesAutoresizingMaskIntoConstraints="NO" id="WRT-t3-RUd">
+                        <rect key="frame" x="8" y="26" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="F8G-NS-ED8"/>
+                            <constraint firstAttribute="height" constant="26" id="P0a-vE-IcY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fxc-Um-vYM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="15" id="484-OF-job"/>
+                    <constraint firstItem="WRT-t3-RUd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4Hg-0n-GdG"/>
+                    <constraint firstAttribute="trailing" secondItem="v2X-Dw-hjM" secondAttribute="trailing" constant="58" id="6Xg-NU-SCO"/>
+                    <constraint firstAttribute="trailing" secondItem="v2X-Dw-hjM" secondAttribute="trailing" constant="13" id="Pw6-gC-i9L"/>
+                    <constraint firstItem="fxc-Um-vYM" firstAttribute="leading" secondItem="v2X-Dw-hjM" secondAttribute="leading" id="Tr2-Zm-9Al"/>
+                    <constraint firstItem="v2X-Dw-hjM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-15" id="fA7-7r-Sqe"/>
+                    <constraint firstItem="WRT-t3-RUd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hw4-Wb-NFe"/>
+                    <constraint firstItem="v2X-Dw-hjM" firstAttribute="leading" secondItem="M4i-cZ-W7g" secondAttribute="trailing" constant="13" id="iJl-rQ-k43"/>
+                    <constraint firstItem="M4i-cZ-W7g" firstAttribute="leading" secondItem="WRT-t3-RUd" secondAttribute="trailing" constant="10" id="tx3-jv-wcr"/>
+                    <constraint firstItem="M4i-cZ-W7g" firstAttribute="centerY" secondItem="WRT-t3-RUd" secondAttribute="centerY" id="wkD-1V-pYz"/>
+                    <constraint firstItem="v2X-Dw-hjM" firstAttribute="leading" secondItem="WRT-t3-RUd" secondAttribute="trailing" constant="10" id="xRa-Wc-DkT"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="6Xg-NU-SCO"/>
+                        <exclude reference="xRa-Wc-DkT"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="deviceName" destination="v2X-Dw-hjM" id="UNK-Oq-xfB"/>
+                <outlet property="deviceStatus" destination="fxc-Um-vYM" id="DXg-1e-Avf"/>
+                <outlet property="mark" destination="WRT-t3-RUd" id="Zk2-4d-KcE"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="345"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check_nol" width="32" height="32"/>
+        <image name="speaker_default_icon" width="60" height="60"/>
+    </resources>
+</document>

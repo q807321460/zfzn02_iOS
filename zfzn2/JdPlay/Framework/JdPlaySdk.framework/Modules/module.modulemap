@@ -1,0 +1,6 @@
+framework module JdPlaySdk {
+  umbrella header "JdPlaySdk.h"
+
+  export *
+  module * { export * }
+}

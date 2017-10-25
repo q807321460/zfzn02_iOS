@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JdMyDeviceViewController">
+            <connections>
+                <outlet property="noDevice" destination="v1n-EP-OdU" id="XfE-03-1cf"/>
+                <outlet property="tableview" destination="I7G-JW-SQD" id="hDD-hY-v7O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-rC-7Ot" userLabel="headView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="背景音乐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-99-UKU" userLabel="title">
+                            <rect key="frame" x="151" y="31" width="73.5" height="21.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21.5" id="Qdc-Ud-ayO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLM-dE-Hec">
+                            <rect key="frame" x="0.0" y="21" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="GnO-qp-GjT"/>
+                                <constraint firstAttribute="height" constant="40" id="Lba-Sj-K4L"/>
+                            </constraints>
+                            <state key="normal" image="allow_down_icon_nol"/>
+                            <connections>
+                                <action selector="OnBack:" destination="-1" eventType="touchUpInside" id="VQq-Dd-4tS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="pLM-dE-Hec" firstAttribute="leading" secondItem="WYs-rC-7Ot" secondAttribute="leading" id="1NO-i8-CEf"/>
+                        <constraint firstItem="qOp-99-UKU" firstAttribute="centerX" secondItem="WYs-rC-7Ot" secondAttribute="centerX" id="9FK-pA-N4q"/>
+                        <constraint firstItem="pLM-dE-Hec" firstAttribute="centerY" secondItem="qOp-99-UKU" secondAttribute="centerY" id="IQZ-eb-cRR"/>
+                        <constraint firstAttribute="height" constant="64" id="MxS-ve-DTn"/>
+                        <constraint firstItem="qOp-99-UKU" firstAttribute="top" secondItem="WYs-rC-7Ot" secondAttribute="top" constant="31" id="Qxt-fn-iPo"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-JW-SQD">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1n-EP-OdU">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有找到设备" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlp-TF-vdZ">
+                            <rect key="frame" x="135.5" y="281.5" width="104" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="app_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="Kfo-El-jjB">
+                            <rect key="frame" x="138" y="138" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="YVb-xo-42V"/>
+                                <constraint firstAttribute="height" constant="100" id="v0O-VF-8yW"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Kfo-El-jjB" firstAttribute="centerX" secondItem="v1n-EP-OdU" secondAttribute="centerX" id="93q-1q-Uoe"/>
+                        <constraint firstItem="Wlp-TF-vdZ" firstAttribute="centerY" secondItem="v1n-EP-OdU" secondAttribute="centerY" constant="-10" id="Spz-3u-mNJ"/>
+                        <constraint firstItem="Wlp-TF-vdZ" firstAttribute="centerX" secondItem="v1n-EP-OdU" secondAttribute="centerX" id="fxE-dC-hWJ"/>
+                        <constraint firstItem="Kfo-El-jjB" firstAttribute="centerY" secondItem="v1n-EP-OdU" secondAttribute="centerY" constant="-40" id="grT-YE-j4h"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="I7G-JW-SQD" secondAttribute="bottom" id="3Uf-It-m4w"/>
+                <constraint firstItem="v1n-EP-OdU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Env-Qu-Cuz"/>
+                <constraint firstItem="WYs-rC-7Ot" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="One-9u-BaG"/>
+                <constraint firstAttribute="trailing" secondItem="I7G-JW-SQD" secondAttribute="trailing" id="PfO-hc-PaJ"/>
+                <constraint firstItem="I7G-JW-SQD" firstAttribute="top" secondItem="WYs-rC-7Ot" secondAttribute="bottom" id="SWA-5p-Fza"/>
+                <constraint firstAttribute="trailing" secondItem="WYs-rC-7Ot" secondAttribute="trailing" id="ZBH-aE-dEZ"/>
+                <constraint firstAttribute="trailing" secondItem="v1n-EP-OdU" secondAttribute="trailing" id="jtG-pY-Pzz"/>
+                <constraint firstItem="I7G-JW-SQD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="msM-Cp-sho"/>
+                <constraint firstAttribute="bottom" secondItem="v1n-EP-OdU" secondAttribute="bottom" id="pfh-zM-d5B"/>
+                <constraint firstItem="v1n-EP-OdU" firstAttribute="top" secondItem="WYs-rC-7Ot" secondAttribute="bottom" id="sge-JR-NXf"/>
+                <constraint firstItem="WYs-rC-7Ot" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zsl-Bb-oPN"/>
+            </constraints>
+            <point key="canvasLocation" x="439.5" y="336.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="allow_down_icon_nol" width="40" height="40"/>
+        <image name="app_logo_large" width="110" height="110"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

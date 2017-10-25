@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="deleteElectric" id="9dS-zD-OEF" customClass="DeleteElectric" customModule="zfzn2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhz-O1-U6I">
+                        <rect key="frame" x="-70" y="-23" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtI-Av-y6a">
+                        <rect key="frame" x="25" y="18" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rtI-Av-y6a" secondAttribute="height" multiplier="1:1" id="Mck-Wp-NfQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy7-HE-yWQ">
+                        <rect key="frame" x="29" y="71.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.63529411759999999" green="0.63529411759999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩_紫色" translatesAutoresizingMaskIntoConstraints="NO" id="rZw-5U-Hya">
+                        <rect key="frame" x="81" y="5" width="14" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rZw-5U-Hya" secondAttribute="height" multiplier="1:1" id="GYq-al-K8c"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rZw-5U-Hya" firstAttribute="height" secondItem="9dS-zD-OEF" secondAttribute="height" multiplier="15:100" id="64V-Wd-HNs"/>
+                <constraint firstAttribute="trailing" secondItem="rZw-5U-Hya" secondAttribute="trailing" constant="5" id="MpA-Hc-mUx"/>
+                <constraint firstItem="rtI-Av-y6a" firstAttribute="top" secondItem="9dS-zD-OEF" secondAttribute="top" constant="18" id="fLq-XC-dcB"/>
+                <constraint firstItem="rZw-5U-Hya" firstAttribute="top" secondItem="9dS-zD-OEF" secondAttribute="top" constant="5" id="kps-F2-zT5"/>
+                <constraint firstAttribute="bottom" secondItem="uy7-HE-yWQ" secondAttribute="bottom" constant="8" id="rKv-Xs-yOx"/>
+                <constraint firstItem="uy7-HE-yWQ" firstAttribute="centerX" secondItem="9dS-zD-OEF" secondAttribute="centerX" id="u37-wc-wG1"/>
+                <constraint firstItem="rtI-Av-y6a" firstAttribute="height" secondItem="9dS-zD-OEF" secondAttribute="height" multiplier="1:2" id="xiT-PM-MEK"/>
+                <constraint firstItem="rtI-Av-y6a" firstAttribute="centerX" secondItem="9dS-zD-OEF" secondAttribute="centerX" id="zHB-F2-SPh"/>
+            </constraints>
+            <size key="customSize" width="200" height="200"/>
+            <connections>
+                <outlet property="m_imageElectric" destination="rtI-Av-y6a" id="vHo-OM-9TG"/>
+                <outlet property="m_imageSelected" destination="rZw-5U-Hya" id="gQJ-g9-lYS"/>
+                <outlet property="m_labelElectric" destination="uy7-HE-yWQ" id="jdO-J4-yOK"/>
+                <outlet property="m_layoutMultiplierHeight" destination="xiT-PM-MEK" id="73k-cq-yeZ"/>
+            </connections>
+            <point key="canvasLocation" x="89" y="142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="登录_对钩_紫色" width="14" height="14"/>
+    </resources>
+</document>
