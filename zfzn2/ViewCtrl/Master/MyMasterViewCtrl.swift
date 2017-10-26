@@ -119,7 +119,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
                 if gDC.mUserList.count>0 {//如果还有主机的话，则自动跳转到默认的第一个主机
                     self.SetCurrentUser(0)
                 }else {//如果只剩下最后一个主机的话，则直接跳转回登录界面
-//                    MyWebService.sharedInstance.StopPolling()
+                    MyWebService.sharedInstance.StopPolling()
                     WebSocket.sharedInstance.CloseWebSocket()
                     self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
                 }
@@ -140,7 +140,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
             self.m_viewLoading.showInfo("提示", subTitle: " 正在加载用户数据......", duration: 0)
         })
         //开始各种读取工作
-//        MyWebService.sharedInstance.StopPolling()
+        MyWebService.sharedInstance.StopPolling()
         //从web加载房间列表
         let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
         gDC.mAreaData.UpdateArea(dictsArea)
@@ -206,7 +206,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
             WebSocket.sharedInstance.CloseWebSocket()
         }else {
             ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
-//            MyWebService.sharedInstance.OpenPolling()
+            MyWebService.sharedInstance.OpenPolling()
             WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.m_bRemote = true
         }

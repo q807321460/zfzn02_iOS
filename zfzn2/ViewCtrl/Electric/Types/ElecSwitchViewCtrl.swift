@@ -57,8 +57,8 @@ class ElecSwitchViewCtrl: ElecSuperViewCtrl {
 //            return
 //        }
 //        if gDC.m_bRemote == true {
-////            m_bPermit = false
-////            MyWebService.sharedInstance.StopPolling()//临时关闭电器的轮询
+//            m_bPermit = false
+//            MyWebService.sharedInstance.StopPolling()//临时关闭电器的轮询
 //            m_timer = Timer.scheduledTimer(timeInterval: 2, target:self,selector:#selector(ElecSwitchViewCtrl.OnTimer), userInfo:nil, repeats:false)
 //        }
         m_sElectricOrder = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sOrderInfo + "********"
@@ -147,7 +147,7 @@ class ElecSwitchViewCtrl: ElecSuperViewCtrl {
     
     func OnTimer() {
 //        m_bPermit = true
-//        MyWebService.sharedInstance.OpenPolling()
+        MyWebService.sharedInstance.OpenPolling()
     }
 
     ///////////////////////////////////////////////////////////////////////////////////

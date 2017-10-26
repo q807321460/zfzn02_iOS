@@ -56,13 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {//, GCDAsyncSocketDelegat
             }
         }
         //进入后台后，需要断开与web的连接，不再进行轮询
-//        MyWebService.sharedInstance.StopPolling()
+        MyWebService.sharedInstance.StopPolling()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         JdPlay_appOnResume()
         //进入前台后，需要重新与web保持连接
-//        MyWebService.sharedInstance.OpenPolling()
+        MyWebService.sharedInstance.OpenPolling()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

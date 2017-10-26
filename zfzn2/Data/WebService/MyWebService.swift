@@ -782,24 +782,24 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
     
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {
-        if m_bPolling == true {
-            return
-        }
-        m_timerPolling = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(MyWebService.RunPolling), userInfo:nil, repeats:true)
-        m_bPolling = true
+//        if m_bPolling == true {
+//            return
+//        }
+//        m_timerPolling = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(MyWebService.RunPolling), userInfo:nil, repeats:true)
+//        m_bPolling = true
     }
     
     func RunPolling() {
-        let dictsElectricState = GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
-        gDC.mElectricData.UpdateElectricState(dictsElectricState)
-        g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
+//        let dictsElectricState = GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
+//        gDC.mElectricData.UpdateElectricState(dictsElectricState)
+//        g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
     }
     
     func StopPolling() {
-        if m_bPolling == false {
-            return
-        }
-        m_bPolling = false
-        m_timerPolling.invalidate()
+//        if m_bPolling == false {
+//            return
+//        }
+//        m_bPolling = false
+//        m_timerPolling.invalidate()
     }
 }

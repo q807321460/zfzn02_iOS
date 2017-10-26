@@ -146,9 +146,9 @@ class AddMasterViewCtrl: UIViewController, GCDAsyncUdpSocketDelegate, GCDAsyncSo
                 })
             }else {//否则将刚刚添加的主机作为当前使用的主机
                 print("从添加主机界面返回到我的主机界面")
-//                MyWebService.sharedInstance.StopPolling()
+                MyWebService.sharedInstance.StopPolling()
                 SetCurrentUser(gDC.mUserList.count-1)//将刚刚添加的主机作为当前主机
-//                MyWebService.sharedInstance.OpenPolling()
+                MyWebService.sharedInstance.OpenPolling()
                 self.navigationController?.popViewController(animated: true)
             }
         case "0":
@@ -163,7 +163,7 @@ class AddMasterViewCtrl: UIViewController, GCDAsyncUdpSocketDelegate, GCDAsyncSo
     func SetCurrentUser(_ index:Int) {
         gDC.mUserInfo = gDC.mUserList[index]
         //开始各种读取工作
-//        MyWebService.sharedInstance.StopPolling()
+        MyWebService.sharedInstance.StopPolling()
         //从web加载房间列表
         let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
         gDC.mAreaData.UpdateArea(dictsArea)

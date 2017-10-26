@@ -306,7 +306,7 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
         }else {
             print("主机不在本地，使用远程控制")
-//            MyWebService.sharedInstance.OpenPolling()
+            MyWebService.sharedInstance.OpenPolling()
             WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.m_bRemote = true
         }

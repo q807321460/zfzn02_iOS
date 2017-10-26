@@ -185,7 +185,7 @@ class LeftMenuViewCtrl: MyViewController {
             self.m_viewLoading = SCLAlertView(appearance: appearance)
             self.m_viewLoading.showInfo("提示", subTitle: " 正在重新连接......", duration: 0)
         }
-//        MyWebService.sharedInstance.StopPolling()
+        MyWebService.sharedInstance.StopPolling()
         //需要搜索本地的主节点，以确定是远程控制还是本地socket通信，同时还要确保获取的主机编号没有问题
         print("当前主节点标号为：\(gDC.mUserInfo.m_sMasterCode)")
         print("当前主节点IP为：  \(gDC.mUserInfo.m_sUserIP)")
@@ -222,8 +222,7 @@ class LeftMenuViewCtrl: MyViewController {
             WebSocket.sharedInstance.CloseWebSocket()
         }else {
             ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
-//            MyWebService.sharedInstance.OpenPolling()
-//            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
+            MyWebService.sharedInstance.OpenPolling()
             gDC.m_bRemote = true
         }
         self.m_viewLoading.hideView()

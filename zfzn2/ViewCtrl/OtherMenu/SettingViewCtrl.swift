@@ -40,7 +40,7 @@ class SettingViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBAction func OnQuitLogin(_ sender: AnyObject) {
         //需要在这里重置一些参数
-//        MyWebService.sharedInstance.StopPolling()
+        MyWebService.sharedInstance.StopPolling()
         WebSocket.sharedInstance.CloseWebSocket()
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }

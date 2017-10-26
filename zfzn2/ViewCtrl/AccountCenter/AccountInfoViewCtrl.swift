@@ -165,13 +165,13 @@ class AccountInfoViewCtrl: UIViewController, UITableViewDelegate, UITableViewDat
     //    选择完图片操作
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [AnyHashable: Any]!) {
         //在这里调用网络通讯方法，上传头像至服务器...
-//        MyWebService.sharedInstance.StopPolling()//先暂停一段时间的电器状态获取，防止出现冲突
+        MyWebService.sharedInstance.StopPolling()//先暂停一段时间的电器状态获取，防止出现冲突
         m_imageView = image.ReSizeImage(CGSize(width: 128, height: 128))
         let photoData = ImageToBase64String(m_imageView, headerSign: false)
         let webReturn = MyWebService.sharedInstance.UpdateAccountPhoto(gDC.mAccountInfo.m_sAccountCode, photo:photoData!)
         WebUpdateAccountPhoto(webReturn)
         self.dismiss(animated: true, completion: nil)
-//        MyWebService.sharedInstance.OpenPolling()
+        MyWebService.sharedInstance.OpenPolling()
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
