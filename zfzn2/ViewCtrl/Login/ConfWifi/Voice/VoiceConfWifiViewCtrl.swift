@@ -11,16 +11,10 @@ import SystemConfiguration
 
 class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
     
-    var strSsid:String = ""
-    var strPassword:String = ""
-    
-    var queue:OperationQueue? = nil
-    
-    let tapRec = UITapGestureRecognizer()
-    
-    @IBOutlet weak var mSsid: UITextField!
-    @IBOutlet weak var mPassword: UITextField!
-    
+    var m_sSsid:String = ""
+    var m_sPassword:String = ""
+    var m_queue:OperationQueue? = nil
+    let m_tapRec = UITapGestureRecognizer()
     var sendInProgress: Bool = false {
         didSet {
             if sendInProgress {
@@ -30,77 +24,19 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
             }
         }
     }
-    
     // MyReachability必须一直存在，所以需要设置为全局变量
     let reachability = VoiceReachability()!
-    
-    @IBOutlet weak var mBtn: UIButton!
-    @IBAction func onToggleSend(_ sender: UIButton) {
-        
-        strSsid = mSsid.text ?? ""
-        print("ssid: \(strSsid)")
-        strPassword = mPassword.text ?? ""
-        print("password: \(strPassword)")
-        
-        self.tappedView()
-        
-        if (queue != nil)  {
-            print("last queue exist")
-            queue?.cancelAllOperations()
-            queue = nil
-        }
-        
-        if !sendInProgress {
-            if !self.reachability.isReachableViaWiFi {
-                print("wifi not connected")
-                DispatchQueue.main.async {
-                    self.view.makeToast("WiFi not connected")
-                }
-                return
-            }
-            
-            print("wifi connected")
-            sendInProgress = true
-            sender.setTitle("Stop", for:UIControlState())
-
-            queue = OperationQueue()
-            queue?.maxConcurrentOperationCount = 5
-            queue?.addOperation { () -> Void in
-                while self.sendInProgress {
-                    let ipAddress = self.getIPAddressForCurrentWiFi()
-                    print("ip :\(ipAddress ?? "")")
-                    let ip: UInt32 = self.getIPForCurrentWiFi()
-                    let ret = SmartConfigClient.send(withSSID: self.strSsid, password: self.strPassword, ip: ip)
-                    print("ret=\(ret)")
-                }
-            }
-            
-            if(!strSsid.isEmpty && !strPassword.isEmpty){
-                var userInfo:Dictionary<String, String> = Dictionary(minimumCapacity: 2);
-                userInfo["password"] = strPassword
-                VoiceUserInfo.setUserInfo(forKey: strSsid, userInfoDic: userInfo)
-            }
-            
-            SmartConfigClient.setRecvTimeout(120)
-            SmartConfigClient.startReciver(self)
-        } else {
-            SmartConfigClient.stopReciver()
-            sendInProgress = false
-            sender.setTitle("Start", for:UIControlState())
-        }
-    }
+    @IBOutlet weak var m_eSsid: UITextField!
+    @IBOutlet weak var m_ePassword: UITextField!
+    @IBOutlet weak var m_btnConf: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        mBtn.layer.borderWidth = 1.0
-        mBtn.layer.borderColor = UIColor.lightGray.cgColor
-        mBtn.layer.cornerRadius = 5.0
-        
-        self.tapRec.addTarget(self, action: #selector(VoiceConfWifiViewCtrl.tappedView))
-        self.view.addGestureRecognizer(tapRec)
-        
+        self.m_btnConf.layer.cornerRadius = 5.0
+        self.m_btnConf.layer.masksToBounds = true
+        self.m_tapRec.addTarget(self, action: #selector(VoiceConfWifiViewCtrl.tappedView))
+        self.view.addGestureRecognizer(m_tapRec)
         SmartConfigClient.enableDebugMode(true)
         self.setNetworkStatusListener()
     }
@@ -116,10 +52,10 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
             let s = getSSIDForCurrentWiFi()
             if s != nil {
                 DispatchQueue.main.async {
-                    self.mSsid.text = s
+                    self.m_eSsid.text = s
                     var userInfo:Dictionary<String, String>? = nil;
                     userInfo = VoiceUserInfo.getUserInfo(forKey: s!)
-                    self.mPassword.text = userInfo?["password"]
+                    self.m_ePassword.text = userInfo?["password"]
                 }
             }
         }
@@ -129,9 +65,9 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
         super.viewDidDisappear(animated)
         SmartConfigClient.stopReciver()
         self.sendInProgress = false;
-        self.mBtn.setTitle("Start", for:UIControlState())
-        if(queue != nil){
-            queue?.cancelAllOperations()
+        self.m_btnConf.setTitle("开始配网", for:UIControlState())
+        if(m_queue != nil){
+            m_queue?.cancelAllOperations()
         }
     }
     
@@ -140,18 +76,69 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    
     deinit {
         reachability.stopNotifier()
         NotificationCenter.default.removeObserver(self, name: ReachabilityChangedNotification, object: reachability)
     }
     
+    @IBAction func OnBack(_ sender: Any) {
+        self.navigationController?.dismiss(animated: true, completion: {
+            print("从语音配网界面返回到登录界面")
+        })
+    }
+    
+    @IBAction func OnConf(_ sender: UIButton) {
+        m_sSsid = m_eSsid.text ?? ""
+        print("ssid: \(m_sSsid)")
+        m_sPassword = m_ePassword.text ?? ""
+        print("password: \(m_sPassword)")
+        self.tappedView()
+        if (m_queue != nil)  {
+            print("last queue exist")
+            m_queue?.cancelAllOperations()
+            m_queue = nil
+        }
+        if !sendInProgress {
+            if !self.reachability.isReachableViaWiFi {
+                print("wifi not connected")
+                DispatchQueue.main.async {
+                    self.view.makeToast("WiFi not connected")
+                }
+                return
+            }
+            print("wifi connected")
+            sendInProgress = true
+            sender.setTitle("停止配网", for:UIControlState())
+            m_queue = OperationQueue()
+            m_queue?.maxConcurrentOperationCount = 5
+            m_queue?.addOperation { () -> Void in
+                while self.sendInProgress {
+                    let ipAddress = self.getIPAddressForCurrentWiFi()
+                    print("ip :\(ipAddress ?? "")")
+                    let ip: UInt32 = self.getIPForCurrentWiFi()
+                    let ret = SmartConfigClient.send(withSSID: self.m_sSsid, password: self.m_sPassword, ip: ip)
+                    print("ret=\(ret)")
+                }
+            }
+            if(!m_sSsid.isEmpty && !m_sPassword.isEmpty){
+                var userInfo:Dictionary<String, String> = Dictionary(minimumCapacity: 2);
+                userInfo["password"] = m_sPassword
+                VoiceUserInfo.setUserInfo(forKey: m_sSsid, userInfoDic: userInfo)
+            }
+            SmartConfigClient.setRecvTimeout(30)
+            SmartConfigClient.startReciver(self)
+        } else {
+            SmartConfigClient.stopReciver()
+            sendInProgress = false
+            sender.setTitle("开始配网", for:UIControlState())
+        }
+    }
 //  MARK: -
     
     @objc func tappedView(){
         DispatchQueue.main.async {
-            self.mSsid.resignFirstResponder()
-            self.mPassword.resignFirstResponder()
+            self.m_eSsid.resignFirstResponder()
+            self.m_ePassword.resignFirstResponder()
         }
     }
     
@@ -242,10 +229,10 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
                 let s = getSSIDForCurrentWiFi()
                 if s != nil {
                     DispatchQueue.main.async {
-                        self.mSsid.text = s
+                        self.m_eSsid.text = s
                         var userInfo:Dictionary<String, String>? = nil;
                         userInfo = VoiceUserInfo.getUserInfo(forKey: s!)
-                        self.mPassword.text = userInfo?["password"]
+                        self.m_ePassword.text = userInfo?["password"]
                     }
                 }
                 
@@ -270,7 +257,7 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
         DispatchQueue.main.async {
             self.view.makeToast("onReceived ip:\(message.ip)  port:\(message.port)  mac:\(message.mac)  hostname:\(message.hostName)")
             self.sendInProgress = false
-            self.mBtn.setTitle("Start", for:UIControlState())
+            self.m_btnConf.setTitle("开始配网", for:UIControlState())
         }
     }
     
@@ -281,7 +268,7 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
             if(errorCode != 2003) {
                 self.view.makeToast("onError \(errorDesc)")
                 self.sendInProgress = false
-                self.mBtn.setTitle("Start", for:UIControlState())
+                self.m_btnConf.setTitle("开始配网", for:UIControlState())
             } else{
                 self.view.makeToast("\(errorDesc)")
             }
@@ -294,7 +281,7 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
         DispatchQueue.main.async {
             self.view.makeToast("timeout")
             self.sendInProgress = false
-            self.mBtn.setTitle("Start", for:UIControlState())
+            self.m_btnConf.setTitle("开始配网", for:UIControlState())
         }
     }
     

@@ -42,7 +42,7 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
     ////////////////////////////////////////////////////////////////////////////////////
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 24
+        return gDC.m_arrayElectricTypeCode.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

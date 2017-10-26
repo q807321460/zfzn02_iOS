@@ -220,10 +220,12 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
                 nextView.m_nAreaListFoot = m_nAreaListFoot
                 nextView.m_nElectricListFoot = electricFoot
                 self.navigationController?.pushViewController(nextView , animated: true)
+            }else if nElectricType==24 {//学习型电视
+
             }
         }
     }
-    
+
     //点击添加电器按钮
     func OnAddElectric() {
         let mainStory = UIStoryboard(name: "Main",bundle: nil)

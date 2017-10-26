@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConfWifiViewCtrl: UIViewController {
+class MasterConfWifiViewCtrl: UIViewController {
 
     @IBOutlet weak var m_btnConf: UIButton!
     @IBOutlet weak var m_labelWifi: UITextField!
@@ -27,7 +27,7 @@ class ConfWifiViewCtrl: UIViewController {
     
     @IBAction func OnBack(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: {
-            print("从配网界面返回到登录界面")
+            print("从主机配网界面返回到登录界面")
         })
     }
     

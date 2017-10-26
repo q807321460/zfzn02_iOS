@@ -103,8 +103,21 @@ class ElecClothesViewCtrl: ElecSuperViewCtrl {
     }
     
     @IBAction func OnMatchCode(_ sender: Any) {
-        m_sElectricOrder = "00********"
-        Open()
+        //晾衣架射频对码不能执行两次，否则会出现无法控制的情况
+        DispatchQueue.main.async(execute: {
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("继续对码", action: {
+                () -> Void in
+                self.m_sElectricOrder = "00********"
+                self.Open()
+            })
+            alertView.addButton("返回检查", action: {
+                () -> Void in
+                return
+            })
+            alertView.showInfo("菜单", subTitle: "请先确认模块没有与晾衣架对码，如果已经对过码，再次添加会导致设备无法控制", duration: 0)//时间间隔为0时不会自动退出
+        })
     }
 
 }

@@ -31,6 +31,7 @@
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
 		1B3BB0EF1DFBFD7000361071 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E71DFBFD7000361071 /* getgateway.c */; };
 		1B3BB0F11DFBFD7000361071 /* MyWifi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0EB1DFBFD7000361071 /* MyWifi.m */; };
+		1B42AC5C1FA08029006324F9 /* SmartConfigClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA021C1FA07DF400EE69D3 /* SmartConfigClient.framework */; };
 		1B441C231DB5133D0009F2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B441C221DB5133D0009F2E0 /* AppDelegate.swift */; };
 		1B441C2A1DB5133E0009F2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B441C291DB5133E0009F2E0 /* Assets.xcassets */; };
 		1B48138C1E0394A10042A57E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B48138B1E0394A00042A57E /* AVFoundation.framework */; };
@@ -167,12 +168,15 @@
 		1BACDAA71DCDF0A500BA85C2 /* SKLaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDAA01DCDF0A500BA85C2 /* SKLaunchMenu.swift */; };
 		1BACDAA81DCDF0A500BA85C2 /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDAA11DCDF0A500BA85C2 /* SKLaunchMenuItem.swift */; };
 		1BACDAA91DCDF0A500BA85C2 /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDAA21DCDF0A500BA85C2 /* SKScNavBar.swift */; };
-		1BB351FC1F8B762C00B77467 /* ConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB351FB1F8B762C00B77467 /* ConfWifiViewCtrl.swift */; };
+		1BB351FC1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB351FB1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift */; };
 		1BB5E5481E1B9371000B7FD3 /* SceneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5471E1B9371000B7FD3 /* SceneData.swift */; };
 		1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */; };
 		1BB5E54C1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E54B1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift */; };
 		1BB5E54E1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E54D1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift */; };
 		1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB62D721E9F652B00DE198A /* MapKit.framework */; };
+		1BBA02201FA07DF500EE69D3 /* VoiceConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA021B1FA07DF400EE69D3 /* VoiceConfWifiViewCtrl.swift */; };
+		1BBA02231FA07DF500EE69D3 /* VoiceReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA021E1FA07DF400EE69D3 /* VoiceReachability.swift */; };
+		1BBA02241FA07DF500EE69D3 /* VoiceUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA021F1FA07DF400EE69D3 /* VoiceUserInfo.swift */; };
 		1BBE3D821E1B379800D294A7 /* ViewPagerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE3D811E1B379800D294A7 /* ViewPagerIndicator.swift */; };
 		1BBE3D861E1B4C8200D294A7 /* MySceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE3D851E1B4C8200D294A7 /* MySceneCell.xib */; };
 		1BBE3D881E1B8F3600D294A7 /* MySceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE3D871E1B8F3600D294A7 /* MySceneCell.swift */; };
@@ -927,12 +931,16 @@
 		1BACDAA01DCDF0A500BA85C2 /* SKLaunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenu.swift; sourceTree = "<group>"; };
 		1BACDAA11DCDF0A500BA85C2 /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
 		1BACDAA21DCDF0A500BA85C2 /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
-		1BB351FB1F8B762C00B77467 /* ConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfWifiViewCtrl.swift; sourceTree = "<group>"; };
+		1BB351FB1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterConfWifiViewCtrl.swift; sourceTree = "<group>"; };
 		1BB5E5471E1B9371000B7FD3 /* SceneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneData.swift; sourceTree = "<group>"; };
 		1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneElectricData.swift; sourceTree = "<group>"; };
 		1BB5E54B1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneViewCtrl.swift; sourceTree = "<group>"; };
 		1BB5E54D1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneViewCtrl.swift; sourceTree = "<group>"; };
 		1BB62D721E9F652B00DE198A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1BBA021B1FA07DF400EE69D3 /* VoiceConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConfWifiViewCtrl.swift; sourceTree = "<group>"; };
+		1BBA021C1FA07DF400EE69D3 /* SmartConfigClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartConfigClient.framework; sourceTree = "<group>"; };
+		1BBA021E1FA07DF400EE69D3 /* VoiceReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReachability.swift; sourceTree = "<group>"; };
+		1BBA021F1FA07DF400EE69D3 /* VoiceUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserInfo.swift; sourceTree = "<group>"; };
 		1BBE3D811E1B379800D294A7 /* ViewPagerIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerIndicator.swift; sourceTree = "<group>"; };
 		1BBE3D851E1B4C8200D294A7 /* MySceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneCell.xib; sourceTree = "<group>"; };
 		1BBE3D871E1B8F3600D294A7 /* MySceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneCell.swift; sourceTree = "<group>"; };
@@ -1544,6 +1552,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B42AC5C1FA08029006324F9 /* SmartConfigClient.framework in Frameworks */,
 				1B3520DA1F99E8D1006002C0 /* SocketRocket.framework in Frameworks */,
 				1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */,
 				1BF3CFBC1F8DF7E500D2B9F4 /* AFNetworking.framework in Frameworks */,
@@ -2337,6 +2346,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1BBA021A1FA07DF400EE69D3 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				1BBA021C1FA07DF400EE69D3 /* SmartConfigClient.framework */,
+				1BBA021B1FA07DF400EE69D3 /* VoiceConfWifiViewCtrl.swift */,
+				1BBA021E1FA07DF400EE69D3 /* VoiceReachability.swift */,
+				1BBA021F1FA07DF400EE69D3 /* VoiceUserInfo.swift */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
 		1BC72FDE1E1A7FA2009F2D9D /* ScenePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -2349,6 +2369,15 @@
 				1BF524741EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift */,
 			);
 			path = ScenePage;
+			sourceTree = "<group>";
+		};
+		1BCB7CC01FA08CA7000B94B6 /* ConfWifi */ = {
+			isa = PBXGroup;
+			children = (
+				1BBA021A1FA07DF400EE69D3 /* Voice */,
+				1BB351FB1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift */,
+			);
+			path = ConfWifi;
 			sourceTree = "<group>";
 		};
 		1BF2E2641E14A36400EC5E49 /* AccountCenter */ = {
@@ -3454,12 +3483,12 @@
 		1BF505F81DB71DC2002AA286 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1BCB7CC01FA08CA7000B94B6 /* ConfWifi */,
 				1BF506011DB72456002AA286 /* LoginViewCtrl.swift */,
 				1BF506051DB74D2C002AA286 /* RegisterViewCtrl.swift */,
 				1BF506071DB74EB8002AA286 /* SetPasswordViewCtrl.swift */,
 				1BF505FF1DB720F6002AA286 /* FindPasswordViewCtrl.swift */,
 				1BF506091DB750FF002AA286 /* ResetPasswordViewCtrl.swift */,
-				1BB351FB1F8B762C00B77467 /* ConfWifiViewCtrl.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -4023,6 +4052,7 @@
 				1B7667E91EF3CA1C007B21B4 /* CHLoadingView.m in Sources */,
 				1BF3D27A1F8DFCA000D2B9F4 /* JSWebViewController.m in Sources */,
 				1BBE3D881E1B8F3600D294A7 /* MySceneCell.swift in Sources */,
+				1BBA02201FA07DF500EE69D3 /* VoiceConfWifiViewCtrl.swift in Sources */,
 				1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */,
 				1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */,
 				1B504CFA1F13BD6F00C57F17 /* ETData.swift in Sources */,
@@ -4106,6 +4136,7 @@
 				1B6F29D91E460E3C00D19DE9 /* RestApiInfo.m in Sources */,
 				1B7667E71EF3CA1C007B21B4 /* CategoryTableViewCell.m in Sources */,
 				1BF3D24E1F8DFCA000D2B9F4 /* BrandAccountModel.m in Sources */,
+				1BBA02231FA07DF500EE69D3 /* VoiceReachability.swift in Sources */,
 				1B6F29B11E460D7500D19DE9 /* UserBindSms.cpp in Sources */,
 				1BF3D26C1F8DFCA000D2B9F4 /* NSDate+Change.m in Sources */,
 				1BF3D3A41F8DFCA100D2B9F4 /* PinyinFormatter.m in Sources */,
@@ -4176,7 +4207,7 @@
 				1BF3D2881F8DFCA000D2B9F4 /* SortForArray.m in Sources */,
 				1BF3D2711F8DFCA000D2B9F4 /* NullSafe.m in Sources */,
 				1BF3D2461F8DFCA000D2B9F4 /* AddRedSatelliteGuideViewController.m in Sources */,
-				1BB351FC1F8B762C00B77467 /* ConfWifiViewCtrl.swift in Sources */,
+				1BB351FC1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift in Sources */,
 				1BF3D2531F8DFCA000D2B9F4 /* MatchInfoModel.m in Sources */,
 				1BF3D2481F8DFCA000D2B9F4 /* MatchProcessInfraredViewController.m in Sources */,
 				1BF2E2761E14A36400EC5E49 /* ChangeAccountPasswordViewCtrl.swift in Sources */,
@@ -4204,6 +4235,7 @@
 				1BF3D27E1F8DFCA000D2B9F4 /* JSSelectedButton.m in Sources */,
 				1B6F29AC1E460D7500D19DE9 /* LCOpenApi_base64.cpp in Sources */,
 				1BF2E2791E14A36400EC5E49 /* EditMasterViewCtrl.swift in Sources */,
+				1BBA02241FA07DF500EE69D3 /* VoiceUserInfo.swift in Sources */,
 				1BF3D2811F8DFCA000D2B9F4 /* DevicesManagerNetworkMgr.mm in Sources */,
 				1B935A771F15CCC00017F694 /* AddElectricTypeViewCtrl.swift in Sources */,
 				1B935A791F15CCC00017F694 /* EditElectricViewCtrl.swift in Sources */,
@@ -4454,7 +4486,11 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Result",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SocketRocket",
+					"$(PROJECT_DIR)/zfzn2/Voice",
+					"$(PROJECT_DIR)/**",
+					"\"$(SRCROOT)/zfzn2/Voice/SmartConfigClient.framework\"",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/Smart360/Smart360.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4479,7 +4515,7 @@
 					"$(PROJECT_DIR)/Smart360/Vendors/ZBarSDK",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-                OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HanwenKong.zfzn2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -4520,7 +4556,11 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Result",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SDWebImage",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SocketRocket",
+					"$(PROJECT_DIR)/zfzn2/Voice",
+					"$(PROJECT_DIR)/**",
+					"\"$(SRCROOT)/zfzn2/Voice/SmartConfigClient.framework\"",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/Smart360/Smart360.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4545,7 +4585,7 @@
 					"$(PROJECT_DIR)/Smart360/Vendors/ZBarSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-                OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HanwenKong.zfzn2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

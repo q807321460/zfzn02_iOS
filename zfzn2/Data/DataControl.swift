@@ -40,14 +40,15 @@ let g_sElectric_type_clothes = "0F"//晾衣架
 let g_sElectric_type_air_learn = "09"//学习型空调
 let g_sElectric_type_air_center = "0800" //中央空调
 let g_sElectric_type_lock2 = "1000"//新门锁，这是第23种电器
+let g_sElectric_type_tv_learn = "09"//学习型空调
 
 let g_dAnimationDuration:TimeInterval = 0.15 //弹出视图的显示时间
 let g_dAnimationStartOffset:CGFloat = -10//弹出视图从上方弹出的滑动距离
 
 @objc class DataControl: NSObject {
-    let m_arrayElectricTypeCode:NSArray = [g_sElectric_type_socket, g_sElectric_type_swift_one, g_sElectric_type_swift_two, g_sElectric_type_swift_three, g_sElectric_type_swift_four, g_sElectric_type_lock, g_sElectric_type_curtain, g_sElectric_type_window, g_sElectric_type_camera, g_sElectric_type_air, g_sElectric_type_scene_swift, g_sElectric_type_valve, g_sElectric_type_tv, g_sElectric_type_temperature, g_sElectric_type_water, g_sElectric_type_door, g_sElectric_type_gas, g_sElectric_type_wall_ir, g_sElectric_type_horn, g_sElectric_type_smoke, g_sElectric_type_clothes, g_sElectric_type_air_learn, g_sElectric_type_air_center, g_sElectric_type_lock2]
-    let m_arrayElectricImage:NSArray = ["电器类型_插座", "电器类型_一键开关", "电器类型_两键开关", "电器类型_三键开关", "电器类型_四键开关", "电器类型_门锁", "电器类型_窗帘", "电器类型_窗户", "电器类型_摄像头", "电器类型_空调", "电器类型_四键开关", "电器类型_机械手", "电器类型_电视", "电器类型_传感器_温度", "电器类型_传感器_水浸", "电器类型_传感器_门磁", "电器类型_传感器_燃气", "电器类型_传感器_壁挂红外", "电器类型_警号", "电器类型_传感器_烟雾", "电器类型_晾衣架", "电器类型_空调", "电器类型_空调", "电器类型_门锁"]
-    let m_arrayElectricLabel:NSArray = ["插座", "一键开关", "两键开关", "三键开关", "四键开关", "门锁", "窗帘", "窗户", "摄像头", "空调", "情景开关", "机械手", "电视", "温度计", "水浸", "门磁", "燃气报警", "壁挂红外", "警号", "烟雾报警", "晾衣架", "学习型空调", "中央空调", "新门锁"]
+    let m_arrayElectricTypeCode:NSArray = [g_sElectric_type_socket, g_sElectric_type_swift_one, g_sElectric_type_swift_two, g_sElectric_type_swift_three, g_sElectric_type_swift_four, g_sElectric_type_lock, g_sElectric_type_curtain, g_sElectric_type_window, g_sElectric_type_camera, g_sElectric_type_air, g_sElectric_type_scene_swift, g_sElectric_type_valve, g_sElectric_type_tv, g_sElectric_type_temperature, g_sElectric_type_water, g_sElectric_type_door, g_sElectric_type_gas, g_sElectric_type_wall_ir, g_sElectric_type_horn, g_sElectric_type_smoke, g_sElectric_type_clothes, g_sElectric_type_air_learn, g_sElectric_type_air_center, g_sElectric_type_lock2, g_sElectric_type_tv_learn]
+    let m_arrayElectricImage:NSArray = ["电器类型_插座", "电器类型_一键开关", "电器类型_两键开关", "电器类型_三键开关", "电器类型_四键开关", "电器类型_门锁", "电器类型_窗帘", "电器类型_窗户", "电器类型_摄像头", "电器类型_空调", "电器类型_四键开关", "电器类型_机械手", "电器类型_电视", "电器类型_传感器_温度", "电器类型_传感器_水浸", "电器类型_传感器_门磁", "电器类型_传感器_燃气", "电器类型_传感器_壁挂红外", "电器类型_警号", "电器类型_传感器_烟雾", "电器类型_晾衣架", "电器类型_空调", "电器类型_空调", "电器类型_门锁", "电器类型_电视"]
+    let m_arrayElectricLabel:NSArray = ["插座", "一键开关", "两键开关", "三键开关", "四键开关", "门锁", "窗帘", "窗户", "摄像头", "空调", "情景开关", "机械手", "电视", "温度计", "水浸", "门磁", "燃气报警", "壁挂红外", "警号", "烟雾报警", "晾衣架", "学习型空调", "中央空调", "新门锁", "学习型电视"]
     
     let m_sAddLeft = "000000"
     let m_sOrderSign:String = "X", m_sAddSign:String = "Y", m_sStateSign:String = "Z"

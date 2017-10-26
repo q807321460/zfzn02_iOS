@@ -130,25 +130,25 @@ class AddElectricViewCtrl: UIViewController {
                 return
             }
         }
-        //晾衣架不能再同一个主机中添加两次，否则会导致晾衣架无法控制
-        if (m_nElectricType==20) {
-            DispatchQueue.main.async(execute: {
-                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                let alertView = SCLAlertView(appearance: appearance)
-                alertView.addButton("继续对码", action: {
-                    () -> Void in
-                    self.AddElectricDetail()
-                })
-                alertView.addButton("返回检查", action: {
-                    () -> Void in
-                    return
-                })
-                alertView.showInfo("菜单", subTitle: "请先确认当前主机中没有添加过相同编号的晾衣架，如果已经添加过，再次添加会导致设备无法控制", duration: 0)//时间间隔为0时不会自动退出
-            })
-        }else {
-            AddElectricDetail()
-        }
-        
+//        //晾衣架不能再同一个主机中添加两次，否则会导致晾衣架无法控制
+//        if (m_nElectricType==20) {
+//            DispatchQueue.main.async(execute: {
+//                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+//                let alertView = SCLAlertView(appearance: appearance)
+//                alertView.addButton("继续对码", action: {
+//                    () -> Void in
+//                    self.AddElectricDetail()
+//                })
+//                alertView.addButton("返回检查", action: {
+//                    () -> Void in
+//                    return
+//                })
+//                alertView.showInfo("菜单", subTitle: "请先确认当前主机中没有添加过相同编号的晾衣架，如果已经添加过，再次添加会导致设备无法控制", duration: 0)//时间间隔为0时不会自动退出
+//            })
+//        }else {
+//            AddElectricDetail()
+//        }
+        AddElectricDetail()
     }
     
     func AddElectricDetail() {
