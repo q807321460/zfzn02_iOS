@@ -25,7 +25,6 @@
 		1B24C6921DCB3B69006B2A24 /* MainTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24C6901DCB3B69006B2A24 /* MainTabBarCtrl.swift */; };
 		1B3392061E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3392051E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift */; };
 		1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3520D71F99E84B006002C0 /* WebSocket.swift */; };
-		1B3520DA1F99E8D1006002C0 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3520D91F99E8D1006002C0 /* SocketRocket.framework */; };
 		1B39532E1E0FB9E7008A08F5 /* MiniSceneAndArea.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39532D1E0FB9E7008A08F5 /* MiniSceneAndArea.xib */; };
 		1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */; };
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
@@ -185,6 +184,18 @@
 		1BD468F01E1E8F8000B2275B /* MyAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD468EE1E1E8F8000B2275B /* MyAreaCell.swift */; };
 		1BD468F11E1E8F8000B2275B /* MyAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD468EF1E1E8F8000B2275B /* MyAreaCell.xib */; };
 		1BEA09851FA4277C00BA28D3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA09841FA4277C00BA28D3 /* Toast.swift */; };
+		1BEA09861FA429D300BA28D3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09921FA429D300BA28D3 /* AFNetworking.framework */; };
+		1BEA09871FA429D300BA28D3 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */; };
+		1BEA09881FA429D300BA28D3 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09941FA429D300BA28D3 /* Masonry.framework */; };
+		1BEA09891FA429D300BA28D3 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09951FA429D300BA28D3 /* MBProgressHUD.framework */; };
+		1BEA098A1FA429D300BA28D3 /* MJExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09961FA429D300BA28D3 /* MJExtension.framework */; };
+		1BEA098B1FA429D300BA28D3 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09971FA429D300BA28D3 /* MJRefresh.framework */; };
+		1BEA098C1FA429D300BA28D3 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09981FA429D300BA28D3 /* Reachability.framework */; };
+		1BEA098D1FA429D300BA28D3 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09991FA429D300BA28D3 /* ReactiveCocoa.framework */; };
+		1BEA098E1FA429D300BA28D3 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099A1FA429D300BA28D3 /* ReactiveSwift.framework */; };
+		1BEA098F1FA429D300BA28D3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099B1FA429D300BA28D3 /* Result.framework */; };
+		1BEA09901FA429D300BA28D3 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */; };
+		1BEA09911FA429D300BA28D3 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */; };
 		1BEEAF151DD9AE6900E17617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEEAF141DD9AE6900E17617 /* Main.storyboard */; };
 		1BF0812F1F418F5600898799 /* ElecDoor2ViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0812E1F418F5600898799 /* ElecDoor2ViewCtrl.swift */; };
 		1BF0B30C1F04A1DF00DA4F37 /* AddSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF0B30B1F04A1DF00DA4F37 /* AddSceneCell.xib */; };
@@ -200,17 +211,6 @@
 		1BF2E27B1E14A36400EC5E49 /* ShareMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E2701E14A36400EC5E49 /* ShareMasterViewCtrl.swift */; };
 		1BF2E27D1E15079D00EC5E49 /* AddElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF2E27C1E15079D00EC5E49 /* AddElectric.xib */; };
 		1BF2E27F1E1507C700EC5E49 /* AddElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E27E1E1507C700EC5E49 /* AddElectric.swift */; };
-		1BF3CFBC1F8DF7E500D2B9F4 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB11F8DF7E500D2B9F4 /* AFNetworking.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		1BF3CFBD1F8DF7E500D2B9F4 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB21F8DF7E500D2B9F4 /* Masonry.framework */; };
-		1BF3CFBE1F8DF7E500D2B9F4 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB31F8DF7E500D2B9F4 /* MBProgressHUD.framework */; };
-		1BF3CFBF1F8DF7E500D2B9F4 /* MJExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB41F8DF7E500D2B9F4 /* MJExtension.framework */; };
-		1BF3CFC01F8DF7E500D2B9F4 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB51F8DF7E500D2B9F4 /* MJRefresh.framework */; };
-		1BF3CFC11F8DF7E500D2B9F4 /* Pods_zfzn2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB61F8DF7E500D2B9F4 /* Pods_zfzn2.framework */; };
-		1BF3CFC21F8DF7E500D2B9F4 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB71F8DF7E500D2B9F4 /* Reachability.framework */; };
-		1BF3CFC31F8DF7E500D2B9F4 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB81F8DF7E500D2B9F4 /* ReactiveCocoa.framework */; };
-		1BF3CFC41F8DF7E500D2B9F4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFB91F8DF7E500D2B9F4 /* ReactiveSwift.framework */; };
-		1BF3CFC51F8DF7E500D2B9F4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFBA1F8DF7E500D2B9F4 /* Result.framework */; };
-		1BF3CFC61F8DF7E500D2B9F4 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFBB1F8DF7E500D2B9F4 /* SDWebImage.framework */; };
 		1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */; };
 		1BF505F71DB71575002AA286 /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505F61DB71575002AA286 /* DataControl.swift */; };
 		1BF506001DB720F6002AA286 /* FindPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505FF1DB720F6002AA286 /* FindPasswordViewCtrl.swift */; };
@@ -264,7 +264,6 @@
 		1B24C6901DCB3B69006B2A24 /* MainTabBarCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarCtrl.swift; path = HomePage/MainTabBarCtrl.swift; sourceTree = "<group>"; };
 		1B3392051E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
 		1B3520D71F99E84B006002C0 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = zfzn2/Data/Socket/WebSocket.swift; sourceTree = SOURCE_ROOT; };
-		1B3520D91F99E8D1006002C0 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = "Pods/../build/Debug-iphoneos/SocketRocket/SocketRocket.framework"; sourceTree = "<group>"; };
 		1B39532D1E0FB9E7008A08F5 /* MiniSceneAndArea.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniSceneAndArea.xib; sourceTree = "<group>"; };
 		1B3BB0E31DFBFD7000361071 /* GCDAsyncTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncTcpSocket.h; sourceTree = "<group>"; };
 		1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncTcpSocket.m; sourceTree = "<group>"; };
@@ -438,7 +437,6 @@
 		1B6F29FC1E4611D000D19DE9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		1B6F29FE1E4611D600D19DE9 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		1B6F2A001E46122300D19DE9 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
-		1B6F2A021E46123400D19DE9 /* dylib1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = dylib1.o; path = ../../../../../usr/lib/dylib1.o; sourceTree = "<group>"; };
 		1B7667461EF3CA1C007B21B4 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		1B7667471EF3CA1C007B21B4 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		1B7667491EF3CA1C007B21B4 /* JdCategory_AViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JdCategory_AViewController.h; sourceTree = "<group>"; };
@@ -553,6 +551,18 @@
 		1BD468EF1E1E8F8000B2275B /* MyAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAreaCell.xib; sourceTree = "<group>"; };
 		1BE482241EADEE8C004C756E /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		1BEA09841FA4277C00BA28D3 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		1BEA09921FA429D300BA28D3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09941FA429D300BA28D3 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09951FA429D300BA28D3 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09961FA429D300BA28D3 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09971FA429D300BA28D3 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09981FA429D300BA28D3 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA09991FA429D300BA28D3 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA099A1FA429D300BA28D3 /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA099B1FA429D300BA28D3 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEEAF141DD9AE6900E17617 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1BF0812E1F418F5600898799 /* ElecDoor2ViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoor2ViewCtrl.swift; sourceTree = "<group>"; };
 		1BF0B30B1F04A1DF00DA4F37 /* AddSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSceneCell.xib; sourceTree = "<group>"; };
@@ -568,17 +578,6 @@
 		1BF2E2701E14A36400EC5E49 /* ShareMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMasterViewCtrl.swift; sourceTree = "<group>"; };
 		1BF2E27C1E15079D00EC5E49 /* AddElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddElectric.xib; sourceTree = "<group>"; };
 		1BF2E27E1E1507C700EC5E49 /* AddElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectric.swift; sourceTree = "<group>"; };
-		1BF3CFB11F8DF7E500D2B9F4 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Release-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
-		1BF3CFB21F8DF7E500D2B9F4 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = "Pods/../build/Debug-iphoneos/Masonry/Masonry.framework"; sourceTree = "<group>"; };
-		1BF3CFB31F8DF7E500D2B9F4 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework"; sourceTree = "<group>"; };
-		1BF3CFB41F8DF7E500D2B9F4 /* MJExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJExtension.framework; path = "Pods/../build/Debug-iphoneos/MJExtension/MJExtension.framework"; sourceTree = "<group>"; };
-		1BF3CFB51F8DF7E500D2B9F4 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "Pods/../build/Release-iphoneos/MJRefresh/MJRefresh.framework"; sourceTree = "<group>"; };
-		1BF3CFB61F8DF7E500D2B9F4 /* Pods_zfzn2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_zfzn2.framework; path = "Pods/../build/Debug-iphoneos/Pods_zfzn2.framework"; sourceTree = "<group>"; };
-		1BF3CFB71F8DF7E500D2B9F4 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = "Pods/../build/Debug-iphoneos/Reachability/Reachability.framework"; sourceTree = "<group>"; };
-		1BF3CFB81F8DF7E500D2B9F4 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Release-iphoneos/ReactiveCocoa/ReactiveCocoa.framework"; sourceTree = "<group>"; };
-		1BF3CFB91F8DF7E500D2B9F4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "Pods/../build/Debug-iphoneos/ReactiveSwift/ReactiveSwift.framework"; sourceTree = "<group>"; };
-		1BF3CFBA1F8DF7E500D2B9F4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Pods/../build/Debug-iphoneos/Result/Result.framework"; sourceTree = "<group>"; };
-		1BF3CFBB1F8DF7E500D2B9F4 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
 		1BF505F61DB71575002AA286 /* DataControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataControl.swift; sourceTree = "<group>"; };
 		1BF505FF1DB720F6002AA286 /* FindPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordViewCtrl.swift; sourceTree = "<group>"; };
@@ -597,20 +596,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEA09861FA429D300BA28D3 /* AFNetworking.framework in Frameworks */,
+				1BEA09871FA429D300BA28D3 /* IQKeyboardManager.framework in Frameworks */,
+				1BEA09881FA429D300BA28D3 /* Masonry.framework in Frameworks */,
+				1BEA09891FA429D300BA28D3 /* MBProgressHUD.framework in Frameworks */,
+				1BEA098A1FA429D300BA28D3 /* MJExtension.framework in Frameworks */,
+				1BEA098B1FA429D300BA28D3 /* MJRefresh.framework in Frameworks */,
+				1BEA098C1FA429D300BA28D3 /* Reachability.framework in Frameworks */,
+				1BEA098D1FA429D300BA28D3 /* ReactiveCocoa.framework in Frameworks */,
+				1BEA098E1FA429D300BA28D3 /* ReactiveSwift.framework in Frameworks */,
+				1BEA098F1FA429D300BA28D3 /* Result.framework in Frameworks */,
+				1BEA09901FA429D300BA28D3 /* SDWebImage.framework in Frameworks */,
+				1BEA09911FA429D300BA28D3 /* SocketRocket.framework in Frameworks */,
 				1B42AC5C1FA08029006324F9 /* SmartConfigClient.framework in Frameworks */,
-				1B3520DA1F99E8D1006002C0 /* SocketRocket.framework in Frameworks */,
 				1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */,
-				1BF3CFBC1F8DF7E500D2B9F4 /* AFNetworking.framework in Frameworks */,
-				1BF3CFBD1F8DF7E500D2B9F4 /* Masonry.framework in Frameworks */,
-				1BF3CFBE1F8DF7E500D2B9F4 /* MBProgressHUD.framework in Frameworks */,
-				1BF3CFBF1F8DF7E500D2B9F4 /* MJExtension.framework in Frameworks */,
-				1BF3CFC01F8DF7E500D2B9F4 /* MJRefresh.framework in Frameworks */,
-				1BF3CFC11F8DF7E500D2B9F4 /* Pods_zfzn2.framework in Frameworks */,
-				1BF3CFC21F8DF7E500D2B9F4 /* Reachability.framework in Frameworks */,
-				1BF3CFC31F8DF7E500D2B9F4 /* ReactiveCocoa.framework in Frameworks */,
-				1BF3CFC41F8DF7E500D2B9F4 /* ReactiveSwift.framework in Frameworks */,
-				1BF3CFC51F8DF7E500D2B9F4 /* Result.framework in Frameworks */,
-				1BF3CFC61F8DF7E500D2B9F4 /* SDWebImage.framework in Frameworks */,
 				1B7667F51EF3CAA3007B21B4 /* libstdc++.6.tbd in Frameworks */,
 				1B6F2A011E46122300D19DE9 /* libz.1.dylib in Frameworks */,
 				1B7667F31EF3CA58007B21B4 /* JdPlaySdk.framework in Frameworks */,
@@ -1300,22 +1299,21 @@
 		1BACDA831DCC746000BA85C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B3520D91F99E8D1006002C0 /* SocketRocket.framework */,
+				1BEA09921FA429D300BA28D3 /* AFNetworking.framework */,
+				1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */,
+				1BEA09941FA429D300BA28D3 /* Masonry.framework */,
+				1BEA09951FA429D300BA28D3 /* MBProgressHUD.framework */,
+				1BEA09961FA429D300BA28D3 /* MJExtension.framework */,
+				1BEA09971FA429D300BA28D3 /* MJRefresh.framework */,
+				1BEA09981FA429D300BA28D3 /* Reachability.framework */,
+				1BEA09991FA429D300BA28D3 /* ReactiveCocoa.framework */,
+				1BEA099A1FA429D300BA28D3 /* ReactiveSwift.framework */,
+				1BEA099B1FA429D300BA28D3 /* Result.framework */,
+				1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */,
+				1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */,
 				1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */,
-				1BF3CFB11F8DF7E500D2B9F4 /* AFNetworking.framework */,
-				1BF3CFB21F8DF7E500D2B9F4 /* Masonry.framework */,
-				1BF3CFB31F8DF7E500D2B9F4 /* MBProgressHUD.framework */,
-				1BF3CFB41F8DF7E500D2B9F4 /* MJExtension.framework */,
-				1BF3CFB51F8DF7E500D2B9F4 /* MJRefresh.framework */,
-				1BF3CFB61F8DF7E500D2B9F4 /* Pods_zfzn2.framework */,
-				1BF3CFB71F8DF7E500D2B9F4 /* Reachability.framework */,
-				1BF3CFB81F8DF7E500D2B9F4 /* ReactiveCocoa.framework */,
-				1BF3CFB91F8DF7E500D2B9F4 /* ReactiveSwift.framework */,
-				1BF3CFBA1F8DF7E500D2B9F4 /* Result.framework */,
-				1BF3CFBB1F8DF7E500D2B9F4 /* SDWebImage.framework */,
 				1B7667F41EF3CAA3007B21B4 /* libstdc++.6.tbd */,
 				1BB62D721E9F652B00DE198A /* MapKit.framework */,
-				1B6F2A021E46123400D19DE9 /* dylib1.o */,
 				1B6F2A001E46122300D19DE9 /* libz.1.dylib */,
 				1B6F29FE1E4611D600D19DE9 /* CoreAudio.framework */,
 				1B6F29FC1E4611D000D19DE9 /* MediaPlayer.framework */,
