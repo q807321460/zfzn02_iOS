@@ -39,7 +39,7 @@
 #import <IQKeyboardManager.h>
 #import <SDWebImageManager.h>
 #import <UIImageView+WebCache.h>
-#import <UIView+Toast.h>
+//#import <UIView+Toast.h>
 #import <SocketRocket.h>
 #import <SRWebSocket.h>
 //语音主机配网相关

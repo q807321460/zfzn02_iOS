@@ -1,4 +1,4 @@
-//
+
 //  JingRoundView.m
 //  JingFM-RoundEffect
 //
@@ -12,7 +12,7 @@
 
 #define kRotationDuration 8.0
 
-#define UIColorFromRGB(rgbValue)  [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0f green:((float)((rgbValue & 0xFF00) >> 8))/255.0f blue:((float)(rgbValue & 0xFF))/255.0f alpha:1.0f]
+//#define UIColorFromRGB(rgbValue)  [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0f green:((float)((rgbValue & 0xFF00) >> 8))/255.0f blue:((float)(rgbValue & 0xFF))/255.0f alpha:1.0f]
 
 @implementation JingRoundView
 

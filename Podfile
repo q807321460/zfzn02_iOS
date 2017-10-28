@@ -12,4 +12,5 @@ pod 'Reachability'
 pod 'Bugly'
 pod 'UMengAnalytics'
 pod 'SocketRocket'
+pod 'IQKeyboardManager'
 end

@@ -368,7 +368,7 @@ enum GCDAsyncUdpSocketConfig
 		if (dq)
 		{
 			delegateQueue = dq;
-			#if !OS_OBJECT_USE_OBJC 
+			#if !OS_OBJECT_USE_OBJC
 			dispatch_retain(delegateQueue);
 			#endif
 		}

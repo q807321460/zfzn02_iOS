@@ -24,9 +24,8 @@
 /**
  请求音乐源失败的回调
  
- @param infos 资源数组
- @param last  是否是最后一级目录
- @param loadMore 是否加载更多
+ @param erroCode 错误Code
+ @param errMsg  错误消息
  */
 - (void)onGetMusicResourceFail:(int)erroCode errMsg:(NSString *)errMsg;
 
