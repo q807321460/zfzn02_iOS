@@ -21,7 +21,7 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
     var m_nAreaListFoot:Int!
     var m_nElectricListFoot:Int!
     var m_nSceneSelectedIndex:Int! = -1//当前情景开关绑定的情景index
-    var m_jsonDoor:JSON = nil//用于判断绑定的是哪种触发模式
+    var m_jsonDoor:JSON = JSON.null//用于判断绑定的是哪种触发模式
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +115,7 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
     func SwitchDidChange() {
         if m_switchDoorState.isOn == true {
             m_labelDoorState.text = "当前状态：开触发"
-            if m_jsonDoor == nil {
+            if m_jsonDoor == JSON.null {
                 m_nSceneSelectedIndex = -1
             }else {
                 if m_jsonDoor["SH"].string == nil {
@@ -126,7 +126,7 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }else {
             m_labelDoorState.text = "当前状态：关触发"
-            if m_jsonDoor == nil {
+            if m_jsonDoor == JSON.null {
                 m_nSceneSelectedIndex = -1
             }else {
                 if m_jsonDoor["SG"].string == nil {

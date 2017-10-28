@@ -99,7 +99,7 @@
         //去除已用房间
         [self removeUsedRoomInDataArray];
         
-        JSDebug(@"AddRoomVC_GetRoomList", @"original count :%d, room count(can be used to add room) %lu",self.originalDataArray.count,(unsigned long)self.dataArray.count);
+        JSDebug(@"AddRoomVC_GetRoomList", @"original count :%lu, room count(can be used to add room) %lu",(unsigned long)self.originalDataArray.count,(unsigned long)self.dataArray.count);
         
         dispatch_async(dispatch_get_main_queue(), ^(void){
             

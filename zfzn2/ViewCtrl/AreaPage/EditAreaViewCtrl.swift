@@ -50,6 +50,10 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     }
     
     @IBAction func OnDeleteElectric(_ sender: AnyObject) {
+        if (gDC.m_bRemote == true) {
+            ShowNoticeDispatch("提示", content: "远程状态下不允许删除电器", duration: 1.0)
+            return
+        }
         //如果有任意一个电器被选中，则将bHavingSelected置为ture
         var bHavingSelected:Bool = false
         for i in 0..<gDC.mAreaList[self.m_nAreaListFoot].mElectricList.count {

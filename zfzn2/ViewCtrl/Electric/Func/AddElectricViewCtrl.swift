@@ -83,7 +83,7 @@ class AddElectricViewCtrl: UIViewController {
             m_constraintSave.constant = 30.0 + 36.0 + 36.0 + 36.0
         default:
             m_imageElectricType.image = UIImage(named: gDC.m_arrayElectricImage[m_nElectricType] as! String)
-            m_labelElectricType.text = gDC.m_arrayElectricLabel[m_nElectricType] as! String
+            m_labelElectricType.text = gDC.m_arrayElectricLabel[m_nElectricType] as? String
             m_constraintSave.constant = 30.0
             break
         }

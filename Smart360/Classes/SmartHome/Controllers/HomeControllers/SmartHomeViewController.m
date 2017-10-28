@@ -409,7 +409,7 @@
     pop.currentIndexPath = [self queryIndexPathOfBoxSN:[JSSaveUserMessage sharedInstance].currentBoxSN];
     
     
-    JSDebug(@"rightItemClick", @"pop.currentIndexPath:%d ",pop.currentIndexPath.row);
+    JSDebug(@"rightItemClick", @"pop.currentIndexPath:%ld ",(long)pop.currentIndexPath.row);
     
     pop.selectRowAtIndex = ^(NSIndexPath *selectIndexPath){
         

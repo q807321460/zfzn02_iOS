@@ -116,7 +116,7 @@ class PublicWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
                 value = (["WebError"] as AnyObject, false)//必须返回一个NSArray数组而不是String字符串
                 bReceiving = false
                 DispatchQueue.main.async(execute: {
-                    //                    print("连接webservice发生了错误")
+                    //print("连接webservice发生了错误")
                 })
             }
             else{

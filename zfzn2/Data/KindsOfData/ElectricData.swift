@@ -375,7 +375,7 @@ class ElectricData: NSObject {
                 if (dict?[electricOrder]?.string == nil) {
                     dict?[electricOrder] = JSON(jsonString: sSceneIndex)
                 }
-                json2 = JSON(object: dict)
+                json2 = JSON(object: dict!)
                 print(json2)
             }catch { print("json error") }
         }
@@ -495,7 +495,7 @@ class ElectricData: NSObject {
                 do { json = try JSON(data: jsonData)
                     var dict = json.dictionary
                     dict?["BuFang"] = JSON(jsonString: sExtras)
-                    json2 = JSON(object: dict)
+                    json2 = JSON(object: dict!)
                     print(json2)
                 }catch { print("json error") }
             }

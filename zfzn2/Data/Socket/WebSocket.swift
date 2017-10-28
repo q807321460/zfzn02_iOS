@@ -68,6 +68,10 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     func webSocketDidOpen(_ webSocket: SRWebSocket!) {
         print("【websocket】连接成功")
         StopPolling()
+        //重连后，从服务器调用最新的所有电器的状态
+        let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
+        gDC.mElectricData.UpdateElectricState(dictsElectricState)
+        g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
     }
     
     func webSocket(_ webSocket: SRWebSocket!, didFailWithError error: Error!) {

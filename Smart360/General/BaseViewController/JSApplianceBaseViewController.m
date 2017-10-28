@@ -67,7 +67,7 @@
         
         self.updateRoomArray = dict[kSBEngine_Data];
         
-        JSDebug(@"HomeBaseVC_UpdateRoom", @"room count : %d",self.updateRoomArray.count);
+        JSDebug(@"HomeBaseVC_UpdateRoom", @"room count : %lu",(unsigned long)self.updateRoomArray.count);
         
         NSMutableDictionary * notifiRoomDict = [self getNotifiDict_UpdateRoom_WithArchArray:self.updateRoomArray];
         
@@ -94,7 +94,7 @@
         
         self.updateDeviceArray = dict[kSBEngine_Data];
         
-        JSDebug(@"HomeBaseVC_UpdateDevice", @"room count : %d",self.updateDeviceArray.count);
+        JSDebug(@"HomeBaseVC_UpdateDevice", @"room count : %lu",(unsigned long)self.updateDeviceArray.count);
         
         NSMutableDictionary * notifiRoomDict = [self getNotifiDict_UpdateRoom_WithArchArray:self.updateDeviceArray];
         

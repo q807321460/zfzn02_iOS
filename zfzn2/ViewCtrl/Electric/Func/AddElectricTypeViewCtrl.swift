@@ -58,7 +58,7 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
         //返回Cell内容，这里我们使用刚刚建立的defaultCell作为显示内容
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "miniElectric", for: indexPath) as! MiniElectric
         cell.m_imageElectricType.image = UIImage(named: gDC.m_arrayElectricImage[indexPath.row] as! String)
-        cell.m_labelElectricType.text = gDC.m_arrayElectricLabel[indexPath.row] as! String
+        cell.m_labelElectricType.text = gDC.m_arrayElectricLabel[indexPath.row] as? String
         return cell
     }
     

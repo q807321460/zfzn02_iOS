@@ -104,7 +104,8 @@ class SensorViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.m_switch.isOn = true
             }
         }else {
-            var json:JSON = nil
+            var json:JSON = JSON.null
+//            var json:JSON = nil
             if sExtras == "" {
                 sExtras = "{}"
             }

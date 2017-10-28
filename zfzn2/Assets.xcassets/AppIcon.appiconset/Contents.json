@@ -101,6 +101,12 @@
       "idiom" : "ipad",
       "filename" : "icon_newiPadProApp_83.5pt@2x.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "1024_1024.jpg",
+      "scale" : "1x"
     }
   ],
   "info" : {

@@ -36,15 +36,15 @@
 //
 
 //第三方
-#import <AFNetworking.h>//AFNetworking/
-#import <MJExtension.h>//MJExtension/
+#import <AFNetworking.h>
+#import <MJExtension.h>
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import "MBProgressHUD.h"
-#import <ReactiveCocoa.h>//ReactiveCocoa/
+#import <ReactiveCocoa.h>
 #import <IQKeyboardManager.h>
-#import <SDWebImageManager.h>//<SDWebImage/>
-#import <UIImageView+WebCache.h>//<SDWebImage/>
+#import <SDWebImageManager.h>
+#import <UIImageView+WebCache.h>
 #import <UIView+Toast.h>
 
 //恬家红卫星
@@ -91,3 +91,4 @@
 
 
 #endif
+

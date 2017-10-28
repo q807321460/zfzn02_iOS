@@ -289,7 +289,7 @@ func RefreshElectricStates(_ sReceive:String) -> Bool {
         return false
     }
     if nStart != -1 {
-        let sReturn:String = (sReceive as! NSString).substring(with: NSMakeRange(nStart+1, nEnd-nStart-1))
+        let sReturn:String = (sReceive as NSString).substring(with: NSMakeRange(nStart+1, nEnd-nStart-1))
         var sElectricCode:String = ""
         var sElectricState:String = ""
         var sStateInfo:String = ""

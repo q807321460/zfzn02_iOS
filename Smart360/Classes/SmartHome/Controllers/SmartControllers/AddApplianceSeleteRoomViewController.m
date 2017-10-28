@@ -65,11 +65,11 @@
     if (0 == [dict[kSBEngine_ErrCode] intValue]) {
         
         self.dataArray = dict[kSBEngine_Data];
-        JSDebug(@"AddApplianceSelecteRoomVC", @" all room count: %d",self.dataArray.count);
+        JSDebug(@"AddApplianceSelecteRoomVC", @" all room count: %lu",(unsigned long)self.dataArray.count);
         
         if (0 == self.dataArray.count) {
             
-            JSError(@"AddApplianceSelecteRoomVC", @" all room count: %d , please check!!!",self.dataArray.count);
+            JSError(@"AddApplianceSelecteRoomVC", @" all room count: %lu , please check!!!",(unsigned long)self.dataArray.count);
             
             dispatch_async(dispatch_get_main_queue(), ^(void){
                 [self hideHud];

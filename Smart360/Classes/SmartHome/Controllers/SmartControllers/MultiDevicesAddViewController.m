@@ -68,7 +68,7 @@
     if (0 == [dict[kSBEngine_ErrCode] intValue]) {
         
         self.dataArray = dict[kSBEngine_Data];
-        JSDebug(@"AddMultiPlugVC", @"devices count: %d",self.dataArray.count);
+        JSDebug(@"AddMultiPlugVC", @"devices count: %lu",(unsigned long)self.dataArray.count);
         
         dispatch_async(dispatch_get_main_queue(), ^(void){
             [self hideHud];
@@ -154,7 +154,7 @@
     AddRoomTableViewCell *cell = (AddRoomTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     cell.seleRightImageView.hidden = YES;
     
-    JSDebug(@"MutilDevicesAdd_Cell", @"取消选择, cell.selected:%d ,row:%d ",cell.selected,indexPath.row);
+    JSDebug(@"MutilDevicesAdd_Cell", @"取消选择, cell.selected:%d ,row:%ld ",cell.selected,(long)indexPath.row);
     
 }
 
@@ -163,7 +163,7 @@
     
     AddRoomTableViewCell *cell = (AddRoomTableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
     cell.seleRightImageView.hidden = NO;
-    JSDebug(@"MutilDevicesAdd_Cell", @"选中, cell.selected:%d ,row:%d",cell.selected,indexPath.row);
+    JSDebug(@"MutilDevicesAdd_Cell", @"选中, cell.selected:%d ,row:%ld",cell.selected,(long)indexPath.row);
     
 }
 

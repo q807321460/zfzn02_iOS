@@ -89,8 +89,8 @@ static unichar numericValues[] = {
     NSString *allMarkedVowelStr = @"āáăàaēéĕèeīíĭìiōóŏòoūúŭùuǖǘǚǜü";
     if ([lowerCasePinyinStr matchesPatternRegexPattern:@"[a-z]*[1-5]"]) {
         int tuneNumber = [PinyinFormatter getNumericValue:[lowerCasePinyinStr characterAtIndex:lowerCasePinyinStr.length -1]];
-      int indexOfA = [lowerCasePinyinStr indexOf:charA];
-      int indexOfE = [lowerCasePinyinStr indexOf:charE];
+      int indexOfA = [lowerCasePinyinStr indexOf:(int)charA];
+      int indexOfE = [lowerCasePinyinStr indexOf:(int)charE];
       int ouIndex = [lowerCasePinyinStr indexOfString:ouStr];
       if (-1 != indexOfA) {
         indexOfUnmarkedVowel = indexOfA;

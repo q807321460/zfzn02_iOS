@@ -74,7 +74,7 @@
         
         self.dataArray = [SBAEngineDataMgr getBrandsContainAppliancesArray:dict[kSBEngine_Data]];
         
-        JSDebug(@"SearchAppliance", @"brand count: %d",self.dataArray.count);
+        JSDebug(@"SearchAppliance", @"brand count: %lu",(unsigned long)self.dataArray.count);
         
         dispatch_async(dispatch_get_main_queue(), ^(void){
             [self hideHud];

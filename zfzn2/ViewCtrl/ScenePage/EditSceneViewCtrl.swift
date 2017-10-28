@@ -177,10 +177,10 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let electricIndex:Int = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_nElectricIndex
         let electricCode:String = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_sElectricCode
-        let electricName:String = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_sElectricName
-        let electricType:Int = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_nElectricType
+//        let electricName:String = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_sElectricName
+//        let electricType:Int = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_nElectricType
         let sceneIndex:Int = gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex
-        let roomIndex:Int = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_nRoomIndex
+//        let roomIndex:Int = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_nRoomIndex
         let orderInfo:String = gDC.mSceneList[m_nSceneListFoot].mSceneElectricList[m_nSceneElectricListFoot].m_sOrderInfo
 
 //        let webReturn = MyWebService.sharedInstance.AddSceneElectric(gDC.mUserInfo.m_sMasterCode, electricCode:electricCode, electricOrder:sElectricOrder, accountCode:gDC.mAccountInfo.m_sAccountCode, sceneIndex:sceneIndex, orderInfo:orderInfo, electricIndex:electricIndex, electricName:electricName, roomIndex:roomIndex, electricType:electricType)
