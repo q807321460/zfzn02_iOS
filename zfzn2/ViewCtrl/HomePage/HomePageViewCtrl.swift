@@ -86,7 +86,15 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func OnAlarmRecord(_ sender: Any) {
+        print("点击报警列表菜单")
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let nextView = sb.instantiateViewController(withIdentifier: "alarmRecordViewCtrl") as! AlarmRecordViewCtrl
+        self.navigationController?.pushViewController(nextView, animated: true)
+    }
+    
     @IBAction func OnAdd(_ sender: UIButton) {
         print("按下")
         if gDC.mUserInfo.m_nIsAdmin == 0 {

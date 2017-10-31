@@ -36,7 +36,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         if gDC.m_bUseRemoteService == true {//远程服务器
             m_URL_zfzn = URL(string: "http://101.201.211.87:8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
         }else {//本地服务器
-            m_URL_zfzn = URL(string: "http://192.168.1.112:8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
+            m_URL_zfzn = URL(string: "http://192.168.0.100:8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
         }
         m_URLRequest_zfzn = NSMutableURLRequest.init(url: m_URL_zfzn!)
         m_URLRequest_zfzn!.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -761,6 +761,29 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let methodName:String = "loadDoorRecord"
         let arrayKey = ["masterCode", "electricCode"]
         let arrayValue = [masterCode, electricCode]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        //在这里处理json字符串
+        let sJson = value.mainValue as! String
+        if let jsonData = sJson.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+            var json:JSON!
+            do { json = try JSON(data: jsonData) }
+            catch { print("json error"); return [] }
+            if let array = json.array {
+                return array
+            }else {
+                return []
+            }
+        }else {
+            return []
+        }
+    }
+    
+    func LoadAlarmRecord(masterCode:String) -> [JSON] {
+        let methodName:String = "loadAlarmRecord"
+        let arrayKey = ["masterCode"]
+        let arrayValue = [masterCode]
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")

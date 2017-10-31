@@ -78,22 +78,23 @@ class SensorViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSour
         let j:Int = mElectricFootList[indexPath.row]
         let nType:Int = gDC.mAreaList[i].mElectricList[j].m_nElectricType
         let cell:MySensorCell = tableView.dequeueReusableCell(withIdentifier: "mySensorCell", for: indexPath) as! MySensorCell
-        switch nType {
-        case 13:
-            cell.m_imageView.image = UIImage(named: "电器类型_传感器_温度")
-        case 14:
-            cell.m_imageView.image = UIImage(named: "电器类型_传感器_水浸")
-        case 15:
-            cell.m_imageView.image = UIImage(named: "电器类型_传感器_门磁")
-        case 16:
-            cell.m_imageView.image = UIImage(named: "电器类型_传感器_燃气")
-        case 17:
-            cell.m_imageView.image = UIImage(named: "电器类型_传感器_壁挂红外")
-        case 19:
-            cell.m_imageView.image = UIImage(named: "电器类型_传感器_烟雾")
-        default:
-            cell.m_imageView.image = nil
-        }
+        cell.m_imageView.image = UIImage(named: gDC.m_arrayElectricImage[nType] as! String)
+//        switch nType {
+//        case 13:
+//            cell.m_imageView.image = UIImage(named: "电器类型_传感器_温度")
+//        case 14:
+//            cell.m_imageView.image = UIImage(named: "电器类型_传感器_水浸")
+//        case 15:
+//            cell.m_imageView.image = UIImage(named: "电器类型_传感器_门磁")
+//        case 16:
+//            cell.m_imageView.image = UIImage(named: "电器类型_传感器_燃气")
+//        case 17:
+//            cell.m_imageView.image = UIImage(named: "电器类型_传感器_壁挂红外")
+//        case 19:
+//            cell.m_imageView.image = UIImage(named: "电器类型_传感器_烟雾")
+//        default:
+//            cell.m_imageView.image = nil
+//        }
         cell.m_labelArea.text = gDC.mAreaList[i].m_sAreaName
         cell.m_labelElectric.text = gDC.mAreaList[i].mElectricList[j].m_sElectricName
         var sExtras:String = gDC.mAreaList[i].mElectricList[j].m_sExtras
@@ -122,26 +123,27 @@ class SensorViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         let sStateInfo:String = gDC.mAreaList[i].mElectricList[j].m_sStateInfo
         let sInfo:String = (sStateInfo as NSString).substring(with: NSMakeRange(0, 2))
-        switch sInfo {
-        case "00":
-            cell.m_labelStateInfo.text = "普通"
-        case "01":
-            cell.m_labelStateInfo.text = "报警"
-        case "02":
-            cell.m_labelStateInfo.text = "防拆"
-        case "03":
-            cell.m_labelStateInfo.text = "报警+防拆"
-        case "04":
-            cell.m_labelStateInfo.text = "电量低"
-        case "05":
-            cell.m_labelStateInfo.text = "报警+电量低"
-        case "06":
-            cell.m_labelStateInfo.text = "防拆+电量低"
-        case "07":
-            cell.m_labelStateInfo.text = "报警+防拆+电量低"
-        default:
-            cell.m_labelStateInfo.text = "未知状态"
-        }
+        cell.m_labelStateInfo.text = gDC.m_arraySensorState[sInfo] as? String
+//        switch sInfo {
+//        case "00":
+//            cell.m_labelStateInfo.text = "普通"
+//        case "01":
+//            cell.m_labelStateInfo.text = "报警"
+//        case "02":
+//            cell.m_labelStateInfo.text = "防拆"
+//        case "03":
+//            cell.m_labelStateInfo.text = "报警+防拆"
+//        case "04":
+//            cell.m_labelStateInfo.text = "电量低"
+//        case "05":
+//            cell.m_labelStateInfo.text = "报警+电量低"
+//        case "06":
+//            cell.m_labelStateInfo.text = "防拆+电量低"
+//        case "07":
+//            cell.m_labelStateInfo.text = "报警+防拆+电量低"
+//        default:
+//            cell.m_labelStateInfo.text = "未知状态"
+//        }
         cell.m_nAreaFoot = i
         cell.m_nElectricFoot = j
         cell.delegate = self

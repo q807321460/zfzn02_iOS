@@ -17,6 +17,9 @@
 		1B0C06581E10C3AF0027290B /* DeleteElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0C06571E10C3AF0027290B /* DeleteElectric.xib */; };
 		1B0C065A1E10C3CE0027290B /* DeleteElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0C06591E10C3CE0027290B /* DeleteElectric.swift */; };
 		1B0D02BB1E037C3A00C412E5 /* AddAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D02BA1E037C3A00C412E5 /* AddAreaViewCtrl.swift */; };
+		1B0DDE6F1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DDE6E1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift */; };
+		1B0DDE711FA81F0F00C7CDDB /* AlarmRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0DDE701FA81F0F00C7CDDB /* AlarmRecordCell.xib */; };
+		1B0DDE751FA81F4D00C7CDDB /* AlarmRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DDE741FA81F4D00C7CDDB /* AlarmRecordCell.swift */; };
 		1B11F5881F98303D00C5C24E /* DoorRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B11F5871F98303D00C5C24E /* DoorRecordCell.xib */; };
 		1B11F58A1F98306700C5C24E /* DoorRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11F5891F98306700C5C24E /* DoorRecordCell.swift */; };
 		1B160C251E5871DF002F3BDA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B160C241E5871DF002F3BDA /* MessageViewController.m */; };
@@ -255,6 +258,9 @@
 		1B0C06571E10C3AF0027290B /* DeleteElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteElectric.xib; sourceTree = "<group>"; };
 		1B0C06591E10C3CE0027290B /* DeleteElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteElectric.swift; sourceTree = "<group>"; };
 		1B0D02BA1E037C3A00C412E5 /* AddAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1B0DDE6E1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmRecordViewCtrl.swift; path = HomePage/AlarmRecordViewCtrl.swift; sourceTree = "<group>"; };
+		1B0DDE701FA81F0F00C7CDDB /* AlarmRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmRecordCell.xib; sourceTree = "<group>"; };
+		1B0DDE741FA81F4D00C7CDDB /* AlarmRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecordCell.swift; sourceTree = "<group>"; };
 		1B11F5871F98303D00C5C24E /* DoorRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorRecordCell.xib; sourceTree = "<group>"; };
 		1B11F5891F98306700C5C24E /* DoorRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordCell.swift; sourceTree = "<group>"; };
 		1B160C231E5871DF002F3BDA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -668,6 +674,7 @@
 				1B67B6361E0FAE860034BB7D /* NirKxMenu */,
 				1B24C68F1DCB3B69006B2A24 /* HomePageViewCtrl.swift */,
 				1B24C6901DCB3B69006B2A24 /* MainTabBarCtrl.swift */,
+				1B0DDE6E1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -844,6 +851,8 @@
 				1B6749831EFB610E00AC98E3 /* MySensorCell.swift */,
 				1B11F5871F98303D00C5C24E /* DoorRecordCell.xib */,
 				1B11F5891F98306700C5C24E /* DoorRecordCell.swift */,
+				1B0DDE701FA81F0F00C7CDDB /* AlarmRecordCell.xib */,
+				1B0DDE741FA81F4D00C7CDDB /* AlarmRecordCell.swift */,
 			);
 			path = TabelCell;
 			sourceTree = "<group>";
@@ -1634,6 +1643,7 @@
 				1B4F49AA1E9483F900489545 /* MySharedAccountCell.xib in Resources */,
 				1B7667ED1EF3CA1C007B21B4 /* JdFailTipView.xib in Resources */,
 				1B9FD2011E1CE43E0050D843 /* MySceneElectricView.xib in Resources */,
+				1B0DDE711FA81F0F00C7CDDB /* AlarmRecordCell.xib in Resources */,
 				1B67B64B1E0FB8610034BB7D /* MyAccountImageCell.xib in Resources */,
 				1BF0B30C1F04A1DF00DA4F37 /* AddSceneCell.xib in Resources */,
 				1BF2E27D1E15079D00EC5E49 /* AddElectric.xib in Resources */,
@@ -1833,6 +1843,7 @@
 				1B7667EA1EF3CA1C007B21B4 /* JdDeviceInfoTableViewCell.m in Sources */,
 				1B0C065A1E10C3CE0027290B /* DeleteElectric.swift in Sources */,
 				1BD468F01E1E8F8000B2275B /* MyAreaCell.swift in Sources */,
+				1B0DDE751FA81F4D00C7CDDB /* AlarmRecordCell.swift in Sources */,
 				1B24C6921DCB3B69006B2A24 /* MainTabBarCtrl.swift in Sources */,
 				1BF506081DB74EB8002AA286 /* SetPasswordViewCtrl.swift in Sources */,
 				1B4F49AE1E94DCA600489545 /* SharedAccountViewCtrl.swift in Sources */,
@@ -1871,6 +1882,7 @@
 				1B67B6461E0FB8610034BB7D /* MiniElectric.swift in Sources */,
 				1B935A7E1F15CCC00017F694 /* ElecHornViewCtrl.swift in Sources */,
 				1B0868D81DE9675B0045E531 /* AccountData.swift in Sources */,
+				1B0DDE6F1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift in Sources */,
 				1BF524751EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift in Sources */,
 				1B7667F21EF3CA1C007B21B4 /* TopAlertView.m in Sources */,
 				1BACDAA81DCDF0A500BA85C2 /* SKLaunchMenuItem.swift in Sources */,

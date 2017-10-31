@@ -25,26 +25,32 @@ class ElecSensorViewCtrl: ElecSuperViewCtrl {//, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricName
-        let type:Int = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nElectricType
-        switch type {
-        case 13:
-            m_imageElectric.image = UIImage(named: "电器类型_传感器_温度")
-        case 14:
-            m_imageElectric.image = UIImage(named: "电器类型_传感器_水浸")
-        case 15:
-            m_imageElectric.image = UIImage(named: "电器类型_传感器_门磁")
+        let nType:Int = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nElectricType
+        m_imageElectric.image = UIImage(named: gDC.m_arrayElectricImage[nType] as! String)
+        if (nType == 15) {
             m_labelScene2.isHidden = false
             m_imageScene2.isHidden = false
             m_labelSceneName2.isHidden = false
-        case 16:
-            m_imageElectric.image = UIImage(named: "电器类型_传感器_燃气")
-        case 17:
-            m_imageElectric.image = UIImage(named: "电器类型_传感器_壁挂红外")
-        case 19:
-            m_imageElectric.image = UIImage(named: "电器类型_传感器_烟雾")
-        default:
-            break
         }
+//        switch type {
+//        case 13:
+//            m_imageElectric.image = UIImage(named: "电器类型_传感器_温度")
+//        case 14:
+//            m_imageElectric.image = UIImage(named: "电器类型_传感器_水浸")
+//        case 15:
+//            m_imageElectric.image = UIImage(named: "电器类型_传感器_门磁")
+//            m_labelScene2.isHidden = false
+//            m_imageScene2.isHidden = false
+//            m_labelSceneName2.isHidden = false
+//        case 16:
+//            m_imageElectric.image = UIImage(named: "电器类型_传感器_燃气")
+//        case 17:
+//            m_imageElectric.image = UIImage(named: "电器类型_传感器_壁挂红外")
+//        case 19:
+//            m_imageElectric.image = UIImage(named: "电器类型_传感器_烟雾")
+//        default:
+//            break
+//        }
         m_labelAreaName.text = gDC.mAreaList[m_nAreaListFoot].m_sAreaName
         //m_nSceneSelectedIndex = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nSceneIndex
         RefreshUI()
