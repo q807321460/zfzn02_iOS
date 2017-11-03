@@ -9,7 +9,7 @@
 import UIKit
 
 class WebSocket: NSObject, SRWebSocketDelegate {
-    let m_url:String = "http://101.201.211.87:8080/zfzn02/websocket/"
+    let m_url:String = "http://101.201.211.87:8080/zfzn02/websocket_app/"
     var m_bConnected = false
     var m_bPolling:Bool = false
     var m_timerPolling:Timer!//心跳包定时器，判断本地连接状态
