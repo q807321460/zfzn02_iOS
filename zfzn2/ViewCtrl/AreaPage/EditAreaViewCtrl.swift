@@ -6,7 +6,11 @@
 //  Copyright © 2016年 Hanwen Kong. All rights reserved.
 //
 
+
 import UIKit
+private let SCREEN_WIDTH = UIScreen.main.bounds.width
+private let SCREEN_HEIGHT = UIScreen.main.bounds.height
+private let CELL_WIDTH:CGFloat = (SCREEN_WIDTH - 2)/3
 
 class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, VPImageCropperDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -17,6 +21,16 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     @IBOutlet weak var m_btnDeleteArea: UIButton!
     @IBOutlet weak var m_btnDeleteElectric: UIButton!
     var m_nAreaListFoot:Int!
+//    var m_bDraging:Bool = false//是否处理正被拖动的状态
+    var m_nBeginIndexPath: IndexPath?
+    var m_nIndexPath: IndexPath?
+    var m_nTargetIndexPath: IndexPath?
+    var m_cellDraging: DeleteElectric!
+//    private lazy var m_cellDraging: DeleteElectric = {
+//        let cell = DeleteElectric(frame: CGRect(x: 0, y: 0, width: CELL_WIDTH, height: CELL_WIDTH))
+//        cell.isHidden = true
+//        return cell
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +46,15 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         //设置与collection相关的参数
         m_collectionElectric.register(DeleteElectric.self, forCellWithReuseIdentifier: "deleteElectric")
         m_collectionElectric.register(UINib(nibName: "DeleteElectric", bundle: nil), forCellWithReuseIdentifier: "deleteElectric")
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(LongPressGesture(_:)))
+        m_collectionElectric.addGestureRecognizer(longPress)
+        m_cellDraging = Bundle.main.loadNibNamed("DeleteElectric", owner: self, options: nil)?.last as! DeleteElectric
+        m_cellDraging.isHidden = true
+        m_collectionElectric.addSubview(m_cellDraging)
+//        if (m_cellDraging == nil) {
+//            m_cellDraging
+//            cell= (QGLIMGroupListCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"QGLIMGroupListCell" owner:self options:nil]  lastObject];
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -172,6 +195,39 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         let webReturn:String = MyWebService.sharedInstance.UpdateUserRoom(gDC.mUserInfo.m_sMasterCode, roomIndex:gDC.mAreaList[m_nAreaListFoot].m_nAreaIndex, roomName:m_eAreaName.text!, roomImg:0)
         WebUpdateArea(webReturn)
     }
+    
+    func SetImageName(type:Int, orderInfo: String) -> String {
+        switch type {
+        case 1:
+            return "电器_一键开关_关"
+        case 2:
+            if orderInfo == "01" {
+                return "电器_两键开关_左关"
+            }else {
+                return "电器_两键开关_右关"
+            }
+        case 3:
+            if orderInfo == "01" {
+                return "电器_三键开关_左关"
+            }else if orderInfo == "02" {
+                return "电器_三键开关_中关"
+            }else {
+                return "电器_三键开关_右关"
+            }
+        case 4, 10:
+            if orderInfo == "01" {
+                return "电器_四键开关_左上关"
+            }else if orderInfo == "02" {
+                return "电器_四键开关_右上关"
+            }else if orderInfo == "03" {
+                return "电器_四键开关_左下关"
+            }else {
+                return "电器_四键开关_右下关"
+            }
+        default:
+            return gDC.m_arrayElectricImage[type] as! String
+        }
+    }
     ////////////////////////////////////////////////////////////////////////////////////
     func WebUpdateArea(_ responseValue:String){
         switch responseValue{
@@ -239,19 +295,6 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         }
     }
     
-//    func WebDeleteSceneElectric(_ responseValue:String, currentJ:Int, currentK:Int){
-//        switch responseValue{
-//        case "WebError":
-//            break
-//        case "1":
-//            gDC.mSceneElectricData.DeleteSceneElectricByFoot(currentJ, electricIndex:gDC.mSceneList[currentJ].mSceneElectricList[currentK].m_nElectricIndex)
-//            print("对应的情景电器删除完成")
-//        default:
-//            ShowNoticeDispatch("错误", content: "在情景模式中删除失败", duration: 1.0)
-//            break
-//        }
-//    }
-    
     ////////////////////////////////////////////////////////////////////////////////////
     //在ImageCropper自定义编辑界面中点击取消
     func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
@@ -265,7 +308,6 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         })
     }
     
-    ////////////////////////////////////////////////////////////////////////////////////
     //    取消图片选择操作
     func imagePickerControllerDidCancel(_ picker:UIImagePickerController)
     {
@@ -286,6 +328,83 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
+    //MARK: - 长按动作
+    func LongPressGesture(_ tap: UILongPressGestureRecognizer) {
+        let point = tap.location(in: m_collectionElectric)
+        switch tap.state {
+        case UIGestureRecognizerState.began:
+            dragBegan(point: point)
+        case UIGestureRecognizerState.changed:
+            drageChanged(point: point)
+        case UIGestureRecognizerState.ended:
+            drageEnded(point: point)
+        case UIGestureRecognizerState.cancelled:
+            drageEnded(point: point)
+        default: break
+        }
+    }
+    
+    //MARK: - 长按开始
+    private func dragBegan(point: CGPoint) {
+        //将所有电器的选中状态取消掉
+        for electric in gDC.mAreaList[m_nAreaListFoot].mElectricList {
+            electric.m_bSelected = false
+        }
+        m_nIndexPath = m_collectionElectric.indexPathForItem(at: point)
+        m_nBeginIndexPath = m_nIndexPath//用于记录最开始的sequ值，方便长久保存排序顺序
+        if (m_nIndexPath == nil) {// || (m_nIndexPath?.row)! >= gDC.mAreaList[m_nAreaListFoot].mElectricList.count
+            return
+        }
+        let item = m_collectionElectric.cellForItem(at: m_nIndexPath!) as? DeleteElectric
+        item?.isHidden = true
+        //在这里显示并初始化m_cellDraging这个单元
+        m_cellDraging.isHidden = false
+        m_cellDraging.frame = (item?.frame)!
+        m_cellDraging.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        for i in 0..<gDC.mAreaList[m_nAreaListFoot].mElectricList.count {
+            if (gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_nElectricSequ == m_nBeginIndexPath?.row) {
+                let sElectricName:String = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sElectricName
+                m_cellDraging.m_labelElectric.text = sElectricName
+                m_cellDraging.m_imageSelected.isHidden = true
+                let nType = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_nElectricType
+                let sOrderInfo = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo
+                m_cellDraging.m_imageElectric.image = UIImage(named : SetImageName(type: nType, orderInfo: sOrderInfo))
+            }
+        }
+    }
+    //MARK: - 长按过程
+    private func drageChanged(point: CGPoint) {
+        if (m_nIndexPath == nil) {
+            return
+        }
+        m_cellDraging.center = point
+        m_nTargetIndexPath = m_collectionElectric.indexPathForItem(at: point)
+        if (m_nTargetIndexPath == nil) {
+            return
+        }
+        //交换位置
+        m_collectionElectric.moveItem(at: m_nIndexPath!, to: m_nTargetIndexPath!)
+        m_nIndexPath = m_nTargetIndexPath
+    }
+    
+    //MARK: - 长按结束
+    private func drageEnded(point: CGPoint) {
+        if (m_nIndexPath == nil) {
+            return
+        }
+        let endCell = m_collectionElectric.cellForItem(at: m_nIndexPath!)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.m_cellDraging.transform = CGAffineTransform.identity
+            self.m_cellDraging.center = (endCell?.center)!
+        }, completion: {
+            (finish) -> () in
+            endCell?.isHidden = false
+            self.m_cellDraging.isHidden = true
+            self.m_nIndexPath = nil
+        })
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return gDC.mAreaList[m_nAreaListFoot].mElectricList.count
@@ -295,6 +414,7 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     {
         let viewWidth = collectionView.frame.width
         let cellWidth = (viewWidth-2)/3
+        
         return CGSize(width: cellWidth, height: cellWidth)
     }
     
@@ -312,37 +432,8 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
                 }
                 cell.m_labelElectric.text = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sElectricName
                 let nElectricType = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_nElectricType
-                switch nElectricType {
-                case 1:
-                    cell.m_imageElectric.image = UIImage(named: "电器_一键开关_关")
-                case 2:
-                    if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "01" {
-                        cell.m_imageElectric.image = UIImage(named: "电器_两键开关_左关")
-                    }else {
-                        cell.m_imageElectric.image = UIImage(named: "电器_两键开关_右关")
-                    }
-                case 3:
-                    if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "01" {
-                        cell.m_imageElectric.image = UIImage(named: "电器_三键开关_左关")
-                    }else if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "02" {
-                        cell.m_imageElectric.image = UIImage(named: "电器_三键开关_中关")
-                    }else {
-                        cell.m_imageElectric.image = UIImage(named: "电器_三键开关_右关")
-                    }
-                case 4, 10:
-                    if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "01" {
-                        cell.m_imageElectric.image = UIImage(named: "电器_四键开关_左上关")
-                    }else if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "02" {
-                        cell.m_imageElectric.image = UIImage(named: "电器_四键开关_右上关")
-                    }else if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "03" {
-                        cell.m_imageElectric.image = UIImage(named: "电器_四键开关_左下关")
-                    }else {
-                        cell.m_imageElectric.image = UIImage(named: "电器_四键开关_右下关")
-                    }
-                default:
-                    cell.m_imageElectric.image = UIImage(named: gDC.m_arrayElectricImage[nElectricType] as! String)
-                    break
-                }
+                let sOrderInfo = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo
+                cell.m_imageElectric.image = UIImage(named: SetImageName(type: nElectricType, orderInfo: sOrderInfo))
             }
         }
         
