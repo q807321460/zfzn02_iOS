@@ -803,6 +803,16 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         }
     }
     
+    func UpdateElectricSequ(masterCode:String, electricIndex:Int, roomIndex:Int, oldElectricSequ:Int, newElectricSequ:Int) -> String {
+        let methodName:String = "updateElectricSequ"
+        let arrayKey = ["masterCode", "electricIndex", "roomIndex", "oldElectricSequ","newElectricSequ"]
+        let arrayValue = [masterCode, electricIndex, roomIndex, oldElectricSequ, newElectricSequ] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        return (value.mainValue as! String)
+    }
+    
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {
 //        if m_bPolling == true {

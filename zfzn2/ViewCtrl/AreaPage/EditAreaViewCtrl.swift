@@ -21,16 +21,11 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     @IBOutlet weak var m_btnDeleteArea: UIButton!
     @IBOutlet weak var m_btnDeleteElectric: UIButton!
     var m_nAreaListFoot:Int!
-//    var m_bDraging:Bool = false//是否处理正被拖动的状态
     var m_nBeginIndexPath: IndexPath?
     var m_nIndexPath: IndexPath?
     var m_nTargetIndexPath: IndexPath?
     var m_cellDraging: DeleteElectric!
-//    private lazy var m_cellDraging: DeleteElectric = {
-//        let cell = DeleteElectric(frame: CGRect(x: 0, y: 0, width: CELL_WIDTH, height: CELL_WIDTH))
-//        cell.isHidden = true
-//        return cell
-//    }()
+    var m_nDraggedElectricIndex: Int! = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +46,6 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         m_cellDraging = Bundle.main.loadNibNamed("DeleteElectric", owner: self, options: nil)?.last as! DeleteElectric
         m_cellDraging.isHidden = true
         m_collectionElectric.addSubview(m_cellDraging)
-//        if (m_cellDraging == nil) {
-//            m_cellDraging
-//            cell= (QGLIMGroupListCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"QGLIMGroupListCell" owner:self options:nil]  lastObject];
-//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -229,105 +220,6 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         }
     }
     ////////////////////////////////////////////////////////////////////////////////////
-    func WebUpdateArea(_ responseValue:String){
-        switch responseValue{
-        case "WebError":
-            break
-        case "1":
-            //修改到本地数据库
-            let setDict:NSMutableDictionary = ["room_name":m_eAreaName.text!]
-            let requiredDict:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "room_index":gDC.mAreaList[m_nAreaListFoot].m_nAreaIndex]
-            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "userroom")
-            
-            //将图片保存到本地，如果编辑过图片，则重新保存
-            if m_imageArea.image != nil {
-                gDC.mAreaList[m_nAreaListFoot].m_imageArea = m_imageArea.image!
-                //如果该图片存在的话，首先删除该图片
-                let fullPath = GetFileFullPath(gDC.mUserInfo.m_sMasterCode+"/area/", fileName: "\(gDC.mAreaList[m_nAreaListFoot].m_sAreaName).png")
-                DeleteFile(fullPath)
-                SaveImage(m_imageArea.image!, newSize: CGSize(width: 720, height: 400), percent: 0.5, imagePath: gDC.mUserInfo.m_sMasterCode+"/area/", imageName: "\(m_eAreaName.text!).png")
-                self.navigationController?.popViewController(animated: true)
-            }else {
-                print("暂时不添加图片")
-            }
-            //修改内存数据
-            gDC.mAreaList[m_nAreaListFoot].m_sAreaName = m_eAreaName.text!
-            //同样也涉及到图片的上传和下载的问题
-            gDC.m_bRefreshAreaList = true
-            self.navigationController?.popViewController(animated: true)
-        default:
-            ShowNoticeDispatch("错误", content: "更新区域失败", duration: 1.0)
-            break
-        }
-    }
-    
-    func WebDeleteArea(_ responseValue:String){
-        switch responseValue{
-        case "WebError":
-            break
-        case "1":
-            //删除本地图片
-            let fullPath = GetFileFullPath(gDC.mUserInfo.m_sMasterCode+"/area/", fileName: "\(gDC.mAreaList[m_nAreaListFoot].m_sAreaName).png")
-            DeleteFile(fullPath)
-            gDC.mAreaData.DeleteAreaByFoot(m_nAreaListFoot)
-            //返回后保证能够刷新界面
-            gDC.m_bRefreshAreaList = true
-            //删除房间时，对应的界面并没有被释放掉，所以无法返回其父类视图
-            self.navigationController?.popViewController(animated: true)
-        default:
-            ShowNoticeDispatch("错误", content: "区域删除失败", duration: 1.0)
-            break
-        }
-    }
-    
-    func WebDeleteElectric(_ responseValue:String, currentI:Int) {
-        switch responseValue{
-        case "WebError":
-            break
-        case "1":
-            gDC.mElectricData.DeleteElectric(gDC.mUserInfo.m_sMasterCode, electricIndex:gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricIndex, electricSequ:gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricSequ, areaFoot:m_nAreaListFoot)
-            //返回后保证能够刷新界面
-            gDC.m_bRefreshAreaList = true
-            m_collectionElectric.reloadData()
-        default:
-            ShowNoticeDispatch("错误", content: "电器删除失败", duration: 1.0)
-            break
-        }
-    }
-    
-    ////////////////////////////////////////////////////////////////////////////////////
-    //在ImageCropper自定义编辑界面中点击取消
-    func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
-        return
-    }
-    
-    //在ImageCropper自定义编辑界面点击完成
-    func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
-        cropperViewController.dismiss(animated: true, completion: {()->Void in
-            self.m_imageArea.image = editedImage
-        })
-    }
-    
-    //    取消图片选择操作
-    func imagePickerControllerDidCancel(_ picker:UIImagePickerController)
-    {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    //    选择完图片操作
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [AnyHashable: Any]!) {
-        //在这里调用网络通讯方法，上传图片至服务器...
-        let width_view:CGFloat = self.view.bounds.width
-        let height_view:CGFloat = self.view.bounds.height
-        let height_image:CGFloat = width_view*40/72
-        self.dismiss(animated: true, completion: {()->Void in
-            let imgCropper:VPImageCropperViewController = VPImageCropperViewController.init(image: image, cropFrame: CGRect(x: 0,y: (height_view-height_image)/2,width: width_view,height: height_image), limitScaleRatio: 3)
-            imgCropper.delegate = self
-            self.present(imgCropper, animated: true, completion: nil)
-        })
-    }
-    
-    ////////////////////////////////////////////////////////////////////////////////////
     //MARK: - 长按动作
     func LongPressGesture(_ tap: UILongPressGestureRecognizer) {
         let point = tap.location(in: m_collectionElectric)
@@ -346,14 +238,17 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     
     //MARK: - 长按开始
     private func dragBegan(point: CGPoint) {
+        m_nIndexPath = m_collectionElectric.indexPathForItem(at: point)
+        if (m_nIndexPath == nil) {// || (m_nIndexPath?.row)! >= gDC.mAreaList[m_nAreaListFoot].mElectricList.count
+            return
+        }
+        m_nBeginIndexPath = m_nIndexPath//用于记录最开始的sequ值，方便长久保存排序顺序
         //将所有电器的选中状态取消掉
         for electric in gDC.mAreaList[m_nAreaListFoot].mElectricList {
             electric.m_bSelected = false
-        }
-        m_nIndexPath = m_collectionElectric.indexPathForItem(at: point)
-        m_nBeginIndexPath = m_nIndexPath//用于记录最开始的sequ值，方便长久保存排序顺序
-        if (m_nIndexPath == nil) {// || (m_nIndexPath?.row)! >= gDC.mAreaList[m_nAreaListFoot].mElectricList.count
-            return
+            if (electric.m_nElectricSequ == m_nBeginIndexPath?.row) {
+                m_nDraggedElectricIndex = electric.m_nElectricIndex
+            }
         }
         let item = m_collectionElectric.cellForItem(at: m_nIndexPath!) as? DeleteElectric
         item?.isHidden = true
@@ -402,6 +297,13 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
             self.m_cellDraging.isHidden = true
             self.m_nIndexPath = nil
         })
+        if (m_nIndexPath == m_nBeginIndexPath) {
+            return
+        }
+        //调用服务器接口，实现sequ的换位
+        let webReturn = MyWebService.sharedInstance.UpdateElectricSequ(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: m_nDraggedElectricIndex, roomIndex: gDC.mAreaList[m_nAreaListFoot].m_nAreaIndex, oldElectricSequ: (m_nBeginIndexPath?.row)!, newElectricSequ: (m_nIndexPath?.row)!)
+        WebUpdateElectricSequ(webReturn, electricIndex: m_nDraggedElectricIndex, oldSequ: (m_nBeginIndexPath?.row)!, newSequ: (m_nIndexPath?.row)!)
+        m_collectionElectric.reloadData()
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
@@ -470,5 +372,117 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
             print("进入imagePickerController")
         })
     }
-
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    //在ImageCropper自定义编辑界面中点击取消
+    func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
+        return
+    }
+    
+    //在ImageCropper自定义编辑界面点击完成
+    func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
+        cropperViewController.dismiss(animated: true, completion: {()->Void in
+            self.m_imageArea.image = editedImage
+        })
+    }
+    
+    //    取消图片选择操作
+    func imagePickerControllerDidCancel(_ picker:UIImagePickerController)
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //    选择完图片操作
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [AnyHashable: Any]!) {
+        //在这里调用网络通讯方法，上传图片至服务器...
+        let width_view:CGFloat = self.view.bounds.width
+        let height_view:CGFloat = self.view.bounds.height
+        let height_image:CGFloat = width_view*40/72
+        self.dismiss(animated: true, completion: {()->Void in
+            let imgCropper:VPImageCropperViewController = VPImageCropperViewController.init(image: image, cropFrame: CGRect(x: 0,y: (height_view-height_image)/2,width: width_view,height: height_image), limitScaleRatio: 3)
+            imgCropper.delegate = self
+            self.present(imgCropper, animated: true, completion: nil)
+        })
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    func WebUpdateArea(_ responseValue:String){
+        switch responseValue{
+        case "WebError":
+            break
+        case "1":
+            //修改到本地数据库
+            let setDict:NSMutableDictionary = ["room_name":m_eAreaName.text!]
+            let requiredDict:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "room_index":gDC.mAreaList[m_nAreaListFoot].m_nAreaIndex]
+            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "userroom")
+            
+            //将图片保存到本地，如果编辑过图片，则重新保存
+            if m_imageArea.image != nil {
+                gDC.mAreaList[m_nAreaListFoot].m_imageArea = m_imageArea.image!
+                //如果该图片存在的话，首先删除该图片
+                let fullPath = GetFileFullPath(gDC.mUserInfo.m_sMasterCode+"/area/", fileName: "\(gDC.mAreaList[m_nAreaListFoot].m_sAreaName).png")
+                DeleteFile(fullPath)
+                SaveImage(m_imageArea.image!, newSize: CGSize(width: 720, height: 400), percent: 0.5, imagePath: gDC.mUserInfo.m_sMasterCode+"/area/", imageName: "\(m_eAreaName.text!).png")
+                self.navigationController?.popViewController(animated: true)
+            }else {
+                print("暂时不添加图片")
+            }
+            //修改内存数据
+            gDC.mAreaList[m_nAreaListFoot].m_sAreaName = m_eAreaName.text!
+            //同样也涉及到图片的上传和下载的问题
+            gDC.m_bRefreshAreaList = true
+            self.navigationController?.popViewController(animated: true)
+        default:
+            ShowNoticeDispatch("错误", content: "更新区域失败", duration: 1.0)
+            break
+        }
+    }
+    
+    func WebDeleteArea(_ responseValue:String){
+        switch responseValue{
+        case "WebError":
+            break
+        case "1":
+            //删除本地图片
+            let fullPath = GetFileFullPath(gDC.mUserInfo.m_sMasterCode+"/area/", fileName: "\(gDC.mAreaList[m_nAreaListFoot].m_sAreaName).png")
+            DeleteFile(fullPath)
+            gDC.mAreaData.DeleteAreaByFoot(m_nAreaListFoot)
+            //返回后保证能够刷新界面
+            gDC.m_bRefreshAreaList = true
+            //删除房间时，对应的界面并没有被释放掉，所以无法返回其父类视图
+            self.navigationController?.popViewController(animated: true)
+        default:
+            ShowNoticeDispatch("错误", content: "区域删除失败", duration: 1.0)
+            break
+        }
+    }
+    
+    func WebDeleteElectric(_ responseValue:String, currentI:Int) {
+        switch responseValue{
+        case "WebError":
+            break
+        case "1":
+            gDC.mElectricData.DeleteElectric(gDC.mUserInfo.m_sMasterCode, electricIndex:gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricIndex, electricSequ:gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricSequ, areaFoot:m_nAreaListFoot)
+            //返回后保证能够刷新界面
+            gDC.m_bRefreshAreaList = true
+            m_collectionElectric.reloadData()
+        default:
+            ShowNoticeDispatch("错误", content: "电器删除失败", duration: 1.0)
+            break
+        }
+    }
+    
+    func WebUpdateElectricSequ(_ responseValue:String, electricIndex:Int, oldSequ:Int, newSequ:Int) {
+        switch responseValue{
+        case "WebError":
+            break
+        case "1":
+            gDC.mElectricData.UpdateElectricSequ(electricIndex: electricIndex, roomFoot: m_nAreaListFoot, oldSequ: oldSequ, newSequ: newSequ)
+            gDC.m_bRefreshAreaList = true
+        default:
+            ShowNoticeDispatch("错误", content: "电器位置调整失败", duration: 0.8)
+            break
+        }
+    }
+    
 }

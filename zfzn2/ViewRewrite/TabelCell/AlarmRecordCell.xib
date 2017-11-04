@@ -26,7 +26,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房间名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVT-ZB-HYb">
-                        <rect key="frame" x="204" y="8" width="108" height="19.5"/>
+                        <rect key="frame" x="204" y="9.5" width="108" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -55,11 +55,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="CVT-ZB-HYb" secondAttribute="trailing" constant="8" id="9Dj-KX-wba"/>
-                    <constraint firstItem="CVT-ZB-HYb" firstAttribute="top" secondItem="TQM-gF-qht" secondAttribute="top" id="9Ye-0G-avp"/>
                     <constraint firstItem="TQM-gF-qht" firstAttribute="leading" secondItem="YES-NM-KsO" secondAttribute="trailing" constant="12" id="ATt-B8-Kwt"/>
                     <constraint firstAttribute="trailing" secondItem="l35-Pw-ujU" secondAttribute="trailing" constant="8" id="HqA-jL-NFh"/>
                     <constraint firstItem="CVT-ZB-HYb" firstAttribute="leading" secondItem="TQM-gF-qht" secondAttribute="trailing" constant="8" id="Jo4-7o-bXU"/>
                     <constraint firstAttribute="trailing" secondItem="hI1-UL-035" secondAttribute="trailing" constant="8" id="LmE-ih-29u"/>
+                    <constraint firstItem="CVT-ZB-HYb" firstAttribute="bottom" secondItem="TQM-gF-qht" secondAttribute="bottom" id="M0q-HN-JDr"/>
                     <constraint firstItem="hI1-UL-035" firstAttribute="leading" secondItem="YES-NM-KsO" secondAttribute="trailing" constant="12" id="M1x-Ka-kao"/>
                     <constraint firstItem="hI1-UL-035" firstAttribute="bottom" secondItem="YES-NM-KsO" secondAttribute="bottom" id="T0o-At-5A6"/>
                     <constraint firstItem="l35-Pw-ujU" firstAttribute="top" secondItem="TQM-gF-qht" secondAttribute="bottom" constant="8" id="YeT-ar-PxK"/>

@@ -69,13 +69,14 @@ let g_dAnimationStartOffset:CGFloat = -10//弹出视图从上方弹出的滑动�
     var m_sCityName:String = "北京"//保存城市名，用于获取天气信息
     var m_sWeatherFrom:String = "0"//保存初始天气图片名
     var m_sWeatherTo:String = "1"//保存后续天气图片名
+    
     var m_sWeatherTemperature:String = "获取温度失败"//温度值，默认为失败
     var m_sWeatherInfo:String = "获取天气信息失败"//其他天气信息，默认为失败
     
     var m_dbVersionOld:Int = -1//因为更新软件时，沙盒中的数据库等没有变化，因此需要判断先前的版本是多少
     var m_bUseProgramSQL:Bool = true     //是否使用本地工程内数据库，该变量只有在调试时使用，基本用不上了
     var m_bTestRemote:Bool = false        //【醒目】是否在本地服务器下测试远程控制，这个在上传时一定要记得修改回来
-    var m_bUseRemoteService:Bool = true   //【醒目】是否使用远程服务器，若不然使用本地服务器，这个在上传时一定要记得修改回来
+    var m_bUseRemoteService:Bool = false   //【醒目】是否使用远程服务器，若不然使用本地服务器，这个在上传时一定要记得修改回来
     var m_bRemote:Bool = true            //是否处于远程状态
     var m_sLastMasterCode:String!          //上一次登录的主机编码（确定是否为本地主机）
     

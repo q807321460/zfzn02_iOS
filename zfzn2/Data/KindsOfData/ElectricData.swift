@@ -510,6 +510,29 @@ class ElectricData: NSObject {
         let setDict:NSMutableDictionary = ["extras": gDC.mAreaList[nAreaFoot].mElectricList[nElectricFoot].m_sExtras]
         gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "electrics")
     }
+    
+    func UpdateElectricSequ(electricIndex:Int, roomFoot:Int, oldSequ:Int, newSequ:Int) {
+        //只修改内存数据，数据库讲道理是没有必要更新的？
+        if (oldSequ < newSequ) {
+            for electric in gDC.mAreaList[roomFoot].mElectricList {
+                if (electric.m_nElectricSequ > oldSequ && electric.m_nElectricSequ <= newSequ) {
+                    electric.m_nElectricSequ = electric.m_nElectricSequ - 1
+                }
+            }
+        }else {
+            for electric in gDC.mAreaList[roomFoot].mElectricList {
+                if (electric.m_nElectricSequ >= newSequ && electric.m_nElectricSequ < oldSequ) {
+                    electric.m_nElectricSequ = electric.m_nElectricSequ + 1
+                }
+            }
+        }
+        for electric in gDC.mAreaList[roomFoot].mElectricList {
+            if (electric.m_nElectricIndex == electricIndex) {
+                electric.m_nElectricSequ = newSequ
+            }
+        }
+    }
+    
  }
 
 class ElectricInfoData:NSObject {

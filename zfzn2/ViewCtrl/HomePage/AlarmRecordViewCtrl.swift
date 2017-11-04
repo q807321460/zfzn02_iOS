@@ -73,7 +73,7 @@ class AlarmRecordViewCtrl: UIViewController, UITableViewDelegate, UITableViewDat
         let nType:Int = m_arrayJSON[row]["electricType"].int!
         cell.m_imageElectric.image = UIImage(named: gDC.m_arrayElectricImage[nType] as! String)//.init(named: gDC.m_arrayElectricImage[nType])
         cell.m_labelElectricName.text = m_arrayJSON[row]["electricName"].string!
-        cell.m_labelRoomName.text = m_arrayJSON[row]["roomName"].string!
+        cell.m_labelRoomName.text = "房间：" + m_arrayJSON[row]["roomName"].string!
         cell.m_labelAlarmTime.text = "报警时间：" + m_arrayJSON[row]["alarmTime"].string!
         let sInfo = (m_arrayJSON[row]["stateInfo"].string! as NSString).substring(with: NSMakeRange(0, 2))
         cell.m_labelStateInfo.text = "报警状态：" + (gDC.m_arraySensorState[sInfo] as? String)!
