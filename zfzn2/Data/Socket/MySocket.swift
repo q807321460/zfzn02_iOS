@@ -288,7 +288,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             gDC.m_bRemote = true
             g_notiCenter.post(name: Notification.Name(rawValue: "RefreshRemoteState"), object: self)
             MyWebService.sharedInstance.OpenPolling()//开启web的轮询,如果已经开启则不需要继续开启
-            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
+//            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
         }
     }
     

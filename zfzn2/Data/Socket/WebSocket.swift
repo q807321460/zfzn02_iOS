@@ -86,8 +86,17 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     
     func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
         print("【websocket】接收到消息——\(message as! String)")
-        if (RefreshElectricStates(message as! String) == true) {
-            g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
+        if (message as! String == "sync") {
+            print("【websocket】接收到同步消息，需要重新加载所有数据")
+        }else if ((message as! String).subStringTo(1) == "<") {//说明是电器状态的更新
+            if (gDC.m_bRemote == false) {//如果当前是本地连接状态，则自动忽略接收的websocket消息
+                return
+            }
+            if (RefreshElectricStates(message as! String) == true) {
+                g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
+            }
+        }else {
+            print("【websocket】接收到其他的消息")
         }
     }
     

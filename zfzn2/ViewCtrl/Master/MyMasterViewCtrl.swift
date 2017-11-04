@@ -203,13 +203,15 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
             gDC.m_bRemote = false
             MySocket.sharedInstance.InitReceiveTcpSocekt()//05.02添加
-            WebSocket.sharedInstance.CloseWebSocket()
+//            WebSocket.sharedInstance.CloseWebSocket()
         }else {
             ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
             MyWebService.sharedInstance.OpenPolling()
-            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.m_bRemote = true
         }
+        //先关闭当前的websocket，再开启新的websocket服务
+        WebSocket.sharedInstance.CloseWebSocket()
+        WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
         
         //重新刷新区域界面
         gDC.m_bRefreshAreaList = true

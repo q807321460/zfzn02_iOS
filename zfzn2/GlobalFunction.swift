@@ -14,7 +14,7 @@ import Photos
  *  全局函数——仅测试用
  */
 func TempFunc() {
-//    WebSocket.sharedInstance.ConnectToWebSocket(masterCode: "123456")
+    
 }
 
 /**swift

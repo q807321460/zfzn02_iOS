@@ -307,9 +307,10 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }else {
             print("主机不在本地，使用远程控制")
             MyWebService.sharedInstance.OpenPolling()
-            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.m_bRemote = true
         }
+        //不论是否本地连接，都要开启websocket服务
+        WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
         //修改整体plist文件数据
         let filePath = DataFilePath("data.plist")//获得本地data.plist文件的路径
         let dict = NSMutableDictionary.init(contentsOfFile: filePath)//根据plist文件路径读取到数据字典
