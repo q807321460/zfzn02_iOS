@@ -14,57 +14,17 @@
 		1B0868D81DE9675B0045E531 /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0868D41DE9675B0045E531 /* AccountData.swift */; };
 		1B0868DA1DE9675B0045E531 /* AreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0868D61DE9675B0045E531 /* AreaData.swift */; };
 		1B0868DB1DE9675B0045E531 /* ElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0868D71DE9675B0045E531 /* ElectricData.swift */; };
-		1B0C06581E10C3AF0027290B /* DeleteElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0C06571E10C3AF0027290B /* DeleteElectric.xib */; };
-		1B0C065A1E10C3CE0027290B /* DeleteElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0C06591E10C3CE0027290B /* DeleteElectric.swift */; };
-		1B0D02BB1E037C3A00C412E5 /* AddAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D02BA1E037C3A00C412E5 /* AddAreaViewCtrl.swift */; };
-		1B0DDE6F1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DDE6E1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift */; };
-		1B0DDE711FA81F0F00C7CDDB /* AlarmRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0DDE701FA81F0F00C7CDDB /* AlarmRecordCell.xib */; };
-		1B0DDE751FA81F4D00C7CDDB /* AlarmRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DDE741FA81F4D00C7CDDB /* AlarmRecordCell.swift */; };
-		1B11F5881F98303D00C5C24E /* DoorRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B11F5871F98303D00C5C24E /* DoorRecordCell.xib */; };
-		1B11F58A1F98306700C5C24E /* DoorRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B11F5891F98306700C5C24E /* DoorRecordCell.swift */; };
 		1B160C251E5871DF002F3BDA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B160C241E5871DF002F3BDA /* MessageViewController.m */; };
-		1B2106F81F97A92D008C396A /* DoorRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2106F71F97A92D008C396A /* DoorRecordViewCtrl.swift */; };
-		1B24C6911DCB3B69006B2A24 /* HomePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24C68F1DCB3B69006B2A24 /* HomePageViewCtrl.swift */; };
-		1B24C6921DCB3B69006B2A24 /* MainTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24C6901DCB3B69006B2A24 /* MainTabBarCtrl.swift */; };
-		1B3392061E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3392051E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift */; };
 		1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3520D71F99E84B006002C0 /* WebSocket.swift */; };
-		1B39532E1E0FB9E7008A08F5 /* MiniSceneAndArea.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B39532D1E0FB9E7008A08F5 /* MiniSceneAndArea.xib */; };
 		1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */; };
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
 		1B3BB0EF1DFBFD7000361071 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E71DFBFD7000361071 /* getgateway.c */; };
 		1B3BB0F11DFBFD7000361071 /* MyWifi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0EB1DFBFD7000361071 /* MyWifi.m */; };
-		1B42AC5C1FA08029006324F9 /* SmartConfigClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA021C1FA07DF400EE69D3 /* SmartConfigClient.framework */; };
 		1B441C231DB5133D0009F2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B441C221DB5133D0009F2E0 /* AppDelegate.swift */; };
 		1B441C2A1DB5133E0009F2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B441C291DB5133E0009F2E0 /* Assets.xcassets */; };
 		1B48138C1E0394A10042A57E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B48138B1E0394A00042A57E /* AVFoundation.framework */; };
-		1B4813B01E055CB10042A57E /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4813AF1E055CB10042A57E /* VPImageCropperViewController.m */; };
-		1B4813B21E06B5D90042A57E /* EditAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4813B11E06B5D90042A57E /* EditAreaViewCtrl.swift */; };
-		1B4F49A41E83637400489545 /* SettingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49A31E83637400489545 /* SettingViewCtrl.swift */; };
-		1B4F49A81E93D9A200489545 /* SharedListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49A71E93D9A200489545 /* SharedListViewCtrl.swift */; };
-		1B4F49AA1E9483F900489545 /* MySharedAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F49A91E9483F900489545 /* MySharedAccountCell.xib */; };
-		1B4F49AC1E94874D00489545 /* MySharedAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49AB1E94874D00489545 /* MySharedAccountCell.swift */; };
-		1B4F49AE1E94DCA600489545 /* SharedAccountViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49AD1E94DCA600489545 /* SharedAccountViewCtrl.swift */; };
-		1B4F49B01E94E92500489545 /* SharedAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F49AF1E94E92500489545 /* SharedAccountInfoCell.xib */; };
-		1B4F49B21E94E95200489545 /* SharedAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49B11E94E95200489545 /* SharedAccountInfoCell.swift */; };
-		1B4F49B41E972BF600489545 /* SharedElecListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49B31E972BF600489545 /* SharedElecListViewCtrl.swift */; };
-		1B4F49B61E9B1CB600489545 /* SharedElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B4F49B51E9B1CB600489545 /* SharedElectricCell.xib */; };
-		1B4F49B81E9B1CD900489545 /* SharedElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4F49B71E9B1CD900489545 /* SharedElectricCell.swift */; };
 		1B504CFA1F13BD6F00C57F17 /* ETData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B504CF91F13BD6F00C57F17 /* ETData.swift */; };
 		1B5D2B9B1EF4CBC9008DCF1F /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505F61DB71575002AA286 /* DataControl.swift */; };
-		1B62BE3F1F14EF57004E459A /* ETKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B62BE3E1F14EF57004E459A /* ETKeyButton.swift */; };
-		1B6749821EFB60EF00AC98E3 /* MySensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6749811EFB60EF00AC98E3 /* MySensorCell.xib */; };
-		1B6749841EFB610E00AC98E3 /* MySensorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6749831EFB610E00AC98E3 /* MySensorCell.swift */; };
-		1B6749881EFB689F00AC98E3 /* SensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6749871EFB689F00AC98E3 /* SensorViewCtrl.swift */; };
-		1B67B6391E0FAE860034BB7D /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B6381E0FAE860034BB7D /* NirKxMenu.m */; };
-		1B67B6461E0FB8610034BB7D /* MiniElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B63B1E0FB8610034BB7D /* MiniElectric.swift */; };
-		1B67B6471E0FB8610034BB7D /* MiniElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B63C1E0FB8610034BB7D /* MiniElectric.xib */; };
-		1B67B64A1E0FB8610034BB7D /* MyAccountImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B6401E0FB8610034BB7D /* MyAccountImageCell.swift */; };
-		1B67B64B1E0FB8610034BB7D /* MyAccountImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B6411E0FB8610034BB7D /* MyAccountImageCell.xib */; };
-		1B67B64C1E0FB8610034BB7D /* MyAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B6421E0FB8610034BB7D /* MyAccountInfoCell.swift */; };
-		1B67B64D1E0FB8610034BB7D /* MyAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B6431E0FB8610034BB7D /* MyAccountInfoCell.xib */; };
-		1B67B64E1E0FB8610034BB7D /* MyMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B6441E0FB8610034BB7D /* MyMasterCell.swift */; };
-		1B67B64F1E0FB8610034BB7D /* MyMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B6451E0FB8610034BB7D /* MyMasterCell.xib */; };
-		1B67B6531E0FB8B50034BB7D /* MiniSceneAndArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B6521E0FB8B50034BB7D /* MiniSceneAndArea.swift */; };
 		1B6F29061E460B1000D19DE9 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1B6F28C61E460B0F00D19DE9 /* cert.pem */; };
 		1B6F29071E460B1000D19DE9 /* libLechangeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6F29051E460B1000D19DE9 /* libLechangeSDK.a */; };
 		1B6F29A71E460D7500D19DE9 /* UIDevice+LeChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F29611E460D7500D19DE9 /* UIDevice+LeChange.m */; };
@@ -122,38 +82,11 @@
 		1B7667F21EF3CA1C007B21B4 /* TopAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7667BB1EF3CA1C007B21B4 /* TopAlertView.m */; };
 		1B7667F31EF3CA58007B21B4 /* JdPlaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B76675A1EF3CA1C007B21B4 /* JdPlaySdk.framework */; };
 		1B7667F51EF3CAA3007B21B4 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7667F41EF3CAA3007B21B4 /* libstdc++.6.tbd */; };
-		1B7E078A1DC9E11600DD3E00 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E07891DC9E11600DD3E00 /* SWRevealViewController.m */; };
-		1B7E078C1DC9E39000DD3E00 /* LeftMenuViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E078B1DC9E39000DD3E00 /* LeftMenuViewCtrl.swift */; };
 		1B7FC36C1E9CC73F00209C41 /* PublicWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */; };
 		1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B7FC36D1E9DBA9700209C41 /* address.plist */; };
-		1B7FC3701E9DD91900209C41 /* SwitchCityViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FC36F1E9DD91900209C41 /* SwitchCityViewCtrl.swift */; };
 		1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8305481DD017890070FDD3 /* MyWebService.swift */; };
-		1B8305511DD0265E0070FDD3 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83054F1DD0265E0070FDD3 /* SCLAlertView.swift */; };
-		1B8305521DD0265E0070FDD3 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8305501DD0265E0070FDD3 /* SCLExtensions.swift */; };
 		1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */; };
 		1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */; };
-		1B935A771F15CCC00017F694 /* AddElectricTypeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A681F15CCC00017F694 /* AddElectricTypeViewCtrl.swift */; };
-		1B935A781F15CCC00017F694 /* AddElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A691F15CCC00017F694 /* AddElectricViewCtrl.swift */; };
-		1B935A791F15CCC00017F694 /* EditElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A6A1F15CCC00017F694 /* EditElectricViewCtrl.swift */; };
-		1B935A7A1F15CCC00017F694 /* ElecAirViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A6C1F15CCC00017F694 /* ElecAirViewCtrl.swift */; };
-		1B935A7B1F15CCC00017F694 /* ElecClothesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A6D1F15CCC00017F694 /* ElecClothesViewCtrl.swift */; };
-		1B935A7C1F15CCC00017F694 /* ElecCurtainViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A6E1F15CCC00017F694 /* ElecCurtainViewCtrl.swift */; };
-		1B935A7D1F15CCC00017F694 /* ElecDoorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A6F1F15CCC00017F694 /* ElecDoorViewCtrl.swift */; };
-		1B935A7E1F15CCC00017F694 /* ElecHornViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A701F15CCC00017F694 /* ElecHornViewCtrl.swift */; };
-		1B935A7F1F15CCC00017F694 /* ElecSceneSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A711F15CCC00017F694 /* ElecSceneSwitchViewCtrl.swift */; };
-		1B935A801F15CCC00017F694 /* ElecSensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A721F15CCC00017F694 /* ElecSensorViewCtrl.swift */; };
-		1B935A811F15CCC00017F694 /* ElecSuperViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A731F15CCC00017F694 /* ElecSuperViewCtrl.swift */; };
-		1B935A821F15CCC00017F694 /* ElecSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A741F15CCC00017F694 /* ElecSwitchViewCtrl.swift */; };
-		1B935A831F15CCC00017F694 /* ElecTvViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A751F15CCC00017F694 /* ElecTvViewCtrl.swift */; };
-		1B935A841F15CCC00017F694 /* ElecWindowViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A761F15CCC00017F694 /* ElecWindowViewCtrl.swift */; };
-		1B935A861F15CD220017F694 /* ElecAirLearnViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B935A851F15CD220017F694 /* ElecAirLearnViewCtrl.swift */; };
-		1B9FD1F41E1BE1520050D843 /* ScenePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FD1F31E1BE1520050D843 /* ScenePageViewCtrl.swift */; };
-		1B9FD1F61E1CB95B0050D843 /* MySceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FD1F51E1CB95B0050D843 /* MySceneElectricCell.xib */; };
-		1B9FD1F81E1CB99F0050D843 /* MySceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FD1F71E1CB99F0050D843 /* MySceneElectricCell.swift */; };
-		1B9FD2001E1CE43E0050D843 /* MySceneElectricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FD1FE1E1CE43E0050D843 /* MySceneElectricView.swift */; };
-		1B9FD2011E1CE43E0050D843 /* MySceneElectricView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FD1FF1E1CE43E0050D843 /* MySceneElectricView.xib */; };
-		1B9FD2031E1CE8B80050D843 /* EditSceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9FD2021E1CE8B80050D843 /* EditSceneElectricCell.xib */; };
-		1B9FD2051E1CE8D70050D843 /* EditSceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FD2041E1CE8D70050D843 /* EditSceneElectricCell.swift */; };
 		1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */; };
 		1BA52DEF1F13C78600CD9D37 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DED1F13C78600CD9D37 /* XMLDictionary.m */; };
 		1BACDA861DCC746100BA85C2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACDA841DCC746100BA85C2 /* libsqlite3.0.tbd */; };
@@ -163,30 +96,10 @@
 		1BACDA951DCDF07A00BA85C2 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA911DCDF07A00BA85C2 /* SQLiteDB.swift */; };
 		1BACDA961DCDF07A00BA85C2 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA921DCDF07A00BA85C2 /* SQLTable.swift */; };
 		1BACDA971DCDF07A00BA85C2 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA931DCDF07A00BA85C2 /* String-Extras.swift */; };
-		1BACDAA31DCDF0A500BA85C2 /* AreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA991DCDF0A500BA85C2 /* AreaViewCtrl.swift */; };
-		1BACDAA41DCDF0A500BA85C2 /* SelectedAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA9A1DCDF0A500BA85C2 /* SelectedAreaViewCtrl.swift */; };
-		1BACDAA51DCDF0A500BA85C2 /* SKScNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA9D1DCDF0A500BA85C2 /* SKScNavViewController.swift */; };
-		1BACDAA61DCDF0A500BA85C2 /* SKMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDA9E1DCDF0A500BA85C2 /* SKMacros.swift */; };
-		1BACDAA71DCDF0A500BA85C2 /* SKLaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDAA01DCDF0A500BA85C2 /* SKLaunchMenu.swift */; };
-		1BACDAA81DCDF0A500BA85C2 /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDAA11DCDF0A500BA85C2 /* SKLaunchMenuItem.swift */; };
-		1BACDAA91DCDF0A500BA85C2 /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BACDAA21DCDF0A500BA85C2 /* SKScNavBar.swift */; };
-		1BB351FC1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB351FB1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift */; };
 		1BB5E5481E1B9371000B7FD3 /* SceneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5471E1B9371000B7FD3 /* SceneData.swift */; };
 		1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */; };
-		1BB5E54C1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E54B1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift */; };
-		1BB5E54E1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E54D1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift */; };
 		1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB62D721E9F652B00DE198A /* MapKit.framework */; };
-		1BBA02201FA07DF500EE69D3 /* VoiceConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA021B1FA07DF400EE69D3 /* VoiceConfWifiViewCtrl.swift */; };
-		1BBA02231FA07DF500EE69D3 /* VoiceReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA021E1FA07DF400EE69D3 /* VoiceReachability.swift */; };
-		1BBA02241FA07DF500EE69D3 /* VoiceUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA021F1FA07DF400EE69D3 /* VoiceUserInfo.swift */; };
-		1BBE3D821E1B379800D294A7 /* ViewPagerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE3D811E1B379800D294A7 /* ViewPagerIndicator.swift */; };
-		1BBE3D861E1B4C8200D294A7 /* MySceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE3D851E1B4C8200D294A7 /* MySceneCell.xib */; };
-		1BBE3D881E1B8F3600D294A7 /* MySceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE3D871E1B8F3600D294A7 /* MySceneCell.swift */; };
 		1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */; };
-		1BC72FE41E1A8036009F2D9D /* SceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC72FE31E1A8036009F2D9D /* SceneViewCtrl.swift */; };
-		1BD468F01E1E8F8000B2275B /* MyAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD468EE1E1E8F8000B2275B /* MyAreaCell.swift */; };
-		1BD468F11E1E8F8000B2275B /* MyAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD468EF1E1E8F8000B2275B /* MyAreaCell.xib */; };
-		1BEA09851FA4277C00BA28D3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA09841FA4277C00BA28D3 /* Toast.swift */; };
 		1BEA09861FA429D300BA28D3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09921FA429D300BA28D3 /* AFNetworking.framework */; };
 		1BEA09871FA429D300BA28D3 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */; };
 		1BEA09881FA429D300BA28D3 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09941FA429D300BA28D3 /* Masonry.framework */; };
@@ -200,28 +113,116 @@
 		1BEA09901FA429D300BA28D3 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */; };
 		1BEA09911FA429D300BA28D3 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */; };
 		1BEEAF151DD9AE6900E17617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEEAF141DD9AE6900E17617 /* Main.storyboard */; };
-		1BF0812F1F418F5600898799 /* ElecDoor2ViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0812E1F418F5600898799 /* ElecDoor2ViewCtrl.swift */; };
-		1BF0B30C1F04A1DF00DA4F37 /* AddSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF0B30B1F04A1DF00DA4F37 /* AddSceneCell.xib */; };
-		1BF0B30E1F04A20500DA4F37 /* AddSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0B30D1F04A20500DA4F37 /* AddSceneCell.swift */; };
-		1BF2E2721E14A36400EC5E49 /* AccountInfoViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E2661E14A36400EC5E49 /* AccountInfoViewCtrl.swift */; };
-		1BF2E2731E14A36400EC5E49 /* ChangeAccountAddressViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E2671E14A36400EC5E49 /* ChangeAccountAddressViewCtrl.swift */; };
-		1BF2E2741E14A36400EC5E49 /* ChangeAccountEmailViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E2681E14A36400EC5E49 /* ChangeAccountEmailViewCtrl.swift */; };
-		1BF2E2751E14A36400EC5E49 /* ChangeAccountNameViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E2691E14A36400EC5E49 /* ChangeAccountNameViewCtrl.swift */; };
-		1BF2E2761E14A36400EC5E49 /* ChangeAccountPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E26A1E14A36400EC5E49 /* ChangeAccountPasswordViewCtrl.swift */; };
-		1BF2E2781E14A36400EC5E49 /* AddMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E26D1E14A36400EC5E49 /* AddMasterViewCtrl.swift */; };
-		1BF2E2791E14A36400EC5E49 /* EditMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E26E1E14A36400EC5E49 /* EditMasterViewCtrl.swift */; };
-		1BF2E27A1E14A36400EC5E49 /* MyMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E26F1E14A36400EC5E49 /* MyMasterViewCtrl.swift */; };
-		1BF2E27B1E14A36400EC5E49 /* ShareMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E2701E14A36400EC5E49 /* ShareMasterViewCtrl.swift */; };
-		1BF2E27D1E15079D00EC5E49 /* AddElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF2E27C1E15079D00EC5E49 /* AddElectric.xib */; };
-		1BF2E27F1E1507C700EC5E49 /* AddElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2E27E1E1507C700EC5E49 /* AddElectric.swift */; };
+		1BF1AEDA1FAF0A5800A8E27E /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEAD1FAF0A5800A8E27E /* SCLAlertView.swift */; };
+		1BF1AEDB1FAF0A5800A8E27E /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEAE1FAF0A5800A8E27E /* SCLExtensions.swift */; };
+		1BF1AEDC1FAF0A5800A8E27E /* AddElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB01FAF0A5800A8E27E /* AddElectric.swift */; };
+		1BF1AEDD1FAF0A5800A8E27E /* AddElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB11FAF0A5800A8E27E /* AddElectric.xib */; };
+		1BF1AEDE1FAF0A5800A8E27E /* DeleteElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB21FAF0A5800A8E27E /* DeleteElectric.swift */; };
+		1BF1AEDF1FAF0A5800A8E27E /* DeleteElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB31FAF0A5800A8E27E /* DeleteElectric.xib */; };
+		1BF1AEE01FAF0A5800A8E27E /* MiniElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB41FAF0A5800A8E27E /* MiniElectric.swift */; };
+		1BF1AEE11FAF0A5800A8E27E /* MiniElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB51FAF0A5800A8E27E /* MiniElectric.xib */; };
+		1BF1AEE21FAF0A5800A8E27E /* MiniSceneAndArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB61FAF0A5800A8E27E /* MiniSceneAndArea.swift */; };
+		1BF1AEE31FAF0A5800A8E27E /* MiniSceneAndArea.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB71FAF0A5800A8E27E /* MiniSceneAndArea.xib */; };
+		1BF1AEE41FAF0A5800A8E27E /* ETKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB91FAF0A5800A8E27E /* ETKeyButton.swift */; };
+		1BF1AEE51FAF0A5800A8E27E /* AddSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBB1FAF0A5800A8E27E /* AddSceneCell.swift */; };
+		1BF1AEE61FAF0A5800A8E27E /* AddSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBC1FAF0A5800A8E27E /* AddSceneCell.xib */; };
+		1BF1AEE71FAF0A5800A8E27E /* AlarmRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBD1FAF0A5800A8E27E /* AlarmRecordCell.swift */; };
+		1BF1AEE81FAF0A5800A8E27E /* AlarmRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBE1FAF0A5800A8E27E /* AlarmRecordCell.xib */; };
+		1BF1AEE91FAF0A5800A8E27E /* DoorRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBF1FAF0A5800A8E27E /* DoorRecordCell.swift */; };
+		1BF1AEEA1FAF0A5800A8E27E /* DoorRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC01FAF0A5800A8E27E /* DoorRecordCell.xib */; };
+		1BF1AEEB1FAF0A5800A8E27E /* EditSceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC11FAF0A5800A8E27E /* EditSceneElectricCell.swift */; };
+		1BF1AEEC1FAF0A5800A8E27E /* EditSceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC21FAF0A5800A8E27E /* EditSceneElectricCell.xib */; };
+		1BF1AEED1FAF0A5800A8E27E /* MyAccountImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC31FAF0A5800A8E27E /* MyAccountImageCell.swift */; };
+		1BF1AEEE1FAF0A5800A8E27E /* MyAccountImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC41FAF0A5800A8E27E /* MyAccountImageCell.xib */; };
+		1BF1AEEF1FAF0A5800A8E27E /* MyAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC51FAF0A5800A8E27E /* MyAccountInfoCell.swift */; };
+		1BF1AEF01FAF0A5800A8E27E /* MyAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */; };
+		1BF1AEF11FAF0A5800A8E27E /* MyAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */; };
+		1BF1AEF21FAF0A5800A8E27E /* MyAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */; };
+		1BF1AEF31FAF0A5800A8E27E /* MyMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */; };
+		1BF1AEF41FAF0A5800A8E27E /* MyMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */; };
+		1BF1AEF51FAF0A5800A8E27E /* MySceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */; };
+		1BF1AEF61FAF0A5800A8E27E /* MySceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AECC1FAF0A5800A8E27E /* MySceneCell.xib */; };
+		1BF1AEF71FAF0A5800A8E27E /* MySceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AECD1FAF0A5800A8E27E /* MySceneElectricCell.swift */; };
+		1BF1AEF81FAF0A5800A8E27E /* MySceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AECE1FAF0A5800A8E27E /* MySceneElectricCell.xib */; };
+		1BF1AEF91FAF0A5800A8E27E /* MySensorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AECF1FAF0A5800A8E27E /* MySensorCell.swift */; };
+		1BF1AEFA1FAF0A5800A8E27E /* MySensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED01FAF0A5800A8E27E /* MySensorCell.xib */; };
+		1BF1AEFB1FAF0A5800A8E27E /* MySharedAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED11FAF0A5800A8E27E /* MySharedAccountCell.swift */; };
+		1BF1AEFC1FAF0A5800A8E27E /* MySharedAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED21FAF0A5800A8E27E /* MySharedAccountCell.xib */; };
+		1BF1AEFD1FAF0A5800A8E27E /* SharedAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED31FAF0A5800A8E27E /* SharedAccountInfoCell.swift */; };
+		1BF1AEFE1FAF0A5800A8E27E /* SharedAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED41FAF0A5800A8E27E /* SharedAccountInfoCell.xib */; };
+		1BF1AEFF1FAF0A5800A8E27E /* SharedElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED51FAF0A5800A8E27E /* SharedElectricCell.swift */; };
+		1BF1AF001FAF0A5800A8E27E /* SharedElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED61FAF0A5800A8E27E /* SharedElectricCell.xib */; };
+		1BF1AF011FAF0A5800A8E27E /* MySceneElectricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED81FAF0A5800A8E27E /* MySceneElectricView.swift */; };
+		1BF1AF021FAF0A5800A8E27E /* MySceneElectricView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED91FAF0A5800A8E27E /* MySceneElectricView.xib */; };
+		1BF1AF5D1FAF0A6F00A8E27E /* AccountInfoViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF051FAF0A6E00A8E27E /* AccountInfoViewCtrl.swift */; };
+		1BF1AF5E1FAF0A6F00A8E27E /* ChangeAccountAddressViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF061FAF0A6E00A8E27E /* ChangeAccountAddressViewCtrl.swift */; };
+		1BF1AF5F1FAF0A6F00A8E27E /* ChangeAccountEmailViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF071FAF0A6E00A8E27E /* ChangeAccountEmailViewCtrl.swift */; };
+		1BF1AF601FAF0A6F00A8E27E /* ChangeAccountNameViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF081FAF0A6E00A8E27E /* ChangeAccountNameViewCtrl.swift */; };
+		1BF1AF611FAF0A6F00A8E27E /* ChangeAccountPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF091FAF0A6E00A8E27E /* ChangeAccountPasswordViewCtrl.swift */; };
+		1BF1AF621FAF0A6F00A8E27E /* AddAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */; };
+		1BF1AF631FAF0A6F00A8E27E /* AreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */; };
+		1BF1AF641FAF0A6F00A8E27E /* EditAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */; };
+		1BF1AF651FAF0A6F00A8E27E /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF101FAF0A6E00A8E27E /* VPImageCropperViewController.m */; };
+		1BF1AF661FAF0A6F00A8E27E /* SelectedAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */; };
+		1BF1AF671FAF0A6F00A8E27E /* SKScNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF141FAF0A6E00A8E27E /* SKScNavViewController.swift */; };
+		1BF1AF681FAF0A6F00A8E27E /* SKMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */; };
+		1BF1AF691FAF0A6F00A8E27E /* SKLaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF171FAF0A6E00A8E27E /* SKLaunchMenu.swift */; };
+		1BF1AF6A1FAF0A6F00A8E27E /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF181FAF0A6E00A8E27E /* SKLaunchMenuItem.swift */; };
+		1BF1AF6B1FAF0A6F00A8E27E /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF191FAF0A6E00A8E27E /* SKScNavBar.swift */; };
+		1BF1AF7D1FAF0A6F00A8E27E /* AlarmRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF2F1FAF0A6E00A8E27E /* AlarmRecordViewCtrl.swift */; };
+		1BF1AF7E1FAF0A6F00A8E27E /* HomePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF301FAF0A6E00A8E27E /* HomePageViewCtrl.swift */; };
+		1BF1AF7F1FAF0A6F00A8E27E /* MainTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */; };
+		1BF1AF801FAF0A6F00A8E27E /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */; };
+		1BF1AF811FAF0A6F00A8E27E /* LeftMenuViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */; };
+		1BF1AF821FAF0A6F00A8E27E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */; };
+		1BF1AF831FAF0A6F00A8E27E /* MasterConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */; };
+		1BF1AF841FAF0A6F00A8E27E /* SmartConfigClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */; };
+		1BF1AF851FAF0A6F00A8E27E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */; };
+		1BF1AF861FAF0A6F00A8E27E /* VoiceConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3F1FAF0A6E00A8E27E /* VoiceConfWifiViewCtrl.swift */; };
+		1BF1AF871FAF0A6F00A8E27E /* VoiceReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF401FAF0A6E00A8E27E /* VoiceReachability.swift */; };
+		1BF1AF881FAF0A6F00A8E27E /* VoiceUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF411FAF0A6E00A8E27E /* VoiceUserInfo.swift */; };
+		1BF1AF891FAF0A6F00A8E27E /* FindPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */; };
+		1BF1AF8A1FAF0A6F00A8E27E /* LoginViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */; };
+		1BF1AF8B1FAF0A6F00A8E27E /* RegisterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */; };
+		1BF1AF8C1FAF0A6F00A8E27E /* ResetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */; };
+		1BF1AF8D1FAF0A6F00A8E27E /* SetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */; };
+		1BF1AF8E1FAF0A6F00A8E27E /* AddMasterNaviCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */; };
+		1BF1AF8F1FAF0A6F00A8E27E /* AddMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */; };
+		1BF1AF901FAF0A6F00A8E27E /* EditMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */; };
+		1BF1AF911FAF0A6F00A8E27E /* MyMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */; };
+		1BF1AF921FAF0A6F00A8E27E /* SharedAccountViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */; };
+		1BF1AF931FAF0A6F00A8E27E /* SharedElecListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */; };
+		1BF1AF941FAF0A6F00A8E27E /* SharedListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */; };
+		1BF1AF951FAF0A6F00A8E27E /* ShareMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4F1FAF0A6E00A8E27E /* ShareMasterViewCtrl.swift */; };
+		1BF1AF961FAF0A6F00A8E27E /* SettingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF511FAF0A6E00A8E27E /* SettingViewCtrl.swift */; };
+		1BF1AF971FAF0A6F00A8E27E /* SwitchCityViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF521FAF0A6E00A8E27E /* SwitchCityViewCtrl.swift */; };
+		1BF1AF981FAF0A6F00A8E27E /* AddSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF541FAF0A6E00A8E27E /* AddSceneElectricViewCtrl.swift */; };
+		1BF1AF991FAF0A6F00A8E27E /* AddSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF551FAF0A6E00A8E27E /* AddSceneViewCtrl.swift */; };
+		1BF1AF9A1FAF0A6F00A8E27E /* EditSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF561FAF0A6E00A8E27E /* EditSceneElectricViewCtrl.swift */; };
+		1BF1AF9B1FAF0A6F00A8E27E /* EditSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF571FAF0A6E00A8E27E /* EditSceneViewCtrl.swift */; };
+		1BF1AF9C1FAF0A6F00A8E27E /* ScenePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF581FAF0A6E00A8E27E /* ScenePageViewCtrl.swift */; };
+		1BF1AF9D1FAF0A6F00A8E27E /* SceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF591FAF0A6E00A8E27E /* SceneViewCtrl.swift */; };
+		1BF1AF9E1FAF0A6F00A8E27E /* ViewPagerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF5A1FAF0A6E00A8E27E /* ViewPagerIndicator.swift */; };
+		1BF1AF9F1FAF0A6F00A8E27E /* SensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF5C1FAF0A6E00A8E27E /* SensorViewCtrl.swift */; };
+		1BF1AFB41FAF236A00A8E27E /* AddElectricTypeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA21FAF236900A8E27E /* AddElectricTypeViewCtrl.swift */; };
+		1BF1AFB51FAF236A00A8E27E /* AddElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA31FAF236900A8E27E /* AddElectricViewCtrl.swift */; };
+		1BF1AFB61FAF236A00A8E27E /* DoorRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA41FAF236900A8E27E /* DoorRecordViewCtrl.swift */; };
+		1BF1AFB71FAF236A00A8E27E /* EditElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA51FAF236900A8E27E /* EditElectricViewCtrl.swift */; };
+		1BF1AFB81FAF236A00A8E27E /* ElecAirLearnViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */; };
+		1BF1AFB91FAF236A00A8E27E /* ElecAirViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */; };
+		1BF1AFBA1FAF236A00A8E27E /* ElecClothesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */; };
+		1BF1AFBB1FAF236A00A8E27E /* ElecCurtainViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAA1FAF236900A8E27E /* ElecCurtainViewCtrl.swift */; };
+		1BF1AFBC1FAF236A00A8E27E /* ElecDoor2ViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAB1FAF236900A8E27E /* ElecDoor2ViewCtrl.swift */; };
+		1BF1AFBD1FAF236A00A8E27E /* ElecDoorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAC1FAF236900A8E27E /* ElecDoorViewCtrl.swift */; };
+		1BF1AFBE1FAF236A00A8E27E /* ElecHornViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */; };
+		1BF1AFBF1FAF236A00A8E27E /* ElecSceneSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */; };
+		1BF1AFC01FAF236A00A8E27E /* ElecSensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */; };
+		1BF1AFC11FAF236A00A8E27E /* ElecSuperViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */; };
+		1BF1AFC21FAF236A00A8E27E /* ElecSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */; };
+		1BF1AFC31FAF236A00A8E27E /* ElecTvViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */; };
+		1BF1AFC41FAF236A00A8E27E /* ElecWindowViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */; };
 		1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */; };
 		1BF505F71DB71575002AA286 /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505F61DB71575002AA286 /* DataControl.swift */; };
-		1BF506001DB720F6002AA286 /* FindPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505FF1DB720F6002AA286 /* FindPasswordViewCtrl.swift */; };
-		1BF506021DB72456002AA286 /* LoginViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF506011DB72456002AA286 /* LoginViewCtrl.swift */; };
-		1BF506061DB74D2C002AA286 /* RegisterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF506051DB74D2C002AA286 /* RegisterViewCtrl.swift */; };
-		1BF506081DB74EB8002AA286 /* SetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF506071DB74EB8002AA286 /* SetPasswordViewCtrl.swift */; };
-		1BF5060A1DB750FF002AA286 /* ResetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF506091DB750FF002AA286 /* ResetPasswordViewCtrl.swift */; };
-		1BF524751EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF524741EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift */; };
 		1BFAB33D1E52FA7E00162FC5 /* EditCameraViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */; };
 		FA3FCC83D022825AD65CB2DE /* Pods_zfzn2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD817351FACF333AE193758 /* Pods_zfzn2.framework */; };
 /* End PBXBuildFile section */
@@ -255,22 +256,9 @@
 		1B0868D41DE9675B0045E531 /* AccountData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 		1B0868D61DE9675B0045E531 /* AreaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaData.swift; sourceTree = "<group>"; };
 		1B0868D71DE9675B0045E531 /* ElectricData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectricData.swift; sourceTree = "<group>"; };
-		1B0C06571E10C3AF0027290B /* DeleteElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteElectric.xib; sourceTree = "<group>"; };
-		1B0C06591E10C3CE0027290B /* DeleteElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteElectric.swift; sourceTree = "<group>"; };
-		1B0D02BA1E037C3A00C412E5 /* AddAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAreaViewCtrl.swift; sourceTree = "<group>"; };
-		1B0DDE6E1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmRecordViewCtrl.swift; path = HomePage/AlarmRecordViewCtrl.swift; sourceTree = "<group>"; };
-		1B0DDE701FA81F0F00C7CDDB /* AlarmRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmRecordCell.xib; sourceTree = "<group>"; };
-		1B0DDE741FA81F4D00C7CDDB /* AlarmRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecordCell.swift; sourceTree = "<group>"; };
-		1B11F5871F98303D00C5C24E /* DoorRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorRecordCell.xib; sourceTree = "<group>"; };
-		1B11F5891F98306700C5C24E /* DoorRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordCell.swift; sourceTree = "<group>"; };
 		1B160C231E5871DF002F3BDA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		1B160C241E5871DF002F3BDA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
-		1B2106F71F97A92D008C396A /* DoorRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordViewCtrl.swift; sourceTree = "<group>"; };
-		1B24C68F1DCB3B69006B2A24 /* HomePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewCtrl.swift; path = HomePage/HomePageViewCtrl.swift; sourceTree = "<group>"; };
-		1B24C6901DCB3B69006B2A24 /* MainTabBarCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarCtrl.swift; path = HomePage/MainTabBarCtrl.swift; sourceTree = "<group>"; };
-		1B3392051E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
 		1B3520D71F99E84B006002C0 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = zfzn2/Data/Socket/WebSocket.swift; sourceTree = SOURCE_ROOT; };
-		1B39532D1E0FB9E7008A08F5 /* MiniSceneAndArea.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniSceneAndArea.xib; sourceTree = "<group>"; };
 		1B3BB0E31DFBFD7000361071 /* GCDAsyncTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncTcpSocket.h; sourceTree = "<group>"; };
 		1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncTcpSocket.m; sourceTree = "<group>"; };
 		1B3BB0E51DFBFD7000361071 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -286,35 +274,7 @@
 		1B441C331DB5133E0009F2E0 /* zfzn2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zfzn2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B441C3E1DB5133E0009F2E0 /* zfzn2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zfzn2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B48138B1E0394A00042A57E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		1B4813AE1E055CB10042A57E /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
-		1B4813AF1E055CB10042A57E /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
-		1B4813B11E06B5D90042A57E /* EditAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAreaViewCtrl.swift; sourceTree = "<group>"; };
-		1B4F49A31E83637400489545 /* SettingViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewCtrl.swift; sourceTree = "<group>"; };
-		1B4F49A71E93D9A200489545 /* SharedListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedListViewCtrl.swift; sourceTree = "<group>"; };
-		1B4F49A91E9483F900489545 /* MySharedAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySharedAccountCell.xib; sourceTree = "<group>"; };
-		1B4F49AB1E94874D00489545 /* MySharedAccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySharedAccountCell.swift; sourceTree = "<group>"; };
-		1B4F49AD1E94DCA600489545 /* SharedAccountViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountViewCtrl.swift; sourceTree = "<group>"; };
-		1B4F49AF1E94E92500489545 /* SharedAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedAccountInfoCell.xib; sourceTree = "<group>"; };
-		1B4F49B11E94E95200489545 /* SharedAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountInfoCell.swift; sourceTree = "<group>"; };
-		1B4F49B31E972BF600489545 /* SharedElecListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElecListViewCtrl.swift; sourceTree = "<group>"; };
-		1B4F49B51E9B1CB600489545 /* SharedElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedElectricCell.xib; sourceTree = "<group>"; };
-		1B4F49B71E9B1CD900489545 /* SharedElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElectricCell.swift; sourceTree = "<group>"; };
 		1B504CF91F13BD6F00C57F17 /* ETData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETData.swift; sourceTree = "<group>"; };
-		1B62BE3E1F14EF57004E459A /* ETKeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETKeyButton.swift; sourceTree = "<group>"; };
-		1B6749811EFB60EF00AC98E3 /* MySensorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySensorCell.xib; sourceTree = "<group>"; };
-		1B6749831EFB610E00AC98E3 /* MySensorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySensorCell.swift; sourceTree = "<group>"; };
-		1B6749871EFB689F00AC98E3 /* SensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewCtrl.swift; sourceTree = "<group>"; };
-		1B67B6371E0FAE860034BB7D /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
-		1B67B6381E0FAE860034BB7D /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
-		1B67B63B1E0FB8610034BB7D /* MiniElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniElectric.swift; sourceTree = "<group>"; };
-		1B67B63C1E0FB8610034BB7D /* MiniElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniElectric.xib; sourceTree = "<group>"; };
-		1B67B6401E0FB8610034BB7D /* MyAccountImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountImageCell.swift; sourceTree = "<group>"; };
-		1B67B6411E0FB8610034BB7D /* MyAccountImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountImageCell.xib; sourceTree = "<group>"; };
-		1B67B6421E0FB8610034BB7D /* MyAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountInfoCell.swift; sourceTree = "<group>"; };
-		1B67B6431E0FB8610034BB7D /* MyAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountInfoCell.xib; sourceTree = "<group>"; };
-		1B67B6441E0FB8610034BB7D /* MyMasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterCell.swift; sourceTree = "<group>"; };
-		1B67B6451E0FB8610034BB7D /* MyMasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMasterCell.xib; sourceTree = "<group>"; };
-		1B67B6521E0FB8B50034BB7D /* MiniSceneAndArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniSceneAndArea.swift; sourceTree = "<group>"; };
 		1B6F28C61E460B0F00D19DE9 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		1B6F28C81E460B0F00D19DE9 /* basedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basedef.h; sourceTree = "<group>"; };
 		1B6F28C91E460B0F00D19DE9 /* ConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstString.h; sourceTree = "<group>"; };
@@ -486,39 +446,11 @@
 		1B7667BA1EF3CA1C007B21B4 /* TopAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAlertView.h; sourceTree = "<group>"; };
 		1B7667BB1EF3CA1C007B21B4 /* TopAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAlertView.m; sourceTree = "<group>"; };
 		1B7667F41EF3CAA3007B21B4 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		1B7E07881DC9E11600DD3E00 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		1B7E07891DC9E11600DD3E00 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		1B7E078B1DC9E39000DD3E00 /* LeftMenuViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewCtrl.swift; sourceTree = "<group>"; };
 		1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicWebService.swift; sourceTree = "<group>"; };
 		1B7FC36D1E9DBA9700209C41 /* address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address.plist; sourceTree = "<group>"; };
-		1B7FC36F1E9DD91900209C41 /* SwitchCityViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCityViewCtrl.swift; sourceTree = "<group>"; };
 		1B8305481DD017890070FDD3 /* MyWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebService.swift; sourceTree = "<group>"; };
-		1B83054F1DD0265E0070FDD3 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
-		1B8305501DD0265E0070FDD3 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocket.swift; sourceTree = "<group>"; };
 		1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zfzn2.db; sourceTree = "<group>"; };
-		1B935A681F15CCC00017F694 /* AddElectricTypeViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricTypeViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A691F15CCC00017F694 /* AddElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A6A1F15CCC00017F694 /* EditElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A6C1F15CCC00017F694 /* ElecAirViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A6D1F15CCC00017F694 /* ElecClothesViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecClothesViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A6E1F15CCC00017F694 /* ElecCurtainViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecCurtainViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A6F1F15CCC00017F694 /* ElecDoorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoorViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A701F15CCC00017F694 /* ElecHornViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecHornViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A711F15CCC00017F694 /* ElecSceneSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSceneSwitchViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A721F15CCC00017F694 /* ElecSensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSensorViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A731F15CCC00017F694 /* ElecSuperViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSuperViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A741F15CCC00017F694 /* ElecSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSwitchViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A751F15CCC00017F694 /* ElecTvViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecTvViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A761F15CCC00017F694 /* ElecWindowViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecWindowViewCtrl.swift; sourceTree = "<group>"; };
-		1B935A851F15CD220017F694 /* ElecAirLearnViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirLearnViewCtrl.swift; sourceTree = "<group>"; };
-		1B9FD1F31E1BE1520050D843 /* ScenePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePageViewCtrl.swift; sourceTree = "<group>"; };
-		1B9FD1F51E1CB95B0050D843 /* MySceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricCell.xib; sourceTree = "<group>"; };
-		1B9FD1F71E1CB99F0050D843 /* MySceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricCell.swift; sourceTree = "<group>"; };
-		1B9FD1FE1E1CE43E0050D843 /* MySceneElectricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricView.swift; sourceTree = "<group>"; };
-		1B9FD1FF1E1CE43E0050D843 /* MySceneElectricView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricView.xib; sourceTree = "<group>"; };
-		1B9FD2021E1CE8B80050D843 /* EditSceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditSceneElectricCell.xib; sourceTree = "<group>"; };
-		1B9FD2041E1CE8D70050D843 /* EditSceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricCell.swift; sourceTree = "<group>"; };
 		1BA52DEA1F13C78600CD9D37 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		1BA52DEC1F13C78600CD9D37 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
@@ -531,32 +463,11 @@
 		1BACDA911DCDF07A00BA85C2 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
 		1BACDA921DCDF07A00BA85C2 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 		1BACDA931DCDF07A00BA85C2 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
-		1BACDA991DCDF0A500BA85C2 /* AreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewCtrl.swift; sourceTree = "<group>"; };
-		1BACDA9A1DCDF0A500BA85C2 /* SelectedAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedAreaViewCtrl.swift; sourceTree = "<group>"; };
-		1BACDA9D1DCDF0A500BA85C2 /* SKScNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavViewController.swift; sourceTree = "<group>"; };
-		1BACDA9E1DCDF0A500BA85C2 /* SKMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMacros.swift; sourceTree = "<group>"; };
-		1BACDAA01DCDF0A500BA85C2 /* SKLaunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenu.swift; sourceTree = "<group>"; };
-		1BACDAA11DCDF0A500BA85C2 /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
-		1BACDAA21DCDF0A500BA85C2 /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
-		1BB351FB1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterConfWifiViewCtrl.swift; sourceTree = "<group>"; };
 		1BB5E5471E1B9371000B7FD3 /* SceneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneData.swift; sourceTree = "<group>"; };
 		1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneElectricData.swift; sourceTree = "<group>"; };
-		1BB5E54B1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneViewCtrl.swift; sourceTree = "<group>"; };
-		1BB5E54D1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneViewCtrl.swift; sourceTree = "<group>"; };
 		1BB62D721E9F652B00DE198A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		1BBA021B1FA07DF400EE69D3 /* VoiceConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConfWifiViewCtrl.swift; sourceTree = "<group>"; };
-		1BBA021C1FA07DF400EE69D3 /* SmartConfigClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartConfigClient.framework; sourceTree = "<group>"; };
-		1BBA021E1FA07DF400EE69D3 /* VoiceReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReachability.swift; sourceTree = "<group>"; };
-		1BBA021F1FA07DF400EE69D3 /* VoiceUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserInfo.swift; sourceTree = "<group>"; };
-		1BBE3D811E1B379800D294A7 /* ViewPagerIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerIndicator.swift; sourceTree = "<group>"; };
-		1BBE3D851E1B4C8200D294A7 /* MySceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneCell.xib; sourceTree = "<group>"; };
-		1BBE3D871E1B8F3600D294A7 /* MySceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneCell.swift; sourceTree = "<group>"; };
 		1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
-		1BC72FE31E1A8036009F2D9D /* SceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewCtrl.swift; sourceTree = "<group>"; };
-		1BD468EE1E1E8F8000B2275B /* MyAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAreaCell.swift; sourceTree = "<group>"; };
-		1BD468EF1E1E8F8000B2275B /* MyAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAreaCell.xib; sourceTree = "<group>"; };
 		1BE482241EADEE8C004C756E /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
-		1BEA09841FA4277C00BA28D3 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		1BEA09921FA429D300BA28D3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA09941FA429D300BA28D3 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -570,28 +481,119 @@
 		1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEEAF141DD9AE6900E17617 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1BF0812E1F418F5600898799 /* ElecDoor2ViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoor2ViewCtrl.swift; sourceTree = "<group>"; };
-		1BF0B30B1F04A1DF00DA4F37 /* AddSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSceneCell.xib; sourceTree = "<group>"; };
-		1BF0B30D1F04A20500DA4F37 /* AddSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneCell.swift; sourceTree = "<group>"; };
-		1BF2E2661E14A36400EC5E49 /* AccountInfoViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E2671E14A36400EC5E49 /* ChangeAccountAddressViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountAddressViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E2681E14A36400EC5E49 /* ChangeAccountEmailViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountEmailViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E2691E14A36400EC5E49 /* ChangeAccountNameViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E26A1E14A36400EC5E49 /* ChangeAccountPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E26D1E14A36400EC5E49 /* AddMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E26E1E14A36400EC5E49 /* EditMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E26F1E14A36400EC5E49 /* MyMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E2701E14A36400EC5E49 /* ShareMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF2E27C1E15079D00EC5E49 /* AddElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddElectric.xib; sourceTree = "<group>"; };
-		1BF2E27E1E1507C700EC5E49 /* AddElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectric.swift; sourceTree = "<group>"; };
+		1BF1AEAD1FAF0A5800A8E27E /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		1BF1AEAE1FAF0A5800A8E27E /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		1BF1AEB01FAF0A5800A8E27E /* AddElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectric.swift; sourceTree = "<group>"; };
+		1BF1AEB11FAF0A5800A8E27E /* AddElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddElectric.xib; sourceTree = "<group>"; };
+		1BF1AEB21FAF0A5800A8E27E /* DeleteElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteElectric.swift; sourceTree = "<group>"; };
+		1BF1AEB31FAF0A5800A8E27E /* DeleteElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteElectric.xib; sourceTree = "<group>"; };
+		1BF1AEB41FAF0A5800A8E27E /* MiniElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniElectric.swift; sourceTree = "<group>"; };
+		1BF1AEB51FAF0A5800A8E27E /* MiniElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniElectric.xib; sourceTree = "<group>"; };
+		1BF1AEB61FAF0A5800A8E27E /* MiniSceneAndArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniSceneAndArea.swift; sourceTree = "<group>"; };
+		1BF1AEB71FAF0A5800A8E27E /* MiniSceneAndArea.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniSceneAndArea.xib; sourceTree = "<group>"; };
+		1BF1AEB91FAF0A5800A8E27E /* ETKeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETKeyButton.swift; sourceTree = "<group>"; };
+		1BF1AEBB1FAF0A5800A8E27E /* AddSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneCell.swift; sourceTree = "<group>"; };
+		1BF1AEBC1FAF0A5800A8E27E /* AddSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSceneCell.xib; sourceTree = "<group>"; };
+		1BF1AEBD1FAF0A5800A8E27E /* AlarmRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRecordCell.swift; sourceTree = "<group>"; };
+		1BF1AEBE1FAF0A5800A8E27E /* AlarmRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmRecordCell.xib; sourceTree = "<group>"; };
+		1BF1AEBF1FAF0A5800A8E27E /* DoorRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordCell.swift; sourceTree = "<group>"; };
+		1BF1AEC01FAF0A5800A8E27E /* DoorRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorRecordCell.xib; sourceTree = "<group>"; };
+		1BF1AEC11FAF0A5800A8E27E /* EditSceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricCell.swift; sourceTree = "<group>"; };
+		1BF1AEC21FAF0A5800A8E27E /* EditSceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditSceneElectricCell.xib; sourceTree = "<group>"; };
+		1BF1AEC31FAF0A5800A8E27E /* MyAccountImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountImageCell.swift; sourceTree = "<group>"; };
+		1BF1AEC41FAF0A5800A8E27E /* MyAccountImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountImageCell.xib; sourceTree = "<group>"; };
+		1BF1AEC51FAF0A5800A8E27E /* MyAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountInfoCell.swift; sourceTree = "<group>"; };
+		1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountInfoCell.xib; sourceTree = "<group>"; };
+		1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAreaCell.swift; sourceTree = "<group>"; };
+		1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAreaCell.xib; sourceTree = "<group>"; };
+		1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterCell.swift; sourceTree = "<group>"; };
+		1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMasterCell.xib; sourceTree = "<group>"; };
+		1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneCell.swift; sourceTree = "<group>"; };
+		1BF1AECC1FAF0A5800A8E27E /* MySceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneCell.xib; sourceTree = "<group>"; };
+		1BF1AECD1FAF0A5800A8E27E /* MySceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricCell.swift; sourceTree = "<group>"; };
+		1BF1AECE1FAF0A5800A8E27E /* MySceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricCell.xib; sourceTree = "<group>"; };
+		1BF1AECF1FAF0A5800A8E27E /* MySensorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySensorCell.swift; sourceTree = "<group>"; };
+		1BF1AED01FAF0A5800A8E27E /* MySensorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySensorCell.xib; sourceTree = "<group>"; };
+		1BF1AED11FAF0A5800A8E27E /* MySharedAccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySharedAccountCell.swift; sourceTree = "<group>"; };
+		1BF1AED21FAF0A5800A8E27E /* MySharedAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySharedAccountCell.xib; sourceTree = "<group>"; };
+		1BF1AED31FAF0A5800A8E27E /* SharedAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountInfoCell.swift; sourceTree = "<group>"; };
+		1BF1AED41FAF0A5800A8E27E /* SharedAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedAccountInfoCell.xib; sourceTree = "<group>"; };
+		1BF1AED51FAF0A5800A8E27E /* SharedElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElectricCell.swift; sourceTree = "<group>"; };
+		1BF1AED61FAF0A5800A8E27E /* SharedElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedElectricCell.xib; sourceTree = "<group>"; };
+		1BF1AED81FAF0A5800A8E27E /* MySceneElectricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricView.swift; sourceTree = "<group>"; };
+		1BF1AED91FAF0A5800A8E27E /* MySceneElectricView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricView.xib; sourceTree = "<group>"; };
+		1BF1AF051FAF0A6E00A8E27E /* AccountInfoViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF061FAF0A6E00A8E27E /* ChangeAccountAddressViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountAddressViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF071FAF0A6E00A8E27E /* ChangeAccountEmailViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountEmailViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF081FAF0A6E00A8E27E /* ChangeAccountNameViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF091FAF0A6E00A8E27E /* ChangeAccountPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF0F1FAF0A6E00A8E27E /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		1BF1AF101FAF0A6E00A8E27E /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF141FAF0A6E00A8E27E /* SKScNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavViewController.swift; sourceTree = "<group>"; };
+		1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMacros.swift; sourceTree = "<group>"; };
+		1BF1AF171FAF0A6E00A8E27E /* SKLaunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenu.swift; sourceTree = "<group>"; };
+		1BF1AF181FAF0A6E00A8E27E /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
+		1BF1AF191FAF0A6E00A8E27E /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
+		1BF1AF2F1FAF0A6E00A8E27E /* AlarmRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRecordViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF301FAF0A6E00A8E27E /* HomePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF331FAF0A6E00A8E27E /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
+		1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
+		1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF371FAF0A6E00A8E27E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterConfWifiViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartConfigClient.framework; sourceTree = "<group>"; };
+		1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		1BF1AF3F1FAF0A6E00A8E27E /* VoiceConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConfWifiViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF401FAF0A6E00A8E27E /* VoiceReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReachability.swift; sourceTree = "<group>"; };
+		1BF1AF411FAF0A6E00A8E27E /* VoiceUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserInfo.swift; sourceTree = "<group>"; };
+		1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterNaviCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElecListViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedListViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF4F1FAF0A6E00A8E27E /* ShareMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF511FAF0A6E00A8E27E /* SettingViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF521FAF0A6E00A8E27E /* SwitchCityViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCityViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF541FAF0A6E00A8E27E /* AddSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF551FAF0A6E00A8E27E /* AddSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF561FAF0A6E00A8E27E /* EditSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF571FAF0A6E00A8E27E /* EditSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF581FAF0A6E00A8E27E /* ScenePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePageViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF591FAF0A6E00A8E27E /* SceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AF5A1FAF0A6E00A8E27E /* ViewPagerIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerIndicator.swift; sourceTree = "<group>"; };
+		1BF1AF5C1FAF0A6E00A8E27E /* SensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA21FAF236900A8E27E /* AddElectricTypeViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricTypeViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA31FAF236900A8E27E /* AddElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA41FAF236900A8E27E /* DoorRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA51FAF236900A8E27E /* EditElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirLearnViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecClothesViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFAA1FAF236900A8E27E /* ElecCurtainViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecCurtainViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFAB1FAF236900A8E27E /* ElecDoor2ViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoor2ViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFAC1FAF236900A8E27E /* ElecDoorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoorViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecHornViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSceneSwitchViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSensorViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSuperViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSwitchViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecTvViewCtrl.swift; sourceTree = "<group>"; };
+		1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecWindowViewCtrl.swift; sourceTree = "<group>"; };
 		1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
 		1BF505F61DB71575002AA286 /* DataControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataControl.swift; sourceTree = "<group>"; };
-		1BF505FF1DB720F6002AA286 /* FindPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF506011DB72456002AA286 /* LoginViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtrl.swift; sourceTree = "<group>"; };
-		1BF506051DB74D2C002AA286 /* RegisterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF506071DB74EB8002AA286 /* SetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF506091DB750FF002AA286 /* ResetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF524741EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
 		1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCameraViewCtrl.swift; sourceTree = "<group>"; };
 		1FD817351FACF333AE193758 /* Pods_zfzn2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zfzn2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB99EA49CA0375C31D73042F /* Pods-zfzn2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zfzn2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zfzn2/Pods-zfzn2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -614,7 +616,6 @@
 				1BEA098F1FA429D300BA28D3 /* Result.framework in Frameworks */,
 				1BEA09901FA429D300BA28D3 /* SDWebImage.framework in Frameworks */,
 				1BEA09911FA429D300BA28D3 /* SocketRocket.framework in Frameworks */,
-				1B42AC5C1FA08029006324F9 /* SmartConfigClient.framework in Frameworks */,
 				1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */,
 				1B7667F51EF3CAA3007B21B4 /* libstdc++.6.tbd in Frameworks */,
 				1B6F2A011E46122300D19DE9 /* libz.1.dylib in Frameworks */,
@@ -622,6 +623,7 @@
 				1B6F29FF1E4611D600D19DE9 /* CoreAudio.framework in Frameworks */,
 				1B6F29FD1E4611D000D19DE9 /* MediaPlayer.framework in Frameworks */,
 				1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */,
+				1BF1AF841FAF0A6F00A8E27E /* SmartConfigClient.framework in Frameworks */,
 				1B6F29FB1E4611C300D19DE9 /* AudioToolbox.framework in Frameworks */,
 				1B6F29F91E4611BD00D19DE9 /* VideoToolbox.framework in Frameworks */,
 				1B6F29F71E4611B400D19DE9 /* OpenGLES.framework in Frameworks */,
@@ -666,17 +668,6 @@
 				1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */,
 			);
 			path = KindsOfData;
-			sourceTree = "<group>";
-		};
-		1B24C68E1DCB3B45006B2A24 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				1B67B6361E0FAE860034BB7D /* NirKxMenu */,
-				1B24C68F1DCB3B69006B2A24 /* HomePageViewCtrl.swift */,
-				1B24C6901DCB3B69006B2A24 /* MainTabBarCtrl.swift */,
-				1B0DDE6E1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift */,
-			);
-			name = HomePage;
 			sourceTree = "<group>";
 		};
 		1B3BB0E21DFBFD7000361071 /* BaseClass */ = {
@@ -726,135 +717,12 @@
 				1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */,
 				1B6F29DB1E460EB800D19DE9 /* zfzn2-Bridging-Header.h */,
 				1BF505F51DB7154A002AA286 /* Data */,
-				1B441C551DB6686E0009F2E0 /* ViewRewrite */,
-				1B441C501DB5135C0009F2E0 /* ViewCtrl */,
+				1BF1AEAB1FAF0A5800A8E27E /* ViewRewrite */,
+				1BF1AF031FAF0A6E00A8E27E /* ViewCtrl */,
 				1B6F29581E460D7500D19DE9 /* Camera */,
 				1B7667441EF3CA1C007B21B4 /* JdPlay */,
 			);
 			path = zfzn2;
-			sourceTree = "<group>";
-		};
-		1B441C501DB5135C0009F2E0 /* ViewCtrl */ = {
-			isa = PBXGroup;
-			children = (
-				1B4F49A01E835BA900489545 /* OtherMenu */,
-				1BF2E2641E14A36400EC5E49 /* AccountCenter */,
-				1BF2E26B1E14A36400EC5E49 /* Master */,
-				1BF505F81DB71DC2002AA286 /* Login */,
-				1BF83AB01DC84190001DAA29 /* LeftView */,
-				1B24C68E1DCB3B45006B2A24 /* HomePage */,
-				1BACDA981DCDF0A500BA85C2 /* AreaPage */,
-				1BC72FDE1E1A7FA2009F2D9D /* ScenePage */,
-				1B6749861EFB688500AC98E3 /* SensorPage */,
-				1B8305411DCF76CF0070FDD3 /* Electric */,
-			);
-			path = ViewCtrl;
-			sourceTree = "<group>";
-		};
-		1B441C551DB6686E0009F2E0 /* ViewRewrite */ = {
-			isa = PBXGroup;
-			children = (
-				1B62BE3D1F14EEFE004E459A /* Other */,
-				1B9FD1F91E1CE19F0050D843 /* UIView */,
-				1B67B63A1E0FB8610034BB7D /* CollectionCell */,
-				1B67B63D1E0FB8610034BB7D /* TabelCell */,
-				1B83054E1DD0265E0070FDD3 /* Alert */,
-			);
-			path = ViewRewrite;
-			sourceTree = "<group>";
-		};
-		1B4813AD1E055CB10042A57E /* ImageCropper */ = {
-			isa = PBXGroup;
-			children = (
-				1B4813AE1E055CB10042A57E /* VPImageCropperViewController.h */,
-				1B4813AF1E055CB10042A57E /* VPImageCropperViewController.m */,
-			);
-			path = ImageCropper;
-			sourceTree = "<group>";
-		};
-		1B4F49A01E835BA900489545 /* OtherMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1B4F49A31E83637400489545 /* SettingViewCtrl.swift */,
-				1B7FC36F1E9DD91900209C41 /* SwitchCityViewCtrl.swift */,
-			);
-			path = OtherMenu;
-			sourceTree = "<group>";
-		};
-		1B62BE3D1F14EEFE004E459A /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				1B62BE3E1F14EF57004E459A /* ETKeyButton.swift */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		1B6749861EFB688500AC98E3 /* SensorPage */ = {
-			isa = PBXGroup;
-			children = (
-				1B6749871EFB689F00AC98E3 /* SensorViewCtrl.swift */,
-			);
-			path = SensorPage;
-			sourceTree = "<group>";
-		};
-		1B67B6361E0FAE860034BB7D /* NirKxMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1B67B6371E0FAE860034BB7D /* NirKxMenu.h */,
-				1B67B6381E0FAE860034BB7D /* NirKxMenu.m */,
-			);
-			name = NirKxMenu;
-			path = HomePage/NirKxMenu;
-			sourceTree = "<group>";
-		};
-		1B67B63A1E0FB8610034BB7D /* CollectionCell */ = {
-			isa = PBXGroup;
-			children = (
-				1B67B63C1E0FB8610034BB7D /* MiniElectric.xib */,
-				1B67B63B1E0FB8610034BB7D /* MiniElectric.swift */,
-				1B39532D1E0FB9E7008A08F5 /* MiniSceneAndArea.xib */,
-				1B67B6521E0FB8B50034BB7D /* MiniSceneAndArea.swift */,
-				1B0C06571E10C3AF0027290B /* DeleteElectric.xib */,
-				1B0C06591E10C3CE0027290B /* DeleteElectric.swift */,
-				1BF2E27C1E15079D00EC5E49 /* AddElectric.xib */,
-				1BF2E27E1E1507C700EC5E49 /* AddElectric.swift */,
-			);
-			path = CollectionCell;
-			sourceTree = "<group>";
-		};
-		1B67B63D1E0FB8610034BB7D /* TabelCell */ = {
-			isa = PBXGroup;
-			children = (
-				1B67B6411E0FB8610034BB7D /* MyAccountImageCell.xib */,
-				1B67B6401E0FB8610034BB7D /* MyAccountImageCell.swift */,
-				1B67B6431E0FB8610034BB7D /* MyAccountInfoCell.xib */,
-				1B67B6421E0FB8610034BB7D /* MyAccountInfoCell.swift */,
-				1B67B6451E0FB8610034BB7D /* MyMasterCell.xib */,
-				1B67B6441E0FB8610034BB7D /* MyMasterCell.swift */,
-				1BD468EF1E1E8F8000B2275B /* MyAreaCell.xib */,
-				1BD468EE1E1E8F8000B2275B /* MyAreaCell.swift */,
-				1BBE3D851E1B4C8200D294A7 /* MySceneCell.xib */,
-				1BBE3D871E1B8F3600D294A7 /* MySceneCell.swift */,
-				1B9FD1F51E1CB95B0050D843 /* MySceneElectricCell.xib */,
-				1B9FD1F71E1CB99F0050D843 /* MySceneElectricCell.swift */,
-				1BF0B30B1F04A1DF00DA4F37 /* AddSceneCell.xib */,
-				1BF0B30D1F04A20500DA4F37 /* AddSceneCell.swift */,
-				1B9FD2021E1CE8B80050D843 /* EditSceneElectricCell.xib */,
-				1B9FD2041E1CE8D70050D843 /* EditSceneElectricCell.swift */,
-				1B4F49A91E9483F900489545 /* MySharedAccountCell.xib */,
-				1B4F49AB1E94874D00489545 /* MySharedAccountCell.swift */,
-				1B4F49AF1E94E92500489545 /* SharedAccountInfoCell.xib */,
-				1B4F49B11E94E95200489545 /* SharedAccountInfoCell.swift */,
-				1B4F49B51E9B1CB600489545 /* SharedElectricCell.xib */,
-				1B4F49B71E9B1CD900489545 /* SharedElectricCell.swift */,
-				1B6749811EFB60EF00AC98E3 /* MySensorCell.xib */,
-				1B6749831EFB610E00AC98E3 /* MySensorCell.swift */,
-				1B11F5871F98303D00C5C24E /* DoorRecordCell.xib */,
-				1B11F5891F98306700C5C24E /* DoorRecordCell.swift */,
-				1B0DDE701FA81F0F00C7CDDB /* AlarmRecordCell.xib */,
-				1B0DDE741FA81F4D00C7CDDB /* AlarmRecordCell.swift */,
-			);
-			path = TabelCell;
 			sourceTree = "<group>";
 		};
 		1B6F28C51E460B0F00D19DE9 /* Depend */ = {
@@ -1216,15 +1084,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1B8305411DCF76CF0070FDD3 /* Electric */ = {
-			isa = PBXGroup;
-			children = (
-				1B935A671F15CCC00017F694 /* Func */,
-				1B935A6B1F15CCC00017F694 /* Types */,
-			);
-			path = Electric;
-			sourceTree = "<group>";
-		};
 		1B8305461DD017890070FDD3 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
@@ -1232,15 +1091,6 @@
 				1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */,
 			);
 			path = WebService;
-			sourceTree = "<group>";
-		};
-		1B83054E1DD0265E0070FDD3 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				1B83054F1DD0265E0070FDD3 /* SCLAlertView.swift */,
-				1B8305501DD0265E0070FDD3 /* SCLExtensions.swift */,
-			);
-			path = Alert;
 			sourceTree = "<group>";
 		};
 		1B8DCBD51DE5865C000D8DE0 /* Socket */ = {
@@ -1253,46 +1103,6 @@
 			name = Socket;
 			path = zfzn2/Data/Socket;
 			sourceTree = SOURCE_ROOT;
-		};
-		1B935A671F15CCC00017F694 /* Func */ = {
-			isa = PBXGroup;
-			children = (
-				1B935A681F15CCC00017F694 /* AddElectricTypeViewCtrl.swift */,
-				1B935A691F15CCC00017F694 /* AddElectricViewCtrl.swift */,
-				1B935A6A1F15CCC00017F694 /* EditElectricViewCtrl.swift */,
-				1B2106F71F97A92D008C396A /* DoorRecordViewCtrl.swift */,
-			);
-			path = Func;
-			sourceTree = "<group>";
-		};
-		1B935A6B1F15CCC00017F694 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				1B935A731F15CCC00017F694 /* ElecSuperViewCtrl.swift */,
-				1B935A741F15CCC00017F694 /* ElecSwitchViewCtrl.swift */,
-				1B935A6F1F15CCC00017F694 /* ElecDoorViewCtrl.swift */,
-				1BF0812E1F418F5600898799 /* ElecDoor2ViewCtrl.swift */,
-				1B935A761F15CCC00017F694 /* ElecWindowViewCtrl.swift */,
-				1B935A6E1F15CCC00017F694 /* ElecCurtainViewCtrl.swift */,
-				1B935A711F15CCC00017F694 /* ElecSceneSwitchViewCtrl.swift */,
-				1B935A6C1F15CCC00017F694 /* ElecAirViewCtrl.swift */,
-				1B935A851F15CD220017F694 /* ElecAirLearnViewCtrl.swift */,
-				1B935A751F15CCC00017F694 /* ElecTvViewCtrl.swift */,
-				1B935A721F15CCC00017F694 /* ElecSensorViewCtrl.swift */,
-				1B935A701F15CCC00017F694 /* ElecHornViewCtrl.swift */,
-				1B935A6D1F15CCC00017F694 /* ElecClothesViewCtrl.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		1B9FD1F91E1CE19F0050D843 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				1B9FD1FF1E1CE43E0050D843 /* MySceneElectricView.xib */,
-				1B9FD1FE1E1CE43E0050D843 /* MySceneElectricView.swift */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
 		};
 		1BA52DE91F13C78600CD9D37 /* Format */ = {
 			isa = PBXGroup;
@@ -1354,106 +1164,321 @@
 			path = SQL;
 			sourceTree = "<group>";
 		};
-		1BACDA981DCDF0A500BA85C2 /* AreaPage */ = {
+		1BF1AEAB1FAF0A5800A8E27E /* ViewRewrite */ = {
 			isa = PBXGroup;
 			children = (
-				1B4813AD1E055CB10042A57E /* ImageCropper */,
-				1BACDA9B1DCDF0A500BA85C2 /* SKScNavBarController */,
-				1BACDA991DCDF0A500BA85C2 /* AreaViewCtrl.swift */,
-				1BACDA9A1DCDF0A500BA85C2 /* SelectedAreaViewCtrl.swift */,
-				1B0D02BA1E037C3A00C412E5 /* AddAreaViewCtrl.swift */,
-				1B4813B11E06B5D90042A57E /* EditAreaViewCtrl.swift */,
+				1BF1AEAC1FAF0A5800A8E27E /* Alert */,
+				1BF1AEAF1FAF0A5800A8E27E /* CollectionCell */,
+				1BF1AEB81FAF0A5800A8E27E /* Other */,
+				1BF1AEBA1FAF0A5800A8E27E /* TabelCell */,
+				1BF1AED71FAF0A5800A8E27E /* UIView */,
 			);
-			path = AreaPage;
+			path = ViewRewrite;
 			sourceTree = "<group>";
 		};
-		1BACDA9B1DCDF0A500BA85C2 /* SKScNavBarController */ = {
+		1BF1AEAC1FAF0A5800A8E27E /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				1BACDA9C1DCDF0A500BA85C2 /* Controller */,
-				1BACDA9E1DCDF0A500BA85C2 /* SKMacros.swift */,
-				1BACDA9F1DCDF0A500BA85C2 /* Views */,
+				1BF1AEAD1FAF0A5800A8E27E /* SCLAlertView.swift */,
+				1BF1AEAE1FAF0A5800A8E27E /* SCLExtensions.swift */,
 			);
-			path = SKScNavBarController;
+			path = Alert;
 			sourceTree = "<group>";
 		};
-		1BACDA9C1DCDF0A500BA85C2 /* Controller */ = {
+		1BF1AEAF1FAF0A5800A8E27E /* CollectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				1BACDA9D1DCDF0A500BA85C2 /* SKScNavViewController.swift */,
+				1BF1AEB01FAF0A5800A8E27E /* AddElectric.swift */,
+				1BF1AEB11FAF0A5800A8E27E /* AddElectric.xib */,
+				1BF1AEB21FAF0A5800A8E27E /* DeleteElectric.swift */,
+				1BF1AEB31FAF0A5800A8E27E /* DeleteElectric.xib */,
+				1BF1AEB41FAF0A5800A8E27E /* MiniElectric.swift */,
+				1BF1AEB51FAF0A5800A8E27E /* MiniElectric.xib */,
+				1BF1AEB61FAF0A5800A8E27E /* MiniSceneAndArea.swift */,
+				1BF1AEB71FAF0A5800A8E27E /* MiniSceneAndArea.xib */,
 			);
-			path = Controller;
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
-		1BACDA9F1DCDF0A500BA85C2 /* Views */ = {
+		1BF1AEB81FAF0A5800A8E27E /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				1BACDAA01DCDF0A500BA85C2 /* SKLaunchMenu.swift */,
-				1BACDAA11DCDF0A500BA85C2 /* SKLaunchMenuItem.swift */,
-				1BACDAA21DCDF0A500BA85C2 /* SKScNavBar.swift */,
+				1BF1AEB91FAF0A5800A8E27E /* ETKeyButton.swift */,
 			);
-			path = Views;
+			path = Other;
 			sourceTree = "<group>";
 		};
-		1BBA021A1FA07DF400EE69D3 /* Voice */ = {
+		1BF1AEBA1FAF0A5800A8E27E /* TabelCell */ = {
 			isa = PBXGroup;
 			children = (
-				1BBA021C1FA07DF400EE69D3 /* SmartConfigClient.framework */,
-				1BEA09841FA4277C00BA28D3 /* Toast.swift */,
-				1BBA021B1FA07DF400EE69D3 /* VoiceConfWifiViewCtrl.swift */,
-				1BBA021E1FA07DF400EE69D3 /* VoiceReachability.swift */,
-				1BBA021F1FA07DF400EE69D3 /* VoiceUserInfo.swift */,
+				1BF1AEBB1FAF0A5800A8E27E /* AddSceneCell.swift */,
+				1BF1AEBC1FAF0A5800A8E27E /* AddSceneCell.xib */,
+				1BF1AEBD1FAF0A5800A8E27E /* AlarmRecordCell.swift */,
+				1BF1AEBE1FAF0A5800A8E27E /* AlarmRecordCell.xib */,
+				1BF1AEBF1FAF0A5800A8E27E /* DoorRecordCell.swift */,
+				1BF1AEC01FAF0A5800A8E27E /* DoorRecordCell.xib */,
+				1BF1AEC11FAF0A5800A8E27E /* EditSceneElectricCell.swift */,
+				1BF1AEC21FAF0A5800A8E27E /* EditSceneElectricCell.xib */,
+				1BF1AEC31FAF0A5800A8E27E /* MyAccountImageCell.swift */,
+				1BF1AEC41FAF0A5800A8E27E /* MyAccountImageCell.xib */,
+				1BF1AEC51FAF0A5800A8E27E /* MyAccountInfoCell.swift */,
+				1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */,
+				1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */,
+				1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */,
+				1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */,
+				1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */,
+				1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */,
+				1BF1AECC1FAF0A5800A8E27E /* MySceneCell.xib */,
+				1BF1AECD1FAF0A5800A8E27E /* MySceneElectricCell.swift */,
+				1BF1AECE1FAF0A5800A8E27E /* MySceneElectricCell.xib */,
+				1BF1AECF1FAF0A5800A8E27E /* MySensorCell.swift */,
+				1BF1AED01FAF0A5800A8E27E /* MySensorCell.xib */,
+				1BF1AED11FAF0A5800A8E27E /* MySharedAccountCell.swift */,
+				1BF1AED21FAF0A5800A8E27E /* MySharedAccountCell.xib */,
+				1BF1AED31FAF0A5800A8E27E /* SharedAccountInfoCell.swift */,
+				1BF1AED41FAF0A5800A8E27E /* SharedAccountInfoCell.xib */,
+				1BF1AED51FAF0A5800A8E27E /* SharedElectricCell.swift */,
+				1BF1AED61FAF0A5800A8E27E /* SharedElectricCell.xib */,
 			);
-			path = Voice;
+			path = TabelCell;
 			sourceTree = "<group>";
 		};
-		1BC72FDE1E1A7FA2009F2D9D /* ScenePage */ = {
+		1BF1AED71FAF0A5800A8E27E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				1BBE3D811E1B379800D294A7 /* ViewPagerIndicator.swift */,
-				1BC72FE31E1A8036009F2D9D /* SceneViewCtrl.swift */,
-				1B9FD1F31E1BE1520050D843 /* ScenePageViewCtrl.swift */,
-				1BB5E54B1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift */,
-				1BB5E54D1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift */,
-				1B3392051E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift */,
-				1BF524741EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift */,
+				1BF1AED81FAF0A5800A8E27E /* MySceneElectricView.swift */,
+				1BF1AED91FAF0A5800A8E27E /* MySceneElectricView.xib */,
 			);
-			path = ScenePage;
+			path = UIView;
 			sourceTree = "<group>";
 		};
-		1BCB7CC01FA08CA7000B94B6 /* ConfWifi */ = {
+		1BF1AF031FAF0A6E00A8E27E /* ViewCtrl */ = {
 			isa = PBXGroup;
 			children = (
-				1BBA021A1FA07DF400EE69D3 /* Voice */,
-				1BB351FB1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift */,
+				1BF1AF041FAF0A6E00A8E27E /* AccountCenter */,
+				1BF1AF0A1FAF0A6E00A8E27E /* AreaPage */,
+				1BF1AFA01FAF236900A8E27E /* Electric */,
+				1BF1AF2E1FAF0A6E00A8E27E /* HomePage */,
+				1BF1AF351FAF0A6E00A8E27E /* LeftView */,
+				1BF1AF391FAF0A6E00A8E27E /* Login */,
+				1BF1AF471FAF0A6E00A8E27E /* Master */,
+				1BF1AF501FAF0A6E00A8E27E /* OtherMenu */,
+				1BF1AF531FAF0A6E00A8E27E /* ScenePage */,
+				1BF1AF5B1FAF0A6E00A8E27E /* SensorPage */,
 			);
-			path = ConfWifi;
+			path = ViewCtrl;
 			sourceTree = "<group>";
 		};
-		1BF2E2641E14A36400EC5E49 /* AccountCenter */ = {
+		1BF1AF041FAF0A6E00A8E27E /* AccountCenter */ = {
 			isa = PBXGroup;
 			children = (
-				1BF2E2661E14A36400EC5E49 /* AccountInfoViewCtrl.swift */,
-				1BF2E2671E14A36400EC5E49 /* ChangeAccountAddressViewCtrl.swift */,
-				1BF2E2681E14A36400EC5E49 /* ChangeAccountEmailViewCtrl.swift */,
-				1BF2E2691E14A36400EC5E49 /* ChangeAccountNameViewCtrl.swift */,
-				1BF2E26A1E14A36400EC5E49 /* ChangeAccountPasswordViewCtrl.swift */,
+				1BF1AF051FAF0A6E00A8E27E /* AccountInfoViewCtrl.swift */,
+				1BF1AF061FAF0A6E00A8E27E /* ChangeAccountAddressViewCtrl.swift */,
+				1BF1AF071FAF0A6E00A8E27E /* ChangeAccountEmailViewCtrl.swift */,
+				1BF1AF081FAF0A6E00A8E27E /* ChangeAccountNameViewCtrl.swift */,
+				1BF1AF091FAF0A6E00A8E27E /* ChangeAccountPasswordViewCtrl.swift */,
 			);
 			path = AccountCenter;
 			sourceTree = "<group>";
 		};
-		1BF2E26B1E14A36400EC5E49 /* Master */ = {
+		1BF1AF0A1FAF0A6E00A8E27E /* AreaPage */ = {
 			isa = PBXGroup;
 			children = (
-				1BF2E26F1E14A36400EC5E49 /* MyMasterViewCtrl.swift */,
-				1BF2E26D1E14A36400EC5E49 /* AddMasterViewCtrl.swift */,
-				1BF2E26E1E14A36400EC5E49 /* EditMasterViewCtrl.swift */,
-				1BF2E2701E14A36400EC5E49 /* ShareMasterViewCtrl.swift */,
-				1B4F49A71E93D9A200489545 /* SharedListViewCtrl.swift */,
-				1B4F49AD1E94DCA600489545 /* SharedAccountViewCtrl.swift */,
-				1B4F49B31E972BF600489545 /* SharedElecListViewCtrl.swift */,
+				1BF1AF0E1FAF0A6E00A8E27E /* ImageCropper */,
+				1BF1AF121FAF0A6E00A8E27E /* SKScNavBarController */,
+				1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */,
+				1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */,
+				1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */,
+				1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */,
+			);
+			path = AreaPage;
+			sourceTree = "<group>";
+		};
+		1BF1AF0E1FAF0A6E00A8E27E /* ImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF0F1FAF0A6E00A8E27E /* VPImageCropperViewController.h */,
+				1BF1AF101FAF0A6E00A8E27E /* VPImageCropperViewController.m */,
+			);
+			path = ImageCropper;
+			sourceTree = "<group>";
+		};
+		1BF1AF121FAF0A6E00A8E27E /* SKScNavBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF131FAF0A6E00A8E27E /* Controller */,
+				1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */,
+				1BF1AF161FAF0A6E00A8E27E /* Views */,
+			);
+			path = SKScNavBarController;
+			sourceTree = "<group>";
+		};
+		1BF1AF131FAF0A6E00A8E27E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF141FAF0A6E00A8E27E /* SKScNavViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BF1AF161FAF0A6E00A8E27E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF171FAF0A6E00A8E27E /* SKLaunchMenu.swift */,
+				1BF1AF181FAF0A6E00A8E27E /* SKLaunchMenuItem.swift */,
+				1BF1AF191FAF0A6E00A8E27E /* SKScNavBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BF1AF2E1FAF0A6E00A8E27E /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF2F1FAF0A6E00A8E27E /* AlarmRecordViewCtrl.swift */,
+				1BF1AF301FAF0A6E00A8E27E /* HomePageViewCtrl.swift */,
+				1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */,
+				1BF1AF321FAF0A6E00A8E27E /* NirKxMenu */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		1BF1AF321FAF0A6E00A8E27E /* NirKxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF331FAF0A6E00A8E27E /* NirKxMenu.h */,
+				1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */,
+			);
+			path = NirKxMenu;
+			sourceTree = "<group>";
+		};
+		1BF1AF351FAF0A6E00A8E27E /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */,
+				1BF1AF371FAF0A6E00A8E27E /* SWRevealViewController.h */,
+				1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */,
+			);
+			path = LeftView;
+			sourceTree = "<group>";
+		};
+		1BF1AF391FAF0A6E00A8E27E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF3A1FAF0A6E00A8E27E /* ConfWifi */,
+				1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */,
+				1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */,
+				1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */,
+				1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */,
+				1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1BF1AF3A1FAF0A6E00A8E27E /* ConfWifi */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */,
+				1BF1AF3C1FAF0A6E00A8E27E /* Voice */,
+			);
+			path = ConfWifi;
+			sourceTree = "<group>";
+		};
+		1BF1AF3C1FAF0A6E00A8E27E /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */,
+				1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */,
+				1BF1AF3F1FAF0A6E00A8E27E /* VoiceConfWifiViewCtrl.swift */,
+				1BF1AF401FAF0A6E00A8E27E /* VoiceReachability.swift */,
+				1BF1AF411FAF0A6E00A8E27E /* VoiceUserInfo.swift */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		1BF1AF471FAF0A6E00A8E27E /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */,
+				1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */,
+				1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */,
+				1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */,
+				1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */,
+				1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */,
+				1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */,
+				1BF1AF4F1FAF0A6E00A8E27E /* ShareMasterViewCtrl.swift */,
 			);
 			path = Master;
+			sourceTree = "<group>";
+		};
+		1BF1AF501FAF0A6E00A8E27E /* OtherMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF511FAF0A6E00A8E27E /* SettingViewCtrl.swift */,
+				1BF1AF521FAF0A6E00A8E27E /* SwitchCityViewCtrl.swift */,
+			);
+			path = OtherMenu;
+			sourceTree = "<group>";
+		};
+		1BF1AF531FAF0A6E00A8E27E /* ScenePage */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF541FAF0A6E00A8E27E /* AddSceneElectricViewCtrl.swift */,
+				1BF1AF551FAF0A6E00A8E27E /* AddSceneViewCtrl.swift */,
+				1BF1AF561FAF0A6E00A8E27E /* EditSceneElectricViewCtrl.swift */,
+				1BF1AF571FAF0A6E00A8E27E /* EditSceneViewCtrl.swift */,
+				1BF1AF581FAF0A6E00A8E27E /* ScenePageViewCtrl.swift */,
+				1BF1AF591FAF0A6E00A8E27E /* SceneViewCtrl.swift */,
+				1BF1AF5A1FAF0A6E00A8E27E /* ViewPagerIndicator.swift */,
+			);
+			path = ScenePage;
+			sourceTree = "<group>";
+		};
+		1BF1AF5B1FAF0A6E00A8E27E /* SensorPage */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AF5C1FAF0A6E00A8E27E /* SensorViewCtrl.swift */,
+			);
+			path = SensorPage;
+			sourceTree = "<group>";
+		};
+		1BF1AFA01FAF236900A8E27E /* Electric */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AFA11FAF236900A8E27E /* Func */,
+				1BF1AFA61FAF236900A8E27E /* Types */,
+			);
+			path = Electric;
+			sourceTree = "<group>";
+		};
+		1BF1AFA11FAF236900A8E27E /* Func */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AFA21FAF236900A8E27E /* AddElectricTypeViewCtrl.swift */,
+				1BF1AFA31FAF236900A8E27E /* AddElectricViewCtrl.swift */,
+				1BF1AFA41FAF236900A8E27E /* DoorRecordViewCtrl.swift */,
+				1BF1AFA51FAF236900A8E27E /* EditElectricViewCtrl.swift */,
+			);
+			path = Func;
+			sourceTree = "<group>";
+		};
+		1BF1AFA61FAF236900A8E27E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */,
+				1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */,
+				1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */,
+				1BF1AFAA1FAF236900A8E27E /* ElecCurtainViewCtrl.swift */,
+				1BF1AFAB1FAF236900A8E27E /* ElecDoor2ViewCtrl.swift */,
+				1BF1AFAC1FAF236900A8E27E /* ElecDoorViewCtrl.swift */,
+				1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */,
+				1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */,
+				1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */,
+				1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */,
+				1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */,
+				1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */,
+				1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		1BF505F51DB7154A002AA286 /* Data */ = {
@@ -1468,29 +1493,6 @@
 				1BA52DE91F13C78600CD9D37 /* Format */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		1BF505F81DB71DC2002AA286 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				1BCB7CC01FA08CA7000B94B6 /* ConfWifi */,
-				1BF506011DB72456002AA286 /* LoginViewCtrl.swift */,
-				1BF506051DB74D2C002AA286 /* RegisterViewCtrl.swift */,
-				1BF506071DB74EB8002AA286 /* SetPasswordViewCtrl.swift */,
-				1BF505FF1DB720F6002AA286 /* FindPasswordViewCtrl.swift */,
-				1BF506091DB750FF002AA286 /* ResetPasswordViewCtrl.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		1BF83AB01DC84190001DAA29 /* LeftView */ = {
-			isa = PBXGroup;
-			children = (
-				1B7E078B1DC9E39000DD3E00 /* LeftMenuViewCtrl.swift */,
-				1B7E07881DC9E11600DD3E00 /* SWRevealViewController.h */,
-				1B7E07891DC9E11600DD3E00 /* SWRevealViewController.m */,
-			);
-			path = LeftView;
 			sourceTree = "<group>";
 		};
 		6BBECDFED7DDCB8E5E82EDE6 /* Pods */ = {
@@ -1620,34 +1622,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9FD2031E1CE8B80050D843 /* EditSceneElectricCell.xib in Resources */,
-				1B0C06581E10C3AF0027290B /* DeleteElectric.xib in Resources */,
+				1BF1AEE81FAF0A5800A8E27E /* AlarmRecordCell.xib in Resources */,
+				1BF1AEE61FAF0A5800A8E27E /* AddSceneCell.xib in Resources */,
+				1BF1AEFE1FAF0A5800A8E27E /* SharedAccountInfoCell.xib in Resources */,
 				1B7667EB1EF3CA1C007B21B4 /* JdDeviceInfoTableViewCell.xib in Resources */,
+				1BF1AEEC1FAF0A5800A8E27E /* EditSceneElectricCell.xib in Resources */,
 				1B7667E81EF3CA1C007B21B4 /* CategoryTableViewCell.xib in Resources */,
 				1B7667C51EF3CA1C007B21B4 /* JdMyDeviceViewController.xib in Resources */,
-				1B4F49B01E94E92500489545 /* SharedAccountInfoCell.xib in Resources */,
-				1B4F49B61E9B1CB600489545 /* SharedElectricCell.xib in Resources */,
-				1B39532E1E0FB9E7008A08F5 /* MiniSceneAndArea.xib in Resources */,
+				1BF1AEE11FAF0A5800A8E27E /* MiniElectric.xib in Resources */,
+				1BF1AEF81FAF0A5800A8E27E /* MySceneElectricCell.xib in Resources */,
+				1BF1AF001FAF0A5800A8E27E /* SharedElectricCell.xib in Resources */,
+				1BF1AEE31FAF0A5800A8E27E /* MiniSceneAndArea.xib in Resources */,
+				1BF1AEEE1FAF0A5800A8E27E /* MyAccountImageCell.xib in Resources */,
 				1B441C2A1DB5133E0009F2E0 /* Assets.xcassets in Resources */,
-				1BBE3D861E1B4C8200D294A7 /* MySceneCell.xib in Resources */,
-				1BD468F11E1E8F8000B2275B /* MyAreaCell.xib in Resources */,
-				1B6749821EFB60EF00AC98E3 /* MySensorCell.xib in Resources */,
-				1B11F5881F98303D00C5C24E /* DoorRecordCell.xib in Resources */,
+				1BF1AF021FAF0A5800A8E27E /* MySceneElectricView.xib in Resources */,
 				1B6F29061E460B1000D19DE9 /* cert.pem in Resources */,
+				1BF1AEFA1FAF0A5800A8E27E /* MySensorCell.xib in Resources */,
+				1BF1AEEA1FAF0A5800A8E27E /* DoorRecordCell.xib in Resources */,
 				1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */,
-				1B67B6471E0FB8610034BB7D /* MiniElectric.xib in Resources */,
-				1B67B64F1E0FB8610034BB7D /* MyMasterCell.xib in Resources */,
-				1B9FD1F61E1CB95B0050D843 /* MySceneElectricCell.xib in Resources */,
+				1BF1AEF01FAF0A5800A8E27E /* MyAccountInfoCell.xib in Resources */,
+				1BF1AEFC1FAF0A5800A8E27E /* MySharedAccountCell.xib in Resources */,
+				1BF1AEF21FAF0A5800A8E27E /* MyAreaCell.xib in Resources */,
 				1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */,
+				1BF1AEF61FAF0A5800A8E27E /* MySceneCell.xib in Resources */,
 				1BEEAF151DD9AE6900E17617 /* Main.storyboard in Resources */,
-				1B4F49AA1E9483F900489545 /* MySharedAccountCell.xib in Resources */,
+				1BF1AEF41FAF0A5800A8E27E /* MyMasterCell.xib in Resources */,
 				1B7667ED1EF3CA1C007B21B4 /* JdFailTipView.xib in Resources */,
-				1B9FD2011E1CE43E0050D843 /* MySceneElectricView.xib in Resources */,
-				1B0DDE711FA81F0F00C7CDDB /* AlarmRecordCell.xib in Resources */,
-				1B67B64B1E0FB8610034BB7D /* MyAccountImageCell.xib in Resources */,
-				1BF0B30C1F04A1DF00DA4F37 /* AddSceneCell.xib in Resources */,
-				1BF2E27D1E15079D00EC5E49 /* AddElectric.xib in Resources */,
-				1B67B64D1E0FB8610034BB7D /* MyAccountInfoCell.xib in Resources */,
+				1BF1AEDF1FAF0A5800A8E27E /* DeleteElectric.xib in Resources */,
+				1BF1AEDD1FAF0A5800A8E27E /* AddElectric.xib in Resources */,
 				1B7667C31EF3CA1C007B21B4 /* JdMusicPlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1749,161 +1751,162 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF1AEDC1FAF0A5800A8E27E /* AddElectric.swift in Sources */,
 				1B7667E91EF3CA1C007B21B4 /* CHLoadingView.m in Sources */,
-				1BBE3D881E1B8F3600D294A7 /* MySceneCell.swift in Sources */,
-				1BBA02201FA07DF500EE69D3 /* VoiceConfWifiViewCtrl.swift in Sources */,
+				1BF1AFB51FAF236A00A8E27E /* AddElectricViewCtrl.swift in Sources */,
 				1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */,
+				1BF1AF7E1FAF0A6F00A8E27E /* HomePageViewCtrl.swift in Sources */,
 				1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */,
+				1BF1AF9B1FAF0A6F00A8E27E /* EditSceneViewCtrl.swift in Sources */,
 				1B504CFA1F13BD6F00C57F17 /* ETData.swift in Sources */,
-				1B8305521DD0265E0070FDD3 /* SCLExtensions.swift in Sources */,
 				1B7667E61EF3CA1C007B21B4 /* JsonUtils.m in Sources */,
-				1B935A7F1F15CCC00017F694 /* ElecSceneSwitchViewCtrl.swift in Sources */,
+				1BF1AF9C1FAF0A6F00A8E27E /* ScenePageViewCtrl.swift in Sources */,
+				1BF1AFBB1FAF236A00A8E27E /* ElecCurtainViewCtrl.swift in Sources */,
+				1BF1AEF31FAF0A5800A8E27E /* MyMasterCell.swift in Sources */,
 				1B6F29B21E460D7500D19DE9 /* UserToken.cpp in Sources */,
 				1B7667C21EF3CA1C007B21B4 /* JdMusicPlayViewController.m in Sources */,
-				1B4F49B21E94E95200489545 /* SharedAccountInfoCell.swift in Sources */,
-				1B7E078C1DC9E39000DD3E00 /* LeftMenuViewCtrl.swift in Sources */,
 				1B7667C41EF3CA1C007B21B4 /* JdMyDeviceViewController.m in Sources */,
+				1BF1AF601FAF0A6F00A8E27E /* ChangeAccountNameViewCtrl.swift in Sources */,
 				1B6F29E91E46112B00D19DE9 /* AddDeviceViewController.m in Sources */,
+				1BF1AF8F1FAF0A6F00A8E27E /* AddMasterViewCtrl.swift in Sources */,
+				1BF1AFC21FAF236A00A8E27E /* ElecSwitchViewCtrl.swift in Sources */,
 				1BA52DEF1F13C78600CD9D37 /* XMLDictionary.m in Sources */,
-				1BF5060A1DB750FF002AA286 /* ResetPasswordViewCtrl.swift in Sources */,
-				1BF2E27F1E1507C700EC5E49 /* AddElectric.swift in Sources */,
-				1BF2E2751E14A36400EC5E49 /* ChangeAccountNameViewCtrl.swift in Sources */,
-				1BF0812F1F418F5600898799 /* ElecDoor2ViewCtrl.swift in Sources */,
-				1BF506021DB72456002AA286 /* LoginViewCtrl.swift in Sources */,
+				1BF1AFC41FAF236A00A8E27E /* ElecWindowViewCtrl.swift in Sources */,
+				1BF1AF6B1FAF0A6F00A8E27E /* SKScNavBar.swift in Sources */,
 				1B6F29B31E460D7500D19DE9 /* cJSON.cpp in Sources */,
-				1B935A801F15CCC00017F694 /* ElecSensorViewCtrl.swift in Sources */,
-				1B24C6911DCB3B69006B2A24 /* HomePageViewCtrl.swift in Sources */,
+				1BF1AFBE1FAF236A00A8E27E /* ElecHornViewCtrl.swift in Sources */,
 				1B6F29B81E460D7500D19DE9 /* LCOpenApi_Reflection.cpp in Sources */,
+				1BF1AF661FAF0A6F00A8E27E /* SelectedAreaViewCtrl.swift in Sources */,
 				1B0868DB1DE9675B0045E531 /* ElectricData.swift in Sources */,
-				1BF0B30E1F04A20500DA4F37 /* AddSceneCell.swift in Sources */,
 				1B3BB0EF1DFBFD7000361071 /* getgateway.c in Sources */,
 				1B6F29B51E460D7500D19DE9 /* LCOpenApi_Common.cpp in Sources */,
-				1BC72FE41E1A8036009F2D9D /* SceneViewCtrl.swift in Sources */,
 				1B7667C01EF3CA1C007B21B4 /* JdCategory_DViewController.m in Sources */,
 				1BACDA961DCDF07A00BA85C2 /* SQLTable.swift in Sources */,
-				1B4F49A81E93D9A200489545 /* SharedListViewCtrl.swift in Sources */,
-				1B3392061E1DE25300A6E7B7 /* AddSceneElectricViewCtrl.swift in Sources */,
+				1BF1AFB41FAF236A00A8E27E /* AddElectricTypeViewCtrl.swift in Sources */,
+				1BF1AF641FAF0A6F00A8E27E /* EditAreaViewCtrl.swift in Sources */,
+				1BF1AEF71FAF0A5800A8E27E /* MySceneElectricCell.swift in Sources */,
+				1BF1AEE41FAF0A5800A8E27E /* ETKeyButton.swift in Sources */,
+				1BF1AF951FAF0A6F00A8E27E /* ShareMasterViewCtrl.swift in Sources */,
+				1BF1AF811FAF0A6F00A8E27E /* LeftMenuViewCtrl.swift in Sources */,
 				1B441C231DB5133D0009F2E0 /* AppDelegate.swift in Sources */,
-				1B935A841F15CCC00017F694 /* ElecWindowViewCtrl.swift in Sources */,
 				1B055C8F1E50667100F04851 /* UserBindModeViewController.m in Sources */,
 				1B6F29A71E460D7500D19DE9 /* UIDevice+LeChange.m in Sources */,
+				1BF1AF911FAF0A6F00A8E27E /* MyMasterViewCtrl.swift in Sources */,
+				1BF1AEED1FAF0A5800A8E27E /* MyAccountImageCell.swift in Sources */,
 				1B6F29B61E460D7500D19DE9 /* LCOpenApi_ConstString.cpp in Sources */,
+				1BF1AF691FAF0A6F00A8E27E /* SKLaunchMenu.swift in Sources */,
+				1BF1AF961FAF0A6F00A8E27E /* SettingViewCtrl.swift in Sources */,
 				1B7667F01EF3CA1C007B21B4 /* JUIActionButton.m in Sources */,
-				1B935A811F15CCC00017F694 /* ElecSuperViewCtrl.swift in Sources */,
 				1B6F29A81E460D7500D19DE9 /* VideoPlay.m in Sources */,
+				1BF1AF831FAF0A6F00A8E27E /* MasterConfWifiViewCtrl.swift in Sources */,
 				1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */,
-				1BF2E2721E14A36400EC5E49 /* AccountInfoViewCtrl.swift in Sources */,
-				1BACDAA61DCDF0A500BA85C2 /* SKMacros.swift in Sources */,
-				1B4F49AC1E94874D00489545 /* MySharedAccountCell.swift in Sources */,
+				1BF1AF9D1FAF0A6F00A8E27E /* SceneViewCtrl.swift in Sources */,
+				1BF1AEDA1FAF0A5800A8E27E /* SCLAlertView.swift in Sources */,
 				1B7667BC1EF3CA1C007B21B4 /* UIView+Frame.m in Sources */,
-				1B6749841EFB610E00AC98E3 /* MySensorCell.swift in Sources */,
-				1BB5E54E1E1BD6F6000B7FD3 /* EditSceneViewCtrl.swift in Sources */,
+				1BF1AF8A1FAF0A6F00A8E27E /* LoginViewCtrl.swift in Sources */,
 				1B6F29AE1E460D7500D19DE9 /* LCOpenApi_sha1.cpp in Sources */,
-				1B935A7C1F15CCC00017F694 /* ElecCurtainViewCtrl.swift in Sources */,
 				1B6F29D91E460E3C00D19DE9 /* RestApiInfo.m in Sources */,
+				1BF1AFB71FAF236A00A8E27E /* EditElectricViewCtrl.swift in Sources */,
+				1BF1AF651FAF0A6F00A8E27E /* VPImageCropperViewController.m in Sources */,
+				1BF1AFBF1FAF236A00A8E27E /* ElecSceneSwitchViewCtrl.swift in Sources */,
+				1BF1AF611FAF0A6F00A8E27E /* ChangeAccountPasswordViewCtrl.swift in Sources */,
 				1B7667E71EF3CA1C007B21B4 /* CategoryTableViewCell.m in Sources */,
-				1BBA02231FA07DF500EE69D3 /* VoiceReachability.swift in Sources */,
 				1B6F29B11E460D7500D19DE9 /* UserBindSms.cpp in Sources */,
+				1BF1AF8D1FAF0A6F00A8E27E /* SetPasswordViewCtrl.swift in Sources */,
+				1BF1AF991FAF0A6F00A8E27E /* AddSceneViewCtrl.swift in Sources */,
 				1B7667BF1EF3CA1C007B21B4 /* JdCategory_CViewController.m in Sources */,
-				1B935A831F15CCC00017F694 /* ElecTvViewCtrl.swift in Sources */,
-				1B9FD1F41E1BE1520050D843 /* ScenePageViewCtrl.swift in Sources */,
+				1BF1AF8C1FAF0A6F00A8E27E /* ResetPasswordViewCtrl.swift in Sources */,
+				1BF1AFBC1FAF236A00A8E27E /* ElecDoor2ViewCtrl.swift in Sources */,
+				1BF1AEEB1FAF0A5800A8E27E /* EditSceneElectricCell.swift in Sources */,
 				1B055C951E515BB300F04851 /* LiveVideoViewController.m in Sources */,
+				1BF1AF5E1FAF0A6F00A8E27E /* ChangeAccountAddressViewCtrl.swift in Sources */,
 				1B3BB0F11DFBFD7000361071 /* MyWifi.m in Sources */,
 				1B0868DA1DE9675B0045E531 /* AreaData.swift in Sources */,
-				1B935A821F15CCC00017F694 /* ElecSwitchViewCtrl.swift in Sources */,
-				1BF2E2731E14A36400EC5E49 /* ChangeAccountAddressViewCtrl.swift in Sources */,
-				1B0D02BB1E037C3A00C412E5 /* AddAreaViewCtrl.swift in Sources */,
-				1BACDAA71DCDF0A500BA85C2 /* SKLaunchMenu.swift in Sources */,
+				1BF1AEF51FAF0A5800A8E27E /* MySceneCell.swift in Sources */,
+				1BF1AF941FAF0A6F00A8E27E /* SharedListViewCtrl.swift in Sources */,
+				1BF1AF891FAF0A6F00A8E27E /* FindPasswordViewCtrl.swift in Sources */,
+				1BF1AEE21FAF0A5800A8E27E /* MiniSceneAndArea.swift in Sources */,
+				1BF1AEDB1FAF0A5800A8E27E /* SCLExtensions.swift in Sources */,
 				1B7667EC1EF3CA1C007B21B4 /* JdFailTipView.m in Sources */,
-				1BF2E2781E14A36400EC5E49 /* AddMasterViewCtrl.swift in Sources */,
 				1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */,
 				1B7667BE1EF3CA1C007B21B4 /* JdCategory_BViewController.m in Sources */,
-				1B935A861F15CD220017F694 /* ElecAirLearnViewCtrl.swift in Sources */,
-				1BEA09851FA4277C00BA28D3 /* Toast.swift in Sources */,
+				1BF1AF801FAF0A6F00A8E27E /* NirKxMenu.m in Sources */,
+				1BF1AF971FAF0A6F00A8E27E /* SwitchCityViewCtrl.swift in Sources */,
+				1BF1AEE91FAF0A5800A8E27E /* DoorRecordCell.swift in Sources */,
 				1B6F29B41E460D7500D19DE9 /* LCOpenApi_ClientSdk.cpp in Sources */,
 				1B7FC36C1E9CC73F00209C41 /* PublicWebService.swift in Sources */,
-				1B935A7A1F15CCC00017F694 /* ElecAirViewCtrl.swift in Sources */,
 				1B6F29B71E460D7500D19DE9 /* LCOpenApi_FreeBuffer.cpp in Sources */,
-				1B4813B21E06B5D90042A57E /* EditAreaViewCtrl.swift in Sources */,
+				1BF1AF681FAF0A6F00A8E27E /* SKMacros.swift in Sources */,
 				1B160C251E5871DF002F3BDA /* MessageViewController.m in Sources */,
+				1BF1AFBD1FAF236A00A8E27E /* ElecDoorViewCtrl.swift in Sources */,
+				1BF1AF5D1FAF0A6F00A8E27E /* AccountInfoViewCtrl.swift in Sources */,
+				1BF1AF921FAF0A6F00A8E27E /* SharedAccountViewCtrl.swift in Sources */,
 				1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */,
 				1BB5E5481E1B9371000B7FD3 /* SceneData.swift in Sources */,
+				1BF1AF6A1FAF0A6F00A8E27E /* SKLaunchMenuItem.swift in Sources */,
 				1B7667EE1EF3CA1C007B21B4 /* JdPlayCtrlBottomView.m in Sources */,
-				1B67B64A1E0FB8610034BB7D /* MyAccountImageCell.swift in Sources */,
 				1B6F29DA1E460E3C00D19DE9 /* RestApiService.mm in Sources */,
 				1BFAB33D1E52FA7E00162FC5 /* EditCameraViewCtrl.swift in Sources */,
-				1BACDAA31DCDF0A500BA85C2 /* AreaViewCtrl.swift in Sources */,
-				1BACDAA91DCDF0A500BA85C2 /* SKScNavBar.swift in Sources */,
-				1BB5E54C1E1BD6C7000B7FD3 /* AddSceneViewCtrl.swift in Sources */,
-				1BF2E27A1E14A36400EC5E49 /* MyMasterViewCtrl.swift in Sources */,
-				1B9FD1F81E1CB99F0050D843 /* MySceneElectricCell.swift in Sources */,
+				1BF1AEF91FAF0A5800A8E27E /* MySensorCell.swift in Sources */,
 				1BACDA941DCDF07A00BA85C2 /* MySqlCtrl.swift in Sources */,
-				1BF2E2741E14A36400EC5E49 /* ChangeAccountEmailViewCtrl.swift in Sources */,
+				1BF1AEEF1FAF0A5800A8E27E /* MyAccountInfoCell.swift in Sources */,
 				1B6F29B01E460D7500D19DE9 /* UserBind.cpp in Sources */,
+				1BF1AFBA1FAF236A00A8E27E /* ElecClothesViewCtrl.swift in Sources */,
 				1B7667EA1EF3CA1C007B21B4 /* JdDeviceInfoTableViewCell.m in Sources */,
-				1B0C065A1E10C3CE0027290B /* DeleteElectric.swift in Sources */,
-				1BD468F01E1E8F8000B2275B /* MyAreaCell.swift in Sources */,
-				1B0DDE751FA81F4D00C7CDDB /* AlarmRecordCell.swift in Sources */,
-				1B24C6921DCB3B69006B2A24 /* MainTabBarCtrl.swift in Sources */,
-				1BF506081DB74EB8002AA286 /* SetPasswordViewCtrl.swift in Sources */,
-				1B4F49AE1E94DCA600489545 /* SharedAccountViewCtrl.swift in Sources */,
-				1BB351FC1F8B762C00B77467 /* MasterConfWifiViewCtrl.swift in Sources */,
-				1BF2E2761E14A36400EC5E49 /* ChangeAccountPasswordViewCtrl.swift in Sources */,
+				1BF1AF7D1FAF0A6F00A8E27E /* AlarmRecordViewCtrl.swift in Sources */,
 				1B7667C11EF3CA1C007B21B4 /* JdCategoryBaseViewController.m in Sources */,
+				1BF1AF8E1FAF0A6F00A8E27E /* AddMasterNaviCtrl.swift in Sources */,
+				1BF1AF621FAF0A6F00A8E27E /* AddAreaViewCtrl.swift in Sources */,
 				1B7667BD1EF3CA1C007B21B4 /* JdCategory_AViewController.m in Sources */,
 				1B7667EF1EF3CA1C007B21B4 /* JingRoundView.m in Sources */,
+				1BF1AF9F1FAF0A6F00A8E27E /* SensorViewCtrl.swift in Sources */,
 				1B6F29AF1E460D7500D19DE9 /* AccessToken.cpp in Sources */,
-				1B67B64E1E0FB8610034BB7D /* MyMasterCell.swift in Sources */,
-				1B6749881EFB689F00AC98E3 /* SensorViewCtrl.swift in Sources */,
-				1B9FD2001E1CE43E0050D843 /* MySceneElectricView.swift in Sources */,
-				1BACDAA41DCDF0A500BA85C2 /* SelectedAreaViewCtrl.swift in Sources */,
-				1B67B64C1E0FB8610034BB7D /* MyAccountInfoCell.swift in Sources */,
 				1B0868D31DE9672D0045E531 /* UserData.swift in Sources */,
 				1B6F29B91E460D7500D19DE9 /* LCOpenApi_ReflectionObject.cpp in Sources */,
+				1BF1AFC11FAF236A00A8E27E /* ElecSuperViewCtrl.swift in Sources */,
 				1BF505F71DB71575002AA286 /* DataControl.swift in Sources */,
+				1BF1AEFD1FAF0A5800A8E27E /* SharedAccountInfoCell.swift in Sources */,
+				1BF1AEFB1FAF0A5800A8E27E /* MySharedAccountCell.swift in Sources */,
+				1BF1AEE71FAF0A5800A8E27E /* AlarmRecordCell.swift in Sources */,
+				1BF1AF861FAF0A6F00A8E27E /* VoiceConfWifiViewCtrl.swift in Sources */,
 				1B6F29D81E460E3C00D19DE9 /* DownloadPicture.m in Sources */,
-				1B2106F81F97A92D008C396A /* DoorRecordViewCtrl.swift in Sources */,
+				1BF1AF631FAF0A6F00A8E27E /* AreaViewCtrl.swift in Sources */,
+				1BF1AEDE1FAF0A5800A8E27E /* DeleteElectric.swift in Sources */,
+				1BF1AF981FAF0A6F00A8E27E /* AddSceneElectricViewCtrl.swift in Sources */,
+				1BF1AFC31FAF236A00A8E27E /* ElecTvViewCtrl.swift in Sources */,
+				1BF1AF931FAF0A6F00A8E27E /* SharedElecListViewCtrl.swift in Sources */,
+				1BF1AF901FAF0A6F00A8E27E /* EditMasterViewCtrl.swift in Sources */,
 				1B6F29AC1E460D7500D19DE9 /* LCOpenApi_base64.cpp in Sources */,
-				1BF2E2791E14A36400EC5E49 /* EditMasterViewCtrl.swift in Sources */,
-				1BBA02241FA07DF500EE69D3 /* VoiceUserInfo.swift in Sources */,
-				1B935A771F15CCC00017F694 /* AddElectricTypeViewCtrl.swift in Sources */,
-				1B935A791F15CCC00017F694 /* EditElectricViewCtrl.swift in Sources */,
-				1B7E078A1DC9E11600DD3E00 /* SWRevealViewController.m in Sources */,
+				1BF1AEFF1FAF0A5800A8E27E /* SharedElectricCell.swift in Sources */,
 				1B055C981E529CDD00F04851 /* MyViewController.m in Sources */,
-				1B67B6531E0FB8B50034BB7D /* MiniSceneAndArea.swift in Sources */,
-				1B935A7D1F15CCC00017F694 /* ElecDoorViewCtrl.swift in Sources */,
 				1BACDA951DCDF07A00BA85C2 /* SQLiteDB.swift in Sources */,
-				1BACDAA51DCDF0A500BA85C2 /* SKScNavViewController.swift in Sources */,
 				1B6F29AD1E460D7500D19DE9 /* LCOpenApi_md5.cpp in Sources */,
-				1BF506001DB720F6002AA286 /* FindPasswordViewCtrl.swift in Sources */,
-				1BF506061DB74D2C002AA286 /* RegisterViewCtrl.swift in Sources */,
-				1B7FC3701E9DD91900209C41 /* SwitchCityViewCtrl.swift in Sources */,
-				1B9FD2051E1CE8D70050D843 /* EditSceneElectricCell.swift in Sources */,
-				1B67B6461E0FB8610034BB7D /* MiniElectric.swift in Sources */,
-				1B935A7E1F15CCC00017F694 /* ElecHornViewCtrl.swift in Sources */,
+				1BF1AFB91FAF236A00A8E27E /* ElecAirViewCtrl.swift in Sources */,
+				1BF1AF9E1FAF0A6F00A8E27E /* ViewPagerIndicator.swift in Sources */,
 				1B0868D81DE9675B0045E531 /* AccountData.swift in Sources */,
-				1B0DDE6F1FA81A8A00C7CDDB /* AlarmRecordViewCtrl.swift in Sources */,
-				1BF524751EFCF45B00C4D0C4 /* EditSceneElectricViewCtrl.swift in Sources */,
+				1BF1AF5F1FAF0A6F00A8E27E /* ChangeAccountEmailViewCtrl.swift in Sources */,
 				1B7667F21EF3CA1C007B21B4 /* TopAlertView.m in Sources */,
-				1BACDAA81DCDF0A500BA85C2 /* SKLaunchMenuItem.swift in Sources */,
-				1B11F58A1F98306700C5C24E /* DoorRecordCell.swift in Sources */,
-				1BBE3D821E1B379800D294A7 /* ViewPagerIndicator.swift in Sources */,
-				1B67B6391E0FAE860034BB7D /* NirKxMenu.m in Sources */,
-				1BF2E27B1E14A36400EC5E49 /* ShareMasterViewCtrl.swift in Sources */,
+				1BF1AEF11FAF0A5800A8E27E /* MyAreaCell.swift in Sources */,
+				1BF1AF871FAF0A6F00A8E27E /* VoiceReachability.swift in Sources */,
 				1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */,
+				1BF1AF881FAF0A6F00A8E27E /* VoiceUserInfo.swift in Sources */,
+				1BF1AF851FAF0A6F00A8E27E /* Toast.swift in Sources */,
 				1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */,
+				1BF1AF671FAF0A6F00A8E27E /* SKScNavViewController.swift in Sources */,
+				1BF1AF7F1FAF0A6F00A8E27E /* MainTabBarCtrl.swift in Sources */,
+				1BF1AF8B1FAF0A6F00A8E27E /* RegisterViewCtrl.swift in Sources */,
 				1B6F29AB1E460D7500D19DE9 /* OpenApiService.mm in Sources */,
-				1B8305511DD0265E0070FDD3 /* SCLAlertView.swift in Sources */,
+				1BF1AEE51FAF0A5800A8E27E /* AddSceneCell.swift in Sources */,
+				1BF1AEE01FAF0A5800A8E27E /* MiniElectric.swift in Sources */,
 				1B7667F11EF3CA1C007B21B4 /* JUITableViewSheet.m in Sources */,
-				1B935A7B1F15CCC00017F694 /* ElecClothesViewCtrl.swift in Sources */,
-				1B4F49B81E9B1CD900489545 /* SharedElectricCell.swift in Sources */,
-				1B935A781F15CCC00017F694 /* AddElectricViewCtrl.swift in Sources */,
-				1B4F49B41E972BF600489545 /* SharedElecListViewCtrl.swift in Sources */,
-				1B4813B01E055CB10042A57E /* VPImageCropperViewController.m in Sources */,
+				1BF1AFB61FAF236A00A8E27E /* DoorRecordViewCtrl.swift in Sources */,
+				1BF1AF821FAF0A6F00A8E27E /* SWRevealViewController.m in Sources */,
+				1BF1AF9A1FAF0A6F00A8E27E /* EditSceneElectricViewCtrl.swift in Sources */,
+				1BF1AFB81FAF236A00A8E27E /* ElecAirLearnViewCtrl.swift in Sources */,
+				1BF1AF011FAF0A5800A8E27E /* MySceneElectricView.swift in Sources */,
 				1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */,
+				1BF1AFC01FAF236A00A8E27E /* ElecSensorViewCtrl.swift in Sources */,
 				1BACDA971DCDF07A00BA85C2 /* String-Extras.swift in Sources */,
-				1B62BE3F1F14EF57004E459A /* ETKeyButton.swift in Sources */,
-				1B4F49A41E83637400489545 /* SettingViewCtrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2068,6 +2071,7 @@
 					"$(PROJECT_DIR)/zfzn2/Voice",
 					"$(PROJECT_DIR)/**",
 					"\"$(SRCROOT)/zfzn2/Voice/SmartConfigClient.framework\"",
+					"$(PROJECT_DIR)/zfzn2/ViewCtrl/Login/ConfWifi/Voice",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2138,6 +2142,7 @@
 					"$(PROJECT_DIR)/zfzn2/Voice",
 					"$(PROJECT_DIR)/**",
 					"\"$(SRCROOT)/zfzn2/Voice/SmartConfigClient.framework\"",
+					"$(PROJECT_DIR)/zfzn2/ViewCtrl/Login/ConfWifi/Voice",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -297,7 +297,7 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
             self.m_cellDraging.isHidden = true
             self.m_nIndexPath = nil
         })
-        if (m_nIndexPath == m_nBeginIndexPath) {
+        if (m_nIndexPath == m_nBeginIndexPath) {//位置没有变化的时候，不需要调用服务器的接口
             return
         }
         //调用服务器接口，实现sequ的换位
