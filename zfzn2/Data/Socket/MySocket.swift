@@ -78,26 +78,15 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
     }
     
     func InitReceiveTcpSocekt() {
-        m_socketReceiveTcp?.disconnect()//MySocket.sharedInstance.
+        m_socketReceiveTcp?.disconnect()
         m_socketReceiveTcp?.delegate = self
         m_socketReceiveTcp?.delegateQueue = DispatchQueue.main
         m_socketReceiveTcp?.isIPv6Enabled = true
         do { try m_socketReceiveTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
         catch { print("m_socketReceiveTcp connectToHost error") }
         m_socketReceiveTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
-//        OpenPolling()
     }
-    
-//    func InitPollingTcpSocket() {
-//        m_socketPollingTcp?.disconnect()
-//        m_socketPollingTcp?.delegate = self
-//        m_socketPollingTcp?.delegateQueue = DispatchQueue.main
-//        m_socketPollingTcp?.isIPv6Enabled = true
-//        do { try m_socketPollingTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
-//        catch { print("m_socketReceiveTcp connectToHost error") }
-//        m_socketPollingTcp?.readData(withTimeout: -1, tag: SOCKET_POLLING)//无限等待主机的返回
-//    }
-    
+
     //开启心跳包，确定本地连接状态
     func OpenPolling() {
         m_timerPolling = Timer.scheduledTimer(timeInterval: 3, target:self,selector:#selector(MySocket.RunPolling), userInfo:nil, repeats:true)
@@ -169,13 +158,10 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         m_sTcpMasterReturn = ""
         m_socketSendTcp?.write(data, withTimeout: -1, tag: 0)
         if style == SEARCH_MASTER_CODE {
-//            m_socketSendTcp?.write(data, withTimeout: -1, tag: SEARCH_MASTER_CODE)
             m_socketSendTcp?.readData(withTimeout: -1, tag: SEARCH_MASTER_CODE)//主节点tag为0
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
             return ""
         } else {
-//            m_sTcpMasterReturn = ""//删掉这一句，突然就能连接了？？？！！！
-//            m_socketSendTcp?.write(data, withTimeout: -1, tag: GET_MASTER_CODE)
             m_socketSendTcp?.readData(withTimeout: -1, tag: GET_MASTER_CODE)//主节点tag为1
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
             return m_sTcpMasterReturn

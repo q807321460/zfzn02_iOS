@@ -396,7 +396,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
 //    }
     
     //删除电器
-    func DeleteElectric1(_ masterCode:String, electricCode:String, electricIndex:Int, electricSequ:Int, roomIndex:Int) -> String {
+    func DeleteElectric1(masterCode:String, electricCode:String, electricIndex:Int, electricSequ:Int, roomIndex:Int) -> String {
         let methodName:String = "deleteElectric1"
         let arrayKey = ["masterCode", "electricCode", "electricIndex", "electricSequ", "roomIndex"]
         let arrayValue = [masterCode, electricCode, electricIndex, electricSequ, roomIndex] as [Any]
@@ -807,6 +807,16 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let methodName:String = "updateElectricSequ"
         let arrayKey = ["masterCode", "electricIndex", "roomIndex", "oldElectricSequ","newElectricSequ"]
         let arrayValue = [masterCode, electricIndex, roomIndex, oldElectricSequ, newElectricSequ] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        return (value.mainValue as! String)
+    }
+    
+    func IsExistElectric(masterCode:String, electricCode:String) -> String {
+        let methodName:String = "isExistElectric"
+        let arrayKey = ["masterCode", "electricCode"]
+        let arrayValue = [masterCode, electricCode]
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")

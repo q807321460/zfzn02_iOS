@@ -1307,8 +1307,8 @@
 			isa = PBXGroup;
 			children = (
 				1BF1AF131FAF0A6E00A8E27E /* Controller */,
-				1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */,
 				1BF1AF161FAF0A6E00A8E27E /* Views */,
+				1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */,
 			);
 			path = SKScNavBarController;
 			sourceTree = "<group>";
@@ -1464,6 +1464,7 @@
 		1BF1AFA61FAF236900A8E27E /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */,
 				1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */,
 				1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */,
 				1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */,
@@ -1473,7 +1474,6 @@
 				1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */,
 				1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */,
 				1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */,
-				1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */,
 				1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */,
 				1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */,
 				1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */,

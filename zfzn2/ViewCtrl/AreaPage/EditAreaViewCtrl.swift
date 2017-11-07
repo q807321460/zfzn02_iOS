@@ -94,7 +94,12 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
                                 GetLechageTokenGlobal(sPhoneNumber, isShowLoading: false)//获取指定手机号的token，konnn
                                 UIDevice.unbindLechangeCamera(gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sElectricCode)
                                 if gDC.m_sUnbindSuccess == "true" {
-                                    let webReturn:String = MyWebService.sharedInstance.DeleteElectric1(gDC.mUserInfo.m_sMasterCode, electricCode: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sElectricCode, electricIndex: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricIndex, electricSequ: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricSequ, roomIndex: gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex)
+                                    let webReturn:String = MyWebService.sharedInstance.DeleteElectric1(
+                                        masterCode: gDC.mUserInfo.m_sMasterCode,
+                                        electricCode: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sElectricCode,
+                                        electricIndex: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricIndex,
+                                        electricSequ: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricSequ,
+                                        roomIndex: gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex)
                                     gDC.m_sUnbindSuccess = "false"
                                     self.WebDeleteElectric(webReturn, currentI:i)
                                 }else {
@@ -103,7 +108,12 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
                             }else {//如果是非摄像头的其他电器
                                 //新版本无需再调用这个MyWebService.sharedInstance.DeleteSceneElectric接口了，该功能直接在服务器中完成
                                 //删除这个电器
-                                let webReturn:String = MyWebService.sharedInstance.DeleteElectric1(gDC.mUserInfo.m_sMasterCode, electricCode: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sElectricCode, electricIndex: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricIndex, electricSequ: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricSequ, roomIndex: gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex)
+                                let webReturn:String = MyWebService.sharedInstance.DeleteElectric1(
+                                    masterCode: gDC.mUserInfo.m_sMasterCode,
+                                    electricCode: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sElectricCode,
+                                    electricIndex: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricIndex,
+                                    electricSequ: gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricSequ,
+                                    roomIndex: gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex)
                                 self.WebDeleteElectric(webReturn, currentI:i)
                             }
                             break//删除当前电器后一定要break，否则会导致数组越界
@@ -462,7 +472,11 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         case "WebError":
             break
         case "1":
-            gDC.mElectricData.DeleteElectric(gDC.mUserInfo.m_sMasterCode, electricIndex:gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricIndex, electricSequ:gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricSequ, areaFoot:m_nAreaListFoot)
+            gDC.mElectricData.DeleteElectric(
+                masterCode: gDC.mUserInfo.m_sMasterCode,
+                electricIndex: gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricIndex,
+                electricSequ: gDC.mAreaList[m_nAreaListFoot].mElectricList[currentI].m_nElectricSequ,
+                areaFoot: m_nAreaListFoot)
             //返回后保证能够刷新界面
             gDC.m_bRefreshAreaList = true
             m_collectionElectric.reloadData()

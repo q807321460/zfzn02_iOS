@@ -39,7 +39,6 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
         switch type {
         case 15:
             m_imageElectric.image = UIImage(named: "电器类型_传感器_门磁")
-//            m_layoutHeight.constant = 50//需要留一个开或者关触发的选择空间
             m_labelDoorState.isHidden = false
             m_switchDoorState.isHidden = false
         default:

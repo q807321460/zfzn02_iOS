@@ -121,10 +121,10 @@ class ElectricData: NSObject {
         gMySqlClass.DeleteSql(requiredDict, table: "electrics")
     }
     
-    func DeleteElectric(_ masterCode:String, electricIndex:Int, electricSequ:Int, areaFoot:Int) {
+    func DeleteElectric(masterCode:String, electricIndex:Int, electricSequ:Int, areaFoot:Int) {
         //首先从本地数据库中删除
-        let requiredDict:NSMutableDictionary = ["master_code": masterCode, "electric_index": electricIndex]
-        gMySqlClass.DeleteSql(requiredDict, table: "electrics")
+//        let requiredDict:NSMutableDictionary = ["master_code": masterCode, "electric_index": electricIndex]
+//        gMySqlClass.DeleteSql(requiredDict, table: "electrics")
         //在内存数据中删除，由于在服务器端已经删除了情景中的相同电器，所以这里也需要在本地数据库和内存中删除
         for i in 0..<gDC.mSceneList.count {
             //双重for循环是为了防止出现数组越界
@@ -148,10 +148,10 @@ class ElectricData: NSObject {
         for i in 0..<gDC.mAreaList[areaFoot].mElectricList.count {
             if gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ > electricSequ {
                 gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ = gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ - 1
-                //将新的sequ重新写到本地数据库中
-                let dictSet:NSMutableDictionary = ["electric_sequ":gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ]
-                let dictRequired:NSMutableDictionary = ["electric_index":gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricIndex]
-                gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "electrics")
+                //将新的sequ重新写到本地数据库中，其实这一步是没有必要的
+//                let dictSet:NSMutableDictionary = ["electric_sequ":gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ]
+//                let dictRequired:NSMutableDictionary = ["electric_index":gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricIndex]
+//                gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "electrics")
             }
         }
     }

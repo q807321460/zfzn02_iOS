@@ -130,28 +130,7 @@ class AddElectricViewCtrl: UIViewController {
                 return
             }
         }
-//        //晾衣架不能再同一个主机中添加两次，否则会导致晾衣架无法控制
-//        if (m_nElectricType==20) {
-//            DispatchQueue.main.async(execute: {
-//                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-//                let alertView = SCLAlertView(appearance: appearance)
-//                alertView.addButton("继续对码", action: {
-//                    () -> Void in
-//                    self.AddElectricDetail()
-//                })
-//                alertView.addButton("返回检查", action: {
-//                    () -> Void in
-//                    return
-//                })
-//                alertView.showInfo("菜单", subTitle: "请先确认当前主机中没有添加过相同编号的晾衣架，如果已经添加过，再次添加会导致设备无法控制", duration: 0)//时间间隔为0时不会自动退出
-//            })
-//        }else {
-//            AddElectricDetail()
-//        }
-        AddElectricDetail()
-    }
-    
-    func AddElectricDetail() {
+//        AddElectricDetail()
         DispatchQueue.main.async(execute: {
             self.m_viewSearching = SCLAlertView(appearance: self.m_appearSearching)
             self.m_viewSearching.showInfo("提示", subTitle: " 正在添加电器中......", duration: 0)
@@ -169,9 +148,7 @@ class AddElectricViewCtrl: UIViewController {
         //需要在这里判断electricCode是否是合法的（比如我添加传感器时对上了开关的码键，结果收到的电器code就会错误）
         if electricCode.characters.count >= nSignSize {
             let sSign2:String = (electricCode as NSString).substring(with: NSMakeRange(0, nSignSize))
-            if sSign2 == sSign {
-                ShowInfoDispatch("提示", content: "添加成功", duration: 0.5)
-            }else {
+            if sSign2 != sSign {
                 ShowNoticeDispatch("提示", content: "没有找到对应的电器，请确认是否对码成功", duration: 1.0)
                 return
             }
@@ -179,7 +156,56 @@ class AddElectricViewCtrl: UIViewController {
             ShowNoticeDispatch("提示", content: "没有找到对应的电器，请确认是否对码成功", duration: 1.0)
             return
         }
-        //开始向服务器添加
+        //当sSign2 == sSign时，开始向服务器添加，首先判断当前主机下是否已经存在相同编号的电器，如果存在则给出提示
+        let re:String = MyWebService.sharedInstance.IsExistElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricCode: electricCode)
+        if (re=="1") {
+            print("发现有相同编号的电器")
+            DispatchQueue.main.async(execute: {
+                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("继续", action: {
+                    () -> Void in
+                    //删除重复的电器
+                    for i in 0..<gDC.mAreaList.count {
+                        for _ in 0..<gDC.mAreaList[i].mElectricList.count {//双重循环防止数组越界
+                            for j in 0..<gDC.mAreaList[i].mElectricList.count {
+                                if (gDC.mAreaList[i].mElectricList[j].m_sElectricCode == electricCode) {
+                                    let result:String = MyWebService.sharedInstance.DeleteElectric1(
+                                        masterCode: gDC.mUserInfo.m_sMasterCode,
+                                        electricCode: electricCode,
+                                        electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex,
+                                        electricSequ: gDC.mAreaList[i].mElectricList[j].m_nElectricSequ,
+                                        roomIndex: gDC.mAreaList[i].m_nAreaIndex)
+                                    if (result=="1"){
+                                        gDC.mElectricData.DeleteElectric(
+                                            masterCode: gDC.mUserInfo.m_sMasterCode,
+                                            electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex,
+                                            electricSequ: gDC.mAreaList[i].mElectricList[j].m_nElectricSequ,
+                                            areaFoot: i)
+                                        break//删除当前电器后一定要break，否则会导致数组越界
+                                    }else {
+                                       ShowNoticeDispatch("错误", content: "操作失败", duration: 1.0)
+                                        return
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    self.AddElectricDetail(electricCode)
+                })
+                alertView.addButton("取消", action: {
+                    () -> Void in
+                    return
+                })
+                alertView.showInfo("菜单", subTitle: "您已经添加过该电器，重复添加将自动删除之前已添加过的电器，请问是否继续添加？", duration: 0)//时间间隔为0时不会自动退出
+            })
+        }else {
+            print("电器编号不重复，可以直接添加")
+            AddElectricDetail(electricCode)
+        }
+    }
+    
+    func AddElectricDetail(_ electricCode:String) {
         var sElectricName:String!
         switch m_nElectricType {
         case 2:
@@ -201,7 +227,7 @@ class AddElectricViewCtrl: UIViewController {
         case "WebError":
             break
         case "1":
-            print("向服务器添加成功")
+            ShowInfoDispatch("提示", content: "添加成功", duration: 0.5)
             gDC.m_bRefreshAreaList = true
             self.navigationController?.popToRootViewController(animated: true)
         case "2":
