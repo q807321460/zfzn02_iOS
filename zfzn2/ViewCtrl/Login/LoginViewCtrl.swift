@@ -301,7 +301,7 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if gDC.mUserInfo.m_sMasterCode == sResult {
             print("主机在本地，可以使用本地socket通信")
             gDC.m_bRemote = false
-            MySocket.sharedInstance.InitReceiveTcpSocekt()
+            MySocket.sharedInstance.OpenTcpSocekt()
             let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
         }else {

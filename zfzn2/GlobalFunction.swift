@@ -464,6 +464,10 @@ func GetLechageTokenGlobal(_ sPhoneNumber:String, isShowLoading:Bool) {
     }
 }
 
+func LoadAllDataFromWeb() {
+    
+}
+
 /**
  扩展函数——对图像缩放
  */

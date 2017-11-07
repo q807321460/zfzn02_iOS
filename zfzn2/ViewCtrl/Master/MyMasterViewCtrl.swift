@@ -202,7 +202,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
             let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
             gDC.m_bRemote = false
-            MySocket.sharedInstance.InitReceiveTcpSocekt()//05.02添加
+            MySocket.sharedInstance.OpenTcpSocekt()//05.02添加
 //            WebSocket.sharedInstance.CloseWebSocket()
         }else {
             ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)

@@ -20,8 +20,11 @@ let RECEIVE_FROM_MASTER = 100
 class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
     
     var m_socketUdp = GCDAsyncUdpSocket()//udp套接字对象
-    var m_socketSendTcp = GCDAsyncSocket()//tcp套接字对象，用于本地
-    var m_socketReceiveTcp = GCDAsyncSocket()//tcp套接字对象，不断接收主机返回的数据，用于本地
+//    var m_socketSendTcp = GCDAsyncSocket()//tcp套接字对象，用于本地
+//    var m_socketReceiveTcp = GCDAsyncSocket()//tcp套接字对象，不断接收主机返回的数据，用于本地
+    
+    var m_socketTcp = GCDAsyncSocket()//tcp套接字对象，用于本地
+    
 //    var m_socketPollingTcp = GCDAsyncSocket()//tcp套接字对象，心跳包
     
     var mainQueue = DispatchQueue.main
@@ -71,21 +74,37 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         print("成功打开udp socket —— port:\(m_socketUdp?.localPort() ?? UInt16(0)) ip:\(m_socketUdp?.localHost() ?? "0.0.0.0")\n")
     }
     
-    func InitSendTcpSocket() {
-        m_socketSendTcp?.delegate = self
-        m_socketSendTcp?.delegateQueue = DispatchQueue.main
-        m_socketSendTcp?.isIPv6Enabled = true
+    func InitTcpSocket() {
+        m_socketTcp?.delegate = self
+        m_socketTcp?.delegateQueue = DispatchQueue.main
+        m_socketTcp?.isIPv6Enabled = true
     }
     
-    func InitReceiveTcpSocekt() {
-        m_socketReceiveTcp?.disconnect()
-        m_socketReceiveTcp?.delegate = self
-        m_socketReceiveTcp?.delegateQueue = DispatchQueue.main
-        m_socketReceiveTcp?.isIPv6Enabled = true
-        do { try m_socketReceiveTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
+    func OpenTcpSocekt() {
+        m_socketTcp?.disconnect()
+        m_socketTcp?.delegate = self
+        m_socketTcp?.delegateQueue = DispatchQueue.main
+        m_socketTcp?.isIPv6Enabled = true
+        do { try m_socketTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
         catch { print("m_socketReceiveTcp connectToHost error") }
-        m_socketReceiveTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
+        m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
     }
+    
+//    func InitSendTcpSocket() {
+//        m_socketSendTcp?.delegate = self
+//        m_socketSendTcp?.delegateQueue = DispatchQueue.main
+//        m_socketSendTcp?.isIPv6Enabled = true
+//    }
+//
+//    func InitReceiveTcpSocekt() {
+//        m_socketReceiveTcp?.disconnect()
+//        m_socketReceiveTcp?.delegate = self
+//        m_socketReceiveTcp?.delegateQueue = DispatchQueue.main
+//        m_socketReceiveTcp?.isIPv6Enabled = true
+//        do { try m_socketReceiveTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
+//        catch { print("m_socketReceiveTcp connectToHost error") }
+//        m_socketReceiveTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
+//    }
 
     //开启心跳包，确定本地连接状态
     func OpenPolling() {
@@ -137,32 +156,32 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
     
     //配网
     func ConfWifi(sWifi:String, sPassWord:String) {
-        m_socketSendTcp?.disconnect()
-        do { try m_socketSendTcp?.connect(toHost: "192.168.4.1", onPort: 8899) }
+        m_socketTcp?.disconnect()
+        do { try m_socketTcp?.connect(toHost: "192.168.4.1", onPort: 8899) }
         catch { print("connectToHost error") }
         let sCmd:String = "<<" + sWifi + "," + sPassWord + ">>\r\n"
         print("ConfWifi tcp发送的数据为——\(sCmd)")
         let data:Data = sCmd.data(using: String.Encoding.utf8)!
-        m_socketSendTcp?.write(data, withTimeout: -1, tag: 0)
+        m_socketTcp?.write(data, withTimeout: -1, tag: 0)
     }
     
     //获得主节点Code，在这里首次执行sendSocket的连接
     @discardableResult func GetMasterCode(_ ip:String, style:Int) -> String {
-        m_socketSendTcp?.disconnect()
-        do { try m_socketSendTcp?.connect(toHost: ip, onPort: 8899) }
+        m_socketTcp?.disconnect()
+        do { try m_socketTcp?.connect(toHost: ip, onPort: 8899) }
         catch { print("connectToHost error");return "" }
         SetTimeOut(3)
         let sCmd = "<00000000U0**********A9>\r\n"
         print("GetMasterCode tcp发送——\(sCmd) 目标IP——\(ip)")
         let data:Data = sCmd.data(using: String.Encoding.utf8)!
         m_sTcpMasterReturn = ""
-        m_socketSendTcp?.write(data, withTimeout: -1, tag: 0)
+        m_socketTcp?.write(data, withTimeout: -1, tag: 0)
         if style == SEARCH_MASTER_CODE {
-            m_socketSendTcp?.readData(withTimeout: -1, tag: SEARCH_MASTER_CODE)//主节点tag为0
+            m_socketTcp?.readData(withTimeout: -1, tag: SEARCH_MASTER_CODE)//主节点tag为0
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
             return ""
         } else {
-            m_socketSendTcp?.readData(withTimeout: -1, tag: GET_MASTER_CODE)//主节点tag为1
+            m_socketTcp?.readData(withTimeout: -1, tag: GET_MASTER_CODE)//主节点tag为1
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
             return m_sTcpMasterReturn
         }
@@ -201,8 +220,8 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             print("GetElectricStatesAll tcp发送——\(sCmd)")
             let data:Data = sCmd.data(using: String.Encoding.utf8)!
             m_sTcpMasterReturn = ""
-            m_socketSendTcp?.write(data, withTimeout: -1, tag: 0)
-            m_socketSendTcp?.readData(withTimeout: -1, tag: GET_ELECTRIC_STATE)//主节点tag为1
+            m_socketTcp?.write(data, withTimeout: -1, tag: 0)
+            m_socketTcp?.readData(withTimeout: -1, tag: GET_ELECTRIC_STATE)//主节点tag为1
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
             print("GET_ELECTRIC_STATE return: \(m_sTcpMasterReturn)")
             if m_sTcpMasterReturn != "" {
@@ -219,8 +238,8 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             print("GetElectricCodeFromMaster tcp发送的数据为——\(sendString)")
             let data:Data = sCmd.data(using: String.Encoding.utf8)!
             m_sTcpMasterReturn = ""
-            m_socketSendTcp?.write(data, withTimeout: -1, tag: 0)
-            m_socketSendTcp?.readData(withTimeout: -1, tag: GET_ELECTRIC_CODE)
+            m_socketTcp?.write(data, withTimeout: -1, tag: 0)
+            m_socketTcp?.readData(withTimeout: -1, tag: GET_ELECTRIC_CODE)
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
             if m_sTcpMasterReturn.characters.count == 0 {
                 print("没有接收到有效的电器编号")
@@ -253,7 +272,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
     func OperateElectric(_ sendString:String) {
         let sCmd:String = ModifyMarkBit(sendString)
         let data:Data = sCmd.data(using: String.Encoding.utf8)!
-        m_socketSendTcp?.write(data, withTimeout: -1, tag: 0)//只需要发送，不需要接收
+        m_socketTcp?.write(data, withTimeout: -1, tag: 0)//只需要发送，不需要接收
         print("OperateElectric tcp发送的数据为——\(sCmd)")
     }
 
@@ -262,7 +281,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         if gDC.m_bRemote == true {//只能从本socekt控制切换为web控制，而不能从web切换为本地socket
             return
         }
-        if m_socketSendTcp?.isConnected == true {
+        if m_socketTcp?.isConnected == true {
             gDC.m_bRemote = false
         }else {
             print("本地socket状态——断开，启用远程web控制")
@@ -326,7 +345,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             if (RefreshElectricStates(sReceive) == true) {
                 g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
             }
-            m_socketReceiveTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//继续等待主机的返回
+            m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//继续等待主机的返回
         }else{
             print("没有接收到期望的tag，当前tag为\(tag)")
         }

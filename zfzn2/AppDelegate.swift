@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {//, GCDAsyncSocketDelegat
         PublicWebService.sharedInstance.InitURLSession()//初始化服务器对象，用于和远程webservice通信
         //初始化tcp和udp的连接
         MySocket.sharedInstance.InitUdpSocket()
-        MySocket.sharedInstance.InitSendTcpSocket()
+        MySocket.sharedInstance.InitTcpSocket()
+//        MySocket.sharedInstance.InitSendTcpSocket()
         MySocket.sharedInstance.OpenPolling()
         //初始化websocket连接
         WebSocket.sharedInstance.InitWebSocket()
