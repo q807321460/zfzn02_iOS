@@ -22,10 +22,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
     var m_socketUdp = GCDAsyncUdpSocket()//udp套接字对象
 //    var m_socketSendTcp = GCDAsyncSocket()//tcp套接字对象，用于本地
 //    var m_socketReceiveTcp = GCDAsyncSocket()//tcp套接字对象，不断接收主机返回的数据，用于本地
-    
-    var m_socketTcp = GCDAsyncSocket()//tcp套接字对象，用于本地
-    
-//    var m_socketPollingTcp = GCDAsyncSocket()//tcp套接字对象，心跳包
+    var m_socketTcp = GCDAsyncSocket()//tcp套接字对象，用于本地，即实现发送，又实现接受
     
     var mainQueue = DispatchQueue.main
     var m_timerPolling:Timer!//心跳包定时器，判断本地连接状态

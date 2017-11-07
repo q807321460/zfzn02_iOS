@@ -130,7 +130,7 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
         gDC.mAccountInfo.m_sAccountCode = m_eAccountCode.text!
         if gDC.mAccountInfo.m_sAccountCode == "" {
             ShowNoticeDispatch("提示", content: "请输入您的手机号", duration: 0.8)
-        }else if m_eAccountCode.text?.characters.count != 11 {
+        }else if m_eAccountCode.text?.count != 11 {
             ShowNoticeDispatch("提示", content: "手机号格式有问题", duration: 0.8)
         }else{
             m_btnLogin.isUserInteractionEnabled = false//保证登录按钮不被反复按下，因为涉及到网络通信，所以放在这个位置是比较合适的
@@ -242,75 +242,8 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     //读取各种列表数据
     func LoadOtherData() {
-        //从服务器加载房间列表
-        let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
-        gDC.mAreaData.UpdateArea(dictsArea)
-        //从服务器加载电器列表
-        let dictsElectric = MyWebService.sharedInstance.LoadElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, electricTime: gDC.mUserInfo.m_sTimeElectric)
-        gDC.mElectricData.UpdateElectric(dictsElectric)
-        //从服务器加载红外类型电器的键值
-        if dictsElectric.count != 0 {
-            for i in 0..<gDC.mAreaList.count {
-                for j in 0..<gDC.mAreaList[i].mElectricList.count {
-                    let nType = gDC.mAreaList[i].mElectricList[j].m_nElectricType
-                    if gDC.m_arrayElectricTypeCode[nType] as! String == "09" {//9是空调，12是电视，21是临时设计的学习型空调
-                        let jsons = MyWebService.sharedInstance.LoadKeyByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-                        gDC.mETData.UpdateETKeys(jsons)
-                        if nType == 9 || nType == 21 {//如果是空调的话，则读取
-                             let jsons2 = MyWebService.sharedInstance.LoadETAirByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-                            gDC.mETData.UpdateETAir(jsons2)
-                        }
-                    }
-                }
-            }
-        }
-        //从服务器加载情景列表
-        let dictsScene = MyWebService.sharedInstance.LoadScene(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneTime: gDC.mUserInfo.m_sTimeScene)
-        gDC.mSceneData.UpdateScene(dictsScene)
-        //从服务器加载情景电器列表
-        let dictSceneElectric = MyWebService.sharedInstance.LoadSceneElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneElectricTime: gDC.mUserInfo.m_sTimeSceneElectric)
-        gDC.mSceneElectricData.UpdateSceneElectric(dictSceneElectric)
-
-        
-        //需要搜索本地的主节点，以确定是远程控制还是本地socket通信，同时还要确保获取的主机编号没有问题，逻辑没有问题但是结构不理想
-        MySocket.sharedInstance.SetTimeOut(2.0)
-        var sResult:String!
-        var bLegalMaster:Bool = false
-        for _ in 0..<2 {
-            print("上一次的IP为：\(gDC.mUserInfo.m_sUserIP)")
-            sResult = MySocket.sharedInstance.GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)//gDC.m_sUserIP为上次登录使用的ip
-            var bLegal:Bool = true
-            for ch in sResult.characters {
-                if (ch>="0"&&ch<="9") || (ch>="a"&&ch<="z") || (ch>="A"&&ch<="Z") {//如果满足三个条件任意一个，可以认为符号没有问题
-                    continue
-                }else {
-                    bLegal = false
-                    break
-                }
-            }
-            if bLegal == true {
-                bLegalMaster = true
-                break
-            }
-        }
-        if bLegalMaster == false {
-            self.m_viewLoading.hideView()//取消显示正在加载的字样
-            ShowNoticeDispatch("错误", content: "搜索到的主机编码有问题，请试着重新登录", duration: 1.5)
-            return
-        }
-        if gDC.mUserInfo.m_sMasterCode == sResult {
-            print("主机在本地，可以使用本地socket通信")
-            gDC.m_bRemote = false
-            MySocket.sharedInstance.OpenTcpSocekt()
-            let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
-            gDC.mElectricData.UpdateElectricState(dictsElectricState)
-        }else {
-            print("主机不在本地，使用远程控制")
-            MyWebService.sharedInstance.OpenPolling()
-            gDC.m_bRemote = true
-        }
-        //不论是否本地连接，都要开启websocket服务
-        WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
+        //开始各种读取工作
+        LoadDataFromWeb()
         //修改整体plist文件数据
         let filePath = DataFilePath("data.plist")//获得本地data.plist文件的路径
         let dict = NSMutableDictionary.init(contentsOfFile: filePath)//根据plist文件路径读取到数据字典

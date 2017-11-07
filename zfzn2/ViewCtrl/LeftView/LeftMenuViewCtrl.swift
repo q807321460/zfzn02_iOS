@@ -187,27 +187,8 @@ class LeftMenuViewCtrl: MyViewController {
         }
         MyWebService.sharedInstance.StopPolling()
         //需要搜索本地的主节点，以确定是远程控制还是本地socket通信，同时还要确保获取的主机编号没有问题
-        print("当前主节点标号为：\(gDC.mUserInfo.m_sMasterCode)")
-        print("当前主节点IP为：  \(gDC.mUserInfo.m_sUserIP)")
-        var sResult:String = ""
-        var bLegalMaster:Bool = false
-        for _ in 0..<3 {
-            sResult = MySocket.sharedInstance.GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)
-            var bLegal:Bool = true
-            for ch in sResult.characters {
-                if (ch>="0"&&ch<="9") || (ch>="a"&&ch<="z") || (ch>="A"&&ch<="Z") {//如果满足三个条件任意一个，可以认为符号没有问题
-                    continue
-                }else {
-                    bLegal = false
-                    break
-                }
-            }
-            if bLegal == true {
-                bLegalMaster = true
-                break
-            }
-        }
-        if bLegalMaster == false {
+        let sResult:String = MySocket.sharedInstance.GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)
+        if (IsValidMasterCode(sResult) == false) {
             ShowNoticeDispatch("错误", content: "搜索到的主机编码有问题，请试着重新搜索主机", duration: 1.5)
             self.m_viewLoading.hideView()
             return
