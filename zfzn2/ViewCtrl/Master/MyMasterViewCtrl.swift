@@ -22,6 +22,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
         m_tableMaster.register(UINib(nibName: "MyMasterCell", bundle: nil), forCellReuseIdentifier: "myMasterCell")
         m_tableMaster.bounces = false//不需要弹簧效果
         m_tableMaster.tableFooterView = UIView()//隐藏多余行
+//        g_notiCenter.addObserver(self, selector:#selector(MyMasterViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
 //        m_tableMaster.hidden = true
     }
 
@@ -33,7 +34,6 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
         m_tableMaster.reloadData()//修改数据返回时处理这个
-//        m_tableMaster.estimatedRowHeight
     }
     
     @IBAction func OnBack(_ sender: UIBarButtonItem) {
@@ -162,4 +162,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
         array!.write(toFile: fullPath, atomically: true)
     }
 
+//    func SyncData() {
+//        m_tableMaster.reloadData()
+//    }
 }

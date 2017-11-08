@@ -46,6 +46,7 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         m_cellDraging = Bundle.main.loadNibNamed("DeleteElectric", owner: self, options: nil)?.last as! DeleteElectric
         m_cellDraging.isHidden = true
         m_collectionElectric.addSubview(m_cellDraging)
+        g_notiCenter.addObserver(self, selector:#selector(EditAreaViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -497,6 +498,10 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
             ShowNoticeDispatch("错误", content: "电器位置调整失败", duration: 0.8)
             break
         }
+    }
+    
+    func SyncData() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }
