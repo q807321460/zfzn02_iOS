@@ -87,21 +87,27 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
     }
     
-//    func InitSendTcpSocket() {
-//        m_socketSendTcp?.delegate = self
-//        m_socketSendTcp?.delegateQueue = DispatchQueue.main
-//        m_socketSendTcp?.isIPv6Enabled = true
-//    }
-//
-//    func InitReceiveTcpSocekt() {
-//        m_socketReceiveTcp?.disconnect()
-//        m_socketReceiveTcp?.delegate = self
-//        m_socketReceiveTcp?.delegateQueue = DispatchQueue.main
-//        m_socketReceiveTcp?.isIPv6Enabled = true
-//        do { try m_socketReceiveTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
-//        catch { print("m_socketReceiveTcp connectToHost error") }
-//        m_socketReceiveTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
-//    }
+    func SearchLocalMaster() {
+        //需要搜索本地的主节点，以确定是远程控制还是本地socket通信，同时还要确保获取的主机编号没有问题
+        print("上一次使用的主节点编号为：\(gDC.mUserInfo.m_sMasterCode)")//这个应该也是从本地数据库中读取到的，正常不可能为nil
+        let sResult:String = GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)
+        print("根据上一次登录使用的ip值，搜索到的主节点编号为：\(sResult)")
+        if gDC.mUserInfo.m_sMasterCode == sResult {
+            ShowInfoDispatch("成功", content: "本地连接成功", duration: 0.8)
+            gDC.m_bRemote = false
+            MySocket.sharedInstance.OpenTcpSocekt()//05.02添加
+            let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
+            gDC.mElectricData.UpdateElectricState(dictsElectricState)
+            //            WebSocket.sharedInstance.CloseWebSocket()
+        }else {
+            ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
+            MyWebService.sharedInstance.OpenPolling()
+            gDC.m_bRemote = true
+        }
+        //不论是否本地连接，都要开启websocket服务
+        WebSocket.sharedInstance.CloseWebSocket()
+        WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
+    }
 
     //开启心跳包，确定本地连接状态
     func OpenPolling() {

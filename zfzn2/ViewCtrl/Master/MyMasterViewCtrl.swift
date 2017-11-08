@@ -140,7 +140,8 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
             self.m_viewLoading.showInfo("提示", subTitle: " 正在加载用户数据......", duration: 0)
         })
         //开始各种读取工作
-        LoadDataFromWeb()
+        MyWebService.sharedInstance.LoadDataFromWeb()
+        MySocket.sharedInstance.SearchLocalMaster()
         //重新刷新区域界面
         gDC.m_bRefreshAreaList = true
         gDC.m_nSelectAreaSequ = 0

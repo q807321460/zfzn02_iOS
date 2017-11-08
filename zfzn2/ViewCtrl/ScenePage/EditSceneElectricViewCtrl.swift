@@ -26,36 +26,23 @@ class EditSceneElectricViewCtrl: UIViewController {
         m_btnAdd.layer.masksToBounds = true
         let nType:Int = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nElectricType
         switch nType {
-        case 0:
-            m_imageElectric.image = UIImage(named: "电器类型_一键开关")
-        case 1:
-            m_imageElectric.image = UIImage(named: "电器类型_一键开关")
-        case 2:
-            m_imageElectric.image = UIImage(named: "电器类型_两键开关")
-        case 3:
-            m_imageElectric.image = UIImage(named: "电器类型_三键开关")
-        case 4:
-            m_imageElectric.image = UIImage(named: "电器类型_四键开关")
-        case 6:
-            m_imageElectric.image = UIImage(named: "电器类型_窗帘")
-        case 7:
-            m_imageElectric.image = UIImage(named: "电器类型_窗户")
-        case 11:
-            m_imageElectric.image = UIImage(named: "电器类型_机械手")//应该是机械手
-        case 18:
-            m_imageElectric.image = UIImage(named: "电器类型_警号")
-        case 20:
-            m_imageElectric.image = UIImage(named: "电器类型_晾衣架")
+        case 0,1,2,3,4,6,7,11,18,20:
+            m_imageElectric.image = UIImage(named: gDC.m_arrayElectricImage[nType] as! String)
         default:
             break
         }
         m_labelArea.text = gDC.mAreaList[m_nAreaListFoot].m_sAreaName
         m_switch.addTarget(self, action: #selector(SwitchDidChange), for: UIControlEvents.valueChanged)
+        g_notiCenter.addObserver(self, selector:#selector(EditSceneElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated) // No need for semicolon
     }
     
     @IBAction func OnBack(_ sender: Any) {
@@ -105,6 +92,10 @@ class EditSceneElectricViewCtrl: UIViewController {
     ///////////////////////////////////////////////////////////////////////////////////
     func SwitchDidChange() {
         //暂时不用做什么
+    }
+    
+    func SyncData() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
 }

@@ -464,71 +464,16 @@ func GetLechageTokenGlobal(_ sPhoneNumber:String, isShowLoading:Bool) {
     }
 }
 
-func LoadDataFromWeb() {
-    MyWebService.sharedInstance.StopPolling()
-    //从服务器加载房间列表
-    let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
-    gDC.mAreaData.UpdateArea(dictsArea)
-    //从服务器加载电器列表
-    let dictsElectric = MyWebService.sharedInstance.LoadElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, electricTime: gDC.mUserInfo.m_sTimeElectric)
-    gDC.mElectricData.UpdateElectric(dictsElectric)
-    //从服务器加载红外类型电器的键值
-    if dictsElectric.count != 0 {
-        for i in 0..<gDC.mAreaList.count {
-            for j in 0..<gDC.mAreaList[i].mElectricList.count {
-                let nType = gDC.mAreaList[i].mElectricList[j].m_nElectricType
-                if gDC.m_arrayElectricTypeCode[nType] as! String == "09" {//9是空调，12是电视，21是临时设计的学习型空调
-                    let jsons = MyWebService.sharedInstance.LoadKeyByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-                    gDC.mETData.UpdateETKeys(jsons)
-                    if nType == 9 || nType == 21 {//如果是空调的话，则读取
-                        let jsons2 = MyWebService.sharedInstance.LoadETAirByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-                        gDC.mETData.UpdateETAir(jsons2)
-                    }
-                }
-            }
-        }
-    }
-    //从服务器加载情景列表
-    let dictsScene = MyWebService.sharedInstance.LoadScene(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneTime: gDC.mUserInfo.m_sTimeScene)
-    gDC.mSceneData.UpdateScene(dictsScene)
-    //从服务器加载情景电器列表
-    let dictSceneElectric = MyWebService.sharedInstance.LoadSceneElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneElectricTime: gDC.mUserInfo.m_sTimeSceneElectric)
-    gDC.mSceneElectricData.UpdateSceneElectric(dictSceneElectric)
-    //需要搜索本地的主节点，以确定是远程控制还是本地socket通信，同时还要确保获取的主机编号没有问题
-    print("上一次使用的主节点编号为：\(gDC.mUserInfo.m_sMasterCode)")//这个应该也是从本地数据库中读取到的，正常不可能为nil
-    let sResult:String = MySocket.sharedInstance.GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)
-    if IsValidMasterCode(sResult) == false {
-        ShowNoticeDispatch("错误", content: "搜索到的主机编码有问题，请试着重新搜索主机", duration: 1.5)
-        return
-    }
-    print("根据上一次登录使用的ip值，搜索到的主节点编号为：\(sResult)")
-    if gDC.mUserInfo.m_sMasterCode == sResult {
-        ShowInfoDispatch("成功", content: "本地连接成功", duration: 0.8)
-        gDC.m_bRemote = false
-        MySocket.sharedInstance.OpenTcpSocekt()//05.02添加
-        let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
-        gDC.mElectricData.UpdateElectricState(dictsElectricState)
-        //            WebSocket.sharedInstance.CloseWebSocket()
-    }else {
-        ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
-        MyWebService.sharedInstance.OpenPolling()
-        gDC.m_bRemote = true
-    }
-    //不论是否本地连接，都要开启websocket服务
-    WebSocket.sharedInstance.CloseWebSocket()
-    WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
-}
-
-func IsValidMasterCode(_ masterCode: String) -> Bool {
-    for ch in masterCode {
-        if (ch>="0"&&ch<="9") || (ch>="a"&&ch<="z") || (ch>="A"&&ch<="Z") {//如果满足三个条件任意一个，可以认为符号没有问题
-            continue
-        }else {
-            return false
-        }
-    }
-    return true
-}
+//func IsValidMasterCode(_ masterCode: String) -> Bool {
+//    for ch in masterCode {
+//        if (ch>="0"&&ch<="9") || (ch>="a"&&ch<="z") || (ch>="A"&&ch<="Z") {//如果满足三个条件任意一个，可以认为符号没有问题
+//            continue
+//        }else {
+//            return false
+//        }
+//    }
+//    return true
+//}
 
 /**
  扩展函数——对图像缩放

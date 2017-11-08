@@ -243,7 +243,8 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
     //读取各种列表数据
     func LoadOtherData() {
         //开始各种读取工作
-        LoadDataFromWeb()
+        MyWebService.sharedInstance.LoadDataFromWeb()
+        MySocket.sharedInstance.SearchLocalMaster()
         //修改整体plist文件数据
         let filePath = DataFilePath("data.plist")//获得本地data.plist文件的路径
         let dict = NSMutableDictionary.init(contentsOfFile: filePath)//根据plist文件路径读取到数据字典

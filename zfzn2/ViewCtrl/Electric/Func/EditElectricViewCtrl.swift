@@ -26,8 +26,8 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         //konnn
+        g_notiCenter.addObserver(self, selector:#selector(EditElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
         m_eElectricName.text = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricName
-        
         m_tableSceneSelected.bounces = false
         m_tableSceneList.bounces = false
         m_tableSceneSelected.register(MySceneCell.self, forCellReuseIdentifier: "mySceneCell")
@@ -230,6 +230,10 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    
+    func SyncData() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 

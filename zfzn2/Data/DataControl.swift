@@ -103,7 +103,7 @@ let g_dAnimationStartOffset:CGFloat = -10//弹出视图从上方弹出的滑动�
     var mETKeyList = [ETKeyInfoData]()                   //红外键值列表
     var mETAirDeviceList = [ETAirDeviceInfoData]()        //空调状态列表
     
-    var m_bRefreshAreaList:Bool = false
+    var m_bRefreshAreaList:Bool = false     //刷新显示所有的房间和电器，此变量在删除房间和删除电器之类的操作后变更
     var m_bQuickScene:Bool = false         //是否快捷跳转情景模式
 
     //乐橙摄像头部分，务必不能修改

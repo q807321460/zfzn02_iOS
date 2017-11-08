@@ -17,6 +17,8 @@ class LeftMenuViewCtrl: MyViewController {
     @IBOutlet weak var m_labelMyMaster: UILabel!
     @IBOutlet weak var m_vReconnect: UIView!
     @IBOutlet weak var m_labelReconnect: UILabel!
+    @IBOutlet weak var m_vManualSync: UIView!
+    @IBOutlet weak var m_labelManualSync: UILabel!
     @IBOutlet weak var m_vJdPlay: UIView!
     @IBOutlet weak var m_labelJdPlay: UILabel!
     @IBOutlet weak var m_vSetting: UIView!
@@ -29,14 +31,11 @@ class LeftMenuViewCtrl: MyViewController {
     @IBOutlet weak var m_labelAccountName: UILabel!
     @IBOutlet weak var m_labelLocalVersion: UILabel!
     
-    var m_viewLoading:SCLAlertView! = nil
     var conn: Reachability?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        m_vJdPlay.isHidden = true
         m_vHelp.isHidden = true
-//        m_vSetting.isHidden = false
         //设置logo图片的圆角
         m_btnAccountLogo.setImage(gDC.mAccountInfo.m_imageAccountHead, for: UIControlState())
 //        print("TopArea尺寸为——\(m_vTopArea.bounds.size)")
@@ -79,6 +78,9 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vReconnect.frame.contains(point)) {
             m_vReconnect.backgroundColor = gDC.m_colorTouching
             m_labelReconnect.backgroundColor = gDC.m_colorTouching
+        }else if (m_vManualSync.frame.contains(point)) {
+            m_vManualSync.backgroundColor = gDC.m_colorTouching
+            m_labelManualSync.backgroundColor = gDC.m_colorTouching
         }else if (m_vSetting.frame.contains(point)) {
             m_vSetting.backgroundColor = gDC.m_colorTouching
             m_labelSetting.backgroundColor = gDC.m_colorTouching
@@ -96,52 +98,23 @@ class LeftMenuViewCtrl: MyViewController {
         let touch:UITouch = touches.first! as UITouch
         var point = touch.location(in: self.view)
         point.y = point.y - 20
+        ResetBackgroudColor()
         if (m_vMyMaster.frame.contains(point)) {
             m_vMyMaster.backgroundColor = gDC.m_colorTouching
             m_labelMyMaster.backgroundColor = gDC.m_colorTouching
-            m_vReconnect.backgroundColor = UIColor.white
-            m_labelReconnect.backgroundColor = UIColor.white
-            m_vJdPlay.backgroundColor = UIColor.white
-            m_labelJdPlay.backgroundColor = UIColor.white
-            m_vSetting.backgroundColor = UIColor.white
-            m_labelSetting.backgroundColor = UIColor.white
         }else if (m_vReconnect.frame.contains(point)) {
-            m_vMyMaster.backgroundColor = UIColor.white
-            m_labelMyMaster.backgroundColor = UIColor.white
             m_vReconnect.backgroundColor = gDC.m_colorTouching
             m_labelReconnect.backgroundColor = gDC.m_colorTouching
-            m_vJdPlay.backgroundColor = UIColor.white
-            m_labelJdPlay.backgroundColor = UIColor.white
-            m_vSetting.backgroundColor = UIColor.white
-            m_labelSetting.backgroundColor = UIColor.white
+        }else if (m_vManualSync.frame.contains(point)) {
+            m_vManualSync.backgroundColor = gDC.m_colorTouching
+            m_labelManualSync.backgroundColor = gDC.m_colorTouching
         }else if (m_vJdPlay.frame.contains(point)){
-            m_vMyMaster.backgroundColor = UIColor.white
-            m_labelMyMaster.backgroundColor = UIColor.white
-            m_vReconnect.backgroundColor = UIColor.white
-            m_labelReconnect.backgroundColor = UIColor.white
             m_vJdPlay.backgroundColor = gDC.m_colorTouching
             m_labelJdPlay.backgroundColor = gDC.m_colorTouching
-            m_vSetting.backgroundColor = UIColor.white
-            m_labelSetting.backgroundColor = UIColor.white
         }else if (m_vSetting.frame.contains(point)) {
-            m_vMyMaster.backgroundColor = UIColor.white
-            m_labelMyMaster.backgroundColor = UIColor.white
-            m_vReconnect.backgroundColor = UIColor.white
-            m_labelReconnect.backgroundColor = UIColor.white
-            m_vJdPlay.backgroundColor = UIColor.white
-            m_labelJdPlay.backgroundColor = UIColor.white
             m_vSetting.backgroundColor = gDC.m_colorTouching
             m_labelSetting.backgroundColor = gDC.m_colorTouching
-        }else {
-            m_vMyMaster.backgroundColor = UIColor.white
-            m_labelMyMaster.backgroundColor = UIColor.white
-            m_vReconnect.backgroundColor = UIColor.white
-            m_labelReconnect.backgroundColor = UIColor.white
-            m_vJdPlay.backgroundColor = UIColor.white
-            m_labelJdPlay.backgroundColor = UIColor.white
-            m_vSetting.backgroundColor = UIColor.white
-            m_labelSetting.backgroundColor = UIColor.white
-        }
+        }else {}
     }
     
     //判断手指在哪里点击结束，用于判断选择了哪个功能选项，待扩展
@@ -149,14 +122,7 @@ class LeftMenuViewCtrl: MyViewController {
         if touches.count > 1 {
             return
         }
-        m_vMyMaster.backgroundColor = UIColor.white
-        m_labelMyMaster.backgroundColor = UIColor.white
-        m_vReconnect.backgroundColor = UIColor.white
-        m_labelReconnect.backgroundColor = UIColor.white
-        m_vJdPlay.backgroundColor = UIColor.white
-        m_labelJdPlay.backgroundColor = UIColor.white
-        m_vSetting.backgroundColor = UIColor.white
-        m_labelSetting.backgroundColor = UIColor.white
+        ResetBackgroudColor()
         let touch:UITouch = touches.first! as UITouch
         var point = touch.location(in: self.view)
         point.y = point.y - 20
@@ -166,6 +132,9 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vReconnect.frame.contains(point)) {
             print("点击了本地重连菜单")
             ReconnectToLocal()
+        }else if (m_vManualSync.frame.contains(point)) {
+            print("点击了手动同步菜单")
+            ManualSync()
         }else if (m_vJdPlay.frame.contains(point)) {
             print("点击了背景音乐菜单")
             OnJdPlay()
@@ -175,39 +144,64 @@ class LeftMenuViewCtrl: MyViewController {
         }
     }
     
+    func ResetBackgroudColor() {
+        m_vMyMaster.backgroundColor = UIColor.white
+        m_labelMyMaster.backgroundColor = UIColor.white
+        m_vReconnect.backgroundColor = UIColor.white
+        m_labelReconnect.backgroundColor = UIColor.white
+        m_vManualSync.backgroundColor = UIColor.white
+        m_labelManualSync.backgroundColor = UIColor.white
+        m_vJdPlay.backgroundColor = UIColor.white
+        m_labelJdPlay.backgroundColor = UIColor.white
+        m_vSetting.backgroundColor = UIColor.white
+        m_labelSetting.backgroundColor = UIColor.white
+    }
+    
     //重连到本地主机
     func ReconnectToLocal() {
         if gDC.m_bRemote == false {//说明是本地，不需要执行
             return
         }
+        var viewLoading:SCLAlertView! = nil
         DispatchQueue.main.async {
             let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-            self.m_viewLoading = SCLAlertView(appearance: appearance)
-            self.m_viewLoading.showInfo("提示", subTitle: " 正在重新连接......", duration: 0)
+            viewLoading = SCLAlertView(appearance: appearance)
+            viewLoading.showInfo("提示", subTitle: " 正在重新连接......", duration: 0)
         }
         MyWebService.sharedInstance.StopPolling()
         //需要搜索本地的主节点，以确定是远程控制还是本地socket通信，同时还要确保获取的主机编号没有问题
         let sResult:String = MySocket.sharedInstance.GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)
-        if (IsValidMasterCode(sResult) == false) {
-            ShowNoticeDispatch("错误", content: "搜索到的主机编码有问题，请试着重新搜索主机", duration: 1.5)
-            self.m_viewLoading.hideView()
-            return
-        }
         print("搜索到的主节点编号为：\(sResult)")
         if gDC.mUserInfo.m_sMasterCode == sResult {
-            ShowInfoDispatch("提示", content: "本地连接成功", duration: 0.8)
+            ShowInfoDispatch("提示", content: "本地连接成功", duration: 0.5)
             let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
             gDC.m_bRemote = false
-            MySocket.sharedInstance.OpenTcpSocekt()//05.02添加
+            MySocket.sharedInstance.OpenTcpSocekt()
 //            WebSocket.sharedInstance.CloseWebSocket()
         }else {
-            ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
+            ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.5)
             MyWebService.sharedInstance.OpenPolling()
             gDC.m_bRemote = true
         }
-        self.m_viewLoading.hideView()
+        viewLoading.hideView()
         g_notiCenter.post(name: Notification.Name(rawValue: "RefreshRemoteState"), object: self)
+    }
+    
+    //同步所有数据
+    func ManualSync() {
+        var viewLoading:SCLAlertView! = nil
+        DispatchQueue.main.async(execute: {
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            viewLoading = SCLAlertView(appearance: appearance)
+            viewLoading.showInfo("提示", subTitle: "同步中......", duration: 0)
+        })
+        MyWebService.sharedInstance.LoadDataFromWeb()
+        let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
+        gDC.mElectricData.UpdateElectricState(dictsElectricState)
+        gDC.m_bRefreshAreaList = true
+        g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
+        viewLoading.hideView()//取消显示正在加载的字样
     }
     
     func OnJdPlay() {

@@ -18,6 +18,7 @@ class ElecSuperViewCtrl: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        g_notiCenter.addObserver(self, selector:#selector(ElecSuperViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +67,10 @@ class ElecSuperViewCtrl: UIViewController {
                 MyWebService.sharedInstance.UpdateElectricOrder(gDC.mUserInfo.m_sMasterCode, electricCode:gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode, order:gDC.m_sOrderSign+gDC.m_sOrderStop, orderInfo:m_sElectricOrder)
             }
         }
+    }
+    
+    func SyncData() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
 }

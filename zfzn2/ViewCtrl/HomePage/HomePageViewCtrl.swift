@@ -48,7 +48,9 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         m_imageAccountLogo.layer.masksToBounds = true
         //显示是否在线
         RefreshRemoteState()
+        
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.RefreshRemoteState),name: NSNotification.Name(rawValue: "RefreshRemoteState"), object: nil)
+        g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
         
         //初始化情景和区域中常用的四个图片按钮
         InitScene()
@@ -77,7 +79,6 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         m_labelWeatherCity.text = gDC.m_sCityName
         //刷新天气信息
 //        RefreshWeatherInfo()
-        
         m_collectionScene.reloadData()
         m_collectionArea.reloadData()
     }
@@ -402,6 +403,11 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         }else {
             m_labelOnLine.text = "-远程"
         }
+    }
+    
+    func SyncData() {
+        m_collectionScene.reloadData()
+        m_collectionArea.reloadData()
     }
 
 }

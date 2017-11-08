@@ -1365,8 +1365,8 @@
 			isa = PBXGroup;
 			children = (
 				1BF1AF3A1FAF0A6E00A8E27E /* ConfWifi */,
-				1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */,
 				1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */,
+				1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */,
 				1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */,
 				1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */,
 				1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */,

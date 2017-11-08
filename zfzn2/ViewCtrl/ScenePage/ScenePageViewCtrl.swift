@@ -28,6 +28,7 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         m_tableSceneElectric.bounces = false
         m_btnExecute.layer.cornerRadius = 5.0
         m_btnExecute.layer.masksToBounds = true
+        g_notiCenter.addObserver(self, selector:#selector(AddSceneElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,6 +106,9 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
+    func SyncData() {
+        m_tableSceneElectric.reloadData()
+    }
 }
 
 

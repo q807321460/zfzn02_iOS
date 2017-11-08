@@ -28,6 +28,7 @@ class AddSceneElectricViewCtrl: UIViewController, UITableViewDelegate, UITableVi
         m_tableSceneElectric.register(UINib(nibName: "MyAreaCell", bundle: nil), forCellReuseIdentifier: "myAreaCell")
         m_tableSceneElectric.delegate = self
         m_tableSceneElectric.dataSource = self
+        g_notiCenter.addObserver(self, selector:#selector(AddSceneElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,6 +120,10 @@ class AddSceneElectricViewCtrl: UIViewController, UITableViewDelegate, UITableVi
         }else {
             ShowInfoDispatch("提示", content: "暂时不支持该类型电器的情景控制", duration: 1.0)
         }
+    }
+    
+    func SyncData() {
+        m_tableSceneElectric.reloadData()
     }
     
 }

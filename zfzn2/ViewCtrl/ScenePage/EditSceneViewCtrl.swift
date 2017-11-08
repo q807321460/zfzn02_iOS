@@ -33,6 +33,7 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
 //        m_btnAddAction.layer.masksToBounds = true
         m_btnDelete.layer.cornerRadius = 5.0
         m_btnDelete.layer.masksToBounds = true
+        g_notiCenter.addObserver(self, selector:#selector(EditSceneViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -205,6 +206,9 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     
+    func SyncData() {
+        m_tableSceneElectric.reloadData()
+    }
 }
 
 

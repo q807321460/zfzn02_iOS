@@ -845,4 +845,37 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
 //        m_bPolling = false
 //        m_timerPolling.invalidate()
     }
+    
+    func LoadDataFromWeb() {
+        MyWebService.sharedInstance.StopPolling()
+        //从服务器加载房间列表
+        let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
+        gDC.mAreaData.UpdateArea(dictsArea)
+        //从服务器加载电器列表
+        let dictsElectric = MyWebService.sharedInstance.LoadElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, electricTime: gDC.mUserInfo.m_sTimeElectric)
+        gDC.mElectricData.UpdateElectric(dictsElectric)
+        //从服务器加载红外类型电器的键值
+        if dictsElectric.count != 0 {
+            for i in 0..<gDC.mAreaList.count {
+                for j in 0..<gDC.mAreaList[i].mElectricList.count {
+                    let nType = gDC.mAreaList[i].mElectricList[j].m_nElectricType
+                    if gDC.m_arrayElectricTypeCode[nType] as! String == "09" {//9是空调，12是电视，21是临时设计的学习型空调
+                        let jsons = MyWebService.sharedInstance.LoadKeyByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
+                        gDC.mETData.UpdateETKeys(jsons)
+                        if nType == 9 || nType == 21 {//如果是空调的话，则读取
+                            let jsons2 = MyWebService.sharedInstance.LoadETAirByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
+                            gDC.mETData.UpdateETAir(jsons2)
+                        }
+                    }
+                }
+            }
+        }
+        //从服务器加载情景列表
+        let dictsScene = MyWebService.sharedInstance.LoadScene(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneTime: gDC.mUserInfo.m_sTimeScene)
+        gDC.mSceneData.UpdateScene(dictsScene)
+        //从服务器加载情景电器列表
+        let dictSceneElectric = MyWebService.sharedInstance.LoadSceneElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneElectricTime: gDC.mUserInfo.m_sTimeSceneElectric)
+        gDC.mSceneElectricData.UpdateSceneElectric(dictSceneElectric)
+    }
+    
 }
