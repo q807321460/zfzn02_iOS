@@ -117,6 +117,7 @@ class AddAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImage
             }else {
                 print("下次再编辑图片")
             }
+            gDC.m_nSelectAreaSequ = gDC.mAreaList.count - 1
             gDC.m_bRefreshAreaList = true
             self.navigationController?.popViewController(animated: true)
         case "2":

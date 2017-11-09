@@ -90,19 +90,23 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
 //            if gDC.mUserList[indexPath.row].m_sMasterCode != gDC.mUserInfo.m_sMasterCode {
             alertView.addButton("删除", action: {//需要有一个
                 () -> Void in
-                let appearance2 = SCLAlertView.SCLAppearance(showCloseButton: true)
-                let alertView2 = SCLAlertView(appearance: appearance2)
-                alertView2.addButton("确定", action: {
-                    () -> Void in
-                    let webReturn = MyWebService.sharedInstance.DeleteUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserList[indexPath.row].m_sMasterCode)
-                    self.m_nDeleteListFoot = indexPath.row
-                    if gDC.mUserList[indexPath.row].m_sMasterCode != gDC.mUserInfo.m_sMasterCode {
-                        self.WebDeleteUser(webReturn, isCurrentUser: false)
-                    }else{
-                        self.WebDeleteUser(webReturn, isCurrentUser: true)
-                    }
-                })
-                alertView2.showInfo("提示", subTitle: "请问您是否确认删除该主机", duration: 0)//时间间隔为0时不会自动退出
+                if (gDC.mUserList.count<=1) {
+                    ShowNoticeDispatch("提示", content: "只剩下最后一个主机，不能删除", duration: 0.5)
+                }else {
+                    let appearance2 = SCLAlertView.SCLAppearance(showCloseButton: true)
+                    let alertView2 = SCLAlertView(appearance: appearance2)
+                    alertView2.addButton("确定", action: {
+                        () -> Void in
+                        let webReturn = MyWebService.sharedInstance.DeleteUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserList[indexPath.row].m_sMasterCode)
+                        self.m_nDeleteListFoot = indexPath.row
+                        if gDC.mUserList[indexPath.row].m_sMasterCode != gDC.mUserInfo.m_sMasterCode {
+                            self.WebDeleteUser(webReturn, isCurrentUser: false)
+                        }else{
+                            self.WebDeleteUser(webReturn, isCurrentUser: true)
+                        }
+                    })
+                    alertView2.showInfo("提示", subTitle: "请问您是否确认删除该主机", duration: 0)//时间间隔为0时不会自动退出
+                }
             })
 //            }
             alertView.showInfo("菜单", subTitle: "请选择您需要的操作", duration: 0)//时间间隔为0时不会自动退出

@@ -88,6 +88,9 @@ class AreaViewCtrl: UIViewController {
         skscNavVC.scNavBarColor = UIColor(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
         skscNavVC.scNavBarArrowImage = UIImage(named: "导航栏_下拉.png")
         skscNavVC.addParentController(self)
+        if (gDC.m_nSelectAreaSequ >= gDC.mAreaList.count) {
+            gDC.m_nSelectAreaSequ = gDC.mAreaList.count - 1
+        }
         skscNavVC.mainView.setContentOffset(CGPoint(x: CGFloat(gDC.m_nSelectAreaSequ) * kScreenWidth, y: 0), animated: true)
     }
     

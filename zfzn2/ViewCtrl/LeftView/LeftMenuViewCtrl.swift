@@ -199,7 +199,7 @@ class LeftMenuViewCtrl: MyViewController {
         MyWebService.sharedInstance.LoadDataFromWeb()
         let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
         gDC.mElectricData.UpdateElectricState(dictsElectricState)
-        gDC.m_bRefreshAreaList = true
+//        gDC.m_bRefreshAreaList = true
         g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
         viewLoading.hideView()//取消显示正在加载的字样
     }

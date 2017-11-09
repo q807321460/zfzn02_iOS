@@ -182,7 +182,7 @@ class SKScNavViewController: UIViewController, SKScNavBarDelegate, UIScrollViewD
     
     //MARK: -- SKScNavBarDelegate 中的方法
     func didSelectedWithIndex(_ index: Int) {
-        gDC.m_nSelectAreaSequ = index
+//        gDC.m_nSelectAreaSequ = index
         mainView.setContentOffset(CGPoint(x: CGFloat(index) * kScreenWidth, y: 0), animated: true)
     }
     
