@@ -207,7 +207,7 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func SyncData() {
-        m_tableSceneElectric.reloadData()
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 
