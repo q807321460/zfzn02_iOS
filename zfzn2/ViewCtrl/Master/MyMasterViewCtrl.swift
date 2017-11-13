@@ -22,7 +22,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
         m_tableMaster.register(UINib(nibName: "MyMasterCell", bundle: nil), forCellReuseIdentifier: "myMasterCell")
         m_tableMaster.bounces = false//不需要弹簧效果
         m_tableMaster.tableFooterView = UIView()//隐藏多余行
-//        g_notiCenter.addObserver(self, selector:#selector(MyMasterViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
+        g_notiCenter.addObserver(self, selector:#selector(MyMasterViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
 //        m_tableMaster.hidden = true
     }
 
@@ -140,7 +140,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
             self.m_viewLoading.showInfo("提示", subTitle: " 正在加载用户数据......", duration: 0)
         })
         //开始各种读取工作
-        MyWebService.sharedInstance.LoadDataFromWeb()
+        MyWebService.sharedInstance.LoadDetailDataFromWs()
         MySocket.sharedInstance.SearchLocalMaster()
         //重新刷新区域界面
         gDC.m_bRefreshAreaList = true
@@ -162,7 +162,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
         array!.write(toFile: fullPath, atomically: true)
     }
 
-//    func SyncData() {
-//        m_tableMaster.reloadData()
-//    }
+    func SyncData() {
+        m_tableMaster.reloadData()
+    }
 }

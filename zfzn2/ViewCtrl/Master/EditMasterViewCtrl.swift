@@ -44,6 +44,7 @@ class EditMasterViewCtrl: UIViewController {
         m_btnShareList.layer.masksToBounds = true
         m_btnGetAdminAccount.layer.cornerRadius = 5.0
         m_btnGetAdminAccount.layer.masksToBounds = true
+        g_notiCenter.addObserver(self, selector:#selector(EditMasterViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
         RefreshButton()
     }
 
@@ -201,6 +202,9 @@ class EditMasterViewCtrl: UIViewController {
         }
     }
     
+    func SyncData() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 

@@ -86,6 +86,7 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
+        gDC.mUserList.removeAll()
         //获取曾登录过的账户列表，并初始化下拉账户列表
         m_sArrayAccount.removeAll()
         let myDire: String = NSHomeDirectory() + "/Documents/account_setting"
@@ -190,62 +191,29 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let filePath = GetFileFullPath("account_setting/", fileName: "\(gDC.mAccountInfo.m_sAccountCode).plist")
         let arrayPlist = NSMutableDictionary.init(contentsOfFile: filePath)
         gDC.mAccountInfo.m_sLastMasterCode = arrayPlist?.object(forKey: "last_master") as! String
-        //搜索accounts表
-        let dictQuery = NSMutableDictionary()
-        dictQuery.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-        let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "accounts")//只会返回一条数据
-        if sqlResult.count == 0 {//1、可能是旧账号换了新手机 2、可能是刚刚注册的账号
-            DispatchQueue.main.async(execute: {
-                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                self.m_viewLoading = SCLAlertView(appearance: appearance)
-                self.m_viewLoading.showInfo("提示", subTitle: "首次加载可能需要一段时间，请耐心等待~", duration: 0)
-            })
-            //向本地数据库中添加account
-            let dictInsert = NSMutableDictionary()
-            dictInsert.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-            gMySqlClass.InsertIntoSql(dictInsert, table: "accounts")
-            //从远程数据库中读取最新的数据
-            let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: "")
-            gDC.mAccountData.UpdateAccount(dictsAccount)
-            let dictsUser = MyWebService.sharedInstance.LoadUser(gDC.mAccountInfo.m_sAccountCode, userTime: "")
-            if dictsUser.count == 1 {//因为一定会返回一个extra，所以最小值为1
-                //新手机一定是可以获取web的users的，如果仍然是空，则说明还没有添加过主机
-                print("从登录界面到添加主机界面")
-                self.m_viewLoading.hideView()//取消显示正在加载的字样
-                    self.performSegue(withIdentifier: "addMaster", sender: self)//如果没有主机的话
-                return
-            }else {
-                gDC.mUserData.UpdateUser(dictsUser)
-            }
-        }else {//说明是旧手机
-            DispatchQueue.main.async(execute: {
-                let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                self.m_viewLoading = SCLAlertView(appearance: appearance)
-                self.m_viewLoading.showInfo("提示", subTitle: " 正在加载用户数据......", duration: 0)
-            })
-            let timeAccount = sqlResult[0]["account_time"] as! String
-            let timeUser = sqlResult[0]["user_time"] as! String
-            let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: timeAccount)
-            gDC.mAccountData.UpdateAccount(dictsAccount)
-            let dictsUser = MyWebService.sharedInstance.LoadUser(gDC.mAccountInfo.m_sAccountCode, userTime: timeUser)
-            if (dictsUser.count == 1) {//说明之前删除完所有的user，需要重新添加
-                print("从登录界面到添加主机界面")
-                self.m_viewLoading.hideView()//取消显示正在加载的字样
-                self.performSegue(withIdentifier: "addMaster", sender: self)
-                return
-            }else {
-                gDC.mUserData.UpdateUser(dictsUser)
-            }
+        DispatchQueue.main.async(execute: {
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            self.m_viewLoading = SCLAlertView(appearance: appearance)
+            self.m_viewLoading.showInfo("提示", subTitle: " 正在加载用户数据......", duration: 0)
+        })
+        let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: "")
+        gDC.mAccountData.UpdateAccount(dictsAccount)
+        let dictsUser = MyWebService.sharedInstance.LoadUser(gDC.mAccountInfo.m_sAccountCode, userTime: "")
+        if (dictsUser.count <= 1) {//说明之前删除完所有的user，需要重新添加
+            print("从登录界面到添加主机界面")
+            self.m_viewLoading.hideView()//取消显示正在加载的字样
+            self.performSegue(withIdentifier: "addMaster", sender: self)
+            return
+        }else {
+            gDC.mUserData.UpdateUser(dictsUser)
         }
+        MyWebService.sharedInstance.LoadDetailDataFromWs()
+        MySocket.sharedInstance.SearchLocalMaster()
         LoadOtherData()
     }
     
-    //读取各种列表数据
+    //读取各种列表数据，修改整体plist文件数据
     func LoadOtherData() {
-        //开始各种读取工作
-        MyWebService.sharedInstance.LoadDataFromWeb()
-        MySocket.sharedInstance.SearchLocalMaster()
-        //修改整体plist文件数据
         let filePath = DataFilePath("data.plist")//获得本地data.plist文件的路径
         let dict = NSMutableDictionary.init(contentsOfFile: filePath)//根据plist文件路径读取到数据字典
         if m_imgRememberPass.isHidden == false{

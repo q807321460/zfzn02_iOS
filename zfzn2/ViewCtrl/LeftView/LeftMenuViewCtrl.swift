@@ -36,7 +36,6 @@ class LeftMenuViewCtrl: MyViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         m_vHelp.isHidden = true
-        //设置logo图片的圆角
         m_btnAccountLogo.setImage(gDC.mAccountInfo.m_imageAccountHead, for: UIControlState())
 //        print("TopArea尺寸为——\(m_vTopArea.bounds.size)")
         let btnWidth = m_btnAccountLogo.layer.bounds.size.width
@@ -44,14 +43,13 @@ class LeftMenuViewCtrl: MyViewController {
         self.m_btnAccountLogo.layer.cornerRadius = (btnWidth*3/4)/2
 //        print("按钮圆角半径为——\((btnWidth*3/4)/2)")
         self.m_btnAccountLogo.layer.masksToBounds = true
-        //将手机号中间4位数字修改为****
         var sPhone:String = gDC.mAccountInfo.m_sAccountCode
         let range = (sPhone.index(sPhone.startIndex, offsetBy: 3) ..< sPhone.index(sPhone.startIndex, offsetBy: 7)) //Swift 3.0
         sPhone.replaceSubrange(range, with: "****")
         m_labelAccountCode.text = sPhone
-        //显示账户姓名和版本号
         m_labelAccountName.text = gDC.mAccountInfo.m_sAccountName
         m_labelLocalVersion.text = "version: \(gDC.m_appVersion)"
+        g_notiCenter.addObserver(self, selector:#selector(LeftMenuViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +61,8 @@ class LeftMenuViewCtrl: MyViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
     
     //手指初次按下
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -190,18 +190,12 @@ class LeftMenuViewCtrl: MyViewController {
     
     //同步所有数据
     func ManualSync() {
-        var viewLoading:SCLAlertView! = nil
-        DispatchQueue.main.async(execute: {
-            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-            viewLoading = SCLAlertView(appearance: appearance)
-            viewLoading.showInfo("提示", subTitle: "同步中......", duration: 0)
-        })
-        MyWebService.sharedInstance.LoadDataFromWeb()
-        let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
-        gDC.mElectricData.UpdateElectricState(dictsElectricState)
-//        gDC.m_bRefreshAreaList = true
-        g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
-        viewLoading.hideView()//取消显示正在加载的字样
+        let bFlag = MyWebService.sharedInstance.ManualSync()
+        if (bFlag == true) {
+            g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
+        }else {
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     func OnJdPlay() {
@@ -233,6 +227,10 @@ class LeftMenuViewCtrl: MyViewController {
         }
     }
     
+    func SyncData() {
+        m_btnAccountLogo.setImage(gDC.mAccountInfo.m_imageAccountHead, for: UIControlState())
+        m_labelAccountName.text = gDC.mAccountInfo.m_sAccountName
+    }
 }
 
 

@@ -422,10 +422,10 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         case "WebError":
             break
         case "1":
-            //修改到本地数据库
-            let setDict:NSMutableDictionary = ["room_name":m_eAreaName.text!]
-            let requiredDict:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "room_index":gDC.mAreaList[m_nAreaListFoot].m_nAreaIndex]
-            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "userroom")
+//            //修改到本地数据库
+//            let setDict:NSMutableDictionary = ["room_name":m_eAreaName.text!]
+//            let requiredDict:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "room_index":gDC.mAreaList[m_nAreaListFoot].m_nAreaIndex]
+//            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "userroom")
             
             //将图片保存到本地，如果编辑过图片，则重新保存
             if m_imageArea.image != nil {

@@ -12,36 +12,36 @@ import Foundation
 class AccountData: NSObject {
     func UpdateAccount(_ dicts:[NSDictionary]) {
         print("向内存中写入account数据")
-        //返回空的话，说明本地的数据是最新的，则不用同步，直接读取本地数据库中的数据
-        if dicts.count == 0 {
-            let dictQuery:NSMutableDictionary = ["account_code":gDC.mAccountInfo.m_sAccountCode]
-            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "accounts")
-            if (sqlResult[0]["account_phone"] != nil) {
-                gDC.mAccountInfo.m_sAccountPhone = sqlResult[0]["account_phone"] as! String
-            }
-            if (sqlResult[0]["account_name"] != nil) {
-                gDC.mAccountInfo.m_sAccountName = sqlResult[0]["account_name"] as! String
-            }
-            if (sqlResult[0]["account_address"] != nil) {
-                gDC.mAccountInfo.m_sAccountAddress = sqlResult[0]["account_address"] as! String
-            }
-            if (sqlResult[0]["account_email"] != nil) {
-                gDC.mAccountInfo.m_sAccountEmail = sqlResult[0]["account_email"] as! String
-            }
-            if (sqlResult[0]["password"] != nil) {
-                gDC.mAccountInfo.m_sAccountPassword = sqlResult[0]["password"] as! String
-            }
-            //从本地文件加载图像
-            let imageFullPath:String = GetFileFullPath("account_head/", fileName: "\(gDC.mAccountInfo.m_sAccountCode).png")
-            let fileManager:FileManager = FileManager.default
-            if fileManager.fileExists(atPath: imageFullPath) {//判断文件是否存在
-                gDC.mAccountInfo.m_imageAccountHead = UIImage(contentsOfFile: imageFullPath)!
-            }else {//正常应该进不来.
-                SaveImage(UIImage(named: "首页_用户logo.png")!, newSize: CGSize(width: 128, height: 128), percent: 0.5, imagePath: "account_head/", imageName: "\(gDC.mAccountInfo.m_sAccountCode).png")
-                gDC.mAccountInfo.m_imageAccountHead = UIImage(named: "首页_用户logo.png")
-            }
-            return
-        }
+//        //返回空的话，说明本地的数据是最新的，则不用同步，直接读取本地数据库中的数据
+//        if dicts.count == 0 {
+//            let dictQuery:NSMutableDictionary = ["account_code":gDC.mAccountInfo.m_sAccountCode]
+//            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "accounts")
+//            if (sqlResult[0]["account_phone"] != nil) {
+//                gDC.mAccountInfo.m_sAccountPhone = sqlResult[0]["account_phone"] as! String
+//            }
+//            if (sqlResult[0]["account_name"] != nil) {
+//                gDC.mAccountInfo.m_sAccountName = sqlResult[0]["account_name"] as! String
+//            }
+//            if (sqlResult[0]["account_address"] != nil) {
+//                gDC.mAccountInfo.m_sAccountAddress = sqlResult[0]["account_address"] as! String
+//            }
+//            if (sqlResult[0]["account_email"] != nil) {
+//                gDC.mAccountInfo.m_sAccountEmail = sqlResult[0]["account_email"] as! String
+//            }
+//            if (sqlResult[0]["password"] != nil) {
+//                gDC.mAccountInfo.m_sAccountPassword = sqlResult[0]["password"] as! String
+//            }
+//            //从本地文件加载图像
+//            let imageFullPath:String = GetFileFullPath("account_head/", fileName: "\(gDC.mAccountInfo.m_sAccountCode).png")
+//            let fileManager:FileManager = FileManager.default
+//            if fileManager.fileExists(atPath: imageFullPath) {//判断文件是否存在
+//                gDC.mAccountInfo.m_imageAccountHead = UIImage(contentsOfFile: imageFullPath)!
+//            }else {//正常应该进不来.
+//                SaveImage(UIImage(named: "首页_用户logo.png")!, newSize: CGSize(width: 128, height: 128), percent: 0.5, imagePath: "account_head/", imageName: "\(gDC.mAccountInfo.m_sAccountCode).png")
+//                gDC.mAccountInfo.m_imageAccountHead = UIImage(named: "首页_用户logo.png")
+//            }
+//            return
+//        }
         let dict:NSDictionary = dicts[0]//最多只有一组数据
         let accountInfo = AccountInfoData()//保证切换账号时数据的正确性
         //空的数据，web不会传下来，所以最好每个数据都进行判断
@@ -79,18 +79,18 @@ class AccountData: NSObject {
         }
         gDC.mAccountInfo = accountInfo
         //将这些数据写入到数据库中
-        let dictRequired = NSMutableDictionary()
-        dictRequired.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-        let dictSet = NSMutableDictionary()
-        dictSet.setObject(gDC.mAccountInfo.m_sAccountName, forKey: "account_name" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sAccountPhone, forKey: "account_phone" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sAccountAddress, forKey: "account_address" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sAccountEmail, forKey: "account_email" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sTimeAccount , forKey: "account_time" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sAccountPassword , forKey: "password" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sTimeSign, forKey: "sign_time" as NSCopying)
-        dictSet.setObject(gDC.mAccountInfo.m_sTimeUser, forKey: "user_time" as NSCopying)
-        gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "accounts")
+//        let dictRequired = NSMutableDictionary()
+//        dictRequired.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
+//        let dictSet = NSMutableDictionary()
+//        dictSet.setObject(gDC.mAccountInfo.m_sAccountName, forKey: "account_name" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sAccountPhone, forKey: "account_phone" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sAccountAddress, forKey: "account_address" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sAccountEmail, forKey: "account_email" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sTimeAccount , forKey: "account_time" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sAccountPassword , forKey: "password" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sTimeSign, forKey: "sign_time" as NSCopying)
+//        dictSet.setObject(gDC.mAccountInfo.m_sTimeUser, forKey: "user_time" as NSCopying)
+//        gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "accounts")
     }
 
     //更新分享账户列表
@@ -141,10 +141,10 @@ class AccountData: NSObject {
         dict?.setObject(false, forKey: "is_remember_password" as NSCopying)//下次登录需要重新输入密码
         dict?.setObject(passwordNew, forKey: "password" as NSCopying)
         dict?.write(toFile: fullPath, atomically: true)
-        //修改本地数据库
-        let dictSet:NSMutableDictionary = ["password":passwordNew]
-        let dictRequired:NSMutableDictionary = ["account_code":gDC.mAccountInfo.m_sAccountCode]
-        gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "accounts")
+//        //修改本地数据库
+//        let dictSet:NSMutableDictionary = ["password":passwordNew]
+//        let dictRequired:NSMutableDictionary = ["account_code":gDC.mAccountInfo.m_sAccountCode]
+//        gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "accounts")
     }
 }
 

@@ -51,11 +51,11 @@ class ChangeAccountEmailViewCtrl: UIViewController {
             ShowInfoDispatch("成功", content: "更新用户数据成功", duration: 1.5)
             //将对应的数据写入到数据库,同时也写入内存
             gDC.mAccountInfo.m_sAccountEmail = m_eAccountEmail.text!
-            let dictSet = NSMutableDictionary()
-            dictSet.setObject(m_eAccountEmail.text!, forKey: "account_email" as NSCopying)
-            let dictRequired = NSMutableDictionary()
-            dictRequired.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-            gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "accounts")
+//            let dictSet = NSMutableDictionary()
+//            dictSet.setObject(m_eAccountEmail.text!, forKey: "account_email" as NSCopying)
+//            let dictRequired = NSMutableDictionary()
+//            dictRequired.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
+//            gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "accounts")
             self.navigationController?.popViewController(animated: true)
         default:
             break

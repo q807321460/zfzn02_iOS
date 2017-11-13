@@ -29,52 +29,52 @@ class ETData: NSObject {
     
     func UpdateETKeys(_ jsons:[JSON]) {
         gDC.mETKeyList.removeAll()
-        if jsons.count == 0 {//从本地数据库中读取
-            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]
-            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "etkey")
-            for i in 0..<sqlResult.count {
-                let etkeyInfo = ETKeyInfoData()
-                etkeyInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
-                if (sqlResult[i]["electric_index"] != nil) {
-                    etkeyInfo.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
-                }
-                if (sqlResult[i]["key_name"] != nil) {
-                    etkeyInfo.m_sKeyName = sqlResult[i]["key_name"] as! String
-                }
-                if (sqlResult[i]["key_value"] != nil) {
-                    etkeyInfo.m_sKeyValue = sqlResult[i]["key_value"] as! String
-                }
-                if (sqlResult[i]["key_key"] != nil) {
-                    etkeyInfo.m_nKeyKey = sqlResult[i]["key_key"] as! Int
-                }
-                if (sqlResult[i]["key_brandindex"] != nil) {
-                    etkeyInfo.m_nKeyBrandIndex = sqlResult[i]["key_brandindex"] as! Int
-                }
-                if (sqlResult[i]["key_brandpos"] != nil) {
-                    etkeyInfo.m_nKeyBrandPos = sqlResult[i]["key_brandpos"] as! Int
-                }
-                if (sqlResult[i]["did"] != nil) {
-                    etkeyInfo.m_nDid = sqlResult[i]["did"] as! Int
-                }
-                if (sqlResult[i]["key_x"] != nil) {
-                    etkeyInfo.m_nKeyKey = sqlResult[i]["key_x"] as! Int
-                }
-                if (sqlResult[i]["key_y"] != nil) {
-                    etkeyInfo.m_nKeyKey = sqlResult[i]["key_y"] as! Int
-                }
-                if (sqlResult[i]["key_res"] != nil) {
-                    etkeyInfo.m_nKeyRes = sqlResult[i]["key_res"] as! Int
-                }
-                if (sqlResult[i]["key_row"] != nil) {
-                    etkeyInfo.m_nKeyRow = sqlResult[i]["key_row"] as! Int
-                }
-                if (sqlResult[i]["key_state"] != nil) {
-                    etkeyInfo.m_nKeyState = sqlResult[i]["key_state"] as! Int
-                }
-                gDC.mETKeyList.append(etkeyInfo)
-            }
-        }else {//从jsons获取
-            DeleteETKeysByMaster(gDC.mUserInfo.m_sMasterCode)
+//        if jsons.count == 0 {//从本地数据库中读取
+//            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]
+//            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "etkey")
+//            for i in 0..<sqlResult.count {
+//                let etkeyInfo = ETKeyInfoData()
+//                etkeyInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
+//                if (sqlResult[i]["electric_index"] != nil) {
+//                    etkeyInfo.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
+//                }
+//                if (sqlResult[i]["key_name"] != nil) {
+//                    etkeyInfo.m_sKeyName = sqlResult[i]["key_name"] as! String
+//                }
+//                if (sqlResult[i]["key_value"] != nil) {
+//                    etkeyInfo.m_sKeyValue = sqlResult[i]["key_value"] as! String
+//                }
+//                if (sqlResult[i]["key_key"] != nil) {
+//                    etkeyInfo.m_nKeyKey = sqlResult[i]["key_key"] as! Int
+//                }
+//                if (sqlResult[i]["key_brandindex"] != nil) {
+//                    etkeyInfo.m_nKeyBrandIndex = sqlResult[i]["key_brandindex"] as! Int
+//                }
+//                if (sqlResult[i]["key_brandpos"] != nil) {
+//                    etkeyInfo.m_nKeyBrandPos = sqlResult[i]["key_brandpos"] as! Int
+//                }
+//                if (sqlResult[i]["did"] != nil) {
+//                    etkeyInfo.m_nDid = sqlResult[i]["did"] as! Int
+//                }
+//                if (sqlResult[i]["key_x"] != nil) {
+//                    etkeyInfo.m_nKeyKey = sqlResult[i]["key_x"] as! Int
+//                }
+//                if (sqlResult[i]["key_y"] != nil) {
+//                    etkeyInfo.m_nKeyKey = sqlResult[i]["key_y"] as! Int
+//                }
+//                if (sqlResult[i]["key_res"] != nil) {
+//                    etkeyInfo.m_nKeyRes = sqlResult[i]["key_res"] as! Int
+//                }
+//                if (sqlResult[i]["key_row"] != nil) {
+//                    etkeyInfo.m_nKeyRow = sqlResult[i]["key_row"] as! Int
+//                }
+//                if (sqlResult[i]["key_state"] != nil) {
+//                    etkeyInfo.m_nKeyState = sqlResult[i]["key_state"] as! Int
+//                }
+//                gDC.mETKeyList.append(etkeyInfo)
+//            }
+//        }else {//从jsons获取
+//            DeleteETKeysByMaster(gDC.mUserInfo.m_sMasterCode)
             for i in 0..<jsons.count {
                 let etkeyInfo = ETKeyInfoData()
                 if (jsons[i]["masterCode"].string != nil) {
@@ -117,70 +117,71 @@ class ETData: NSObject {
                     etkeyInfo.m_nKeyState = jsons[i]["keyState"].int!
                 }
                 gDC.mETKeyList.append(etkeyInfo)
-                //并重新写入本地数据库
-                let dictInsert = NSMutableDictionary()
-                dictInsert.setObject(etkeyInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nElectricIndex, forKey: "electric_index" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_sKeyName, forKey: "key_name" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_sKeyValue, forKey: "key_value" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyKey, forKey: "key_key" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyBrandIndex, forKey: "key_brandindex" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyBrandPos, forKey: "key_brandpos" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nDid, forKey: "did" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyX, forKey: "key_x" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyY, forKey: "key_y" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyRes, forKey: "key_res" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyRow, forKey: "key_row" as NSCopying)
-                dictInsert.setObject(etkeyInfo.m_nKeyState, forKey: "key_state" as NSCopying)
-                gMySqlClass.InsertIntoSql(dictInsert, table: "etkey")
-            }
+//                //并重新写入本地数据库
+//                let dictInsert = NSMutableDictionary()
+//                dictInsert.setObject(etkeyInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nElectricIndex, forKey: "electric_index" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_sKeyName, forKey: "key_name" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_sKeyValue, forKey: "key_value" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyKey, forKey: "key_key" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyBrandIndex, forKey: "key_brandindex" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyBrandPos, forKey: "key_brandpos" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nDid, forKey: "did" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyX, forKey: "key_x" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyY, forKey: "key_y" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyRes, forKey: "key_res" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyRow, forKey: "key_row" as NSCopying)
+//                dictInsert.setObject(etkeyInfo.m_nKeyState, forKey: "key_state" as NSCopying)
+//                gMySqlClass.InsertIntoSql(dictInsert, table: "etkey")
+//            }
         }
     }
     
     func DeleteETKeysByMaster(_ masterCode:String) {
-        let dictRequired = NSMutableDictionary()
-        dictRequired.setObject(masterCode, forKey: "master_code" as NSCopying)
-        gMySqlClass.DeleteSql(dictRequired, table: "etkey")
+//        let dictRequired = NSMutableDictionary()
+//        dictRequired.setObject(masterCode, forKey: "master_code" as NSCopying)
+//        gMySqlClass.DeleteSql(dictRequired, table: "etkey")
     }
     
     func UpdateETAir(_ jsons:[JSON]) {
         gDC.mETKeyList.removeAll()
-        if jsons.count == 0 {//从本地数据库中读取
-            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]
-            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "etairdevice")
-            for i in 0..<sqlResult.count {
-                let etAirDeviceInfo = ETAirDeviceInfoData()
-                etAirDeviceInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
-                if (sqlResult[i]["electric_index"] != nil) {
-                    etAirDeviceInfo.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
-                }
-                if (sqlResult[i]["air_brand"] != nil) {
-                    etAirDeviceInfo.m_nAirBrand = sqlResult[i]["air_brand"] as! Int
-                }
-                if (sqlResult[i]["air_index"] != nil) {
-                    etAirDeviceInfo.m_nAirIndex = sqlResult[i]["air_index"] as! Int
-                }
-                if (sqlResult[i]["air_temp"] != nil) {
-                    etAirDeviceInfo.m_nAirTemp = sqlResult[i]["air_temp"] as! Int
-                }
-                if (sqlResult[i]["air_rate"] != nil) {
-                    etAirDeviceInfo.m_nAirRate = sqlResult[i]["air_rate"] as! Int
-                }
-                if (sqlResult[i]["air_dir"] != nil) {
-                    etAirDeviceInfo.m_nAirDir = sqlResult[i]["air_dir"] as! Int
-                }
-                if (sqlResult[i]["air_auto_dir"] != nil) {
-                    etAirDeviceInfo.m_nAirAutoDir = sqlResult[i]["air_auto_dir"] as! Int
-                }
-                if (sqlResult[i]["air_mode"] != nil) {
-                    etAirDeviceInfo.m_nAirMode = sqlResult[i]["air_mode"] as! Int
-                }
-                if (sqlResult[i]["air_power"] != nil) {
-                    etAirDeviceInfo.m_nAirPower = sqlResult[i]["air_power"] as! Int
-                }
-                gDC.mETAirDeviceList.append(etAirDeviceInfo)
-            }
-        }else {//从jsons获取
+//        if jsons.count == 0 {//从本地数据库中读取
+//            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]
+//            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "etairdevice")
+//            for i in 0..<sqlResult.count {
+//                let etAirDeviceInfo = ETAirDeviceInfoData()
+//                etAirDeviceInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
+//                if (sqlResult[i]["electric_index"] != nil) {
+//                    etAirDeviceInfo.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
+//                }
+//                if (sqlResult[i]["air_brand"] != nil) {
+//                    etAirDeviceInfo.m_nAirBrand = sqlResult[i]["air_brand"] as! Int
+//                }
+//                if (sqlResult[i]["air_index"] != nil) {
+//                    etAirDeviceInfo.m_nAirIndex = sqlResult[i]["air_index"] as! Int
+//                }
+//                if (sqlResult[i]["air_temp"] != nil) {
+//                    etAirDeviceInfo.m_nAirTemp = sqlResult[i]["air_temp"] as! Int
+//                }
+//                if (sqlResult[i]["air_rate"] != nil) {
+//                    etAirDeviceInfo.m_nAirRate = sqlResult[i]["air_rate"] as! Int
+//                }
+//                if (sqlResult[i]["air_dir"] != nil) {
+//                    etAirDeviceInfo.m_nAirDir = sqlResult[i]["air_dir"] as! Int
+//                }
+//                if (sqlResult[i]["air_auto_dir"] != nil) {
+//                    etAirDeviceInfo.m_nAirAutoDir = sqlResult[i]["air_auto_dir"] as! Int
+//                }
+//                if (sqlResult[i]["air_mode"] != nil) {
+//                    etAirDeviceInfo.m_nAirMode = sqlResult[i]["air_mode"] as! Int
+//                }
+//                if (sqlResult[i]["air_power"] != nil) {
+//                    etAirDeviceInfo.m_nAirPower = sqlResult[i]["air_power"] as! Int
+//                }
+//                gDC.mETAirDeviceList.append(etAirDeviceInfo)
+//            }
+//        }
+//        else {//从jsons获取
             DeleteETAirByMaster(gDC.mUserInfo.m_sMasterCode)
             for i in 0..<jsons.count {
                 let etAirDeviceInfo = ETAirDeviceInfoData()
@@ -229,14 +230,14 @@ class ETData: NSObject {
                 dictInsert.setObject(etAirDeviceInfo.m_nAirMode, forKey: "air_mode" as NSCopying)
                 dictInsert.setObject(etAirDeviceInfo.m_nAirPower, forKey: "air_power" as NSCopying)
                 gMySqlClass.InsertIntoSql(dictInsert, table: "etairdevice")
-            }
+//            }
         }
     }
     
     func DeleteETAirByMaster(_ masterCode:String) {
-        let dictRequired = NSMutableDictionary()
-        dictRequired.setObject(masterCode, forKey: "master_code" as NSCopying)
-        gMySqlClass.DeleteSql(dictRequired, table: "etairdevice")
+//        let dictRequired = NSMutableDictionary()
+//        dictRequired.setObject(masterCode, forKey: "master_code" as NSCopying)
+//        gMySqlClass.DeleteSql(dictRequired, table: "etairdevice")
     }
     
 }

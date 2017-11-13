@@ -846,7 +846,9 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
 //        m_timerPolling.invalidate()
     }
     
-    func LoadDataFromWeb() {
+    
+    
+    func LoadDetailDataFromWs() {
         MyWebService.sharedInstance.StopPolling()
         //从服务器加载房间列表
         let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
@@ -876,6 +878,42 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         //从服务器加载情景电器列表
         let dictSceneElectric = MyWebService.sharedInstance.LoadSceneElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneElectricTime: gDC.mUserInfo.m_sTimeSceneElectric)
         gDC.mSceneElectricData.UpdateSceneElectric(dictSceneElectric)
+    }
+    
+    func ManualSync() -> Bool {
+        var viewLoading:SCLAlertView! = nil
+        DispatchQueue.main.async(execute: {
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            viewLoading = SCLAlertView(appearance: appearance)
+            viewLoading.showInfo("提示", subTitle: "同步中......", duration: 0)
+        })
+        let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: "")
+        gDC.mAccountData.UpdateAccount(dictsAccount)
+        let dictsUser = MyWebService.sharedInstance.LoadUser(gDC.mAccountInfo.m_sAccountCode, userTime: "")
+        if (dictsUser.count <= 1) {
+            viewLoading.hideView()//取消显示正在加载的字样
+            return false
+        }
+        gDC.mUserData.UpdateUser(dictsUser)
+        //如果返回的最新的主机列表中，没有当前的主机，则说明当前主机被其他app删除了，这时需要退出重新登录
+        var bFlag = false
+        for i in 0..<gDC.mUserList.count {
+            if (gDC.mUserList[i].m_sMasterCode == gDC.mUserInfo.m_sMasterCode) {
+                bFlag = true
+            }
+        }
+        if (bFlag) {
+            gDC.mUserData.UpdateUser(dictsUser)
+        }else {
+            viewLoading.hideView()//取消显示正在加载的字样
+            return false
+        }
+        MyWebService.sharedInstance.LoadDetailDataFromWs()
+        let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
+        gDC.mElectricData.UpdateElectricState(dictsElectricState)
+        viewLoading.hideView()//取消显示正在加载的字样
+        return true
+        //        gDC.m_bRefreshAreaList = true
     }
     
 }
