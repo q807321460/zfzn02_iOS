@@ -70,6 +70,7 @@ class SceneData: NSObject {
 
     //根据web返回的数据更新情景列表
     func UpdateScene(_ dicts:[NSDictionary]) {
+        print("向内存中写入scene数据")
         gDC.mSceneList.removeAll()
 //        if dicts.count == 0 {//没有返回则从数据库读取
 //            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]

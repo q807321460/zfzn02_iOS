@@ -846,53 +846,50 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
 //        m_timerPolling.invalidate()
     }
     
-    
-    
     func LoadDetailDataFromWs() {
         MyWebService.sharedInstance.StopPolling()
         //从服务器加载房间列表
-        let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: gDC.mUserInfo.m_sTimeArea)
+        let dictsArea = MyWebService.sharedInstance.LoadUserRoom(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, areaTime: "")
         gDC.mAreaData.UpdateArea(dictsArea)
         //从服务器加载电器列表
-        let dictsElectric = MyWebService.sharedInstance.LoadElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, electricTime: gDC.mUserInfo.m_sTimeElectric)
+        let dictsElectric = MyWebService.sharedInstance.LoadElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, electricTime: "")
         gDC.mElectricData.UpdateElectric(dictsElectric)
-        //从服务器加载红外类型电器的键值
-        if dictsElectric.count != 0 {
-            for i in 0..<gDC.mAreaList.count {
-                for j in 0..<gDC.mAreaList[i].mElectricList.count {
-                    let nType = gDC.mAreaList[i].mElectricList[j].m_nElectricType
-                    if gDC.m_arrayElectricTypeCode[nType] as! String == "09" {//9是空调，12是电视，21是临时设计的学习型空调
-                        let jsons = MyWebService.sharedInstance.LoadKeyByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-                        gDC.mETData.UpdateETKeys(jsons)
-                        if nType == 9 || nType == 21 {//如果是空调的话，则读取
-                            let jsons2 = MyWebService.sharedInstance.LoadETAirByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-                            gDC.mETData.UpdateETAir(jsons2)
-                        }
-                    }
-                }
-            }
-        }
+//        //从服务器加载红外类型电器的键值
+//        if dictsElectric.count != 0 {
+//            for i in 0..<gDC.mAreaList.count {
+//                for j in 0..<gDC.mAreaList[i].mElectricList.count {
+//                    let nType = gDC.mAreaList[i].mElectricList[j].m_nElectricType
+//                    if gDC.m_arrayElectricTypeCode[nType] as! String == "09" {//9是空调，12是电视，21是临时设计的学习型空调
+//                        let jsons = MyWebService.sharedInstance.LoadKeyByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
+//                        gDC.mETData.UpdateETKeys(jsons)
+//                        if nType == 9 || nType == 21 {//如果是空调的话，则读取
+//                            let jsons2 = MyWebService.sharedInstance.LoadETAirByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
+//                            gDC.mETData.UpdateETAir(jsons2)
+//                        }
+//                    }
+//                }
+//            }
+//        }
         //从服务器加载情景列表
-        let dictsScene = MyWebService.sharedInstance.LoadScene(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneTime: gDC.mUserInfo.m_sTimeScene)
+        let dictsScene = MyWebService.sharedInstance.LoadScene(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneTime: "")
         gDC.mSceneData.UpdateScene(dictsScene)
         //从服务器加载情景电器列表
-        let dictSceneElectric = MyWebService.sharedInstance.LoadSceneElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneElectricTime: gDC.mUserInfo.m_sTimeSceneElectric)
+        let dictSceneElectric = MyWebService.sharedInstance.LoadSceneElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneElectricTime: "")
         gDC.mSceneElectricData.UpdateSceneElectric(dictSceneElectric)
     }
     
-    func ManualSync() -> Bool {
-        var viewLoading:SCLAlertView! = nil
-        DispatchQueue.main.async(execute: {
-            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-            viewLoading = SCLAlertView(appearance: appearance)
-            viewLoading.showInfo("提示", subTitle: "同步中......", duration: 0)
-        })
+    //返回值：-1说明不需要同步，0说明当前主机被删除，需要重新登录，1说明需要同步
+    func ManualSync() -> Int {
+        if (gDC.m_bSyncing == true) {
+            return -1
+        }
+        gDC.m_bSyncing = true
         let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: "")
         gDC.mAccountData.UpdateAccount(dictsAccount)
         let dictsUser = MyWebService.sharedInstance.LoadUser(gDC.mAccountInfo.m_sAccountCode, userTime: "")
         if (dictsUser.count <= 1) {
-            viewLoading.hideView()//取消显示正在加载的字样
-            return false
+            gDC.m_bSyncing = false
+            return 0
         }
         gDC.mUserData.UpdateUser(dictsUser)
         //如果返回的最新的主机列表中，没有当前的主机，则说明当前主机被其他app删除了，这时需要退出重新登录
@@ -900,20 +897,21 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         for i in 0..<gDC.mUserList.count {
             if (gDC.mUserList[i].m_sMasterCode == gDC.mUserInfo.m_sMasterCode) {
                 bFlag = true
+                break
             }
         }
         if (bFlag) {
             gDC.mUserData.UpdateUser(dictsUser)
         }else {
-            viewLoading.hideView()//取消显示正在加载的字样
-            return false
+            gDC.m_bSyncing = false
+            return 0
         }
         MyWebService.sharedInstance.LoadDetailDataFromWs()
         let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
         gDC.mElectricData.UpdateElectricState(dictsElectricState)
-        viewLoading.hideView()//取消显示正在加载的字样
-        return true
-        //        gDC.m_bRefreshAreaList = true
+        gDC.m_bSyncing = false
+        return 1
+//                gDC.m_bRefreshAreaList = true
     }
     
 }

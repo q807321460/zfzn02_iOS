@@ -50,7 +50,9 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         RefreshRemoteState()
         
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.RefreshRemoteState),name: NSNotification.Name(rawValue: "RefreshRemoteState"), object: nil)
+//        g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.Sync),name: NSNotification.Name(rawValue: "Sync"), object: nil)
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
+        g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.Quit),name: NSNotification.Name(rawValue: "Quit"), object: nil)
         
         //初始化情景和区域中常用的四个图片按钮
         InitScene()
@@ -405,9 +407,24 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         }
     }
     
+//    func Sync() {
+//        let bFlag = MyWebService.sharedInstance.ManualSync()
+//        if (bFlag) {
+//            //向所有注册过观测器的界面发送消息
+//            g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
+//        }else {
+//            //向所有注册过观测器的界面发送消息，当前主机被删除，需要退出并重新登录
+//            g_notiCenter.post(name: Notification.Name(rawValue: "Quit"), object: self)
+//        }
+//    }
+    
     func SyncData() {
         m_collectionScene.reloadData()
         m_collectionArea.reloadData()
+    }
+    
+    func Quit() {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
 }

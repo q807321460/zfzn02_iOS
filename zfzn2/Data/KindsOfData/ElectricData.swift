@@ -157,6 +157,7 @@ class ElectricData: NSObject {
     }
     
     func UpdateElectric(_ dicts:[NSDictionary]) {
+        print("向内存中写入electric数据")
         for i in 0..<gDC.mAreaList.count {
             gDC.mAreaList[i].mElectricList.removeAll()
         }

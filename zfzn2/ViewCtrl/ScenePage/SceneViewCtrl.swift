@@ -56,6 +56,7 @@ class SceneViewCtrl: UIViewController, ViewPagerIndicatorDelegate, UIScrollViewD
             }
             self.navigationController?.pushViewController(nextView, animated: true)
         }
+        g_notiCenter.addObserver(self, selector:#selector(SceneViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -132,6 +133,11 @@ class SceneViewCtrl: UIViewController, ViewPagerIndicatorDelegate, UIScrollViewD
         tableView.deselectRow(at: indexPath, animated: false)//手指抬起后直接取消按下时的深色状态
     }
     
+    func SyncData() {
+        DispatchQueue.main.async {
+            self.m_tableView.reloadData()
+        }
+    }
 }
 
 

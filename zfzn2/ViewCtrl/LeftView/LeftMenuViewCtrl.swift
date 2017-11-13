@@ -190,12 +190,21 @@ class LeftMenuViewCtrl: MyViewController {
     
     //同步所有数据
     func ManualSync() {
+        var viewLoading:SCLAlertView! = nil
+        DispatchQueue.main.async(execute: {
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            viewLoading = SCLAlertView(appearance: appearance)
+            viewLoading.showInfo("提示", subTitle: "同步中......", duration: 0)
+        })
         let bFlag = MyWebService.sharedInstance.ManualSync()
-        if (bFlag == true) {
+        if (bFlag == 1) {
             g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
-        }else {
+        }else if (bFlag == 0) {
             self.presentingViewController?.dismiss(animated: true, completion: nil)
+        }else if (bFlag == -1) {
+            ShowInfoDispatch("提示", content: "同步中...", duration: 1.0)
         }
+        viewLoading.hideView()//取消显示正在加载的字样
     }
     
     func OnJdPlay() {

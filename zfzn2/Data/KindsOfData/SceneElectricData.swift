@@ -70,6 +70,7 @@ class SceneElectricData: NSObject {
     
     //根据web返回的数据更新情景电器列表
     func UpdateSceneElectric(_ dicts:[NSDictionary]) {
+        print("向内存中写入sceneElectric数据")
         for i in 0..<gDC.mSceneList.count {
             gDC.mSceneList[i].mSceneElectricList.removeAll()
         }

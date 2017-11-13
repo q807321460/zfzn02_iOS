@@ -9,10 +9,13 @@
 import UIKit
 
 class WebSocket: NSObject, SRWebSocketDelegate {
+    let m_urlLocal:String = "http://192.168.0.100:8080/zfzn02/websocket_app/"
     let m_url:String = "http://101.201.211.87:8080/zfzn02/websocket_app/"
     var m_bConnected = false
     var m_bPolling:Bool = false
     var m_timerPolling:Timer!//心跳包定时器，判断本地连接状态
+    var m_bSyncing:Bool = false//是否正处于自动同步中，如果是则不同步
+    let m_queueSync = DispatchQueue(label: "com.WebSocket.Sync")//自动从服务器同步数据
     
     //使用单例模式
     internal static let sharedInstance = WebSocket()
@@ -24,7 +27,12 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     
     func ConnectToWebSocket(masterCode:String) {
         m_bConnected = true
-        let url = NSURL(string: m_url + masterCode)
+        var url:NSURL!
+        if (gDC.m_bUseRemoteService == false) {//使用本地服务器
+            url = NSURL(string: m_urlLocal + masterCode)
+        }else {//使用远程服务器
+            url = NSURL(string: m_url + masterCode)
+        }
         g_webSocket = SRWebSocket(url: url! as URL)
         g_webSocket.delegate = self
         g_webSocket.open()
@@ -66,7 +74,7 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     
     ////////////////////////////////////////////////////////////////////////////////////
     func webSocketDidOpen(_ webSocket: SRWebSocket!) {
-        print("【websocket】连接成功")
+        print("【web_socket】连接成功")
         StopPolling()
         //重连后，从服务器调用最新的所有电器的状态
         let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
@@ -75,19 +83,21 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     }
     
     func webSocket(_ webSocket: SRWebSocket!, didFailWithError error: Error!) {
-        print("【websocket】发生错误")
+        print("【web_socket】发生错误")
         CloseWebSocket()
         OpenPolling()
     }
     
     func webSocket(_ webSocket: SRWebSocket!, didCloseWithCode code: Int, reason: String!, wasClean: Bool) {
-        print("【websocket】关闭——code:\(code) reason:\(reason) wasClean:\(wasClean)")
+        print("【web_socket】关闭——code:\(code) reason:\(reason) wasClean:\(wasClean)")
     }
     
     func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
-        print("【websocket】接收到消息——\(message as! String)")
-        if (message as! String == "sync") {
-            print("【websocket】接收到同步消息，需要重新加载所有数据")
+        print("【web_socket】接收到消息——\(message as! String)")
+        if (message as! String == "Sync") {
+            m_queueSync.async {
+                self.AutomaticSync()
+            }
         }else if ((message as! String).subStringTo(1) == "<") {//说明是电器状态的更新
             if (gDC.m_bRemote == false) {//如果当前是本地连接状态，则自动忽略接收的websocket消息
                 return
@@ -96,12 +106,26 @@ class WebSocket: NSObject, SRWebSocketDelegate {
                 g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
             }
         }else {
-            print("【websocket】接收到其他的消息")
+            print("【web_socket】接收到其他的消息")
         }
     }
     
     func webSocket(_ webSocket: SRWebSocket!, didReceivePong pongPayload: Data!) {
-        print("【websocket】接收到pong消息")
+        print("【web_socket】接收到pong消息")
     }
 
+    //同步所有数据
+    func AutomaticSync() {
+        print("开始同步...")
+        let bFlag = MyWebService.sharedInstance.ManualSync()
+        if (bFlag == 1) {
+            //向所有注册过观测器的界面发送消息
+            g_notiCenter.post(name: Notification.Name(rawValue: "SyncData"), object: self)
+        }else if (bFlag == 0) {
+            //向所有注册过观测器的界面发送消息，当前主机被删除，需要退出并重新登录
+            g_notiCenter.post(name: Notification.Name(rawValue: "Quit"), object: self)
+        }
+        print("结束同步...")
+    }
+    
 }

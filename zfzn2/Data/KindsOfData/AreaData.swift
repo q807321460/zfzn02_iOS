@@ -48,6 +48,7 @@ class AreaData: NSObject {
     }
     
     func UpdateArea(_ dicts:[NSDictionary]) {
+        print("向内存中写入area数据")
         gDC.mAreaList.removeAll()
 //        if dicts.count == 0 {
 //            //说明本地是最新的数据，不需要同步，读取本地数据库数据

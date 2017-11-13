@@ -65,6 +65,7 @@ class UserData: NSObject {
     
     //通过web返回的数据同步本地user数据
     func UpdateUser(_ dicts:[NSDictionary]) {
+        print("向内存中写入user数据")
         gDC.mUserList.removeAll()
 //        if dicts.count == 0 {
 //            //返回空的话，说明本地的数据是最新的，则不用同步，直接读取本地数据库中的数据
