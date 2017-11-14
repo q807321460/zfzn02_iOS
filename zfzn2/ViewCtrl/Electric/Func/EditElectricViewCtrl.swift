@@ -76,6 +76,7 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
         }else {
             m_nSceneSelectedIndex = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nSceneIndex
         }
+        g_notiCenter.addObserver(self, selector:#selector(EditElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -230,9 +231,10 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
     func SyncData() {
-        self.navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
 

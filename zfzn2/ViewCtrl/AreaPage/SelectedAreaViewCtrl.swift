@@ -231,6 +231,7 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
         let mainStory = UIStoryboard(name: "Main",bundle: nil)
         let nextView = mainStory.instantiateViewController(withIdentifier: "addElectricTypeViewCtrl") as! AddElectricTypeViewCtrl
         nextView.m_nAreaListFoot = self.m_nAreaListFoot
+        nextView.m_nAreaIndex = gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     

@@ -64,13 +64,15 @@ class ElecSuperViewCtrl: UIViewController {
             if gDC.m_bRemote == false {//本地socket控制
                 MySocket.sharedInstance.OperateElectric("<\(gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode)\(gDC.m_sOrderSign)\(gDC.m_sOrderStop)\(m_sElectricOrder)00>")
             }else {//远程web控制
-                MyWebService.sharedInstance.UpdateElectricOrder(gDC.mUserInfo.m_sMasterCode, electricCode:gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode, order:gDC.m_sOrderSign+gDC.m_sOrderStop, orderInfo:m_sElectricOrder)
+                MyWebService.sharedInstance.UpdateElectricOrder(gDC.mUserInfo.m_sMasterCode, electricCode:gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode, order:gDC.m_sOrderSign + gDC.m_sOrderStop, orderInfo:m_sElectricOrder)
             }
         }
     }
     
     func SyncData() {
-        self.navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 
 }

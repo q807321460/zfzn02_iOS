@@ -13,13 +13,12 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var m_labelSceneName: UITextField!
     @IBOutlet weak var m_imageScene: UIImageView!
     @IBOutlet weak var m_tableSceneElectric: UITableView!
-//    @IBOutlet weak var m_scrollView: UIScrollView!
-//    @IBOutlet weak var m_btnAddAction: UIButton!
     @IBOutlet weak var m_btnDelete: UIButton!
     var m_nSceneListFoot:Int!
     var m_nSceneElectricListFoot:Int!
     var m_sElectricOrder:String!
     var m_nAreaListFoot:Int!
+    var m_nSceneIndex:Int! = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +60,7 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         let mainStory = UIStoryboard(name: "Main",bundle: nil)
         let nextView = mainStory.instantiateViewController(withIdentifier: "addSceneElectricViewCtrl") as! AddSceneElectricViewCtrl
         nextView.m_nSceneListFoot = self.m_nSceneListFoot
+        nextView.m_nSceneIndex = self.m_nSceneIndex
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
@@ -100,7 +100,6 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
             break
         case "1":
             gDC.mSceneElectricData.DeleteSceneElectricByFoot(m_nSceneListFoot, electricIndex:gDC.mSceneList[self.m_nSceneListFoot].mSceneElectricList[self.m_nSceneElectricListFoot].m_nElectricIndex)
-//            ShowInfoDispatch("提示", content: "动作删除完成", duration: 1.0)
             m_tableSceneElectric.reloadData()
         default:
             ShowNoticeDispatch("错误", content: "未知的失败", duration: 1.0)
@@ -207,7 +206,14 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func SyncData() {
-        self.navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            //可能会数组越界，还需要判断当前的情景是否已经不存在了（被其他app删除）
+            if (self.m_nSceneListFoot >= gDC.mSceneList.count || gDC.mSceneList[self.m_nSceneListFoot].m_nSceneIndex != self.m_nSceneIndex) {
+                self.navigationController?.popToRootViewController(animated: true)
+                return
+            }
+            self.m_tableSceneElectric.reloadData()
+        }
     }
 }
 

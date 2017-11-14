@@ -52,9 +52,10 @@ class AlarmRecordViewCtrl: UIViewController, UITableViewDelegate, UITableViewDat
     // 头部的下拉刷新触发事件
     func headerClick () {
         print("下拉刷新")
-        LoadAlarmRecord()
-        // 结束刷新
-        m_tableRecord.mj_header.endRefreshing()
+        DispatchQueue.main.async {
+            self.LoadAlarmRecord()
+            self.m_tableRecord.mj_header.endRefreshing()
+        } 
     }
     
     ////////////////////////////////////////////////////////////////////////////////////

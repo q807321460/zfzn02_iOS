@@ -9,7 +9,6 @@
 import UIKit
 
 class AddElectricViewCtrl: UIViewController {
-    var m_nElectricType:Int!
     @IBOutlet weak var m_imageElectricType: UIImageView!
     @IBOutlet weak var m_labelElectricType: UILabel!
     @IBOutlet weak var m_imageArea: UIImageView!
@@ -28,6 +27,8 @@ class AddElectricViewCtrl: UIViewController {
     @IBOutlet weak var m_btnSave: UIButton!
     
     var m_nAreaListFoot:Int!
+    var m_nElectricType:Int!
+    var m_nAreaIndex:Int!
     var m_appearSearching = SCLAlertView.SCLAppearance(showCloseButton: false)
     var m_viewSearching:SCLAlertView! = nil
     var m_nIndexMax:Int! = 0
@@ -95,6 +96,7 @@ class AddElectricViewCtrl: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(AddElectricViewCtrl.keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         //当键盘收起的时候会向系统发出一个通知
         NotificationCenter.default.addObserver(self, selector: #selector(AddElectricViewCtrl.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        g_notiCenter.addObserver(self, selector:#selector(AddElectricTypeViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -280,6 +282,16 @@ class AddElectricViewCtrl: UIViewController {
     
     @IBAction func OnTouchDown(_ sender: UIControl) {
         self.view.endEditing(true)
+    }
+    
+    func SyncData() {
+        DispatchQueue.main.async {
+            //可能会数组越界，还需要判断当前的房间是否已经不存在了（被其他app删除）
+            if (self.m_nAreaListFoot >= gDC.mAreaList.count || gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex != self.m_nAreaIndex) {
+                self.navigationController?.popToRootViewController(animated: true)
+                return
+            }
+        }
     }
     
 }

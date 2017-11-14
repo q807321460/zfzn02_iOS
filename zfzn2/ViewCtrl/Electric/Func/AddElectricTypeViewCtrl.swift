@@ -12,6 +12,7 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
     
     @IBOutlet weak var m_collectionElectric: UICollectionView!
     var m_nAreaListFoot:Int!
+    var m_nAreaIndex:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
         m_collectionElectric.setCollectionViewLayout(layout, animated: true)
         m_collectionElectric.register(MiniElectric.self, forCellWithReuseIdentifier: "miniElectric")
         m_collectionElectric.register(UINib(nibName: "MiniElectric", bundle: nil), forCellWithReuseIdentifier: "miniElectric")
+        g_notiCenter.addObserver(self, selector:#selector(AddElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +74,7 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
         let mainStory = UIStoryboard(name: "Main",bundle: nil)
         let nextView = mainStory.instantiateViewController(withIdentifier: "addElectricViewCtrl") as! AddElectricViewCtrl
         nextView.m_nAreaListFoot = self.m_nAreaListFoot
+        nextView.m_nAreaIndex = self.m_nAreaIndex
         switch indexPath.row {
         case 0:
             print("添加插座")
@@ -211,6 +214,16 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.white
+    }
+    
+    func SyncData() {
+        DispatchQueue.main.async {
+            //可能会数组越界，还需要判断当前的房间是否已经不存在了（被其他app删除）
+            if (self.m_nAreaListFoot >= gDC.mAreaList.count || gDC.mAreaList[self.m_nAreaListFoot].m_nAreaIndex != self.m_nAreaIndex) {
+                self.navigationController?.popToRootViewController(animated: true)
+                return
+            }
+        }
     }
     
 }

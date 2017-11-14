@@ -16,7 +16,9 @@ class EditSceneElectricViewCtrl: UIViewController {
     @IBOutlet weak var m_btnAdd: UIButton!
     var m_nAreaListFoot:Int!
     var m_nElectricListFoot:Int!
+//    var m_nElectricIndex:Int!
     var m_nSceneListFoot:Int!
+    var m_nSceneIndex:Int!
     var m_sElectricOrder:String!
     
     override func viewDidLoad() {
@@ -91,11 +93,19 @@ class EditSceneElectricViewCtrl: UIViewController {
 
     ///////////////////////////////////////////////////////////////////////////////////
     func SwitchDidChange() {
-        //暂时不用做什么
+        //不用做什么
     }
     
     func SyncData() {
-        self.navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            //这里需要考虑的东西太多，比如房间越界，电器越界，情景越界等，所以干脆直接返回
+//            if (self.m_nSceneListFoot >= gDC.mSceneList.count || gDC.mSceneList[self.m_nSceneListFoot].m_nSceneIndex != self.m_nSceneIndex) {
+//                self.navigationController?.popToRootViewController(animated: true)
+//                return
+//            }
+//            self.m_tableSceneElectric.reloadData()
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
 }

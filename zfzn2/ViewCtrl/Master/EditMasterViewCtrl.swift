@@ -20,6 +20,7 @@ class EditMasterViewCtrl: UIViewController {
     @IBOutlet weak var m_btnGetAdminAccount: UIButton!//获取管理员账号
     @IBOutlet weak var m_layoutHeight: NSLayoutConstraint!
     var m_nUserListFoot:Int!
+    var m_sMasterCode:String! = ""
     var m_viewSearching:SCLAlertView! = nil
     var m_viewAfterSearch:SCLAlertView! = nil
     var m_appear = SCLAlertView.SCLAppearance(showCloseButton: false)
@@ -116,16 +117,15 @@ class EditMasterViewCtrl: UIViewController {
             self.m_viewSearching.showInfo("提示", subTitle: " 正在加载中......", duration: 0)
         })
         //加载分享账户列表
-        let dictsSharedAccount = MyWebService.sharedInstance.LoadSharedAccount(gDC.mUserList[m_nUserListFoot].m_sMasterCode)//延迟大约在一秒钟
+        let dictsSharedAccount = MyWebService.sharedInstance.LoadSharedAccount(gDC.mUserList[m_nUserListFoot].m_sMasterCode)
         gDC.mAccountData.UpdateSharedAccount(dictsSharedAccount)
-        //加载分享电器列表
-        let dictsSharedElectric = MyWebService.sharedInstance.LoadAllSharedElectric(gDC.mUserList[m_nUserListFoot].m_sMasterCode)//延迟大约在一秒钟
-        gDC.mElectricData.UpdateSharedElectric(dictsSharedElectric)
         //取消显示正在加载的字样
         self.m_viewSearching.hideView()
         
         let sb = UIStoryboard(name: "Main", bundle:nil)
         let nextView = sb.instantiateViewController(withIdentifier: "sharedListViewCtrl") as! SharedListViewCtrl
+        nextView.m_nUserListFoot = self.m_nUserListFoot
+        nextView.m_sMasterCode = gDC.mUserList[self.m_nUserListFoot].m_sMasterCode
         self.navigationController?.pushViewController(nextView , animated: true)
     }
     
@@ -203,7 +203,17 @@ class EditMasterViewCtrl: UIViewController {
     }
     
     func SyncData() {
-        self.navigationController?.popToRootViewController(animated: true)
+        DispatchQueue.main.async {
+            //可能会数组越界，还需要判断当前的主机是否已经不存在了（被其他app删除）
+            if (self.m_nUserListFoot >= gDC.mUserList.count || gDC.mUserList[self.m_nUserListFoot].m_sMasterCode != self.m_sMasterCode) {
+                self.navigationController?.popToRootViewController(animated: true)
+                return
+            }
+            self.m_eMasterName.text = gDC.mUserList[self.m_nUserListFoot].m_sUserName
+            self.m_eMasterCode.text = gDC.mUserList[self.m_nUserListFoot].m_sMasterCode
+            self.m_eMasterIP.text = gDC.mUserList[self.m_nUserListFoot].m_sUserIP
+            self.RefreshButton()
+        }
     }
 }
 

@@ -411,73 +411,48 @@ class ElectricData: NSObject {
     
     //把通过web得到的所有分享电器保存在本地数据库
     func UpdateSharedElectric(_ dicts:[NSDictionary]) {
-//        //首先删除某一主控所有分享给别的用户的所有电器
-//        let requiredDict:NSMutableDictionary = ["master_code": gDC.mUserInfo.m_sMasterCode]
-//        gMySqlClass.DeleteSql(requiredDict, table: "electricshared")
-//        //写入到本地数据库
-//        for i in 0..<dicts.count {
-//            let dict:NSDictionary = dicts[i]
-//            let dictInsert = NSMutableDictionary()
-//            if (dict.object(forKey: "masterCode") != nil) {
-//                dictInsert.setObject(dict["masterCode"] as! String, forKey: "master_code" as NSCopying)
-//            }
-//            if (dict.object(forKey: "accountCode") != nil) {
-//                dictInsert.setObject(dict["accountCode"] as! String, forKey: "account_code" as NSCopying)
-//            }
-//            if (dict.object(forKey: "electricCode") != nil) {
-//                dictInsert.setObject(dict["electricCode"] as! String, forKey: "electric_code" as NSCopying)
-//            }
-//            if (dict.object(forKey: "electricIndex") != nil) {
-//                dictInsert.setObject(Int(dict["electricIndex"] as! String)!, forKey: "electric_index" as NSCopying)
-//            }
-//            if (dict.object(forKey: "electricType") != nil) {
-//                dictInsert.setObject(Int(dict["electricType"] as! String)!, forKey: "electric_type" as NSCopying)
-//            }
-//            if (dict.object(forKey: "roomIndex") != nil) {
-//                dictInsert.setObject(Int(dict["roomIndex"] as! String)!, forKey: "room_index" as NSCopying)
-//            }
-//            if (dict.object(forKey: "orderInfo") != nil) {
-//                dictInsert.setObject(dict["orderInfo"] as! String, forKey: "order_info" as NSCopying)
-//            }
-//            if (dict.object(forKey: "electricName") != nil) {
-//                dictInsert.setObject(dict["electricName"] as! String, forKey: "electric_name" as NSCopying)
-//            }
-//            if (dict.object(forKey: "isShared") != nil) {
-//                dictInsert.setObject(Int(dict["isShared"] as! String)!, forKey: "is_shared" as NSCopying)
-//            }
-//            gMySqlClass.InsertIntoSql(dictInsert, table: "electricshared")
-//        }
+        gDC.mSharedElectricList.removeAll()
+        for i in 0..<dicts.count {
+            let dict:NSDictionary = dicts[i]
+            let electricSharedInfoData = ElectricSharedInfoData()
+            if (dict.object(forKey: "masterCode") != nil) {
+                electricSharedInfoData.m_sMasterCode = dict["masterCode"] as! String
+            }
+            if (dict.object(forKey: "accountCode") != nil) {
+                electricSharedInfoData.m_sAccountCode = dict["accountCode"] as! String
+            }
+            if (dict.object(forKey: "electricCode") != nil) {
+                electricSharedInfoData.m_sElectricCode = dict["electricCode"] as! String
+            }
+            if (dict.object(forKey: "electricIndex") != nil) {
+                electricSharedInfoData.m_nElectricIndex = Int(dict["electricIndex"] as! String)!
+            }
+            if (dict.object(forKey: "electricType") != nil) {
+                electricSharedInfoData.m_nElectricType = Int(dict["electricType"] as! String)!
+            }
+            if (dict.object(forKey: "electricName") != nil) {
+                electricSharedInfoData.m_sElectricName = dict["electricName"] as! String
+            }
+            if (dict.object(forKey: "roomIndex") != nil) {
+                electricSharedInfoData.m_nRoomIndex = Int(dict["roomIndex"] as! String)!
+            }
+            if (dict.object(forKey: "isShared") != nil) {
+                electricSharedInfoData.m_nIsShared = Int(dict["isShared"] as! String)!
+            }
+            gDC.mSharedElectricList.append(electricSharedInfoData)
+        }
     }
     
     //将内存中的分享电器数据保存到本地数据库中
-    func UpdateSharedElectricInfo() {
-//        for i in 0..<gDC.mSharedElectricList.count {
-//            let requiredDict:NSMutableDictionary = ["account_code": gDC.mSharedElectricList[i].m_sAccountCode, "master_code": gDC.mSharedElectricList[i].m_sMasterCode, "electric_index": gDC.mSharedElectricList[i].m_nElectricIndex]
-//            let setDict:NSMutableDictionary = ["is_shared": gDC.mSharedElectricList[i].m_nIsShared]
-//            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "electricshared")
-//        }
-    }
+//    func UpdateSharedElectricInfo() {
+//
+//    }
     
     //从本地数据库读取到被分享账号中的电器列表，TODO：没有完成该功能
-    func LoadSharedElectricByAccountCode(_ accountCode:String) -> [ElectricSharedInfoData] {
-//        let dictQurey:NSMutableDictionary = ["account_code": accountCode]
-//        let sqlResult = gMySqlClass.QuerySql(dictQurey, table: "electricshared")
-        var sharedElectricList = [ElectricSharedInfoData]()
-//        for i in 0..<sqlResult.count {
-//            let sharedElectric = ElectricSharedInfoData()
-//            sharedElectric.m_sMasterCode = sqlResult[i]["master_code"] as! String
-//            sharedElectric.m_sAccountCode = sqlResult[i]["account_code"] as! String
-//            sharedElectric.m_sElectricCode = sqlResult[i]["electric_code"] as! String
-//            sharedElectric.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
-//            sharedElectric.m_nElectricType = sqlResult[i]["electric_type"] as! Int
-//            sharedElectric.m_sOrderInfo = sqlResult[i]["order_info"] as! String
-//            sharedElectric.m_sElectricName = sqlResult[i]["electric_name"] as! String
-//            sharedElectric.m_nRoomIndex = sqlResult[i]["room_index"] as! Int
-//            sharedElectric.m_nIsShared = sqlResult[i]["is_shared"] as! Int
-//            sharedElectricList.append(sharedElectric)
-//        }
-        return sharedElectricList
-    }
+//    func LoadSharedElectricByAccountCode(_ accountCode:String) -> [ElectricSharedInfoData] {
+//        var sharedElectricList = [ElectricSharedInfoData]()
+//        return sharedElectricList
+//    }
     
     func UpdateSensorExtras(_ nAreaFoot:Int, nElectricFoot:Int, sExtras:String) {
         let nType = gDC.mAreaList[nAreaFoot].mElectricList[nElectricFoot].m_nElectricType
@@ -501,15 +476,8 @@ class ElectricData: NSObject {
                 }catch { print("json error") }
             }
             let sJson2:String = json2.rawString() ?? "{}"
-            //首先修改内存
             gDC.mAreaList[nAreaFoot].mElectricList[nElectricFoot].m_sExtras = sJson2
         }
-//        //再者，修改本地数据库
-//        let sMasterCode:String = gDC.mUserInfo.m_sMasterCode
-//        let nElectricIndex:Int = gDC.mAreaList[nAreaFoot].mElectricList[nElectricFoot].m_nElectricIndex
-//        let requiredDict:NSMutableDictionary = ["master_code": sMasterCode, "electric_index": nElectricIndex]
-//        let setDict:NSMutableDictionary = ["extras": gDC.mAreaList[nAreaFoot].mElectricList[nElectricFoot].m_sExtras]
-//        gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "electrics")
     }
     
     func UpdateElectricSequ(electricIndex:Int, roomFoot:Int, oldSequ:Int, newSequ:Int) {

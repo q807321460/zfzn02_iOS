@@ -12,6 +12,8 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var m_imageAccount: UIImageView!
     @IBOutlet weak var m_tableAccountInfo: UITableView!
+    var m_nUserListFoot:Int!
+    var m_sMasterCode:String! = ""
     var m_nSharedAccountListFoot:Int!
     
     override func viewDidLoad() {
@@ -24,7 +26,7 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
         m_tableAccountInfo.bounces = false
         m_tableAccountInfo.register(SharedAccountInfoCell.self, forCellReuseIdentifier: "sharedAccountInfoCell")
         m_tableAccountInfo.register(UINib(nibName: "SharedAccountInfoCell", bundle: nil), forCellReuseIdentifier: "sharedAccountInfoCell")
-
+//        g_notiCenter.addObserver(self, selector:#selector(SharedAccountViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,8 +80,8 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
         switch indexPath.row {
         case 4:
             //需要在这里添加一个本地数据库获取分享列表的功能
-            gDC.mSharedElectricList.removeAll()
-            gDC.mSharedElectricList = gDC.mElectricData.LoadSharedElectricByAccountCode(gDC.mSharedAccountList[m_nSharedAccountListFoot].m_sAccountCode)
+//            gDC.mSharedElectricList.removeAll()
+//            gDC.mSharedElectricList = gDC.mElectricData.LoadSharedElectricByAccountCode(gDC.mSharedAccountList[m_nSharedAccountListFoot].m_sAccountCode)
             let sb = UIStoryboard(name: "Main", bundle:nil)
             let nextView = sb.instantiateViewController(withIdentifier: "sharedElecListViewCtrl") as! SharedElecListViewCtrl
             nextView.m_nSharedAccountListFoot = self.m_nSharedAccountListFoot
@@ -94,6 +96,23 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
     func didSwitchChange(_ bSwitchOn: Bool) {
 //        ShowInfoDispatch("提示", content: "该功能尚未完善，敬请期待~", duration: 1.0)
     }
+    
+//    func SyncData() {
+//        DispatchQueue.main.async {
+//            //可能会数组越界，还需要判断当前的主机是否已经不存在了（被其他app删除）
+//            if (self.m_nUserListFoot >= gDC.mUserList.count || gDC.mUserList[self.m_nUserListFoot].m_sMasterCode != self.m_sMasterCode) {
+//                self.navigationController?.popToRootViewController(animated: true)
+//                return
+//            }
+//            //加载分享账户列表
+//            let dictsSharedAccount = MyWebService.sharedInstance.LoadSharedAccount(gDC.mUserList[m_nUserListFoot].m_sMasterCode)
+//            gDC.mAccountData.UpdateSharedAccount(dictsSharedAccount)
+//            //加载分享电器列表
+//            let dictsSharedElectric = MyWebService.sharedInstance.LoadAllSharedElectric(gDC.mUserList[m_nUserListFoot].m_sMasterCode)
+//            gDC.mElectricData.UpdateSharedElectric(dictsSharedElectric)
+//            self.m_tableAccountInfo.reloadData()
+//        }
+//    }
     
 }
 

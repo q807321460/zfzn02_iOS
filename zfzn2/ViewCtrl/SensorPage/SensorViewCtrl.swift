@@ -155,11 +155,15 @@ class SensorViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     ///////////////////////////////////////////////////////////////////////////////////
     func RefreshElectricStates() {
-        m_tableSensor.reloadData()
+        DispatchQueue.main.async {
+            self.m_tableSensor.reloadData()
+        }
     }
     
     func SyncData() {
-        m_tableSensor.reloadData()
+        DispatchQueue.main.async {
+            self.m_tableSensor.reloadData()
+        }
     }
 }
 

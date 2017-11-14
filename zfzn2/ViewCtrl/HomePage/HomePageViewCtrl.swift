@@ -50,7 +50,6 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         RefreshRemoteState()
         
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.RefreshRemoteState),name: NSNotification.Name(rawValue: "RefreshRemoteState"), object: nil)
-//        g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.Sync),name: NSNotification.Name(rawValue: "Sync"), object: nil)
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.Quit),name: NSNotification.Name(rawValue: "Quit"), object: nil)
         

@@ -85,6 +85,7 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
                 let sb = UIStoryboard(name: "Main", bundle:nil)
                 let nextView = sb.instantiateViewController(withIdentifier: "editMasterViewCtrl") as! EditMasterViewCtrl
                 nextView.m_nUserListFoot = indexPath.row
+                nextView.m_sMasterCode = gDC.mUserList[indexPath.row].m_sMasterCode
                 self.navigationController?.pushViewController(nextView , animated: true)
             })
 //            if gDC.mUserList[indexPath.row].m_sMasterCode != gDC.mUserInfo.m_sMasterCode {
@@ -163,6 +164,8 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
 
     func SyncData() {
-        m_tableMaster.reloadData()
+        DispatchQueue.main.async {
+            self.m_tableMaster.reloadData()
+        }
     }
 }

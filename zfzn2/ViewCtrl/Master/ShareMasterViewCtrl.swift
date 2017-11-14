@@ -13,6 +13,7 @@ class ShareMasterViewCtrl: UIViewController {
     @IBOutlet weak var m_eAccountCode: UITextField!
     @IBOutlet weak var m_btnDown: UIButton!
     var m_nUserListFoot:Int!
+    var m_sMastercode:String! = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -84,16 +84,6 @@ class AddMasterViewCtrl: UIViewController, GCDAsyncUdpSocketDelegate, GCDAsyncSo
                 return
             }
         }
-//        let dict = NSMutableDictionary()
-//        dict.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-//        let sqlResult = gMySqlClass.QuerySql(dict, table: "users")
-//        for i in 0..<sqlResult.count {
-//            if sqlResult[i]["master_code"] as! String == m_eMasterCode.text! {
-//                //说明已被添加过
-//                ShowNoticeDispatch("提示", content: "该主机已被您添加过了", duration: 0.8)
-//                return
-//            }
-//        }
         print("开始添加user")
         //向服务器中添加这个主机
         let webResult:String = MyWebService.sharedInstance.AddUser(gDC.mAccountInfo.m_sAccountCode, masterCode:m_eMasterCode.text!, userName:m_eMasterName.text!, userIp:m_eMasterIP.text!)

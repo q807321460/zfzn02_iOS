@@ -17,7 +17,7 @@ class AreaViewCtrl: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         InitAreaViews()
-        g_notiCenter.addObserver(self, selector:#selector(AreaViewCtrl.RefreshAreas),name: NSNotification.Name(rawValue: "RefreshAreas"), object: nil)
+//        g_notiCenter.addObserver(self, selector:#selector(AreaViewCtrl.RefreshAreas),name: NSNotification.Name(rawValue: "RefreshAreas"), object: nil)
         g_notiCenter.addObserver(self, selector:#selector(AreaViewCtrl.RefreshElectricStates),name: NSNotification.Name(rawValue: "RefreshElectricStates"), object: nil)
         g_notiCenter.addObserver(self, selector:#selector(AreaViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
         
@@ -96,10 +96,10 @@ class AreaViewCtrl: UIViewController {
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
-    func RefreshAreas() {
-        InitAreaViews()
-        RefreshElectricStates()
-    }
+//    func RefreshAreas() {
+//        InitAreaViews()
+//        RefreshElectricStates()
+//    }
     
     func RefreshElectricStates() {
         for vc in m_vcAreas {
@@ -108,7 +108,10 @@ class AreaViewCtrl: UIViewController {
     }
     
     func SyncData() {
-        InitAreaViews()
+        DispatchQueue.main.async {
+            gDC.m_bRefreshAreaList = true
+            self.InitAreaViews()
+        }
     }
     
 }

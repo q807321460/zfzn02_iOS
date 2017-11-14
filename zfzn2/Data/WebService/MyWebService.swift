@@ -17,6 +17,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
     var m_URLSession:URLSession!
     var m_URLSessionCfg:URLSessionConfiguration!
     
+    var m_timerForbidSync:Timer!
     var m_timerPolling:Timer!
     var m_bPolling:Bool = false
     
@@ -54,7 +55,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         data[0] = dict.object(forKey: "soap:Body") as! NSDictionary
         data[1] = data[0].object(forKey: "ns2:\(methodName)"+"Response") as! NSDictionary
         
-        if returnType=="dicts" {
+        if returnType == "dicts" {
             //如果返回的是结构体数组，则返回整个结构体的数组
             for _:Int in 0..<100{
                 valueDicts.append(NSDictionary())
@@ -194,6 +195,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return value.mainValue as! String
     }
     
@@ -244,6 +246,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return value.mainValue as! String
     }
     
@@ -324,6 +327,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return value.mainValue as! String
     }
     
@@ -335,6 +339,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -346,6 +351,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -356,6 +362,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -380,6 +387,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -403,6 +411,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -456,6 +465,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -467,17 +477,19 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
     //修改电器信息1
-    func UpdateElectric1(_ masterCode:String, electricCode:String, electricIndex:Int, electricName:String, sceneIndex:Int, electricOrder:String)->String {
+    func UpdateElectric1(_ masterCode:String, electricCode:String, electricIndex:Int, electricName:String, sceneIndex:Int, electricOrder:String) -> String {
         let methodName:String = "updateElectric1"
         let arrayKey = ["masterCode", "electricCode", "electricIndex", "electricName", "sceneIndex", "electricOrder"]
         let arrayValue = [masterCode, electricCode, electricIndex, electricName, sceneIndex, electricOrder] as [Any]
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -542,6 +554,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -553,6 +566,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -564,6 +578,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -575,6 +590,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -658,6 +674,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -810,6 +827,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
@@ -823,27 +841,36 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
+    func LoadSharedElectric(masterCode:String, accountCode:String) -> [NSDictionary]{
+        let methodName:String = "loadSharedElectric"
+        let arrayKey = ["masterCode", "accountCode"]
+        let arrayValue = [masterCode, accountCode]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "dicts")
+        if value.bEmpty == true {
+            return []
+        }
+        return (value.mainValue as! [NSDictionary])
+    }
+    
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {
-//        if m_bPolling == true {
-//            return
-//        }
-//        m_timerPolling = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(MyWebService.RunPolling), userInfo:nil, repeats:true)
-//        m_bPolling = true
     }
     
     func RunPolling() {
-//        let dictsElectricState = GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
-//        gDC.mElectricData.UpdateElectricState(dictsElectricState)
-//        g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
     }
     
     func StopPolling() {
-//        if m_bPolling == false {
-//            return
-//        }
-//        m_bPolling = false
-//        m_timerPolling.invalidate()
+    }
+    
+    func ForbidSync() {
+        gDC.m_bSyncing = true
+        m_timerForbidSync = Timer.scheduledTimer(timeInterval: 3.0, target:self, selector: #selector(MyWebService.ResetSync), userInfo: nil, repeats: false)
+    }
+    
+    func ResetSync() {
+        gDC.m_bSyncing = false
     }
     
     func LoadDetailDataFromWs() {
@@ -854,22 +881,6 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         //从服务器加载电器列表
         let dictsElectric = MyWebService.sharedInstance.LoadElectric(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, electricTime: "")
         gDC.mElectricData.UpdateElectric(dictsElectric)
-//        //从服务器加载红外类型电器的键值
-//        if dictsElectric.count != 0 {
-//            for i in 0..<gDC.mAreaList.count {
-//                for j in 0..<gDC.mAreaList[i].mElectricList.count {
-//                    let nType = gDC.mAreaList[i].mElectricList[j].m_nElectricType
-//                    if gDC.m_arrayElectricTypeCode[nType] as! String == "09" {//9是空调，12是电视，21是临时设计的学习型空调
-//                        let jsons = MyWebService.sharedInstance.LoadKeyByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-//                        gDC.mETData.UpdateETKeys(jsons)
-//                        if nType == 9 || nType == 21 {//如果是空调的话，则读取
-//                            let jsons2 = MyWebService.sharedInstance.LoadETAirByElectric(masterCode: gDC.mUserInfo.m_sMasterCode, electricIndex: gDC.mAreaList[i].mElectricList[j].m_nElectricIndex)
-//                            gDC.mETData.UpdateETAir(jsons2)
-//                        }
-//                    }
-//                }
-//            }
-//        }
         //从服务器加载情景列表
         let dictsScene = MyWebService.sharedInstance.LoadScene(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode, sceneTime: "")
         gDC.mSceneData.UpdateScene(dictsScene)

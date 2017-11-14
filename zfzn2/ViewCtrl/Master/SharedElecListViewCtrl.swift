@@ -87,7 +87,7 @@ class SharedElecListViewCtrl: UIViewController, UITableViewDelegate, UITableView
             ShowNoticeDispatch("提示", content: "不能执行该操作", duration: 0.8)
         case "1":
             ShowInfoDispatch("提示", content: "操作成功", duration: 0.5)
-            gDC.mElectricData.UpdateSharedElectricInfo()
+//            gDC.mElectricData.UpdateSharedElectricInfo()
         case "-2":
             ShowNoticeDispatch("提示", content: "操作失败", duration: 0.5)
         default:

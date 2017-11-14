@@ -1400,8 +1400,8 @@
 			children = (
 				1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */,
 				1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */,
-				1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */,
 				1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */,
+				1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */,
 				1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */,
 				1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */,
 				1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */,

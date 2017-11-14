@@ -12,6 +12,7 @@ class AddSceneElectricViewCtrl: UIViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var m_tableSceneElectric: UITableView!
     var m_nSceneListFoot:Int!
+    var m_nSceneIndex:Int!
     var m_nAreaListFoot:Int!
     var m_nElectricListFoot:Int!
     var m_bStretchArray = [Bool]()//用于标记该房间是否处于展开状态
@@ -82,6 +83,7 @@ class AddSceneElectricViewCtrl: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         cell.delegate = self
+        cell.m_collectionView.reloadData()
         return cell
     }
     
@@ -116,6 +118,7 @@ class AddSceneElectricViewCtrl: UIViewController, UITableViewDelegate, UITableVi
             nextView.m_nAreaListFoot = m_nAreaListFoot
             nextView.m_nElectricListFoot = m_nElectricListFoot
             nextView.m_nSceneListFoot = m_nSceneListFoot
+//            nextView.m_nElectricIndex = gDC.mAreaList[self.m_nAreaListFoot].mElectricList[self.m_nElectricListFoot].m_nElectricIndex
             self.navigationController?.pushViewController(nextView , animated: true)
         }else {
             ShowInfoDispatch("提示", content: "暂时不支持该类型电器的情景控制", duration: 1.0)
@@ -123,7 +126,14 @@ class AddSceneElectricViewCtrl: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func SyncData() {
-        m_tableSceneElectric.reloadData()
+        DispatchQueue.main.async {
+            //可能会数组越界，还需要判断当前的情景是否已经不存在了（被其他app删除）
+            if (self.m_nSceneListFoot >= gDC.mSceneList.count || gDC.mSceneList[self.m_nSceneListFoot].m_nSceneIndex != self.m_nSceneIndex) {
+                self.navigationController?.popToRootViewController(animated: true)
+                return
+            }
+            self.m_tableSceneElectric.reloadData()
+        }
     }
     
 }

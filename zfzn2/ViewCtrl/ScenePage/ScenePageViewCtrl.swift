@@ -15,6 +15,7 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var m_tableSceneElectric: UITableView!
     @IBOutlet weak var m_btnExecute: UIButton!
     var m_nSceneListFoot:Int!
+    var m_nSceneIndex:Int! = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         m_tableSceneElectric.bounces = false
         m_btnExecute.layer.cornerRadius = 5.0
         m_btnExecute.layer.masksToBounds = true
+        m_nSceneIndex = gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex
         g_notiCenter.addObserver(self, selector:#selector(AddSceneElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
@@ -52,6 +54,7 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         let mainStory = UIStoryboard(name: "Main",bundle: nil)
         let nextView = mainStory.instantiateViewController(withIdentifier: "editSceneViewCtrl") as! EditSceneViewCtrl
         nextView.m_nSceneListFoot = self.m_nSceneListFoot
+        nextView.m_nSceneIndex = self.m_nSceneIndex
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
@@ -107,7 +110,14 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func SyncData() {
-        m_tableSceneElectric.reloadData()
+        DispatchQueue.main.async {
+            //可能会数组越界，还需要判断当前的情景是否已经不存在了（被其他app删除）
+            if (self.m_nSceneListFoot >= gDC.mSceneList.count || gDC.mSceneList[self.m_nSceneListFoot].m_nSceneIndex != self.m_nSceneIndex) {
+                self.navigationController?.popToRootViewController(animated: true)
+                return
+            }
+            self.m_tableSceneElectric.reloadData()
+        }
     }
 }
 
