@@ -14,6 +14,8 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     var m_bConnected = false
     var m_bPolling:Bool = false
     var m_timerPolling:Timer!//心跳包定时器，判断本地连接状态
+    var m_timerSync:Timer!//接收到同步的消息后，大约在1秒后才执行同步（因为可能另一个手机的做了好几个操作，比如三键开关的重加，有6步操作）
+    var m_timerForbidSync:Timer!//接收到同步消息后，大约3秒之内不再接收同步消息
     var m_bSyncing:Bool = false//是否正处于自动同步中，如果是则不同步
     let m_queueSync = DispatchQueue(label: "com.WebSocket.Sync")//自动从服务器同步数据
     
@@ -95,9 +97,11 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
         print("【web_socket】接收到消息——\(message as! String)")
         if (message as! String == "Sync") {
-            m_queueSync.async {
-                self.AutomaticSync()
+            if (gDC.m_bSyncing == true) {//如果正处于同步中，则忽略这个同步消息
+                return
             }
+            self.m_timerForbidSync = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(WebSocket.ForbidSync), userInfo: nil, repeats: false)
+            self.m_timerSync = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(WebSocket.AutomaticSync), userInfo: nil, repeats: false)
         }else if ((message as! String).subStringTo(1) == "<") {//说明是电器状态的更新
             if (gDC.m_bRemote == false) {//如果当前是本地连接状态，则自动忽略接收的websocket消息
                 return
@@ -114,9 +118,9 @@ class WebSocket: NSObject, SRWebSocketDelegate {
         print("【web_socket】接收到pong消息")
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////
     //同步所有数据
     func AutomaticSync() {
-        print("开始同步...")
         let bFlag = MyWebService.sharedInstance.ManualSync()
         if (bFlag == 1) {
             //向所有注册过观测器的界面发送消息
@@ -125,7 +129,10 @@ class WebSocket: NSObject, SRWebSocketDelegate {
             //向所有注册过观测器的界面发送消息，当前主机被删除，需要退出并重新登录
             g_notiCenter.post(name: Notification.Name(rawValue: "Quit"), object: self)
         }
-        print("结束同步...")
+    }
+    
+    func ForbidSync() {
+        gDC.m_bSyncing = false
     }
     
 }

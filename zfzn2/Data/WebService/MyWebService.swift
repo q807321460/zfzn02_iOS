@@ -892,8 +892,10 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
     //返回值：-1说明不需要同步，0说明当前主机被删除，需要重新登录，1说明需要同步
     func ManualSync() -> Int {
         if (gDC.m_bSyncing == true) {
+            print("正在同步中，暂时无法同步...")
             return -1
         }
+        print("开始同步...")
         gDC.m_bSyncing = true
         let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: "")
         gDC.mAccountData.UpdateAccount(dictsAccount)

@@ -15,6 +15,7 @@ class AlarmRecordViewCtrl: UIViewController, UITableViewDelegate, UITableViewDat
     let m_sReuseIdentifier:String = "alarmRecordCell"
     var m_nRecordCount:Int = 0
     var m_arrayJSON:[JSON] = []
+    @IBOutlet weak var m_labelEmpty: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,14 @@ class AlarmRecordViewCtrl: UIViewController, UITableViewDelegate, UITableViewDat
         m_arrayJSON = MyWebService.sharedInstance.LoadAlarmRecord(masterCode: gDC.mUserInfo.m_sMasterCode)
         //下面处理获取到的json字符串
         m_nRecordCount = m_arrayJSON.count
-        m_tableRecord.reloadData()
+        if (m_nRecordCount == 0) {
+            m_tableRecord.isHidden = true
+            m_labelEmpty.isHidden = false
+        }else {
+            m_tableRecord.isHidden = false
+            m_labelEmpty.isHidden = true
+            m_tableRecord.reloadData()
+        }
     }
     
     // 头部的下拉刷新触发事件
