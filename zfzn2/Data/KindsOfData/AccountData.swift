@@ -99,14 +99,6 @@ class AccountData: NSObject {
         dict?.setObject(passwordNew, forKey: "password" as NSCopying)
         dict?.write(toFile: fullPath, atomically: true)
     }
-    
-//    func DeleteSharedAccount(accountCode:String) {
-//        for i in 0..<gDC.mSharedAccountList.count {
-//            if (gDC.mSharedAccountList[i].m_sAccountCode == accountCode) {
-//                gDC.mSharedAccountList.remove(at: i)
-//            }
-//        }
-//    }
 }
 
 //专门存数据的类

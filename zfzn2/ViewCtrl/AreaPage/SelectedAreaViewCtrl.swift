@@ -59,7 +59,6 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
             }
             ShowEditBar()
             ShowElectric()
-//            m_collectionElectric.reloadData()
             m_bRefreshView = false
         }
     }
@@ -123,6 +122,10 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
     
     //点击编辑按钮
     func OnEdit() {
+        if gDC.mUserInfo.m_nIsAdmin == 0 {
+            ShowNoticeDispatch("提示", content: "权限不足", duration: 0.5)
+            return
+        }
         let mainStory = UIStoryboard(name: "Main",bundle: nil)
         let nextView = mainStory.instantiateViewController(withIdentifier: "editAreaViewCtrl") as! EditAreaViewCtrl
         nextView.m_nAreaListFoot = m_nAreaListFoot

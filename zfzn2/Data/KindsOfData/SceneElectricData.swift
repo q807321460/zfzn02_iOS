@@ -74,30 +74,6 @@ class SceneElectricData: NSObject {
         for i in 0..<gDC.mSceneList.count {
             gDC.mSceneList[i].mSceneElectricList.removeAll()
         }
-//        if dicts.count == 0 {//没有返回则从数据库读取
-//            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]
-//            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "sceneelectrics")
-//            for i in 0..<sqlResult.count {
-//                let sceneElectricInfo = SceneElectricInfoData()
-//                sceneElectricInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
-//                sceneElectricInfo.m_sElectricCode = sqlResult[i]["electric_code"] as! String
-//                sceneElectricInfo.m_sElectricName = sqlResult[i]["electric_name"] as! String
-//                sceneElectricInfo.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
-//                sceneElectricInfo.m_nElectricType = sqlResult[i]["electric_type"] as! Int
-//                sceneElectricInfo.m_sElectricOrder = sqlResult[i]["electric_order"] as! String
-//                sceneElectricInfo.m_nRoomIndex = sqlResult[i]["room_index"] as! Int
-//                sceneElectricInfo.m_nSceneIndex = sqlResult[i]["scene_index"] as! Int
-//                sceneElectricInfo.m_sOrderInfo = sqlResult[i]["order_info"] as! String
-//                for j in 0..<gDC.mSceneList.count {
-//                    if gDC.mSceneList[j].m_nSceneIndex == sceneElectricInfo.m_nSceneIndex {
-//                        gDC.mSceneList[j].mSceneElectricList.append(sceneElectricInfo)
-//                        break
-//                    }
-//                }
-//            }
-//            return
-//        }
-//        DeleteSceneElectric(gDC.mUserInfo.m_sMasterCode)
         for i in 0..<dicts.count-1 {
             let dict:NSDictionary = dicts[i]
             let sceneElectricInfo = SceneElectricInfoData()
@@ -126,18 +102,6 @@ class SceneElectricData: NSObject {
             if (dict.object(forKey: "sceneIndex") != nil) {
                 sceneElectricInfo.m_nSceneIndex = Int(dict["sceneIndex"] as! String)!
             }
-//            //写入到本地数据库
-//            let dictInsert = NSMutableDictionary()
-//            dictInsert.setObject(sceneElectricInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_sElectricCode, forKey: "electric_code" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_nElectricIndex, forKey: "electric_index" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_sElectricName, forKey: "electric_name" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_sElectricOrder, forKey: "electric_order" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_sOrderInfo, forKey: "order_info" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_nRoomIndex, forKey: "room_index" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_nElectricType, forKey: "electric_type" as NSCopying)
-//            dictInsert.setObject(sceneElectricInfo.m_nSceneIndex, forKey: "scene_index" as NSCopying)
-//            gMySqlClass.InsertIntoSql(dictInsert, table: "sceneelectrics")
             //写入到内存
             for j in 0..<gDC.mSceneList.count {
                 if gDC.mSceneList[j].m_nSceneIndex == sceneElectricInfo.m_nSceneIndex {
@@ -145,30 +109,10 @@ class SceneElectricData: NSObject {
                 }
             }
         }
-//        //SceneElectric数组的最后一项保存着一个额外时间extraTime，也就是user的scene_electric_time
-//        let dict:NSDictionary = dicts[dicts.count-1]
-//        if (dict.object(forKey: "extraTime") != nil) {
-//            let sTimeExtra = dict["extraTime"] as! String
-//            let setDict = NSMutableDictionary()
-//            setDict.setObject(sTimeExtra, forKey: "scene_electric_time" as NSCopying)
-//            let requiredDict = NSMutableDictionary()
-//            requiredDict.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-//            requiredDict.setObject(gDC.mUserInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
-//            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "users")
-//        }
     }
     
     func UpdateSceneElectricOrder(electricFoot:Int, sceneFoot:Int, electricOrder:String) {
-        //修改内存数据
         gDC.mSceneList[sceneFoot].mSceneElectricList[electricFoot].m_sElectricOrder = electricOrder
-//        //修改本地数据库
-//        let setDict = NSMutableDictionary()
-//        setDict.setObject(electricOrder, forKey: "electric_order" as NSCopying)
-//        let requiredDict = NSMutableDictionary()
-//        requiredDict.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "master_code" as NSCopying)
-//        requiredDict.setObject(gDC.mSceneList[sceneFoot].mSceneElectricList[electricFoot].m_nElectricIndex, forKey: "electricIndex" as NSCopying)
-//        requiredDict.setObject(gDC.mSceneList[sceneFoot].m_nSceneIndex, forKey: "sceneIndex" as NSCopying)
-//        gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "sceneelectrics")
     }
 }
 

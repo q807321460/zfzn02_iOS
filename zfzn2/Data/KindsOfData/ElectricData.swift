@@ -161,55 +161,6 @@ class ElectricData: NSObject {
         for i in 0..<gDC.mAreaList.count {
             gDC.mAreaList[i].mElectricList.removeAll()
         }
-//        if dicts.count == 0 {
-//            //说明本地是最新的数据，不需要同步，读取本地数据库数据，注意这里读取时需要判断account_code的值
-//            let dictQuery:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode]
-//            let sqlResult = gMySqlClass.QuerySql(dictQuery, table: "electrics")
-//            for i in 0..<sqlResult.count {
-//                //首先要判断该行所属的账户，如果不是登录账户的话，则查询下一行数据
-//                if (sqlResult[i]["account_code"] != nil) {
-//                    if (sqlResult[i]["account_code"] as! String) != gDC.mAccountInfo.m_sAccountCode {
-//                        continue
-//                    }
-//                }
-//                let electricInfo = ElectricInfoData()
-//                electricInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
-//                if (sqlResult[i]["room_index"] != nil) {
-//                    electricInfo.m_nRoomIndex = sqlResult[i]["room_index"] as! Int
-//                }
-//                if (sqlResult[i]["electric_index"] != nil) {
-//                    electricInfo.m_nElectricIndex = sqlResult[i]["electric_index"] as! Int
-//                }
-//                if (sqlResult[i]["electric_name"] != nil) {
-//                    electricInfo.m_sElectricName = sqlResult[i]["electric_name"] as! String
-//                }
-//                if (sqlResult[i]["electric_sequ"] != nil) {
-//                    electricInfo.m_nElectricSequ = sqlResult[i]["electric_sequ"] as! Int
-//                }
-//                if (sqlResult[i]["electric_code"] != nil) {
-//                    electricInfo.m_sElectricCode = sqlResult[i]["electric_code"] as! String
-//                }
-//                if (sqlResult[i]["electric_type"] != nil) {
-//                    electricInfo.m_nElectricType = sqlResult[i]["electric_type"] as! Int
-//                }
-//                if (sqlResult[i]["order_info"] != nil) {
-//                    electricInfo.m_sOrderInfo = sqlResult[i]["order_info"] as! String
-//                }
-//                if (sqlResult[i]["scene_index"] != nil) {
-//                    electricInfo.m_nSceneIndex = sqlResult[i]["scene_index"] as! Int
-//                }
-//                if (sqlResult[i]["extras"] != nil) {
-//                    electricInfo.m_sExtras = sqlResult[i]["extras"] as! String
-//                }
-//                //同时根据电器所在的房间号，分配给不同的房间
-//                for j in 0..<gDC.mAreaList.count {
-//                    if gDC.mAreaList[j].m_nAreaIndex == electricInfo.m_nRoomIndex {
-//                        gDC.mAreaList[j].mElectricList.append(electricInfo)
-//                    }
-//                }
-//            }
-//            return
-//        }
         DeleteElectrics(gDC.mUserInfo.m_sMasterCode)
         for i in 0..<dicts.count-1 {
             let dict:NSDictionary = dicts[i]
@@ -251,20 +202,6 @@ class ElectricData: NSObject {
             for j in 0..<gDC.mAreaList.count {
                 if gDC.mAreaList[j].m_nAreaIndex == electricInfo.m_nRoomIndex {
                     gDC.mAreaList[j].mElectricList.append(electricInfo)
-//                    //重新写入本地数据库
-//                    let dictInsert = NSMutableDictionary()
-//                    dictInsert.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_nRoomIndex, forKey: "room_index" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_nElectricIndex, forKey: "electric_index" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_sElectricName, forKey: "electric_name" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_nElectricSequ, forKey: "electric_sequ" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_sElectricCode, forKey: "electric_code" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_nElectricType, forKey: "electric_type" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_nSceneIndex, forKey: "scene_index" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_sOrderInfo, forKey: "order_info" as NSCopying)
-//                    dictInsert.setObject(electricInfo.m_sExtras, forKey: "extras" as NSCopying)
-//                    gMySqlClass.InsertIntoSql(dictInsert, table: "electrics")
                     break
                 }else {
 //                    print("多余的无效电器")
@@ -273,17 +210,6 @@ class ElectricData: NSObject {
             }
         //按web获取的electric数据的遍历结束
         }
-//        //electric数组的最后一项保存着一个额外时间extraTime，也就是user的electric_time
-//        let dict:NSDictionary = dicts[dicts.count-1]
-//        if (dict.object(forKey: "extraTime") != nil) {
-//            let sTimeExtra = dict["extraTime"] as! String
-//            let setDict = NSMutableDictionary()
-//            setDict.setObject(sTimeExtra, forKey: "electric_time" as NSCopying)
-//            let requiredDict = NSMutableDictionary()
-//            requiredDict.setObject(gDC.mAccountInfo.m_sAccountCode, forKey: "account_code" as NSCopying)
-//            requiredDict.setObject(gDC.mUserInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
-//            gMySqlClass.UpdateSql(setDict, requiredData: requiredDict, table: "users")
-//        }
     }
     
     //根据从数据库中获取的电器状态来重置本地电器状态
@@ -326,13 +252,6 @@ class ElectricData: NSObject {
     
     //在电器视图中更新电器名
     func UpdateElectricInfo(_ electricIndex:Int, electricName:String, sceneIndex:Int) {
-//        //在本地数据库中更新
-//        let dictSet:NSMutableDictionary = ["electric_name":electricName, "scene_index":sceneIndex]
-//        let dictRequired:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "electric_index":electricIndex]
-//        gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "electrics")
-//        let dictSet1:NSMutableDictionary = ["electric_name":electricName]
-//        let dictRequired1:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "electric_index":electricIndex]
-//        gMySqlClass.UpdateSql(dictSet1, requiredData: dictRequired1, table: "sceneelectrics")
         //针对各个区域的电器
         for i in 0..<gDC.mAreaList.count {
             for j in 0..<gDC.mAreaList[i].mElectricList.count {
@@ -391,13 +310,6 @@ class ElectricData: NSObject {
                 }
             }
         }
-//        //修改本地数据库中的数据
-//        let dictSet:NSMutableDictionary = ["electric_name":electricName, "scene_index":sceneIndex, "extras":sJson2]
-//        let dictRequired:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "electric_index":electricIndex]
-//        gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "electrics")
-//        let dictSet1:NSMutableDictionary = ["electric_name":electricName]
-//        let dictRequired1:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "electric_index":electricIndex]
-//        gMySqlClass.UpdateSql(dictSet1, requiredData: dictRequired1, table: "sceneelectrics")
         
         //针对各个情景模式中的电器
         for i in 0..<gDC.mSceneList.count {
