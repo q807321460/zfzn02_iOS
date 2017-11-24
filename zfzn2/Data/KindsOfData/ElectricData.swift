@@ -443,17 +443,6 @@ class ElectricData: NSObject {
         }
     }
     
-    //将内存中的分享电器数据保存到本地数据库中
-//    func UpdateSharedElectricInfo() {
-//
-//    }
-    
-    //从本地数据库读取到被分享账号中的电器列表，TODO：没有完成该功能
-//    func LoadSharedElectricByAccountCode(_ accountCode:String) -> [ElectricSharedInfoData] {
-//        var sharedElectricList = [ElectricSharedInfoData]()
-//        return sharedElectricList
-//    }
-    
     func UpdateSensorExtras(_ nAreaFoot:Int, nElectricFoot:Int, sExtras:String) {
         let nType = gDC.mAreaList[nAreaFoot].mElectricList[nElectricFoot].m_nElectricType
         if nType != 15 {

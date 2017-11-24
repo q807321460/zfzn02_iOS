@@ -275,7 +275,7 @@ func CutImage(_ image:UIImage, rect:CGRect)->UIImage{
 }
 
 /**
- 全局函数——删除文件，当前调试用
+ 全局函数——修改电器状态
  - returns: 有权限返回ture， 没权限返回false
  */
 func RefreshElectricStates(_ sReceive:String) -> Bool {

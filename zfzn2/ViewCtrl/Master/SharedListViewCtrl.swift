@@ -11,6 +11,7 @@ import UIKit
 class SharedListViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var m_tableShareList: UITableView!
+    @IBOutlet weak var m_labelEmpty: UILabel!
     var m_nUserListFoot:Int!
     var m_sMasterCode:String! = ""
     
@@ -25,11 +26,18 @@ class SharedListViewCtrl: UIViewController, UITableViewDelegate, UITableViewData
         let header = MJRefreshNormalHeader()
         header.setRefreshingTarget(self, refreshingAction: #selector(headerClick))
         m_tableShareList.mj_header = header
-//        g_notiCenter.addObserver(self, selector:#selector(SharedListViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
+        RefreshUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated) // No need for semicolon
+        DispatchQueue.main.async {
+            self.RefreshUI()
+        }
     }
     
     @IBAction func OnBack(_ sender: AnyObject) {
@@ -45,7 +53,17 @@ class SharedListViewCtrl: UIViewController, UITableViewDelegate, UITableViewData
             gDC.mAccountData.UpdateSharedAccount(dictsSharedAccount)
             self.m_tableShareList.mj_header.endRefreshing()
         }
-        
+    }
+    
+    func RefreshUI() {
+        if (gDC.mSharedAccountList.count == 0) {
+            m_tableShareList.isHidden = true
+            m_labelEmpty.isHidden = false
+        }else {
+            m_tableShareList.isHidden = false
+            m_labelEmpty.isHidden = true
+            self.m_tableShareList.reloadData()
+        }
     }
     ////////////////////////////////////////////////////////////////////////////////////
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,20 +95,7 @@ class SharedListViewCtrl: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(nextView , animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-//    func SyncData() {
-//        DispatchQueue.main.async {
-//            //可能会数组越界，还需要判断当前的主机是否已经不存在了（被其他app删除）
-//            if (self.m_nUserListFoot >= gDC.mUserList.count || gDC.mUserList[self.m_nUserListFoot].m_sMasterCode != self.m_sMasterCode) {
-//                self.navigationController?.popToRootViewController(animated: true)
-//                return
-//            }
-//            //加载分享账户列表
-//            let dictsSharedAccount = MyWebService.sharedInstance.LoadSharedAccount(gDC.mUserList[self.m_nUserListFoot].m_sMasterCode)
-//            gDC.mAccountData.UpdateSharedAccount(dictsSharedAccount)
-//            self.m_tableShareList.reloadData()
-//        }
-//    }
+
 }
 
 

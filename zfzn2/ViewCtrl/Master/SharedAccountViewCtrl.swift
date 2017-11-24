@@ -12,6 +12,7 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var m_imageAccount: UIImageView!
     @IBOutlet weak var m_tableAccountInfo: UITableView!
+    @IBOutlet weak var m_btnDeleteSharedUser: UIButton!
     var m_nUserListFoot:Int!
     var m_sMasterCode:String! = ""
     var m_nSharedAccountListFoot:Int!
@@ -22,11 +23,12 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
         let height = m_imageAccount.layer.bounds.height
         m_imageAccount.layer.cornerRadius = height/2
         m_imageAccount.layer.masksToBounds = true
+        m_btnDeleteSharedUser.layer.masksToBounds = true
+        m_btnDeleteSharedUser.layer.cornerRadius = 5.0
         m_tableAccountInfo.tableFooterView = UIView()
         m_tableAccountInfo.bounces = false
         m_tableAccountInfo.register(SharedAccountInfoCell.self, forCellReuseIdentifier: "sharedAccountInfoCell")
         m_tableAccountInfo.register(UINib(nibName: "SharedAccountInfoCell", bundle: nil), forCellReuseIdentifier: "sharedAccountInfoCell")
-//        g_notiCenter.addObserver(self, selector:#selector(SharedAccountViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +37,29 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBAction func OnBack(_ sender: AnyObject) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func OnDeleteSharedUser(_ sender: Any) {
+        let re = MyWebService.sharedInstance.DeleteSharedUser(masterCode: gDC.mUserInfo.m_sMasterCode, accountCode: gDC.mSharedAccountList[m_nSharedAccountListFoot].m_sAccountCode)
+        WebDeleteSharedUser(re)
+    }
+    ////////////////////////////////////////////////////////////////////////////////////
+    func WebDeleteSharedUser(_ responseValue:String) {
+        switch responseValue {
+        case "WebError":
+            break
+        case "-2":
+            print("取消分享失败")
+            ShowNoticeDispatch("错误", content: "未知的失败", duration: 0.5)
+        case "1":
+            print("取消分享成功")
+            ShowInfoDispatch("提示", content: "取消分享成功", duration: 0.5)
+            gDC.mSharedAccountList.remove(at: m_nSharedAccountListFoot)
+            gDC.mSharedElectricList.removeAll()
+            self.navigationController?.popViewController(animated: true)
+        default:
+            break
+        }
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
@@ -61,10 +86,6 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
         case 3:
             cell.m_labelTitle.text = "邮箱"
             cell.m_sContent.text = gDC.mSharedAccountList[m_nSharedAccountListFoot].m_sAccountEmail
-//        case 4:
-//            cell.m_labelTitle.text = "使用权限"
-//            cell.m_sContent.text = ""
-//            cell.m_switch.isHidden = false
         case 4:
             cell.m_labelTitle.text = "电器"
             cell.m_sContent.text = ""
@@ -79,9 +100,6 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 4:
-            //需要在这里添加一个本地数据库获取分享列表的功能
-//            gDC.mSharedElectricList.removeAll()
-//            gDC.mSharedElectricList = gDC.mElectricData.LoadSharedElectricByAccountCode(gDC.mSharedAccountList[m_nSharedAccountListFoot].m_sAccountCode)
             let sb = UIStoryboard(name: "Main", bundle:nil)
             let nextView = sb.instantiateViewController(withIdentifier: "sharedElecListViewCtrl") as! SharedElecListViewCtrl
             nextView.m_nSharedAccountListFoot = self.m_nSharedAccountListFoot
@@ -96,24 +114,6 @@ class SharedAccountViewCtrl: UIViewController, UITableViewDelegate, UITableViewD
     func didSwitchChange(_ bSwitchOn: Bool) {
 //        ShowInfoDispatch("提示", content: "该功能尚未完善，敬请期待~", duration: 1.0)
     }
-    
-//    func SyncData() {
-//        DispatchQueue.main.async {
-//            //可能会数组越界，还需要判断当前的主机是否已经不存在了（被其他app删除）
-//            if (self.m_nUserListFoot >= gDC.mUserList.count || gDC.mUserList[self.m_nUserListFoot].m_sMasterCode != self.m_sMasterCode) {
-//                self.navigationController?.popToRootViewController(animated: true)
-//                return
-//            }
-//            //加载分享账户列表
-//            let dictsSharedAccount = MyWebService.sharedInstance.LoadSharedAccount(gDC.mUserList[m_nUserListFoot].m_sMasterCode)
-//            gDC.mAccountData.UpdateSharedAccount(dictsSharedAccount)
-//            //加载分享电器列表
-//            let dictsSharedElectric = MyWebService.sharedInstance.LoadAllSharedElectric(gDC.mUserList[m_nUserListFoot].m_sMasterCode)
-//            gDC.mElectricData.UpdateSharedElectric(dictsSharedElectric)
-//            self.m_tableAccountInfo.reloadData()
-//        }
-//    }
-    
 }
 
 

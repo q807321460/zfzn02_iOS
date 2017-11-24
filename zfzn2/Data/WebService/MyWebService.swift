@@ -854,6 +854,16 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! [NSDictionary])
     }
     
+    func DeleteSharedUser(masterCode:String, accountCode:String) -> String {
+        let methodName:String = "deleteSharedUser"
+        let arrayKey = ["masterCode", "accountCode"]
+        let arrayValue = [masterCode, accountCode]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        return (value.mainValue as! String)
+    }
+    
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {
     }
@@ -924,7 +934,6 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         gDC.mElectricData.UpdateElectricState(dictsElectricState)
         gDC.m_bSyncing = false
         return 1
-//                gDC.m_bRefreshAreaList = true
     }
     
 }
