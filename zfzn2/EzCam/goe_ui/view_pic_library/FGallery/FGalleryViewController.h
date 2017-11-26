@@ -53,7 +53,7 @@ typedef enum
 	NSMutableArray *_barItems;
 	NSMutableArray *_photoThumbnailViews;
 	NSMutableArray *_photoViews;
-	
+//    /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/EzCam/goe_ui/view_pic_library/FGallery/FGalleryViewController.h:57:45: Existing instance variable '_photoSource' for property 'photoSource' with assign attribute must be __unsafe_unretained
 	NSObject <FGalleryViewControllerDelegate> *_photoSource;
     
 	UIBarButtonItem *_nextButton;

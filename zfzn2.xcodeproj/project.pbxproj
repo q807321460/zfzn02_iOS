@@ -311,7 +311,6 @@
 		1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */; };
 		1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */; };
 		1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */; };
-		1BA52DEF1F13C78600CD9D37 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DED1F13C78600CD9D37 /* XMLDictionary.m */; };
 		1BACDA861DCC746100BA85C2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACDA841DCC746100BA85C2 /* libsqlite3.0.tbd */; };
 		1BACDA871DCC746100BA85C2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACDA851DCC746100BA85C2 /* libsqlite3.tbd */; };
 		1BACDA8A1DCC748600BA85C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACDA881DCC748600BA85C2 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -323,6 +322,7 @@
 		1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */; };
 		1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB62D721E9F652B00DE198A /* MapKit.framework */; };
 		1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */; };
+		1BD1F7571FCA9E4A00AEA502 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */; };
 		1BEA09861FA429D300BA28D3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09921FA429D300BA28D3 /* AFNetworking.framework */; };
 		1BEA09871FA429D300BA28D3 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */; };
 		1BEA09881FA429D300BA28D3 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09941FA429D300BA28D3 /* Masonry.framework */; };
@@ -1013,8 +1013,6 @@
 		1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zfzn2.db; sourceTree = "<group>"; };
 		1BA52DEA1F13C78600CD9D37 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		1BA52DEC1F13C78600CD9D37 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
-		1BA52DED1F13C78600CD9D37 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		1BACDA841DCC746100BA85C2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1BACDA851DCC746100BA85C2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		1BACDA881DCC748600BA85C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
@@ -1027,6 +1025,8 @@
 		1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneElectricData.swift; sourceTree = "<group>"; };
 		1BB62D721E9F652B00DE198A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
+		1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		1BD1F7561FCA9E4A00AEA502 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		1BE482241EADEE8C004C756E /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		1BEA09921FA429D300BA28D3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2337,8 +2337,8 @@
 			children = (
 				1BA52DEA1F13C78600CD9D37 /* SwiftyJSON.h */,
 				1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */,
-				1BA52DEC1F13C78600CD9D37 /* XMLDictionary.h */,
-				1BA52DED1F13C78600CD9D37 /* XMLDictionary.m */,
+				1BD1F7561FCA9E4A00AEA502 /* XMLDictionary.h */,
+				1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */,
 			);
 			path = Format;
 			sourceTree = "<group>";
@@ -3121,7 +3121,6 @@
 				1BF1AF8F1FAF0A6F00A8E27E /* AddMasterViewCtrl.swift in Sources */,
 				1B2D6FD01FCA9888006CA0B5 /* UIColor+expanded.m in Sources */,
 				1BF1AFC21FAF236A00A8E27E /* ElecSwitchViewCtrl.swift in Sources */,
-				1BA52DEF1F13C78600CD9D37 /* XMLDictionary.m in Sources */,
 				1B2D700D1FCA9888006CA0B5 /* ScanViewController.m in Sources */,
 				1BF1AFC41FAF236A00A8E27E /* ElecWindowViewCtrl.swift in Sources */,
 				1BF1AF6B1FAF0A6F00A8E27E /* SKScNavBar.swift in Sources */,
@@ -3158,6 +3157,7 @@
 				1B6F29B61E460D7500D19DE9 /* LCOpenApi_ConstString.cpp in Sources */,
 				1BF1AF691FAF0A6F00A8E27E /* SKLaunchMenu.swift in Sources */,
 				1B2D6FCA1FCA9888006CA0B5 /* ViewController_main.m in Sources */,
+				1BD1F7571FCA9E4A00AEA502 /* XMLDictionary.m in Sources */,
 				1B2D6FAF1FCA9888006CA0B5 /* UIGridViewCell.m in Sources */,
 				1B2D6FDD1FCA9888006CA0B5 /* zxy_gallery_photoview.m in Sources */,
 				1B2D6FBC1FCA9888006CA0B5 /* split.c in Sources */,
@@ -3500,6 +3500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hanwen Kong (X24LLC749N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3579,6 +3580,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hanwen Kong (X24LLC749N)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

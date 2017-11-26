@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>  
+#import <UIKit/UIKit.h>
 
 #define DEFAULT_DISPLAY_DURATION 2.0f  
 

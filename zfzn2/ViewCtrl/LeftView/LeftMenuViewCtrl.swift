@@ -26,9 +26,7 @@ class LeftMenuViewCtrl: MyViewController {
     @IBOutlet weak var m_vSetting: UIView!
     @IBOutlet weak var m_labelSetting: UILabel!
    
-    
-    
-    
+
     @IBOutlet weak var m_labelAccountCode: UILabel!
     @IBOutlet weak var m_labelAccountName: UILabel!
     @IBOutlet weak var m_labelLocalVersion: UILabel!

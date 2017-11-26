@@ -5070,14 +5070,14 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-ru-Yha">
-                                                <rect key="frame" x="128.5" y="17" width="118" height="21"/>
+                                                <rect key="frame" x="128.5" y="16.5" width="118" height="21"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4jY-ru-Yha" secondAttribute="height" multiplier="50:9" id="7Rt-Nn-anX"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的主机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5Q-Gd-WIt">
-                                                <rect key="frame" x="128.5" y="17" width="118" height="21"/>
+                                                <rect key="frame" x="128.5" y="16.5" width="118" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -5434,7 +5434,7 @@
                         <outlet property="m_labelMyMaster" destination="I5Q-Gd-WIt" id="GD3-IU-BrB"/>
                         <outlet property="m_labelReconnect" destination="ol0-CB-NSJ" id="88W-Ck-vgN"/>
                         <outlet property="m_labelSetting" destination="Dhh-GU-DPZ" id="1Kz-6p-gtF"/>
-                        <outlet property="m_vEzCam" destination="WyK-ZR-h5l" id="Isi-UM-XlZ"/>
+                        <outlet property="m_vEzCam" destination="WyK-ZR-h5l" id="rKO-SS-H4d"/>
                         <outlet property="m_vJdPlay" destination="lhX-Zd-TMl" id="i72-ct-3ec"/>
                         <outlet property="m_vManualSync" destination="aHZ-Sc-5uH" id="mSd-vV-jLG"/>
                         <outlet property="m_vMyMaster" destination="5bB-oL-Xfn" id="d9H-TZ-IyV"/>
