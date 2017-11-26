@@ -741,7 +741,7 @@ open class SCLAlertView: UIViewController {
     }
     
     // Show animation in the alert view //konnn topToBottom
-    fileprivate func showAnimation(_ animationStyle: SCLAnimationStyle = .topToBottom, animationStartOffset: CGFloat = g_dAnimationStartOffset, boundingAnimationOffset: CGFloat = 15.0, animationDuration: TimeInterval = g_dAnimationDuration) {
+    fileprivate func showAnimation(_ animationStyle: SCLAnimationStyle = .topToBottom, animationStartOffset: CGFloat = gDC.m_dAnimationStartOffset, boundingAnimationOffset: CGFloat = 15.0, animationDuration: TimeInterval = gDC.m_dAnimationDuration) {
         
         let rv = UIApplication.shared.keyWindow! as UIWindow
         var animationStartOrigin = self.baseView.frame.origin
@@ -792,7 +792,7 @@ open class SCLAlertView: UIViewController {
     
     // Close SCLAlertView
     open func hideView() {
-        UIView.animate(withDuration: g_dAnimationDuration, animations: {
+        UIView.animate(withDuration: gDC.m_dAnimationDuration, animations: {
             self.view.alpha = 0
             }, completion: { finished in
                 

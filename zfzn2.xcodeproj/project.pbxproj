@@ -397,7 +397,7 @@
 		1BF1AF7F1FAF0A6F00A8E27E /* MainTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */; };
 		1BF1AF801FAF0A6F00A8E27E /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */; };
 		1BF1AF811FAF0A6F00A8E27E /* LeftMenuViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */; };
-		1BF1AF821FAF0A6F00A8E27E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */; };
+		1BF1AF821FAF0A6F00A8E27E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		1BF1AF831FAF0A6F00A8E27E /* MasterConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */; };
 		1BF1AF841FAF0A6F00A8E27E /* SmartConfigClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */; };
 		1BF1AF851FAF0A6F00A8E27E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */; };

@@ -437,6 +437,7 @@ class ElectricSharedInfoData:NSObject {
     var m_nIsShared:Int = -1
 }
 
+//乐橙摄像头数据
 class CameraInfo:NSObject {
     var m_sID:String = ""//设备唯一编号
     var m_sAbility:String = ""//可使用情况？
@@ -444,4 +445,9 @@ class CameraInfo:NSObject {
     var m_sChannelFoot:String = ""//通道列表中的脚标
     var m_sChannel:String = "origin"//通道号
 }
+
+//ezCam摄像头数据
+//class EzCamInfo:NSObject {
+//    let m_cam_manager:cam_list_manager_local
+//}
 

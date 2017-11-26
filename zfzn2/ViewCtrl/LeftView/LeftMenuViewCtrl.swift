@@ -143,6 +143,7 @@ class LeftMenuViewCtrl: MyViewController {
             OnJdPlay()
         }else if (m_vEzCam.frame.contains(point)) {
             print("点击了ezCam摄像头菜单")
+            OnEzCam()
         }else if (m_vSetting.frame.contains(point)) {
             print("点击了设置菜单")
             self.performSegue(withIdentifier: "setting", sender: self)
@@ -213,13 +214,10 @@ class LeftMenuViewCtrl: MyViewController {
         }
         viewLoading.hideView()//取消显示正在加载的字样
     }
-    
-//    /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/ViewCtrl/LeftView/LeftMenuViewCtrl.swift:221:118: Type 'NSNotification.Name' has no member 'reachabilityChanged'
-//    NSString *const kReachabilityChangedNotification = @"kReachabilityChangedNotification";
+
     func OnJdPlay() {
         JdPlayManagerInit()
         NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.AFNetworkingReachabilityDidChange, object: nil)
         conn = Reachability.forInternetConnection()
         conn?.startNotifier()
         UpdateInterfaceWithReachability(conn!)
@@ -227,6 +225,20 @@ class LeftMenuViewCtrl: MyViewController {
         let jdCtrl:JdMyDeviceViewController = JdMyDeviceViewController()
         let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: jdCtrl)
         naviCtrl.navigationBar.isHidden = true
+        self.present(naviCtrl, animated: true, completion: nil)
+    }
+    
+    func OnEzCam() {
+        let camManager:cam_list_manager_local = cam_list_manager_local.getInstance()
+        let cli:ppview_cli = ppview_cli.getInstance()
+        let cli2:ppview_cli_v2 = ppview_cli_v2.getInstance()
+        let shareData:zxy_share_data = zxy_share_data.getInstance()
+        cli.setAppInfo(nil, devurl: nil, eventurl: nil, appid: nil, vendorpass: nil, with_p2p_svr: "nat.vveye.net", with_p2p_port: 8000, with_secret: "")
+        let sTcerPath = Bundle.main.path(forResource: "ppview", ofType: "cer")
+        cli2.setAppInfo(shareData.m_push_key, vendorpass: shareData.m_push_pass, pushsvr: shareData.push_svr, development: true, with_cer_path: sTcerPath, cer_type: 0)
+        camManager.read_camlist_file()
+        let nextView = ViewController_main.init(nibName: "ViewController_main", bundle: nil)
+        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: nextView)
         self.present(naviCtrl, animated: true, completion: nil)
     }
     
