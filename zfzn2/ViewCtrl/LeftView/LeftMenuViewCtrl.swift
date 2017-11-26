@@ -21,11 +21,13 @@ class LeftMenuViewCtrl: MyViewController {
     @IBOutlet weak var m_labelManualSync: UILabel!
     @IBOutlet weak var m_vJdPlay: UIView!
     @IBOutlet weak var m_labelJdPlay: UILabel!
+    @IBOutlet weak var m_vEzCam: UIView!
+    @IBOutlet weak var m_labelEzCam: UIView!
     @IBOutlet weak var m_vSetting: UIView!
     @IBOutlet weak var m_labelSetting: UILabel!
    
     
-    @IBOutlet weak var m_vHelp: UIView!
+    
     
     @IBOutlet weak var m_labelAccountCode: UILabel!
     @IBOutlet weak var m_labelAccountName: UILabel!
@@ -35,7 +37,6 @@ class LeftMenuViewCtrl: MyViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        m_vHelp.isHidden = true
         m_btnAccountLogo.setImage(gDC.mAccountInfo.m_imageAccountHead, for: UIControlState())
 //        print("TopArea尺寸为——\(m_vTopArea.bounds.size)")
         let btnWidth = m_btnAccountLogo.layer.bounds.size.width
@@ -62,8 +63,6 @@ class LeftMenuViewCtrl: MyViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    
     //手指初次按下
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touches.count > 1 {
@@ -84,6 +83,9 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vSetting.frame.contains(point)) {
             m_vSetting.backgroundColor = gDC.m_colorTouching
             m_labelSetting.backgroundColor = gDC.m_colorTouching
+        }else if (m_vEzCam.frame.contains(point)) {
+            m_vEzCam.backgroundColor = gDC.m_colorTouching
+            m_labelEzCam.backgroundColor = gDC.m_colorTouching
         }else if (m_vJdPlay.frame.contains(point)) {
             m_vJdPlay.backgroundColor = gDC.m_colorTouching
             m_labelJdPlay.backgroundColor = gDC.m_colorTouching
@@ -111,6 +113,9 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vJdPlay.frame.contains(point)){
             m_vJdPlay.backgroundColor = gDC.m_colorTouching
             m_labelJdPlay.backgroundColor = gDC.m_colorTouching
+        }else if (m_vEzCam.frame.contains(point)) {
+            m_vEzCam.backgroundColor = gDC.m_colorTouching
+            m_labelEzCam.backgroundColor = gDC.m_colorTouching
         }else if (m_vSetting.frame.contains(point)) {
             m_vSetting.backgroundColor = gDC.m_colorTouching
             m_labelSetting.backgroundColor = gDC.m_colorTouching
@@ -138,6 +143,8 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vJdPlay.frame.contains(point)) {
             print("点击了背景音乐菜单")
             OnJdPlay()
+        }else if (m_vEzCam.frame.contains(point)) {
+            print("点击了ezCam摄像头菜单")
         }else if (m_vSetting.frame.contains(point)) {
             print("点击了设置菜单")
             self.performSegue(withIdentifier: "setting", sender: self)
@@ -153,6 +160,8 @@ class LeftMenuViewCtrl: MyViewController {
         m_labelManualSync.backgroundColor = UIColor.white
         m_vJdPlay.backgroundColor = UIColor.white
         m_labelJdPlay.backgroundColor = UIColor.white
+        m_vEzCam.backgroundColor = UIColor.white
+        m_labelEzCam.backgroundColor = UIColor.white
         m_vSetting.backgroundColor = UIColor.white
         m_labelSetting.backgroundColor = UIColor.white
     }
@@ -207,9 +216,12 @@ class LeftMenuViewCtrl: MyViewController {
         viewLoading.hideView()//取消显示正在加载的字样
     }
     
+//    /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/ViewCtrl/LeftView/LeftMenuViewCtrl.swift:221:118: Type 'NSNotification.Name' has no member 'reachabilityChanged'
+//    NSString *const kReachabilityChangedNotification = @"kReachabilityChangedNotification";
     func OnJdPlay() {
         JdPlayManagerInit()
-        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name(rawValue: kReachabilityChangedNotification), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.AFNetworkingReachabilityDidChange, object: nil)
         conn = Reachability.forInternetConnection()
         conn?.startNotifier()
         UpdateInterfaceWithReachability(conn!)

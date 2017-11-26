@@ -151,8 +151,12 @@ class VoiceConfWifiViewCtrl : UIViewController, SmartConfigReciverDelegate{
         if let ifs:NSArray = CNCopySupportedInterfaces() {
             for x in ifs {
                 if let dict = CFBridgingRetain(CNCopyCurrentNetworkInfo(x as! CFString)) {
-                    let ssid = dict["SSID"]
-                    return ssid as? String
+//                if let dict = CNCopyCurrentNetworkInfo(x as! CFString) {
+                //                    /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/ViewCtrl/Login/ConfWifi/Voice/VoiceConfWifiViewCtrl.swift:154:36: Ambiguous use of 'subscript'
+                    let dict2 = dict as! [String:String]
+                    let ssid = dict2["SSID"]
+//                    let ssid = dict
+                    return ssid
                 }
             }
         }

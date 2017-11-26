@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="item_file_cell">
+            <connections>
+                <outlet property="cell_img" destination="ADn-Nv-9XW" id="Gc2-wI-4V8"/>
+                <outlet property="cell_img_ok" destination="FZr-Fm-HzS" id="xVE-dj-vhp"/>
+                <outlet property="cell_img_video_flag" destination="blF-dr-bXM" id="JXc-09-2Lf"/>
+                <outlet property="view" destination="LEc-PI-Drk" id="8yC-CE-NQZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LEc-PI-Drk">
+            <rect key="frame" x="0.0" y="0.0" width="106" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kao-D4-VXh">
+                    <rect key="frame" x="0.0" y="5" width="106" height="75"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="png_file_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="ADn-Nv-9XW">
+                            <rect key="frame" x="0.0" y="0.0" width="106" height="75"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ok.png" translatesAutoresizingMaskIntoConstraints="NO" id="FZr-Fm-HzS">
+                            <rect key="frame" x="86" y="55" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="cfp-F6-Grd"/>
+                                <constraint firstAttribute="height" constant="20" id="gFQ-c2-hlh"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="png_btn_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="blF-dr-bXM" userLabel="img_video_flage">
+                            <rect key="frame" x="23" y="7" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="blF-dr-bXM" secondAttribute="height" multiplier="1:1" id="wQk-5H-p2N"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FZr-Fm-HzS" secondAttribute="bottom" id="1eD-RS-Z0D"/>
+                        <constraint firstItem="blF-dr-bXM" firstAttribute="centerX" secondItem="Kao-D4-VXh" secondAttribute="centerX" id="5he-os-gXw"/>
+                        <constraint firstItem="ADn-Nv-9XW" firstAttribute="leading" secondItem="Kao-D4-VXh" secondAttribute="leading" id="Cu9-ag-UE3"/>
+                        <constraint firstItem="ADn-Nv-9XW" firstAttribute="top" secondItem="Kao-D4-VXh" secondAttribute="top" id="TKZ-WO-hhT"/>
+                        <constraint firstItem="blF-dr-bXM" firstAttribute="centerY" secondItem="Kao-D4-VXh" secondAttribute="centerY" id="X4p-58-miM"/>
+                        <constraint firstAttribute="bottom" secondItem="ADn-Nv-9XW" secondAttribute="bottom" id="iaS-Dw-ipt"/>
+                        <constraint firstAttribute="trailing" secondItem="ADn-Nv-9XW" secondAttribute="trailing" id="k5y-uK-3T9"/>
+                        <constraint firstAttribute="trailing" secondItem="FZr-Fm-HzS" secondAttribute="trailing" id="vT7-sC-yOI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kao-D4-VXh" secondAttribute="trailing" id="2nK-0Q-jnd"/>
+                <constraint firstItem="Kao-D4-VXh" firstAttribute="leading" secondItem="LEc-PI-Drk" secondAttribute="leading" id="UcR-Bv-gJH"/>
+                <constraint firstAttribute="bottom" secondItem="Kao-D4-VXh" secondAttribute="bottom" id="ieL-2O-SLG"/>
+                <constraint firstItem="Kao-D4-VXh" firstAttribute="top" secondItem="LEc-PI-Drk" secondAttribute="top" constant="5" id="vQa-I4-UXc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ok.png" width="48" height="48"/>
+        <image name="png_btn_play.png" width="60" height="60"/>
+        <image name="png_file_blue.png" width="96" height="96"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
