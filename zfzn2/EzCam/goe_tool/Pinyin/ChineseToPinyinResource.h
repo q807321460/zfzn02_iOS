@@ -7,12 +7,10 @@
 #ifndef _ChineseToPinyinResource_H_
 #define _ChineseToPinyinResource_H_
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class NSArray;
 @class NSMutableDictionary;
-
-///Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/EzCam/goe_tool/Pinyin/ChineseToPinyinResource.h:13:38: Cannot find interface declaration for 'NSObject', superclass of 'ChineseToPinyinResource'
 
 @interface ChineseToPinyinResource : NSObject {
     NSString* _directory;
@@ -28,5 +26,7 @@
 + (ChineseToPinyinResource *)getInstance;
 
 @end
+
+
 
 #endif // _ChineseToPinyinResource_H_

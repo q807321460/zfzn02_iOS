@@ -220,7 +220,7 @@ class LeftMenuViewCtrl: MyViewController {
 //    NSString *const kReachabilityChangedNotification = @"kReachabilityChangedNotification";
     func OnJdPlay() {
         JdPlayManagerInit()
-        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name(rawValue: kReachabilityChangedNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.AFNetworkingReachabilityDidChange, object: nil)
         conn = Reachability.forInternetConnection()
         conn?.startNotifier()

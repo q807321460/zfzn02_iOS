@@ -7,6 +7,8 @@
 #ifndef _PinyinFormatter_H_
 #define _PinyinFormatter_H_
 
+#import <UIKit/UIKit.h>
+
 @class HanyuPinyinOutputFormat;
 
 @interface PinyinFormatter : NSObject {

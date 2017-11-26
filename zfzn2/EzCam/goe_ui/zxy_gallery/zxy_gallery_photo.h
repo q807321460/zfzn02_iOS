@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ppview_cli.h"
 #import "pic_cache_list_manager.h"
 

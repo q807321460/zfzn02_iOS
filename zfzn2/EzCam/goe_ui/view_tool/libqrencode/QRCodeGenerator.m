@@ -44,8 +44,7 @@ enum {
 		for(int j = 0; j < width; ++j) {
 			if(*data & 1) {
 				rectDraw.origin = CGPointMake((j + qr_margin) * zoom,(i + qr_margin) * zoom);
-//                /Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/EzCam/goe_ui/view_tool/libqrencode/QRCodeGenerator.m:39:20: Implicit declaration of function 'CGRectMake' is invalid in C99
-                CGContextAddRect(ctx, rectDraw);
+				CGContextAddRect(ctx, rectDraw);
 			}
 			++data;
 		}

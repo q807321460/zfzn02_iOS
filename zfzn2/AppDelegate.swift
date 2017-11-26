@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Hanwen Kong. All rights reserved.
 
 import UIKit
-
+///Users/yy/Desktop/ZaoFengZhiNeng/zfzn2/zfzn2/EzCam/goe_ui/view_media/view_alarm_media/ViewController_alarm_media.m:29:13: Property implementation must have its declaration in interface 'ViewController_alarm_media' or one of its extensions
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {//, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate
 

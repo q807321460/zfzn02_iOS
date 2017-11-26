@@ -14,6 +14,7 @@
 #import "cam_list_manager_req.h"
 #import "vv_dev_item.h"
 #import "pic_file_manager.h"
+//#import "AppDelegate.h"
 
 @protocol camlist_interface <NSObject>
 @optional

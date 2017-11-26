@@ -1,9 +1,6 @@
 //
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
-
 #import "SWRevealViewController.h"
 #import <sqlite3.h>
 //解析相关
@@ -58,11 +55,11 @@
 #import "cam_list_manager_local.h"
 #import "cam_list_item.h"
 #import "ViewController_main.h"
-
-#import <Availability.h>
-#ifndef __IPHONE_5_0
-#warning "This project uses features only available in iOS SDK 5.0 and later."
-#endif
+//
+//#import <Availability.h>
+//#ifndef __IPHONE_5_0
+//#warning "This project uses features only available in iOS SDK 5.0 and later."
+//#endif
 
 //#import "CPlayer_fish_jpg.h"
 //#import "CTalk.h"
