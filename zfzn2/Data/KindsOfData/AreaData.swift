@@ -10,13 +10,6 @@ import Foundation
 
 class AreaData: NSObject {
     func AddArea(_ areaName:String, areaIndex:Int, areaSequ:Int) {
-//        //写入到本地数据库
-//        let dictInsert = NSMutableDictionary()
-//        dictInsert.setObject(gDC.mUserInfo.m_sMasterCode, forKey: "master_code" as NSCopying)
-//        dictInsert.setObject(areaName, forKey: "room_name" as NSCopying)
-//        dictInsert.setObject(areaIndex, forKey: "room_index" as NSCopying)
-//        dictInsert.setObject(areaSequ, forKey: "room_sequ" as NSCopying)
-//        gMySqlClass.InsertIntoSql(dictInsert, table: "userroom")
         //写入到内存
         let areaInfo = AreaInfoData()
         areaInfo.m_sMasterCode = gDC.mUserInfo.m_sMasterCode
@@ -27,15 +20,9 @@ class AreaData: NSObject {
     }
     
     func DeleteAreaByMaster(_ masterCode:String) {
-//        let dictRequired = NSMutableDictionary()
-//        dictRequired.setObject(masterCode, forKey: "master_code" as NSCopying)
-//        gMySqlClass.DeleteSql(dictRequired, table: "userroom")
     }
     
     func DeleteAreaByFoot(_ foot:Int) {
-//        //在数据库中删除对应房间号
-//        let requiredDict:NSMutableDictionary = ["master_code":gDC.mUserInfo.m_sMasterCode, "room_index":gDC.mAreaList[foot].m_nAreaIndex]
-//        gMySqlClass.DeleteSql(requiredDict, table: "userroom")
         //在内存数组中移除指定房间
         let deleteSequ:Int = gDC.mAreaList[foot].m_nAreaSequ
         gDC.mAreaList.remove(at: foot)
@@ -77,7 +64,6 @@ class AreaData: NSObject {
             gDC.mAreaList.append(areaInfo)
         }
     }
-    
     
 }
 
