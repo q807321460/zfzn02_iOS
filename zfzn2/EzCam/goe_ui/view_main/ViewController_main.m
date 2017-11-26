@@ -35,16 +35,17 @@
     
     
 }
+
 -(void) viewWillAppear:(BOOL)animated
 {
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [super viewWillAppear:animated];
 }
+
 -(void)enteredBackground:(NSNotification*) notification{
     [m_vv_camlist_manager release_pre_connect];
     [goe_Http cli_lib_cli_active_status:0];
-    
 }
 
 -(void)enterForeground:(NSNotification*) notification{
@@ -67,6 +68,10 @@
 }
 */
 
+- (IBAction)button_back_click:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{NSLog(@"返回");}];
+}
+
 - (IBAction)button_add_click:(id)sender {
     ViewController_adddev *destview=[[ViewController_adddev alloc]initWithNibName:@"ViewController_adddev" bundle:nil];
     [self presentViewController:destview animated:YES completion:nil];
@@ -77,7 +82,7 @@
     destview = [[zxy_FolderViewController alloc]initWithNibName:@"zxy_FolderViewController" bundle:nil];
     [self.navigationController pushViewController:destview animated:YES];
     //[self presentViewController:destview animated:YES completion:nil];
-    destview=nil;
+//    destview=nil;
 }
 
 - (IBAction)button_referesh_click:(id)sender {

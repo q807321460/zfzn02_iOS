@@ -80,7 +80,7 @@
     [mode_file_button_edit setTitle:NSLocalizedString(@"m_edit", @"") forState:UIControlStateNormal];
     [mode_file_button_delete setTitle:NSLocalizedString(@"m_delete", @"") forState:UIControlStateNormal];
     
-    m_file_manager=[pic_file_manager getInstance];
+    m_file_manager = [pic_file_manager getInstance];
     [m_file_manager init_file_path];
     
     m_folder_array=[NSMutableArray new];
@@ -91,7 +91,7 @@
    // m_localCaptions=[NSMutableArray new];
    // m_localImages=[NSMutableArray new];
     
-    my_path= [m_file_manager get_file_path];
+    my_path = [m_file_manager get_file_path];
     NSFileManager* fileMgr = [NSFileManager defaultManager];
     NSArray* tempArray = [fileMgr subpathsOfDirectoryAtPath:my_path error:nil];
     BOOL isfolder=false;

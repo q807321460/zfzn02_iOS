@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 @interface pic_file_manager : NSObject
 {
     NSString* m_path_jpg;
@@ -28,6 +29,9 @@
     BOOL bInit;
     
 }
+
+//@property (nonatomic, weak) NSString *m_path_jpg;
+
 +(pic_file_manager*)getInstance;
 -(BOOL)init_file_path;
 -(NSString*)get_file_path;

@@ -13,10 +13,12 @@
 
 #define  TMP_ABSULATE_PATH_PNG                @"ppviewpng_tmp";
 #define  ABSULATE_PATH_PNG_PRESET             @"ppviewpngpreset";
+
+//static NSString *m_path_jpg;
+
 @implementation pic_file_manager
 
 static pic_file_manager* instance = nil;
-
 - (id)init
 {
     @synchronized(self) {
@@ -37,6 +39,7 @@ static pic_file_manager* instance = nil;
     }
     return instance;
 }
+
 -(BOOL)init_file_path
 {
     if (bInit==true) {
@@ -46,17 +49,17 @@ static pic_file_manager* instance = nil;
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSFileManager *fileManager = [NSFileManager defaultManager];
  
-    m_absulate_path_jpg=@"ppviewjpg";
+    m_absulate_path_jpg=ABSULATE_PATH_JPG;
+//    m_path_jpg = [NSString stringWithFormat:@"%@/%@", documentsDirectory, m_absulate_path_jpg];
     m_path_jpg = [documentsDirectory stringByAppendingPathComponent:m_absulate_path_jpg];
-
     if(![fileManager fileExistsAtPath:m_path_jpg])
     {
         BOOL res=[fileManager createDirectoryAtPath:m_path_jpg withIntermediateDirectories:YES attributes:nil error:nil];
         if (res) {
-            //NSLog(@"文件夹创建成功m_path_jpg");
+            NSLog(@"文件夹创建成功m_path_jpg");
         }
         else{
-            //NSLog(@"文件夹创建失败 m_path_jpg");
+            NSLog(@"文件夹创建失败 m_path_jpg");
         }
     }
     
@@ -69,10 +72,10 @@ static pic_file_manager* instance = nil;
     {
         BOOL res=[fileManager createDirectoryAtPath:m_path_png withIntermediateDirectories:YES attributes:nil error:nil];
         if (res) {
-            //NSLog(@"文件夹创建成功 m_path_png");
+            NSLog(@"文件夹创建成功 m_path_png");
         }
         else{
-            //NSLog(@"文件夹创建失败 m_path_png");
+            NSLog(@"文件夹创建失败 m_path_png");
         }
     }
     m_absulate_path_png=ABSULATE_PATH_PNG_LOCAL;
@@ -81,10 +84,10 @@ static pic_file_manager* instance = nil;
     {
         BOOL res=[fileManager createDirectoryAtPath:m_path_png_local withIntermediateDirectories:YES attributes:nil error:nil];
         if (res) {
-            //NSLog(@"文件夹创建成功 m_path_png");
+            NSLog(@"文件夹创建成功 m_path_png");
         }
         else{
-            //NSLog(@"文件夹创建失败 m_path_png");
+            NSLog(@"文件夹创建失败 m_path_png");
         }
     }
     

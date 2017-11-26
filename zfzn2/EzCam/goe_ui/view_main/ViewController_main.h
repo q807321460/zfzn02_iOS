@@ -34,6 +34,7 @@
     BOOL m_hidden;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableview_cam;
+- (IBAction)button_back_click:(id)sender;
 - (IBAction)button_add_click:(id)sender;
 - (IBAction)button_piclib_click:(id)sender;
 - (IBAction)button_referesh_click:(id)sender;

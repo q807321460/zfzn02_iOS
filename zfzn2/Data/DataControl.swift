@@ -55,7 +55,7 @@ let g_sElectric_type_tv_learn = "09"//学习型空调
     let m_colorFont = UIColor(red: 128/255.0, green: 128/255.0, blue: 128/255.0, alpha: 1)//主页label使用的颜色
     let m_colorPurple = UIColor(red: 139/255, green: 39/255, blue: 114/255, alpha: 1)//紫色，整个app的主色调
     let m_colorTouching = UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1)//手指按下时菜单使用的背景色
-    let m_appVersion = "1.7.035"
+    let m_appVersion = "1.7.041"
     let m_dbVersion = 6//记录当前版本对应的最新数据库版本号，用于更新数据库格式
     
     //以下为天气相关，1.5版本后失效，但是变量暂时保留之
