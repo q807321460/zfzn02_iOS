@@ -88,8 +88,10 @@
     [self.view addSubview:m_replayBtn];
     m_replayBtn.hidden = YES;
 
-    //截图功能
+    //显示工具栏中的几个按钮
     [self layOutBar];
+    
+    //截图
     CGFloat snapBtnHeight = SNAP_BTN_WIDTH * 220 / 192;
     m_snapBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(10, m_screenImg.frame.size.height + 48,
@@ -102,6 +104,8 @@
                   action:@selector(onSnap)
         forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:m_snapBtn];
+    
+    //对讲
     m_talkBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(self.view.center.x - SNAP_BTN_WIDTH / 2,
                           m_screenImg.frame.size.height + 48,
@@ -114,7 +118,7 @@
         forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:m_talkBtn];
 
-    //查看报警快照按钮
+    //录像
     m_recordBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(m_screenFrame.size.width - 10 - SNAP_BTN_WIDTH,
                           m_screenImg.frame.size.height + 48,
