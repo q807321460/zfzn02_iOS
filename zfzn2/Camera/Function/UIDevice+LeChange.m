@@ -187,6 +187,7 @@
                         gDC.mCameraInfo.m_sID = dev->ID;
                         gDC.mCameraInfo.m_sAbility = dev->ability;
                         gDC.mCameraInfo.m_sChannel = [NSString stringWithFormat:@"%ld", dev->channelId[channelFoot]];
+                        NSLog(@"%@", gDC.mCameraInfo.m_sChannel);
                         NSLog(@"onLive device[%@],channel[%@]", gDC.mCameraInfo.m_sID, gDC.mCameraInfo.m_sChannel);
                         break;
                     }

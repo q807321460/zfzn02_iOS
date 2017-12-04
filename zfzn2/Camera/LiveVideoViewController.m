@@ -11,6 +11,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
 #import "MessageViewController.h"
+#import "RecordViewController.h"
 #import "zfzn2-Swift.h"
 
 #define LIVE_BAR_HEIGHT 40.0
@@ -229,8 +230,8 @@
         setBackgroundImage:[UIImage imageNamed:@"list_icon_message_notext.png"]
                   forState:UIControlStateNormal];
     m_messageBtn.tag = 0;
-    [m_messageBtn addTarget:self
-                        action:@selector(onMessage)
+//    onVedio onMessage 记得改回来
+    [m_messageBtn addTarget:self action:@selector(onMessage)
               forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_messageBtn];
 }
@@ -521,12 +522,19 @@
 
 - (void)onMessage
 {
-//    [UIDevice lc_setRotateToSatusBarOrientation];
     UIStoryboard* currentBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MessageViewController* nextView = [currentBoard instantiateViewControllerWithIdentifier:@"messageViewController"];
-//    [nextView SetInfo:m_nAreaListFoot electricFoot:m_nElectricListFoot];
     [nextView setInfo:m_accessToken dev:m_strDevSelected chn:m_devChnSelected];
     [self.navigationController pushViewController:nextView animated:YES];
+}
+
+#pragma mark - SD卡回放界面
+- (void)onVedio
+{
+    UIStoryboard* currentBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RecordViewController* recordView = [currentBoard instantiateViewControllerWithIdentifier:@"recordViewController"];
+    [recordView setInfo:m_accessToken Dev:m_strDevSelected Chn:m_devChnSelected Type:DeviceRecord];
+    [self.navigationController pushViewController:recordView animated:NO];
 }
 
 - (void)onSnap

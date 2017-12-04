@@ -52,7 +52,7 @@ class ElecCurtainViewCtrl: ElecSuperViewCtrl {
     
     func RefreshState() {
         var sStateInfo:String = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sStateInfo
-        if sStateInfo.characters.count < 2 {//这是不允许出现的情况
+        if sStateInfo.count < 2 {//这是不允许出现的情况
             sStateInfo = "00"
         }else {
             sStateInfo = (sStateInfo as NSString).substring(with: NSMakeRange(0, 2))
@@ -106,7 +106,7 @@ class ElecCurtainViewCtrl: ElecSuperViewCtrl {
         }else {
             str = String(format: "%X", percent)
         }
-        while str.characters.count < 10 {
+        while str.count < 10 {
             str = str + "*"
         }
         return str

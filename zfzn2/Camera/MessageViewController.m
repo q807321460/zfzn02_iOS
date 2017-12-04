@@ -23,31 +23,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
-//    UINavigationItem* item = [[UINavigationItem alloc] initWithTitle:@"报警消息列表"];
-//
-//    m_right = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [m_right setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 5 - 40, 0, 50, 30)];
-//    UIImage* img = [UIImage imageNamed:@"common_icon_search.png"];
-//
-//    [m_right setBackgroundImage:img forState:UIControlStateNormal];
-//    [m_right addTarget:self action:@selector(onSearch:) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem* rightBtn = [[UIBarButtonItem alloc] initWithCustomView:m_right];
-//    [item setRightBarButtonItem:rightBtn animated:NO];
-//    super.m_navigationBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-//
-//    UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [left setFrame:CGRectMake(0, 0, 50, 30)];
-//    UIImage* imgLeft = [UIImage imageNamed:@"common_btn_back.png"];
-//
-//    [left setBackgroundImage:imgLeft forState:UIControlStateNormal];
-//    [left addTarget:self action:@selector(onBack:) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
-//    [item setLeftBarButtonItem:leftBtn animated:NO];
-//    [super.m_navigationBar pushNavigationItem:item animated:NO];
-//
-//    [self.view addSubview:super.m_navigationBar];
-
     m_progressInd = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     m_progressInd.transform = CGAffineTransformMakeScale(2.0, 2.0);
     m_progressInd.center = CGPointMake(self.view.center.x, self.view.center.y);
@@ -61,16 +36,16 @@
     [self.view addSubview:m_toastLab];
 
     NSLog(@"%f",self.view.frame.size.height - 49);
-    m_messageList = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49 - 44 - 20)];
-    m_messageList.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:m_messageList];
-    m_messageList.delegate = self;
-    m_messageList.dataSource = self;
+//    self.m_messageList = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49 - 44 - 20)];
+    self.m_messageList.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.m_messageList];
+    self.m_messageList.delegate = self;
+    self.m_messageList.dataSource = self;
 
-    m_messageList.backgroundColor = [UIColor clearColor];
-    m_messageList.separatorColor = [UIColor colorWithRed:217.0 / 255.0 green:217.0 / 255.0 blue:217.0 / 255.0 alpha:1.0];
-    m_messageList.allowsSelection = YES;
-    m_messageList.bounces = NO;
+    self.m_messageList.backgroundColor = [UIColor clearColor];
+    self.m_messageList.separatorColor = [UIColor colorWithRed:217.0 / 255.0 green:217.0 / 255.0 blue:217.0 / 255.0 alpha:1.0];
+    self.m_messageList.allowsSelection = YES;
+    self.m_messageList.bounces = NO;
 
     m_wholePic = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 9 / 16)];
     m_wholePic.center = self.view.center;
@@ -123,7 +98,7 @@
 {
     m_wholePic.hidden = YES;
     [m_wholePic setImage:nil];
-    m_messageList.hidden = NO;
+    self.m_messageList.hidden = NO;
     super.m_navigationBar.hidden = NO;
 }
 - (void)onDelete:(id)sender
@@ -199,7 +174,7 @@
     m_toastLab.hidden = YES;
     m_right.enabled = NO;
     [m_messageListLock lock];
-    m_messageList.hidden = YES;
+    self.m_messageList.hidden = YES;
     [m_messageListLock unlock];
 
     [m_downStatusLock lock];
@@ -232,8 +207,8 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [m_messageListLock lock];
-            [m_messageList reloadData];
-            m_messageList.hidden = NO;
+            [self.m_messageList reloadData];
+            self.m_messageList.hidden = NO;
             [m_messageListLock unlock];
             [self hideLoading];
             m_right.enabled = YES;
@@ -280,7 +255,7 @@
         NSLog(@"cellForRowAtIndexPath index error ,count[%lu],index[%ld]", (unsigned long)[m_msgInfoArray count], (long)[indexPath row]);
         [m_messageListLock unlock];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [m_messageList reloadData];
+            [self.m_messageList reloadData];
         });
         return cell;
     }
@@ -319,7 +294,7 @@
 }
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    if (m_messageList == tableView) {
+    if (self.m_messageList == tableView) {
         if (nil != m_downloadPicture[[indexPath row]].picData) {
             [m_wholePic setImage:[UIImage imageWithData:m_downloadPicture[[indexPath row]].picData]];
         }
@@ -328,7 +303,7 @@
         }
 
         m_wholePic.hidden = NO;
-        m_messageList.hidden = YES;
+        self.m_messageList.hidden = YES;
         self.m_queryView.hidden = YES;
         super.m_navigationBar.hidden = YES;
         [self showLoading];
@@ -449,7 +424,7 @@
             if (0 == iret) {
                 [m_downloadPicture[m_downloadingPos] setData:[NSData dataWithBytes:[dataOut bytes] length:[dataOut length]] status:DOWNLOADFINISHED];
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [m_messageList reloadData];
+                    [self.self.m_messageList reloadData];
                 });
             }
             else {

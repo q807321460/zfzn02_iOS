@@ -322,6 +322,8 @@
 		1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */; };
 		1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB62D721E9F652B00DE198A /* MapKit.framework */; };
 		1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */; };
+		1BCBE4C01FD577D0003CB2EA /* RecordPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCBE4BC1FD577D0003CB2EA /* RecordPlayViewController.m */; };
+		1BCBE4C11FD577D0003CB2EA /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCBE4BD1FD577D0003CB2EA /* RecordViewController.m */; };
 		1BD1F7571FCA9E4A00AEA502 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */; };
 		1BEA09861FA429D300BA28D3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09921FA429D300BA28D3 /* AFNetworking.framework */; };
 		1BEA09871FA429D300BA28D3 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */; };
@@ -1025,6 +1027,10 @@
 		1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneElectricData.swift; sourceTree = "<group>"; };
 		1BB62D721E9F652B00DE198A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
+		1BCBE4BC1FD577D0003CB2EA /* RecordPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordPlayViewController.m; sourceTree = "<group>"; };
+		1BCBE4BD1FD577D0003CB2EA /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		1BCBE4BE1FD577D0003CB2EA /* RecordPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordPlayViewController.h; sourceTree = "<group>"; };
+		1BCBE4BF1FD577D0003CB2EA /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		1BD1F7561FCA9E4A00AEA502 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		1BE482241EADEE8C004C756E /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
@@ -2059,6 +2065,7 @@
 				1B160C231E5871DF002F3BDA /* MessageViewController.h */,
 				1B160C241E5871DF002F3BDA /* MessageViewController.m */,
 				1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */,
+				1BCBE4BB1FD577D0003CB2EA /* Record */,
 				1B6F29D01E460E3C00D19DE9 /* DownloadPicture */,
 				1B6F29D31E460E3C00D19DE9 /* RestApiService */,
 				1B6F295E1E460D7500D19DE9 /* Function */,
@@ -2390,6 +2397,17 @@
 				1BACDA931DCDF07A00BA85C2 /* String-Extras.swift */,
 			);
 			path = SQL;
+			sourceTree = "<group>";
+		};
+		1BCBE4BB1FD577D0003CB2EA /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				1BCBE4BC1FD577D0003CB2EA /* RecordPlayViewController.m */,
+				1BCBE4BE1FD577D0003CB2EA /* RecordPlayViewController.h */,
+				1BCBE4BD1FD577D0003CB2EA /* RecordViewController.m */,
+				1BCBE4BF1FD577D0003CB2EA /* RecordViewController.h */,
+			);
+			path = Record;
 			sourceTree = "<group>";
 		};
 		1BF1AEAB1FAF0A5800A8E27E /* ViewRewrite */ = {
@@ -3119,6 +3137,7 @@
 				1BF1AF8F1FAF0A6F00A8E27E /* AddMasterViewCtrl.swift in Sources */,
 				1B2D6FD01FCA9888006CA0B5 /* UIColor+expanded.m in Sources */,
 				1BF1AFC21FAF236A00A8E27E /* ElecSwitchViewCtrl.swift in Sources */,
+				1BCBE4C11FD577D0003CB2EA /* RecordViewController.m in Sources */,
 				1B2D700D1FCA9888006CA0B5 /* ScanViewController.m in Sources */,
 				1BF1AFC41FAF236A00A8E27E /* ElecWindowViewCtrl.swift in Sources */,
 				1BF1AF6B1FAF0A6F00A8E27E /* SKScNavBar.swift in Sources */,
@@ -3195,6 +3214,7 @@
 				1BF1AF991FAF0A6F00A8E27E /* AddSceneViewCtrl.swift in Sources */,
 				1B2D6FF41FCA9888006CA0B5 /* ViewController_alarm_media.m in Sources */,
 				1B7667BF1EF3CA1C007B21B4 /* JdCategory_CViewController.m in Sources */,
+				1BCBE4C01FD577D0003CB2EA /* RecordPlayViewController.m in Sources */,
 				1B2D70181FCA9888006CA0B5 /* vv_strings.m in Sources */,
 				1B2D70131FCA9888006CA0B5 /* NSString+PinYin.m in Sources */,
 				1B2D6FC21FCA9888006CA0B5 /* InsetsTextField.m in Sources */,

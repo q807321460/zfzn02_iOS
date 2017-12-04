@@ -61,12 +61,12 @@ class ElecDoorViewCtrl: ElecSuperViewCtrl {
             ShowNoticeDispatch("提示", content: "请输入门锁密码", duration: 0.8)
             return
         }
-        if m_ePassword.text!.characters.count > 10 {
+        if m_ePassword.text!.count > 10 {
             ShowNoticeDispatch("提示", content: "密码长度过长", duration: 0.8)
             return
         }
         m_sElectricOrder = m_ePassword.text!
-        while m_sElectricOrder.characters.count < 10 {
+        while m_sElectricOrder.count < 10 {
             m_sElectricOrder = m_sElectricOrder + "*"
         }
         Close()
@@ -77,12 +77,12 @@ class ElecDoorViewCtrl: ElecSuperViewCtrl {
             ShowNoticeDispatch("提示", content: "请输入门锁密码", duration: 0.8)
             return
         }
-        if m_ePassword.text!.characters.count > 10 {
+        if m_ePassword.text!.count > 10 {
             ShowNoticeDispatch("提示", content: "您输入的密码长度过长", duration: 0.8)
             return
         }
         m_sElectricOrder = m_ePassword.text!
-        while m_sElectricOrder.characters.count < 10 {
+        while m_sElectricOrder.count < 10 {
             m_sElectricOrder = m_sElectricOrder + "*"
         }
         Open()

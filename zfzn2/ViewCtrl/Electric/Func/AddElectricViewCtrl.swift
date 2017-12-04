@@ -139,7 +139,7 @@ class AddElectricViewCtrl: UIViewController {
         })
         var sAddLeft:String = ""
         let sSign:String = gDC.m_arrayElectricTypeCode[m_nElectricType] as! String
-        let nSignSize:Int = sSign.characters.count
+        let nSignSize:Int = sSign.count
         if nSignSize == 4 {
             sAddLeft = "0000"
         }else {//nSignSize == 2
@@ -148,7 +148,7 @@ class AddElectricViewCtrl: UIViewController {
         let electricCode = MySocket.sharedInstance.GetElectricCodeFromMaster("<\(gDC.m_arrayElectricTypeCode[m_nElectricType])\(sAddLeft)\(gDC.m_sAddSign)0**********00>")//搜索处于对码状态的电器
         self.m_viewSearching.hideView()
         //需要在这里判断electricCode是否是合法的（比如我添加传感器时对上了开关的码键，结果收到的电器code就会错误）
-        if electricCode.characters.count >= nSignSize {
+        if electricCode.count >= nSignSize {
             let sSign2:String = (electricCode as NSString).substring(with: NSMakeRange(0, nSignSize))
             if sSign2 != sSign {
                 ShowNoticeDispatch("提示", content: "没有找到对应的电器，请确认是否对码成功", duration: 1.0)

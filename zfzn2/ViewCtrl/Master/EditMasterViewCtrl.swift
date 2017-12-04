@@ -81,7 +81,7 @@ class EditMasterViewCtrl: UIViewController {
 
     @IBAction func OnSave(_ sender: AnyObject) {
 //        ShowInfoDispatch("提示", content: "修改主机名功能尚未添加，敬请期待~", duration: 1.5)
-        if m_eMasterName.text?.characters.count == 0 {
+        if m_eMasterName.text?.count == 0 {
             ShowNoticeDispatch("提示", content: "请输入主机名", duration: 0.8)
             return
         }

@@ -244,7 +244,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             m_socketTcp?.write(data, withTimeout: -1, tag: 0)
             m_socketTcp?.readData(withTimeout: -1, tag: GET_ELECTRIC_CODE)
             InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
-            if m_sTcpMasterReturn.characters.count == 0 {
+            if m_sTcpMasterReturn.count == 0 {
                 print("没有接收到有效的电器编号")
             }else {
                 let sStartChar:String = (m_sTcpMasterReturn as NSString).substring(with: NSMakeRange(0, 1))

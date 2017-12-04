@@ -28,7 +28,7 @@
 
     NSDate* m_seleceDate;
     NSString* m_strSelectDate;
-    UITableView* m_messageList;
+//    UITableView* m_messageList;
     NSMutableArray* m_msgInfoArray;
     DownloadPicture* m_downloadPicture[MESSAGE_NUM_MAX];
     UIImageView* m_wholePic;
@@ -47,6 +47,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView* m_MessageNull;
 @property IBOutlet UIView* m_queryView;
 @property IBOutlet UIDatePicker* m_datePicker;
+@property (weak, nonatomic) IBOutlet UITableView *m_messageList;
 
 - (IBAction)onBack:(id)sender;
 //- (void)onSearch:(id)sender;

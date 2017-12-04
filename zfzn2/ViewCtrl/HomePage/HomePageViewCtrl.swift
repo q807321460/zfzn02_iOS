@@ -186,7 +186,7 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
             m_labelWeatherTemperature.text = sWeatherTemperature//当天温度
             //sInfoAll：今日天气实况：气温：18℃；风向/风力：南风 3级；湿度：58%；紫外线强度：中等。空气质量：良。
             let sInfoAll = arrayWeather[10] as? String//各种天气信息
-            let nInfoLength = sInfoAll?.characters.count
+            let nInfoLength = sInfoAll?.count
             let nWindStart = sInfoAll!.positionOf("风向/风力：")
             let nHumidityStart = sInfoAll!.positionOf("；湿度：")
             let nAirQualityStart = sInfoAll!.positionOf("空气质量：")
@@ -197,8 +197,8 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
             //显示天气图片
             let sWeatherFrom = arrayWeather[8] as? String//从某天气状况
             let sWeatherTo = arrayWeather[9] as? String//转至某天气状况
-            let sNameFrom = (sWeatherFrom as NSString?)!.substring(with: NSMakeRange(0, (sWeatherFrom?.characters.count)!-4))
-            let sNameTo = (sWeatherTo as NSString?)!.substring(with: NSMakeRange(0, (sWeatherTo?.characters.count)!-4))
+            let sNameFrom = (sWeatherFrom as NSString?)!.substring(with: NSMakeRange(0, (sWeatherFrom?.count)!-4))
+            let sNameTo = (sWeatherTo as NSString?)!.substring(with: NSMakeRange(0, (sWeatherTo?.count)!-4))
             if sNameFrom == sNameTo {
                 m_imageWeatherFrom.isHidden = true
                 m_imageWeatherTo.image = UIImage(named: sNameTo)

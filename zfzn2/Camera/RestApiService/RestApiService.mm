@@ -86,7 +86,7 @@ static RestApiService* _instance = nil;
 
     req->data.token = CS(m_accessToken);
     req->data.queryRange = CS([sRange UTF8String]);
-
+//    queryLocalRecordNum
     ret = [m_hc request:req resp:resp timeout:10];
     NSLog(@"getDevList ret[%ld]", (long)ret);
     BOOL bret = NO;

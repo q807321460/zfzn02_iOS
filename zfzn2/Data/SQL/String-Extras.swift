@@ -17,7 +17,7 @@ extension String {
 		var pos = -1
 		if let range = self.range(of: sub) {
 			if !range.isEmpty {
-				pos = self.characters.distance(from: self.startIndex, to: range.lowerBound)
+				pos = self.distance(from: self.startIndex, to: range.lowerBound)
 			}
 		}
 		return pos
@@ -25,7 +25,7 @@ extension String {
 	
 	func subStringFrom(_ pos:Int)->String {
 		var substr = ""
-		let start = self.characters.index(self.startIndex, offsetBy: pos)
+		let start = self.index(self.startIndex, offsetBy: pos)
 		let end = self.endIndex
 //		println("String: \(self), start:\(start), end: \(end)")
 		let range = start..<end
@@ -36,7 +36,7 @@ extension String {
 	
 	func subStringTo(_ pos:Int)->String {
 		var substr = ""
-		let end = self.characters.index(self.startIndex, offsetBy: pos-1)
+		let end = self.index(self.startIndex, offsetBy: pos-1)
 		let range = self.startIndex...end
 		substr = self[range]
 		return substr

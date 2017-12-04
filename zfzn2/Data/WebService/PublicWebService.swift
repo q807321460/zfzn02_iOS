@@ -76,7 +76,7 @@ class PublicWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let soapMsg:String = String.localizedStringWithFormat(
             "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><\(methodName) xmlns=\(m_URLNameSpace_weather)></\(methodName)></soap:Body></soap:Envelope>")
         m_URLRequest_weather!.httpBody = (soapMsg.data(using: String.Encoding.utf8))
-        let msgLength:String = "\(soapMsg.characters.count)"
+        let msgLength:String = "\(soapMsg.count)"
         m_URLRequest_weather!.addValue(msgLength, forHTTPHeaderField: "Content-Length")
     }
     
@@ -94,7 +94,7 @@ class PublicWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         }
         let soapMsg:String = String.localizedStringWithFormat("<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><\(methodName) xmlns=\(m_URLNameSpace_weather)>\(mainMsg)</\(methodName)></soap:Body></soap:Envelope>")
         m_URLRequest_weather!.httpBody = (soapMsg.data(using: String.Encoding.utf8))
-        let msgLength:String = "\(soapMsg.characters.count)"
+        let msgLength:String = "\(soapMsg.count)"
         m_URLRequest_weather!.addValue(msgLength, forHTTPHeaderField: "Content-Length")
     }
     

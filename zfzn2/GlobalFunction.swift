@@ -174,13 +174,13 @@ func InitPlistData(){
  */
 func ModifyMarkBit(_ sOriginInfo:String)->String {
     var sum:Int! = 0
-    let nOriginInfoLength:Int = sOriginInfo.characters.count
+    let nOriginInfoLength:Int = sOriginInfo.count
     let sBefore:String = (sOriginInfo as NSString).substring(with: NSMakeRange(1,nOriginInfoLength-4))
     for ch in sBefore.unicodeScalars {
         sum = sum + Int(ch.value)
     }
     let sNumber = String(format: "%X", sum)
-    let sTail:String = (sNumber as NSString).substring(with: NSMakeRange(sNumber.characters.count-2 ,2))
+    let sTail:String = (sNumber as NSString).substring(with: NSMakeRange(sNumber.count-2 ,2))
     let sReturn:String = "<" + sBefore + sTail + ">\r\n"
     return sReturn
 }
@@ -293,11 +293,11 @@ func RefreshElectricStates(_ sReceive:String) -> Bool {
         var sElectricCode:String = ""
         var sElectricState:String = ""
         var sStateInfo:String = ""
-        if sReturn.characters.count == 22 {
+        if sReturn.count == 22 {
             sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 8))
             sElectricState = (sReturn as NSString).substring(with: NSMakeRange(8, 2))
             sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(10, 10))
-        }else if sReturn.characters.count == 26 {
+        }else if sReturn.count == 26 {
             sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 12))
             sElectricState = (sReturn as NSString).substring(with: NSMakeRange(12, 2))
             sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(14, 10))
@@ -400,7 +400,7 @@ func CreateAddressPlist() {
             let array2 = NSMutableArray()
             for j in 0..<arrayCity.count {
                 let str:String = arrayCity[j] as! String
-                let index = str.characters.index(str.endIndex, offsetBy: -8)//去除后面的城市编号
+                let index = str.index(str.endIndex, offsetBy: -8)//去除后面的城市编号
                 let str2:String = str.substring(to: index)
                 array2.add(str2)
             }
