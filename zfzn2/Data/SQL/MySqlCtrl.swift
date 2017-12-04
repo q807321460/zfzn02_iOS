@@ -4,9 +4,8 @@
 //
 //  Created by Hanwen Kong on 16/11/5.
 //  Copyright © 2016年 Hanwen Kong. All rights reserved.
-//
+//  已弃置的类
 //整和了所有的数据库执行指令，方便将来查询维护
-//这个类需要写成单例吗？并没有属于这个类的变量。。。。。。
 
 import Foundation
 

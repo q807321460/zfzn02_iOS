@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 17/4/11.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  已弃置的类
 import Foundation
 import UIKit
 

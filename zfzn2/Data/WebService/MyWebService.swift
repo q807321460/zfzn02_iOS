@@ -99,7 +99,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let soapMsg:String = String.localizedStringWithFormat(
             "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><\(methodName) xmlns=\"http://ws.smarthome.zfznjj.com/\"></\(methodName)></soap:Body></soap:Envelope>")
         m_URLRequest_zfzn!.httpBody = (soapMsg.data(using: String.Encoding.utf8))
-        let msgLength:String = "\(soapMsg.characters.count)"
+        let msgLength:String = "\(soapMsg.count)"
         m_URLRequest_zfzn!.addValue(msgLength, forHTTPHeaderField: "Content-Length")
     }
     
@@ -118,7 +118,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         m_URLNameSpace_zfzn = "\"http://ws.smarthome.zfznjj.com/\""
         let soapMsg:String = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><\(methodName) xmlns=\"http://ws.smarthome.zfznjj.com/\">\(mainMsg)</\(methodName)></soap:Body></soap:Envelope>"
         m_URLRequest_zfzn!.httpBody = (soapMsg.data(using: String.Encoding.utf8))
-        let msgLength:String = "\(soapMsg.characters.count)"
+        let msgLength:String = "\(soapMsg.count)"
         m_URLRequest_zfzn!.addValue(msgLength, forHTTPHeaderField: "Content-Length")
     }
     
@@ -126,7 +126,6 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
      获取Session返回的字符串（根据Key数组的值）, arrayKeyRes:Any
      */
     func GetSessionReturn(_ methodName:String, returnType: String) -> (mainValue:AnyObject, bEmpty:Bool){
-//        let arrayKeyRes2 = arrayKeyRes as! NSArray
         var sReturn:NSString!
         var xmlDoc:NSDictionary!
         var bReceiving:Bool = true
@@ -134,7 +133,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let task = URLSession.shared.dataTask(with: m_URLRequest_zfzn! as URLRequest) {
             (data,response,error) -> Void in
             if error != nil {
-                if methodName != "getElectricStateByUser" {//轮询中，当然不能反复提示没有网络啊
+                if methodName != "getElectricStateByUser" {//轮询中，当然不能反复提示没有网络
                     WebError()
                 }
                 value = ("WebError" as AnyObject, false)
@@ -774,6 +773,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         }
     }
     
+    //加载门锁开锁记录
     func LoadDoorRecord(masterCode:String, electricCode:String) -> [JSON] {
         let methodName:String = "loadDoorRecord"
         let arrayKey = ["masterCode", "electricCode"]
@@ -797,6 +797,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         }
     }
     
+    //加载报警记录
     func LoadAlarmRecord(masterCode:String) -> [JSON] {
         let methodName:String = "loadAlarmRecord"
         let arrayKey = ["masterCode"]
@@ -820,6 +821,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         }
     }
     
+    //更新电器排序序号
     func UpdateElectricSequ(masterCode:String, electricIndex:Int, roomIndex:Int, oldElectricSequ:Int, newElectricSequ:Int) -> String {
         let methodName:String = "updateElectricSequ"
         let arrayKey = ["masterCode", "electricIndex", "roomIndex", "oldElectricSequ","newElectricSequ"]
@@ -831,6 +833,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
+    //判断该电器是否被添加过
     func IsExistElectric(masterCode:String, electricCode:String) -> String {
         let methodName:String = "isExistElectric"
         let arrayKey = ["masterCode", "electricCode"]
@@ -841,6 +844,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
+    //加载分享电器列表
     func LoadSharedElectric(masterCode:String, accountCode:String) -> [NSDictionary]{
         let methodName:String = "loadSharedElectric"
         let arrayKey = ["masterCode", "accountCode"]
@@ -854,6 +858,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! [NSDictionary])
     }
     
+    //删除分享用户
     func DeleteSharedUser(masterCode:String, accountCode:String) -> String {
         let methodName:String = "deleteSharedUser"
         let arrayKey = ["masterCode", "accountCode"]

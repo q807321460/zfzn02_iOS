@@ -114,6 +114,7 @@
         forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:m_talkBtn];
 
+    //查看报警快照按钮
     m_recordBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(m_screenFrame.size.width - 10 - SNAP_BTN_WIDTH,
                           m_screenImg.frame.size.height + 48,
@@ -128,6 +129,7 @@
           forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:m_recordBtn];
 
+    //提示文本
     m_tipLab = [[UILabel alloc]
         initWithFrame:CGRectMake(10,
                           m_screenImg.frame.size.height + 48 + SNAP_BTN_WIDTH + 30,
@@ -176,6 +178,7 @@
     livePlayBarView.alpha = 0.5;
     [self.view addSubview:livePlayBarView];
 
+    //清晰度
     CGFloat liveBarWidth = LIVE_BAR_HEIGHT * 100 / 70;
     m_HDBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(10, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
@@ -187,6 +190,7 @@
         forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_HDBtn];
 
+    //拖动视角
     m_barDivideWidth = (livePlayBarView.frame.size.width - 20 - 4 * liveBarWidth) / 3;
     m_PTZBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(10 + liveBarWidth + m_barDivideWidth, 0,
@@ -200,6 +204,7 @@
         forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_PTZBtn];
 
+    //打开关闭声音
     m_soundBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(10 + 2 * liveBarWidth + 2 * m_barDivideWidth, 0,
                           liveBarWidth, LIVE_BAR_HEIGHT)];
@@ -212,6 +217,7 @@
          forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_soundBtn];
 
+    //报警消息（动态监测）
     m_messageBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(livePlayBarView.frame.size.width - 10 - liveBarWidth,
                           0, liveBarWidth, LIVE_BAR_HEIGHT)];
