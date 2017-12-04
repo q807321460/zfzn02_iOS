@@ -76,6 +76,7 @@
                               m_screenFrame.size.width * 9 / 16)];
 //    [self.view addSubview:m_screenImg];
 
+    //刷新播放按钮
     m_replayBtn = [[UIButton alloc]
         initWithFrame:CGRectMake(0, 0, REPALY_BTN_WIDTH, REPALY_BTN_WIDTH)];
     m_replayBtn.center = CGPointMake(m_screenImg.center.x, m_screenImg.center.y);
@@ -87,6 +88,7 @@
     [self.view addSubview:m_replayBtn];
     m_replayBtn.hidden = YES;
 
+    //截图功能
     [self layOutBar];
     CGFloat snapBtnHeight = SNAP_BTN_WIDTH * 220 / 192;
     m_snapBtn = [[UIButton alloc]

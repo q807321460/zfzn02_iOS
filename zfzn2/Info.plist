@@ -19,9 +19,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.041</string>
+	<string>1.7.045</string>
 	<key>CFBundleVersion</key>
-	<string>1.7.6</string>
+	<string>1.7.8</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>
@@ -49,6 +49,8 @@
 	<string>App需要您的同意,才能访问麦克风</string>
 	<key>NSMotionUsageDescription</key>
 	<string>App需要您的同意,才能访问运动与健身</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App需要您的同意,才能添加视频或图片到相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>App需要您的同意,才能访问相册</string>
 	<key>NSRemindersUsageDescription</key>
@@ -59,6 +61,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

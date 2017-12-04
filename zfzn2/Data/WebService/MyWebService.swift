@@ -146,7 +146,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
                 xmlDoc = NSDictionary(xmlString: sReturn as String)
 //                print("——————————输出Dictionary格式——————————")
 //                if methodName == "loadElectricFromWs" {
-//                    print("\(xmlDoc)")
+                  print("\(xmlDoc)")
 //                }
 //                print("——————————输出Dictionary格式——————————")
                 value = self.GetReturnValue(methodName, dict: xmlDoc, returnType: returnType)//, arrayKeyRes: arrayKeyRes2
@@ -481,7 +481,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
-    //修改电器信息1
+    //修改电器信息，多了一个electricOrder字段，用于指定门磁的开关状态
     func UpdateElectric1(_ masterCode:String, electricCode:String, electricIndex:Int, electricName:String, sceneIndex:Int, electricOrder:String) -> String {
         let methodName:String = "updateElectric1"
         let arrayKey = ["masterCode", "electricCode", "electricIndex", "electricName", "sceneIndex", "electricOrder"]

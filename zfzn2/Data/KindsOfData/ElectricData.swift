@@ -285,7 +285,6 @@ class ElectricData: NSObject {
                 }
             }
         }
-        //在本地数据库中更新 
         var json:JSON!
         var json2:JSON!
         if let jsonData = sJson.data(using: String.Encoding.utf8, allowLossyConversion: false) {
@@ -294,6 +293,8 @@ class ElectricData: NSObject {
                 let sSceneIndex:String = String(sceneIndex)
                 if (dict?[electricOrder]?.string == nil) {
                     dict?[electricOrder] = JSON(jsonString: sSceneIndex)
+                }else {
+                    dict?[electricOrder]?.string = sSceneIndex
                 }
                 json2 = JSON(object: dict!)
                 print(json2)

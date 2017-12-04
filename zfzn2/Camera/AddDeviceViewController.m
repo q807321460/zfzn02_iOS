@@ -192,7 +192,6 @@
 ////////////////////////////////////////////////////////////////////////////////////
 -(void)OnTimer
 {
-//    NSLog(@"测试");
     DataControl *gDC = [DataControl sharedInstance];
     gDC.m_sCameraID = _m_textSerial.text;
     NSString *sRe = [gDC.mElectricData AddElectricToWeb:gDC.mUserInfo.m_sMasterCode areaFoot:self->m_nAreaListFoot electricCode:gDC.m_sCameraToken electricName:self.m_textName.text electricType:8 extra:gDC.mAccountInfo.m_sAccountCode];

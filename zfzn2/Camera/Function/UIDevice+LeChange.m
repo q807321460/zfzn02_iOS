@@ -167,6 +167,7 @@
             bRunning = NO;
             return;
         }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (0 == m_devList.count) {
                 NSLog(@"DeviceViewController getDevList NULL");

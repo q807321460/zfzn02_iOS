@@ -58,6 +58,7 @@ class SharedElecListViewCtrl: UIViewController, UITableViewDelegate, UITableView
         cell.m_imageElectric.image = UIImage(named: gDC.m_arrayElectricImage[type] as! String)
         cell.m_labelElectricName.text = gDC.mSharedElectricList[indexPath.row].m_sElectricName
         let nAreaIndex = gDC.mSharedElectricList[indexPath.row].m_nRoomIndex
+        //这里出现了问题，不能将这里的areaIndex关联到当前areaList
         for i in 0..<gDC.mAreaList.count {
             if gDC.mAreaList[i].m_nAreaIndex == nAreaIndex {
                 cell.m_labelAreaName.text = gDC.mAreaList[i].m_sAreaName

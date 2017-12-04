@@ -32,27 +32,7 @@ class ElecSensorViewCtrl: ElecSuperViewCtrl {//, UITableViewDelegate, UITableVie
             m_imageScene2.isHidden = false
             m_labelSceneName2.isHidden = false
         }
-//        switch type {
-//        case 13:
-//            m_imageElectric.image = UIImage(named: "电器类型_传感器_温度")
-//        case 14:
-//            m_imageElectric.image = UIImage(named: "电器类型_传感器_水浸")
-//        case 15:
-//            m_imageElectric.image = UIImage(named: "电器类型_传感器_门磁")
-//            m_labelScene2.isHidden = false
-//            m_imageScene2.isHidden = false
-//            m_labelSceneName2.isHidden = false
-//        case 16:
-//            m_imageElectric.image = UIImage(named: "电器类型_传感器_燃气")
-//        case 17:
-//            m_imageElectric.image = UIImage(named: "电器类型_传感器_壁挂红外")
-//        case 19:
-//            m_imageElectric.image = UIImage(named: "电器类型_传感器_烟雾")
-//        default:
-//            break
-//        }
         m_labelAreaName.text = gDC.mAreaList[m_nAreaListFoot].m_sAreaName
-        //m_nSceneSelectedIndex = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nSceneIndex
         RefreshUI()
     }
 
@@ -60,16 +40,6 @@ class ElecSensorViewCtrl: ElecSuperViewCtrl {//, UITableViewDelegate, UITableVie
         super.viewWillAppear(animated) // No need for semicolon
         self.navigationItem.title = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricName
         RefreshUI()
-//        m_nSceneSelectedIndex = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nSceneIndex
-//        if m_nSceneSelectedIndex != -1 {
-//            for i in 0..<gDC.mSceneList.count {
-//                if gDC.mSceneList[i].m_nSceneIndex == m_nSceneSelectedIndex {
-//                    m_imageScene.image = gDC.mSceneList[i].m_imageScene
-//                    m_labelSceneName.text = gDC.mSceneList[i].m_sSceneName
-//                    break
-//                }
-//            }
-//        }
     }
     
     func RefreshUI() {
