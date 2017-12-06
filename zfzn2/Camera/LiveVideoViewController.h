@@ -44,6 +44,10 @@ typedef NS_ENUM(NSInteger, ProgressIndType) {
     UIButton* m_PTZBtn;
     UIButton* m_messageBtn;
     UIButton* m_soundBtn;
+    
+    //konnn
+    UIButton* m_localBtn;
+    
     UIButton* m_snapBtn;
     UIButton* m_talkBtn;
     UIButton* m_recordBtn;

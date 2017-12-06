@@ -88,7 +88,7 @@
 {
     [self destroyThread];
 //    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 //- (IBAction)onSearch:(id)sender
 //{

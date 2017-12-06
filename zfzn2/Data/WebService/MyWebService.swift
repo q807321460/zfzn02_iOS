@@ -145,7 +145,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
                 xmlDoc = NSDictionary(xmlString: sReturn as String)
 //                print("——————————输出Dictionary格式——————————")
 //                if methodName == "loadElectricFromWs" {
-                  print("\(xmlDoc)")
+//                  print("\(xmlDoc)")
 //                }
 //                print("——————————输出Dictionary格式——————————")
                 value = self.GetReturnValue(methodName, dict: xmlDoc, returnType: returnType)//, arrayKeyRes: arrayKeyRes2

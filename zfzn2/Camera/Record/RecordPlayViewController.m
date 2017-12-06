@@ -64,19 +64,16 @@ typedef NS_ENUM(NSInteger, PlayState) {
 {
     m_screenFrame = [UIScreen mainScreen].bounds;
 
-    UINavigationItem* item = [[UINavigationItem alloc] initWithTitle:@"录像播放"];
-
-    UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
-    [left setFrame:CGRectMake(0, 0, 50, 30)];
-    UIImage* img = [UIImage imageNamed:@"common_btn_back.png"];
-
-    [left setBackgroundImage:img forState:UIControlStateNormal];
-    [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
-    [item setLeftBarButtonItem:leftBtn animated:NO];
-    [super.m_navigationBar pushNavigationItem:item animated:NO];
-
-    [self.view addSubview:super.m_navigationBar];
+//    UINavigationItem* item = [[UINavigationItem alloc] initWithTitle:@"录像播放"];
+//    UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [left setFrame:CGRectMake(0, 0, 50, 30)];
+//    UIImage* img = [UIImage imageNamed:@"common_btn_back.png"];
+//    [left setBackgroundImage:img forState:UIControlStateNormal];
+//    [left addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
+//    [item setLeftBarButtonItem:leftBtn animated:NO];
+//    [super.m_navigationBar pushNavigationItem:item animated:NO];
+//    [self.view addSubview:super.m_navigationBar];
 
     m_playImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, super.m_yOffset, m_screenFrame.size.width, m_screenFrame.size.width * 9 / 16)];
     [m_playImg setImage:m_imgPicSelected];
@@ -599,7 +596,7 @@ typedef NS_ENUM(NSInteger, PlayState) {
 }
 
 #pragma mark - 返回
-- (void)onBack
+- (IBAction)onBack:(id)sender
 {
     if (m_play) {
         switch (m_playType) {
@@ -614,7 +611,7 @@ typedef NS_ENUM(NSInteger, PlayState) {
         m_playState = Stop;
     }
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

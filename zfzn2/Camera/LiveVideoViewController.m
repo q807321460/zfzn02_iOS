@@ -176,63 +176,50 @@
 
 - (void)layOutBar
 {
-    livePlayBarView = [[UIView alloc]
-        initWithFrame:CGRectMake(0, m_screenImg.frame.size.height - LIVE_BAR_HEIGHT,
-                          m_screenImg.frame.size.width, LIVE_BAR_HEIGHT)];
+    livePlayBarView = [[UIView alloc] initWithFrame:CGRectMake(0, m_screenImg.frame.size.height - LIVE_BAR_HEIGHT, m_screenImg.frame.size.width, LIVE_BAR_HEIGHT)];
     [livePlayBarView setBackgroundColor:[UIColor grayColor]];
     livePlayBarView.alpha = 0.5;
     [self.view addSubview:livePlayBarView];
 
     //清晰度
     CGFloat liveBarWidth = LIVE_BAR_HEIGHT * 100 / 70;
-    m_HDBtn = [[UIButton alloc]
-        initWithFrame:CGRectMake(10, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
-    [m_HDBtn setBackgroundImage:[UIImage imageNamed:@"video_fluent"]
-                       forState:UIControlStateNormal];
+    m_HDBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
+    [m_HDBtn setBackgroundImage:[UIImage imageNamed:@"video_fluent"] forState:UIControlStateNormal];
     m_HDBtn.tag = 0;
-    [m_HDBtn addTarget:self
-                  action:@selector(onDefine)
-        forControlEvents:UIControlEventTouchUpInside];
+    [m_HDBtn addTarget:self action:@selector(onDefine) forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_HDBtn];
 
     //拖动视角
-    m_barDivideWidth = (livePlayBarView.frame.size.width - 20 - 4 * liveBarWidth) / 3;
-    m_PTZBtn = [[UIButton alloc]
-        initWithFrame:CGRectMake(10 + liveBarWidth + m_barDivideWidth, 0,
-                          liveBarWidth, LIVE_BAR_HEIGHT)];
-    [m_PTZBtn setBackgroundImage:[UIImage imageNamed:@"video_yuntai_off"]
-                        forState:UIControlStateNormal];
+//    m_barDivideWidth = (livePlayBarView.frame.size.width - 20 - 4 * liveBarWidth) / 3;
+    m_barDivideWidth = (livePlayBarView.frame.size.width - 20 - 5 * liveBarWidth) / 4;
+    m_PTZBtn = [[UIButton alloc] initWithFrame:CGRectMake(10 + liveBarWidth + m_barDivideWidth, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
+    [m_PTZBtn setBackgroundImage:[UIImage imageNamed:@"video_yuntai_off"] forState:UIControlStateNormal];
     m_PTZBtn.tag = 0;
     m_isEnalbePTZ = NO;
-    [m_PTZBtn addTarget:self
-                  action:@selector(onPTZControl)
-        forControlEvents:UIControlEventTouchUpInside];
+    [m_PTZBtn addTarget:self action:@selector(onPTZControl) forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_PTZBtn];
 
     //打开关闭声音
-    m_soundBtn = [[UIButton alloc]
-        initWithFrame:CGRectMake(10 + 2 * liveBarWidth + 2 * m_barDivideWidth, 0,
-                          liveBarWidth, LIVE_BAR_HEIGHT)];
-    [m_soundBtn setBackgroundImage:[UIImage imageNamed:@"video_sound_on"]
-                          forState:UIControlStateNormal];
+    m_soundBtn = [[UIButton alloc] initWithFrame:CGRectMake(10 + 2 * liveBarWidth + 2 * m_barDivideWidth, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
+    [m_soundBtn setBackgroundImage:[UIImage imageNamed:@"video_sound_on"] forState:UIControlStateNormal];
     m_soundBtn.tag = 0;
     m_soundState = m_soundBtn.tag;
-    [m_soundBtn addTarget:self
-                   action:@selector(onSound)
-         forControlEvents:UIControlEventTouchUpInside];
+    [m_soundBtn addTarget:self action:@selector(onSound) forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_soundBtn];
 
+    //本地录像
+    m_localBtn = [[UIButton alloc] initWithFrame:CGRectMake(10 + 3 * liveBarWidth + 3 * m_barDivideWidth, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
+    [m_localBtn setBackgroundImage:[UIImage imageNamed:@"videoplay_icon_local"] forState:UIControlStateNormal];
+    m_localBtn.tag = 0;
+    m_soundState = m_localBtn.tag;
+    [m_localBtn addTarget:self action:@selector(onVideo) forControlEvents:UIControlEventTouchUpInside];
+    [livePlayBarView addSubview:m_localBtn];
+    
     //报警消息（动态监测）
-    m_messageBtn = [[UIButton alloc]
-        initWithFrame:CGRectMake(livePlayBarView.frame.size.width - 10 - liveBarWidth,
-                          0, liveBarWidth, LIVE_BAR_HEIGHT)];
-    [m_messageBtn
-        setBackgroundImage:[UIImage imageNamed:@"list_icon_message_notext.png"]
-                  forState:UIControlStateNormal];
+    m_messageBtn = [[UIButton alloc] initWithFrame:CGRectMake(livePlayBarView.frame.size.width - 10 - liveBarWidth, 0, liveBarWidth, LIVE_BAR_HEIGHT)];
+    [m_messageBtn setBackgroundImage:[UIImage imageNamed:@"list_icon_message_notext.png"] forState:UIControlStateNormal];
     m_messageBtn.tag = 0;
-//    onVedio onMessage 记得改回来
-    [m_messageBtn addTarget:self action:@selector(onMessage)
-              forControlEvents:UIControlEventTouchUpInside];
+    [m_messageBtn addTarget:self action:@selector(onMessage) forControlEvents:UIControlEventTouchUpInside];
     [livePlayBarView addSubview:m_messageBtn];
 }
 
@@ -529,7 +516,7 @@
 }
 
 #pragma mark - SD卡回放界面
-- (void)onVedio
+- (void)onVideo
 {
     UIStoryboard* currentBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     RecordViewController* recordView = [currentBoard instantiateViewControllerWithIdentifier:@"recordViewController"];

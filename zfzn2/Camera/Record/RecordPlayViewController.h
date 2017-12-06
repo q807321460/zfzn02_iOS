@@ -65,4 +65,6 @@ typedef NS_ENUM(NSInteger, HLSResultCode) {
 
 - (void)onResignActive:(id)sender;
 
+- (IBAction)onBack:(id)sender;
+
 @end

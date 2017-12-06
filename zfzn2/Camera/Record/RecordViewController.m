@@ -292,7 +292,7 @@
 
     [m_recInfoLock unlock];
     UIStoryboard* currentBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    RecordPlayViewController* recordPlayView = [currentBoard instantiateViewControllerWithIdentifier:@"RecordPlay"];
+    RecordPlayViewController* recordPlayView = [currentBoard instantiateViewControllerWithIdentifier:@"recordPlayViewController"];
     [recordPlayView setInfo:m_accessToken Dev:m_strDevSelected Chn:m_devChnSelected Type:m_recordType];
     [recordPlayView setRecInfo:m_strRecSelected Begin:m_beginTimeSelected End:m_endTimeSelected Img:m_imgPicSelected];
     [self.navigationController pushViewController:recordPlayView animated:NO];
