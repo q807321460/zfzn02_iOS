@@ -117,15 +117,9 @@ class ElectricData: NSObject {
     }
     
     func DeleteElectrics(_ masterCode:String) {
-//        let requiredDict:NSMutableDictionary = ["master_code": masterCode, "account_code": gDC.mAccountInfo.m_sAccountCode]
-//        gMySqlClass.DeleteSql(requiredDict, table: "electrics")
     }
     
     func DeleteElectric(masterCode:String, electricIndex:Int, electricSequ:Int, areaFoot:Int) {
-        //首先从本地数据库中删除
-//        let requiredDict:NSMutableDictionary = ["master_code": masterCode, "electric_index": electricIndex]
-//        gMySqlClass.DeleteSql(requiredDict, table: "electrics")
-        //在内存数据中删除，由于在服务器端已经删除了情景中的相同电器，所以这里也需要在本地数据库和内存中删除
         for i in 0..<gDC.mSceneList.count {
             //双重for循环是为了防止出现数组越界
             for _ in 0..<gDC.mSceneList[i].mSceneElectricList.count {
@@ -148,10 +142,6 @@ class ElectricData: NSObject {
         for i in 0..<gDC.mAreaList[areaFoot].mElectricList.count {
             if gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ > electricSequ {
                 gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ = gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ - 1
-                //将新的sequ重新写到本地数据库中，其实这一步是没有必要的
-//                let dictSet:NSMutableDictionary = ["electric_sequ":gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ]
-//                let dictRequired:NSMutableDictionary = ["electric_index":gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricIndex]
-//                gMySqlClass.UpdateSql(dictSet, requiredData: dictRequired, table: "electrics")
             }
         }
     }
@@ -400,6 +390,45 @@ class ElectricData: NSObject {
         for electric in gDC.mAreaList[roomFoot].mElectricList {
             if (electric.m_nElectricIndex == electricIndex) {
                 electric.m_nElectricSequ = newSequ
+            }
+        }
+    }
+    
+    //移动电器到其他房间
+    func MoveElectricToAnotherRoom(electricIndex:Int, targetRoomIndex:Int, areaFoot:Int) {
+        var electric:ElectricInfoData!
+        var electricSequ:Int!
+        var targetRoomFoot:Int!
+        //在当前房间删除
+        for i in 0..<gDC.mAreaList[areaFoot].mElectricList.count {
+            if gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricIndex == electricIndex {
+                electric = gDC.mAreaList[areaFoot].mElectricList[i]
+                electricSequ = electric.m_nElectricSequ
+                gDC.mAreaList[areaFoot].mElectricList.remove(at: i)
+                break
+            }
+        }
+        //调整之前房间中的电器序号sequ
+        for i in 0..<gDC.mAreaList[areaFoot].mElectricList.count {
+            if gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ > electricSequ {
+                gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ = gDC.mAreaList[areaFoot].mElectricList[i].m_nElectricSequ - 1
+            }
+        }
+        //在新的房间中添加
+        for i in 0..<gDC.mAreaList.count {
+            if (gDC.mAreaList[i].m_nAreaIndex == targetRoomIndex) {
+                targetRoomFoot = i
+                break
+            }
+        }
+        electric.m_nElectricSequ = gDC.mAreaList[targetRoomFoot].mElectricList.count
+        gDC.mAreaList[targetRoomFoot].mElectricList.append(electric)
+        //调整情景模式中，该电器的roomIndex值
+        for i in 0..<gDC.mSceneList.count {
+            for j in 0..<gDC.mSceneList[i].mSceneElectricList.count {
+                if (gDC.mSceneList[i].mSceneElectricList[j].m_nElectricIndex == electricIndex) {
+                    gDC.mSceneList[i].mSceneElectricList[j].m_nRoomIndex = targetRoomIndex
+                }
             }
         }
     }

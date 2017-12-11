@@ -56,8 +56,6 @@ class SceneElectricData: NSObject {
     }
     
     func DeleteSceneElectricByFoot(_ sceneFoot:Int, electricIndex:Int) {
-//        let dictRequired:NSMutableDictionary = ["master_code": gDC.mUserInfo.m_sMasterCode, "scene_index": gDC.mSceneList[sceneFoot].m_nSceneIndex, "electric_index": electricIndex]
-//        gMySqlClass.DeleteSql(dictRequired, table: "sceneelectrics")
         var nSceneElectricFoot:Int!
         for i in 0..<gDC.mSceneList[sceneFoot].mSceneElectricList.count {
             if gDC.mSceneList[sceneFoot].mSceneElectricList[i].m_nElectricIndex == electricIndex {

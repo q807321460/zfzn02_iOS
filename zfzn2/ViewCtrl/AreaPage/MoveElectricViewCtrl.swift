@@ -82,12 +82,27 @@ class MoveElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
                         electricIndex: electricIndex,
                         roomIndex: targetRoomIndex
                     )
-                    
+                    WebMoveElectric(re, electricIndex: electricIndex, targetRoomIndex: targetRoomIndex)
                     break
                 }
             }
         }
-        tableView.deselectRow(at: indexPath, animated: false)//手指抬起后直接取消按下时的深色状态
+        ShowInfoDispatch("提示", content: "移动完成", duration: 0.5)
+        gDC.m_bRefreshAreaList = true
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    func WebMoveElectric(_ responseValue:String, electricIndex:Int, targetRoomIndex:Int) {
+        switch responseValue{
+        case "WebError":
+            break
+        case "1":
+            gDC.mElectricData.MoveElectricToAnotherRoom(electricIndex: electricIndex, targetRoomIndex: targetRoomIndex, areaFoot: m_nAreaListFoot)
+        default:
+            ShowNoticeDispatch("错误", content: "移动失败", duration: 1.0)
+            break
+        }
     }
 
 }

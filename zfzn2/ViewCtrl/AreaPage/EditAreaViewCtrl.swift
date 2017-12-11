@@ -54,12 +54,11 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated) // No need for semicolon
-//        m_collectionElectric.reloadData()
+        super.viewWillAppear(animated)
+        m_collectionElectric.reloadData()
     }
     
     @IBAction func OnBack(_ sender: UIBarButtonItem) {

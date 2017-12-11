@@ -308,9 +308,117 @@
 		1B7FC36C1E9CC73F00209C41 /* PublicWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */; };
 		1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B7FC36D1E9DBA9700209C41 /* address.plist */; };
 		1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8305481DD017890070FDD3 /* MyWebService.swift */; };
-		1B83A7441FDE72200013047B /* MoveElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7431FDE72200013047B /* MoveElectricViewCtrl.swift */; };
-		1B83A7461FDE89BE0013047B /* MyAreaCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7451FDE89BE0013047B /* MyAreaCell2.xib */; };
-		1B83A7481FDE89D50013047B /* MyAreaCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7471FDE89D50013047B /* MyAreaCell2.swift */; };
+		1B83A77A1FDEAF150013047B /* MiniSceneAndArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A74B1FDEAF140013047B /* MiniSceneAndArea.swift */; };
+		1B83A77B1FDEAF150013047B /* MiniSceneAndArea.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A74C1FDEAF140013047B /* MiniSceneAndArea.xib */; };
+		1B83A77C1FDEAF150013047B /* MiniElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A74D1FDEAF140013047B /* MiniElectric.swift */; };
+		1B83A77D1FDEAF150013047B /* AddElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A74E1FDEAF140013047B /* AddElectric.xib */; };
+		1B83A77E1FDEAF150013047B /* DeleteElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A74F1FDEAF140013047B /* DeleteElectric.swift */; };
+		1B83A77F1FDEAF150013047B /* MiniElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7501FDEAF140013047B /* MiniElectric.xib */; };
+		1B83A7801FDEAF150013047B /* DeleteElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7511FDEAF140013047B /* DeleteElectric.xib */; };
+		1B83A7811FDEAF150013047B /* AddElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7521FDEAF140013047B /* AddElectric.swift */; };
+		1B83A7821FDEAF150013047B /* MySceneElectricView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7541FDEAF140013047B /* MySceneElectricView.xib */; };
+		1B83A7831FDEAF150013047B /* MySceneElectricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7551FDEAF140013047B /* MySceneElectricView.swift */; };
+		1B83A7841FDEAF150013047B /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7571FDEAF140013047B /* SCLAlertView.swift */; };
+		1B83A7851FDEAF150013047B /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7581FDEAF140013047B /* SCLExtensions.swift */; };
+		1B83A7861FDEAF150013047B /* MyAccountImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A75A1FDEAF140013047B /* MyAccountImageCell.swift */; };
+		1B83A7871FDEAF150013047B /* MySensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A75B1FDEAF140013047B /* MySensorCell.xib */; };
+		1B83A7881FDEAF150013047B /* MySceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A75C1FDEAF140013047B /* MySceneCell.xib */; };
+		1B83A7891FDEAF150013047B /* DoorRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A75D1FDEAF140013047B /* DoorRecordCell.xib */; };
+		1B83A78A1FDEAF150013047B /* MyMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A75E1FDEAF140013047B /* MyMasterCell.xib */; };
+		1B83A78B1FDEAF150013047B /* EditSceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A75F1FDEAF140013047B /* EditSceneElectricCell.swift */; };
+		1B83A78C1FDEAF150013047B /* MySharedAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7601FDEAF140013047B /* MySharedAccountCell.swift */; };
+		1B83A78D1FDEAF150013047B /* MySceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7611FDEAF140013047B /* MySceneElectricCell.swift */; };
+		1B83A78E1FDEAF150013047B /* MyAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7621FDEAF140013047B /* MyAccountInfoCell.swift */; };
+		1B83A78F1FDEAF150013047B /* MyAreaCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7631FDEAF140013047B /* MyAreaCell2.swift */; };
+		1B83A7901FDEAF150013047B /* MySceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7641FDEAF140013047B /* MySceneElectricCell.xib */; };
+		1B83A7911FDEAF150013047B /* EditSceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7651FDEAF140013047B /* EditSceneElectricCell.xib */; };
+		1B83A7921FDEAF150013047B /* MyMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7661FDEAF140013047B /* MyMasterCell.swift */; };
+		1B83A7931FDEAF150013047B /* SharedAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7671FDEAF140013047B /* SharedAccountInfoCell.xib */; };
+		1B83A7941FDEAF160013047B /* SharedAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7681FDEAF140013047B /* SharedAccountInfoCell.swift */; };
+		1B83A7951FDEAF160013047B /* AlarmRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7691FDEAF140013047B /* AlarmRecordCell.swift */; };
+		1B83A7961FDEAF160013047B /* AddSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A76A1FDEAF140013047B /* AddSceneCell.swift */; };
+		1B83A7971FDEAF160013047B /* MySensorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A76B1FDEAF140013047B /* MySensorCell.swift */; };
+		1B83A7981FDEAF160013047B /* SharedElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A76C1FDEAF140013047B /* SharedElectricCell.swift */; };
+		1B83A7991FDEAF160013047B /* MyAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A76D1FDEAF140013047B /* MyAreaCell.swift */; };
+		1B83A79A1FDEAF160013047B /* MyAreaCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A76E1FDEAF140013047B /* MyAreaCell2.xib */; };
+		1B83A79B1FDEAF160013047B /* MySceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A76F1FDEAF140013047B /* MySceneCell.swift */; };
+		1B83A79C1FDEAF160013047B /* AddSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7701FDEAF140013047B /* AddSceneCell.xib */; };
+		1B83A79D1FDEAF160013047B /* AlarmRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7711FDEAF140013047B /* AlarmRecordCell.xib */; };
+		1B83A79E1FDEAF160013047B /* SharedElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7721FDEAF140013047B /* SharedElectricCell.xib */; };
+		1B83A79F1FDEAF160013047B /* MyAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7731FDEAF140013047B /* MyAreaCell.xib */; };
+		1B83A7A01FDEAF160013047B /* MyAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7741FDEAF140013047B /* MyAccountInfoCell.xib */; };
+		1B83A7A11FDEAF160013047B /* MySharedAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7751FDEAF140013047B /* MySharedAccountCell.xib */; };
+		1B83A7A21FDEAF160013047B /* DoorRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7761FDEAF140013047B /* DoorRecordCell.swift */; };
+		1B83A7A31FDEAF160013047B /* MyAccountImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7771FDEAF140013047B /* MyAccountImageCell.xib */; };
+		1B83A7A41FDEAF160013047B /* ETKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7791FDEAF140013047B /* ETKeyButton.swift */; };
+		1B83A8001FDEAF480013047B /* SensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7A71FDEAF470013047B /* SensorViewCtrl.swift */; };
+		1B83A8011FDEAF480013047B /* HomePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7A91FDEAF470013047B /* HomePageViewCtrl.swift */; };
+		1B83A8021FDEAF480013047B /* MainTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7AA1FDEAF470013047B /* MainTabBarCtrl.swift */; };
+		1B83A8031FDEAF480013047B /* AlarmRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7AB1FDEAF470013047B /* AlarmRecordViewCtrl.swift */; };
+		1B83A8041FDEAF480013047B /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7AD1FDEAF470013047B /* NirKxMenu.m */; };
+		1B83A8051FDEAF480013047B /* AreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B01FDEAF470013047B /* AreaViewCtrl.swift */; };
+		1B83A8061FDEAF480013047B /* SelectedAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B11FDEAF470013047B /* SelectedAreaViewCtrl.swift */; };
+		1B83A8071FDEAF480013047B /* AddAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B21FDEAF470013047B /* AddAreaViewCtrl.swift */; };
+		1B83A8081FDEAF480013047B /* EditAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B31FDEAF470013047B /* EditAreaViewCtrl.swift */; };
+		1B83A8091FDEAF480013047B /* MoveElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B41FDEAF470013047B /* MoveElectricViewCtrl.swift */; };
+		1B83A80A1FDEAF480013047B /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B61FDEAF470013047B /* VPImageCropperViewController.m */; };
+		1B83A80B1FDEAF480013047B /* SKMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7B91FDEAF470013047B /* SKMacros.swift */; };
+		1B83A80C1FDEAF480013047B /* SKScNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7BB1FDEAF470013047B /* SKScNavViewController.swift */; };
+		1B83A80D1FDEAF480013047B /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7BD1FDEAF470013047B /* SKScNavBar.swift */; };
+		1B83A80E1FDEAF480013047B /* SKLaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7BE1FDEAF470013047B /* SKLaunchMenu.swift */; };
+		1B83A80F1FDEAF480013047B /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7BF1FDEAF470013047B /* SKLaunchMenuItem.swift */; };
+		1B83A8101FDEAF480013047B /* SettingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C11FDEAF470013047B /* SettingViewCtrl.swift */; };
+		1B83A8111FDEAF480013047B /* SwitchCityViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C21FDEAF470013047B /* SwitchCityViewCtrl.swift */; };
+		1B83A8121FDEAF480013047B /* LeftMenuViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C41FDEAF470013047B /* LeftMenuViewCtrl.swift */; };
+		1B83A8131FDEAF480013047B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C61FDEAF470013047B /* SWRevealViewController.m */; };
+		1B83A8141FDEAF480013047B /* SharedAccountViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C81FDEAF470013047B /* SharedAccountViewCtrl.swift */; };
+		1B83A8151FDEAF480013047B /* AddMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C91FDEAF470013047B /* AddMasterViewCtrl.swift */; };
+		1B83A8161FDEAF480013047B /* MyMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CA1FDEAF470013047B /* MyMasterViewCtrl.swift */; };
+		1B83A8171FDEAF480013047B /* ShareMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CB1FDEAF470013047B /* ShareMasterViewCtrl.swift */; };
+		1B83A8181FDEAF480013047B /* SharedListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CC1FDEAF470013047B /* SharedListViewCtrl.swift */; };
+		1B83A8191FDEAF480013047B /* EditMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CD1FDEAF470013047B /* EditMasterViewCtrl.swift */; };
+		1B83A81A1FDEAF480013047B /* AddMasterNaviCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CE1FDEAF470013047B /* AddMasterNaviCtrl.swift */; };
+		1B83A81B1FDEAF480013047B /* SharedElecListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CF1FDEAF470013047B /* SharedElecListViewCtrl.swift */; };
+		1B83A81C1FDEAF480013047B /* SceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D11FDEAF470013047B /* SceneViewCtrl.swift */; };
+		1B83A81D1FDEAF480013047B /* AddSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D21FDEAF470013047B /* AddSceneElectricViewCtrl.swift */; };
+		1B83A81E1FDEAF480013047B /* ScenePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D31FDEAF470013047B /* ScenePageViewCtrl.swift */; };
+		1B83A81F1FDEAF480013047B /* EditSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D41FDEAF470013047B /* EditSceneElectricViewCtrl.swift */; };
+		1B83A8201FDEAF480013047B /* AddSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D51FDEAF470013047B /* AddSceneViewCtrl.swift */; };
+		1B83A8211FDEAF480013047B /* ViewPagerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D61FDEAF470013047B /* ViewPagerIndicator.swift */; };
+		1B83A8221FDEAF480013047B /* EditSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7D71FDEAF470013047B /* EditSceneViewCtrl.swift */; };
+		1B83A8231FDEAF480013047B /* ElecSensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7DA1FDEAF470013047B /* ElecSensorViewCtrl.swift */; };
+		1B83A8241FDEAF480013047B /* ElecSuperViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7DB1FDEAF470013047B /* ElecSuperViewCtrl.swift */; };
+		1B83A8251FDEAF480013047B /* ElecDoorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7DC1FDEAF470013047B /* ElecDoorViewCtrl.swift */; };
+		1B83A8261FDEAF480013047B /* ElecTvViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7DD1FDEAF470013047B /* ElecTvViewCtrl.swift */; };
+		1B83A8271FDEAF480013047B /* ElecHornViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7DE1FDEAF470013047B /* ElecHornViewCtrl.swift */; };
+		1B83A8281FDEAF480013047B /* ElecClothesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7DF1FDEAF470013047B /* ElecClothesViewCtrl.swift */; };
+		1B83A8291FDEAF480013047B /* ElecWindowViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E01FDEAF470013047B /* ElecWindowViewCtrl.swift */; };
+		1B83A82A1FDEAF480013047B /* ElecAirViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E11FDEAF470013047B /* ElecAirViewCtrl.swift */; };
+		1B83A82B1FDEAF480013047B /* ElecAirLearnViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E21FDEAF470013047B /* ElecAirLearnViewCtrl.swift */; };
+		1B83A82C1FDEAF480013047B /* ElecCurtainViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E31FDEAF470013047B /* ElecCurtainViewCtrl.swift */; };
+		1B83A82D1FDEAF480013047B /* ElecDoor2ViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E41FDEAF470013047B /* ElecDoor2ViewCtrl.swift */; };
+		1B83A82E1FDEAF480013047B /* ElecSceneSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E51FDEAF470013047B /* ElecSceneSwitchViewCtrl.swift */; };
+		1B83A82F1FDEAF480013047B /* ElecSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E61FDEAF470013047B /* ElecSwitchViewCtrl.swift */; };
+		1B83A8301FDEAF480013047B /* DoorRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E81FDEAF470013047B /* DoorRecordViewCtrl.swift */; };
+		1B83A8311FDEAF480013047B /* EditElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7E91FDEAF470013047B /* EditElectricViewCtrl.swift */; };
+		1B83A8321FDEAF480013047B /* AddElectricTypeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7EA1FDEAF470013047B /* AddElectricTypeViewCtrl.swift */; };
+		1B83A8331FDEAF480013047B /* AddElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7EB1FDEAF470013047B /* AddElectricViewCtrl.swift */; };
+		1B83A8341FDEAF480013047B /* ChangeAccountEmailViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7ED1FDEAF470013047B /* ChangeAccountEmailViewCtrl.swift */; };
+		1B83A8351FDEAF480013047B /* ChangeAccountPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7EE1FDEAF470013047B /* ChangeAccountPasswordViewCtrl.swift */; };
+		1B83A8361FDEAF480013047B /* AccountInfoViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7EF1FDEAF470013047B /* AccountInfoViewCtrl.swift */; };
+		1B83A8371FDEAF480013047B /* ChangeAccountAddressViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7F01FDEAF470013047B /* ChangeAccountAddressViewCtrl.swift */; };
+		1B83A8381FDEAF480013047B /* ChangeAccountNameViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7F11FDEAF470013047B /* ChangeAccountNameViewCtrl.swift */; };
+		1B83A8391FDEAF480013047B /* VoiceReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7F51FDEAF470013047B /* VoiceReachability.swift */; };
+		1B83A83A1FDEAF480013047B /* VoiceUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7F61FDEAF470013047B /* VoiceUserInfo.swift */; };
+		1B83A83B1FDEAF480013047B /* VoiceConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7F71FDEAF470013047B /* VoiceConfWifiViewCtrl.swift */; };
+		1B83A83C1FDEAF480013047B /* SmartConfigClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B83A7F81FDEAF470013047B /* SmartConfigClient.framework */; };
+		1B83A83D1FDEAF480013047B /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7F91FDEAF470013047B /* Toast.swift */; };
+		1B83A83E1FDEAF480013047B /* MasterConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FA1FDEAF470013047B /* MasterConfWifiViewCtrl.swift */; };
+		1B83A83F1FDEAF480013047B /* RegisterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FB1FDEAF470013047B /* RegisterViewCtrl.swift */; };
+		1B83A8401FDEAF480013047B /* SetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FC1FDEAF470013047B /* SetPasswordViewCtrl.swift */; };
+		1B83A8411FDEAF480013047B /* ResetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FD1FDEAF470013047B /* ResetPasswordViewCtrl.swift */; };
+		1B83A8421FDEAF480013047B /* FindPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FE1FDEAF470013047B /* FindPasswordViewCtrl.swift */; };
+		1B83A8431FDEAF480013047B /* LoginViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FF1FDEAF470013047B /* LoginViewCtrl.swift */; };
 		1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */; };
 		1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */; };
 		1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */; };
@@ -341,114 +449,6 @@
 		1BEA09901FA429D300BA28D3 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */; };
 		1BEA09911FA429D300BA28D3 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */; };
 		1BEEAF151DD9AE6900E17617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEEAF141DD9AE6900E17617 /* Main.storyboard */; };
-		1BF1AEDA1FAF0A5800A8E27E /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEAD1FAF0A5800A8E27E /* SCLAlertView.swift */; };
-		1BF1AEDB1FAF0A5800A8E27E /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEAE1FAF0A5800A8E27E /* SCLExtensions.swift */; };
-		1BF1AEDC1FAF0A5800A8E27E /* AddElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB01FAF0A5800A8E27E /* AddElectric.swift */; };
-		1BF1AEDD1FAF0A5800A8E27E /* AddElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB11FAF0A5800A8E27E /* AddElectric.xib */; };
-		1BF1AEDE1FAF0A5800A8E27E /* DeleteElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB21FAF0A5800A8E27E /* DeleteElectric.swift */; };
-		1BF1AEDF1FAF0A5800A8E27E /* DeleteElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB31FAF0A5800A8E27E /* DeleteElectric.xib */; };
-		1BF1AEE01FAF0A5800A8E27E /* MiniElectric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB41FAF0A5800A8E27E /* MiniElectric.swift */; };
-		1BF1AEE11FAF0A5800A8E27E /* MiniElectric.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB51FAF0A5800A8E27E /* MiniElectric.xib */; };
-		1BF1AEE21FAF0A5800A8E27E /* MiniSceneAndArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB61FAF0A5800A8E27E /* MiniSceneAndArea.swift */; };
-		1BF1AEE31FAF0A5800A8E27E /* MiniSceneAndArea.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB71FAF0A5800A8E27E /* MiniSceneAndArea.xib */; };
-		1BF1AEE41FAF0A5800A8E27E /* ETKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEB91FAF0A5800A8E27E /* ETKeyButton.swift */; };
-		1BF1AEE51FAF0A5800A8E27E /* AddSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBB1FAF0A5800A8E27E /* AddSceneCell.swift */; };
-		1BF1AEE61FAF0A5800A8E27E /* AddSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBC1FAF0A5800A8E27E /* AddSceneCell.xib */; };
-		1BF1AEE71FAF0A5800A8E27E /* AlarmRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBD1FAF0A5800A8E27E /* AlarmRecordCell.swift */; };
-		1BF1AEE81FAF0A5800A8E27E /* AlarmRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBE1FAF0A5800A8E27E /* AlarmRecordCell.xib */; };
-		1BF1AEE91FAF0A5800A8E27E /* DoorRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEBF1FAF0A5800A8E27E /* DoorRecordCell.swift */; };
-		1BF1AEEA1FAF0A5800A8E27E /* DoorRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC01FAF0A5800A8E27E /* DoorRecordCell.xib */; };
-		1BF1AEEB1FAF0A5800A8E27E /* EditSceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC11FAF0A5800A8E27E /* EditSceneElectricCell.swift */; };
-		1BF1AEEC1FAF0A5800A8E27E /* EditSceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC21FAF0A5800A8E27E /* EditSceneElectricCell.xib */; };
-		1BF1AEED1FAF0A5800A8E27E /* MyAccountImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC31FAF0A5800A8E27E /* MyAccountImageCell.swift */; };
-		1BF1AEEE1FAF0A5800A8E27E /* MyAccountImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC41FAF0A5800A8E27E /* MyAccountImageCell.xib */; };
-		1BF1AEEF1FAF0A5800A8E27E /* MyAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC51FAF0A5800A8E27E /* MyAccountInfoCell.swift */; };
-		1BF1AEF01FAF0A5800A8E27E /* MyAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */; };
-		1BF1AEF11FAF0A5800A8E27E /* MyAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */; };
-		1BF1AEF21FAF0A5800A8E27E /* MyAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */; };
-		1BF1AEF31FAF0A5800A8E27E /* MyMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */; };
-		1BF1AEF41FAF0A5800A8E27E /* MyMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */; };
-		1BF1AEF51FAF0A5800A8E27E /* MySceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */; };
-		1BF1AEF61FAF0A5800A8E27E /* MySceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AECC1FAF0A5800A8E27E /* MySceneCell.xib */; };
-		1BF1AEF71FAF0A5800A8E27E /* MySceneElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AECD1FAF0A5800A8E27E /* MySceneElectricCell.swift */; };
-		1BF1AEF81FAF0A5800A8E27E /* MySceneElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AECE1FAF0A5800A8E27E /* MySceneElectricCell.xib */; };
-		1BF1AEF91FAF0A5800A8E27E /* MySensorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AECF1FAF0A5800A8E27E /* MySensorCell.swift */; };
-		1BF1AEFA1FAF0A5800A8E27E /* MySensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED01FAF0A5800A8E27E /* MySensorCell.xib */; };
-		1BF1AEFB1FAF0A5800A8E27E /* MySharedAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED11FAF0A5800A8E27E /* MySharedAccountCell.swift */; };
-		1BF1AEFC1FAF0A5800A8E27E /* MySharedAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED21FAF0A5800A8E27E /* MySharedAccountCell.xib */; };
-		1BF1AEFD1FAF0A5800A8E27E /* SharedAccountInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED31FAF0A5800A8E27E /* SharedAccountInfoCell.swift */; };
-		1BF1AEFE1FAF0A5800A8E27E /* SharedAccountInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED41FAF0A5800A8E27E /* SharedAccountInfoCell.xib */; };
-		1BF1AEFF1FAF0A5800A8E27E /* SharedElectricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED51FAF0A5800A8E27E /* SharedElectricCell.swift */; };
-		1BF1AF001FAF0A5800A8E27E /* SharedElectricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED61FAF0A5800A8E27E /* SharedElectricCell.xib */; };
-		1BF1AF011FAF0A5800A8E27E /* MySceneElectricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AED81FAF0A5800A8E27E /* MySceneElectricView.swift */; };
-		1BF1AF021FAF0A5800A8E27E /* MySceneElectricView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF1AED91FAF0A5800A8E27E /* MySceneElectricView.xib */; };
-		1BF1AF5D1FAF0A6F00A8E27E /* AccountInfoViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF051FAF0A6E00A8E27E /* AccountInfoViewCtrl.swift */; };
-		1BF1AF5E1FAF0A6F00A8E27E /* ChangeAccountAddressViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF061FAF0A6E00A8E27E /* ChangeAccountAddressViewCtrl.swift */; };
-		1BF1AF5F1FAF0A6F00A8E27E /* ChangeAccountEmailViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF071FAF0A6E00A8E27E /* ChangeAccountEmailViewCtrl.swift */; };
-		1BF1AF601FAF0A6F00A8E27E /* ChangeAccountNameViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF081FAF0A6E00A8E27E /* ChangeAccountNameViewCtrl.swift */; };
-		1BF1AF611FAF0A6F00A8E27E /* ChangeAccountPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF091FAF0A6E00A8E27E /* ChangeAccountPasswordViewCtrl.swift */; };
-		1BF1AF621FAF0A6F00A8E27E /* AddAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */; };
-		1BF1AF631FAF0A6F00A8E27E /* AreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */; };
-		1BF1AF641FAF0A6F00A8E27E /* EditAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */; };
-		1BF1AF651FAF0A6F00A8E27E /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF101FAF0A6E00A8E27E /* VPImageCropperViewController.m */; };
-		1BF1AF661FAF0A6F00A8E27E /* SelectedAreaViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */; };
-		1BF1AF671FAF0A6F00A8E27E /* SKScNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF141FAF0A6E00A8E27E /* SKScNavViewController.swift */; };
-		1BF1AF681FAF0A6F00A8E27E /* SKMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */; };
-		1BF1AF691FAF0A6F00A8E27E /* SKLaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF171FAF0A6E00A8E27E /* SKLaunchMenu.swift */; };
-		1BF1AF6A1FAF0A6F00A8E27E /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF181FAF0A6E00A8E27E /* SKLaunchMenuItem.swift */; };
-		1BF1AF6B1FAF0A6F00A8E27E /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF191FAF0A6E00A8E27E /* SKScNavBar.swift */; };
-		1BF1AF7D1FAF0A6F00A8E27E /* AlarmRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF2F1FAF0A6E00A8E27E /* AlarmRecordViewCtrl.swift */; };
-		1BF1AF7E1FAF0A6F00A8E27E /* HomePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF301FAF0A6E00A8E27E /* HomePageViewCtrl.swift */; };
-		1BF1AF7F1FAF0A6F00A8E27E /* MainTabBarCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */; };
-		1BF1AF801FAF0A6F00A8E27E /* NirKxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */; };
-		1BF1AF811FAF0A6F00A8E27E /* LeftMenuViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */; };
-		1BF1AF821FAF0A6F00A8E27E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		1BF1AF831FAF0A6F00A8E27E /* MasterConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */; };
-		1BF1AF841FAF0A6F00A8E27E /* SmartConfigClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */; };
-		1BF1AF851FAF0A6F00A8E27E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */; };
-		1BF1AF861FAF0A6F00A8E27E /* VoiceConfWifiViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF3F1FAF0A6E00A8E27E /* VoiceConfWifiViewCtrl.swift */; };
-		1BF1AF871FAF0A6F00A8E27E /* VoiceReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF401FAF0A6E00A8E27E /* VoiceReachability.swift */; };
-		1BF1AF881FAF0A6F00A8E27E /* VoiceUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF411FAF0A6E00A8E27E /* VoiceUserInfo.swift */; };
-		1BF1AF891FAF0A6F00A8E27E /* FindPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */; };
-		1BF1AF8A1FAF0A6F00A8E27E /* LoginViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */; };
-		1BF1AF8B1FAF0A6F00A8E27E /* RegisterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */; };
-		1BF1AF8C1FAF0A6F00A8E27E /* ResetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */; };
-		1BF1AF8D1FAF0A6F00A8E27E /* SetPasswordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */; };
-		1BF1AF8E1FAF0A6F00A8E27E /* AddMasterNaviCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */; };
-		1BF1AF8F1FAF0A6F00A8E27E /* AddMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */; };
-		1BF1AF901FAF0A6F00A8E27E /* EditMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */; };
-		1BF1AF911FAF0A6F00A8E27E /* MyMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */; };
-		1BF1AF921FAF0A6F00A8E27E /* SharedAccountViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */; };
-		1BF1AF931FAF0A6F00A8E27E /* SharedElecListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */; };
-		1BF1AF941FAF0A6F00A8E27E /* SharedListViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */; };
-		1BF1AF951FAF0A6F00A8E27E /* ShareMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF4F1FAF0A6E00A8E27E /* ShareMasterViewCtrl.swift */; };
-		1BF1AF961FAF0A6F00A8E27E /* SettingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF511FAF0A6E00A8E27E /* SettingViewCtrl.swift */; };
-		1BF1AF971FAF0A6F00A8E27E /* SwitchCityViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF521FAF0A6E00A8E27E /* SwitchCityViewCtrl.swift */; };
-		1BF1AF981FAF0A6F00A8E27E /* AddSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF541FAF0A6E00A8E27E /* AddSceneElectricViewCtrl.swift */; };
-		1BF1AF991FAF0A6F00A8E27E /* AddSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF551FAF0A6E00A8E27E /* AddSceneViewCtrl.swift */; };
-		1BF1AF9A1FAF0A6F00A8E27E /* EditSceneElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF561FAF0A6E00A8E27E /* EditSceneElectricViewCtrl.swift */; };
-		1BF1AF9B1FAF0A6F00A8E27E /* EditSceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF571FAF0A6E00A8E27E /* EditSceneViewCtrl.swift */; };
-		1BF1AF9C1FAF0A6F00A8E27E /* ScenePageViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF581FAF0A6E00A8E27E /* ScenePageViewCtrl.swift */; };
-		1BF1AF9D1FAF0A6F00A8E27E /* SceneViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF591FAF0A6E00A8E27E /* SceneViewCtrl.swift */; };
-		1BF1AF9E1FAF0A6F00A8E27E /* ViewPagerIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF5A1FAF0A6E00A8E27E /* ViewPagerIndicator.swift */; };
-		1BF1AF9F1FAF0A6F00A8E27E /* SensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AF5C1FAF0A6E00A8E27E /* SensorViewCtrl.swift */; };
-		1BF1AFB41FAF236A00A8E27E /* AddElectricTypeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA21FAF236900A8E27E /* AddElectricTypeViewCtrl.swift */; };
-		1BF1AFB51FAF236A00A8E27E /* AddElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA31FAF236900A8E27E /* AddElectricViewCtrl.swift */; };
-		1BF1AFB61FAF236A00A8E27E /* DoorRecordViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA41FAF236900A8E27E /* DoorRecordViewCtrl.swift */; };
-		1BF1AFB71FAF236A00A8E27E /* EditElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA51FAF236900A8E27E /* EditElectricViewCtrl.swift */; };
-		1BF1AFB81FAF236A00A8E27E /* ElecAirLearnViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */; };
-		1BF1AFB91FAF236A00A8E27E /* ElecAirViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */; };
-		1BF1AFBA1FAF236A00A8E27E /* ElecClothesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */; };
-		1BF1AFBB1FAF236A00A8E27E /* ElecCurtainViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAA1FAF236900A8E27E /* ElecCurtainViewCtrl.swift */; };
-		1BF1AFBC1FAF236A00A8E27E /* ElecDoor2ViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAB1FAF236900A8E27E /* ElecDoor2ViewCtrl.swift */; };
-		1BF1AFBD1FAF236A00A8E27E /* ElecDoorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAC1FAF236900A8E27E /* ElecDoorViewCtrl.swift */; };
-		1BF1AFBE1FAF236A00A8E27E /* ElecHornViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */; };
-		1BF1AFBF1FAF236A00A8E27E /* ElecSceneSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */; };
-		1BF1AFC01FAF236A00A8E27E /* ElecSensorViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */; };
-		1BF1AFC11FAF236A00A8E27E /* ElecSuperViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */; };
-		1BF1AFC21FAF236A00A8E27E /* ElecSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */; };
-		1BF1AFC31FAF236A00A8E27E /* ElecTvViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */; };
-		1BF1AFC41FAF236A00A8E27E /* ElecWindowViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */; };
 		1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */; };
 		1BF505F71DB71575002AA286 /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505F61DB71575002AA286 /* DataControl.swift */; };
 		1BFAB33D1E52FA7E00162FC5 /* EditCameraViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */; };
@@ -1014,9 +1014,120 @@
 		1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicWebService.swift; sourceTree = "<group>"; };
 		1B7FC36D1E9DBA9700209C41 /* address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address.plist; sourceTree = "<group>"; };
 		1B8305481DD017890070FDD3 /* MyWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebService.swift; sourceTree = "<group>"; };
-		1B83A7431FDE72200013047B /* MoveElectricViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1B83A7451FDE89BE0013047B /* MyAreaCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAreaCell2.xib; sourceTree = "<group>"; };
-		1B83A7471FDE89D50013047B /* MyAreaCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreaCell2.swift; sourceTree = "<group>"; };
+		1B83A74B1FDEAF140013047B /* MiniSceneAndArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniSceneAndArea.swift; sourceTree = "<group>"; };
+		1B83A74C1FDEAF140013047B /* MiniSceneAndArea.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniSceneAndArea.xib; sourceTree = "<group>"; };
+		1B83A74D1FDEAF140013047B /* MiniElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniElectric.swift; sourceTree = "<group>"; };
+		1B83A74E1FDEAF140013047B /* AddElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddElectric.xib; sourceTree = "<group>"; };
+		1B83A74F1FDEAF140013047B /* DeleteElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteElectric.swift; sourceTree = "<group>"; };
+		1B83A7501FDEAF140013047B /* MiniElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniElectric.xib; sourceTree = "<group>"; };
+		1B83A7511FDEAF140013047B /* DeleteElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteElectric.xib; sourceTree = "<group>"; };
+		1B83A7521FDEAF140013047B /* AddElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectric.swift; sourceTree = "<group>"; };
+		1B83A7541FDEAF140013047B /* MySceneElectricView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricView.xib; sourceTree = "<group>"; };
+		1B83A7551FDEAF140013047B /* MySceneElectricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricView.swift; sourceTree = "<group>"; };
+		1B83A7571FDEAF140013047B /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		1B83A7581FDEAF140013047B /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		1B83A75A1FDEAF140013047B /* MyAccountImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountImageCell.swift; sourceTree = "<group>"; };
+		1B83A75B1FDEAF140013047B /* MySensorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySensorCell.xib; sourceTree = "<group>"; };
+		1B83A75C1FDEAF140013047B /* MySceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneCell.xib; sourceTree = "<group>"; };
+		1B83A75D1FDEAF140013047B /* DoorRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorRecordCell.xib; sourceTree = "<group>"; };
+		1B83A75E1FDEAF140013047B /* MyMasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMasterCell.xib; sourceTree = "<group>"; };
+		1B83A75F1FDEAF140013047B /* EditSceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricCell.swift; sourceTree = "<group>"; };
+		1B83A7601FDEAF140013047B /* MySharedAccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySharedAccountCell.swift; sourceTree = "<group>"; };
+		1B83A7611FDEAF140013047B /* MySceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricCell.swift; sourceTree = "<group>"; };
+		1B83A7621FDEAF140013047B /* MyAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountInfoCell.swift; sourceTree = "<group>"; };
+		1B83A7631FDEAF140013047B /* MyAreaCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAreaCell2.swift; sourceTree = "<group>"; };
+		1B83A7641FDEAF140013047B /* MySceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricCell.xib; sourceTree = "<group>"; };
+		1B83A7651FDEAF140013047B /* EditSceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditSceneElectricCell.xib; sourceTree = "<group>"; };
+		1B83A7661FDEAF140013047B /* MyMasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterCell.swift; sourceTree = "<group>"; };
+		1B83A7671FDEAF140013047B /* SharedAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedAccountInfoCell.xib; sourceTree = "<group>"; };
+		1B83A7681FDEAF140013047B /* SharedAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountInfoCell.swift; sourceTree = "<group>"; };
+		1B83A7691FDEAF140013047B /* AlarmRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRecordCell.swift; sourceTree = "<group>"; };
+		1B83A76A1FDEAF140013047B /* AddSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneCell.swift; sourceTree = "<group>"; };
+		1B83A76B1FDEAF140013047B /* MySensorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySensorCell.swift; sourceTree = "<group>"; };
+		1B83A76C1FDEAF140013047B /* SharedElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElectricCell.swift; sourceTree = "<group>"; };
+		1B83A76D1FDEAF140013047B /* MyAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAreaCell.swift; sourceTree = "<group>"; };
+		1B83A76E1FDEAF140013047B /* MyAreaCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAreaCell2.xib; sourceTree = "<group>"; };
+		1B83A76F1FDEAF140013047B /* MySceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneCell.swift; sourceTree = "<group>"; };
+		1B83A7701FDEAF140013047B /* AddSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSceneCell.xib; sourceTree = "<group>"; };
+		1B83A7711FDEAF140013047B /* AlarmRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmRecordCell.xib; sourceTree = "<group>"; };
+		1B83A7721FDEAF140013047B /* SharedElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedElectricCell.xib; sourceTree = "<group>"; };
+		1B83A7731FDEAF140013047B /* MyAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAreaCell.xib; sourceTree = "<group>"; };
+		1B83A7741FDEAF140013047B /* MyAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountInfoCell.xib; sourceTree = "<group>"; };
+		1B83A7751FDEAF140013047B /* MySharedAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySharedAccountCell.xib; sourceTree = "<group>"; };
+		1B83A7761FDEAF140013047B /* DoorRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordCell.swift; sourceTree = "<group>"; };
+		1B83A7771FDEAF140013047B /* MyAccountImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountImageCell.xib; sourceTree = "<group>"; };
+		1B83A7791FDEAF140013047B /* ETKeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETKeyButton.swift; sourceTree = "<group>"; };
+		1B83A7A71FDEAF470013047B /* SensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7A91FDEAF470013047B /* HomePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7AA1FDEAF470013047B /* MainTabBarCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarCtrl.swift; sourceTree = "<group>"; };
+		1B83A7AB1FDEAF470013047B /* AlarmRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRecordViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7AD1FDEAF470013047B /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
+		1B83A7AE1FDEAF470013047B /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
+		1B83A7B01FDEAF470013047B /* AreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7B11FDEAF470013047B /* SelectedAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7B21FDEAF470013047B /* AddAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7B31FDEAF470013047B /* EditAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAreaViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7B41FDEAF470013047B /* MoveElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7B61FDEAF470013047B /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		1B83A7B71FDEAF470013047B /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		1B83A7B91FDEAF470013047B /* SKMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMacros.swift; sourceTree = "<group>"; };
+		1B83A7BB1FDEAF470013047B /* SKScNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavViewController.swift; sourceTree = "<group>"; };
+		1B83A7BD1FDEAF470013047B /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
+		1B83A7BE1FDEAF470013047B /* SKLaunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenu.swift; sourceTree = "<group>"; };
+		1B83A7BF1FDEAF470013047B /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
+		1B83A7C11FDEAF470013047B /* SettingViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7C21FDEAF470013047B /* SwitchCityViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCityViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7C41FDEAF470013047B /* LeftMenuViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7C51FDEAF470013047B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1B83A7C61FDEAF470013047B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1B83A7C81FDEAF470013047B /* SharedAccountViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7C91FDEAF470013047B /* AddMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7CA1FDEAF470013047B /* MyMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7CB1FDEAF470013047B /* ShareMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7CC1FDEAF470013047B /* SharedListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedListViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7CD1FDEAF470013047B /* EditMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMasterViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7CE1FDEAF470013047B /* AddMasterNaviCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterNaviCtrl.swift; sourceTree = "<group>"; };
+		1B83A7CF1FDEAF470013047B /* SharedElecListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElecListViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7D11FDEAF470013047B /* SceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7D21FDEAF470013047B /* AddSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7D31FDEAF470013047B /* ScenePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePageViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7D41FDEAF470013047B /* EditSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7D51FDEAF470013047B /* AddSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7D61FDEAF470013047B /* ViewPagerIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerIndicator.swift; sourceTree = "<group>"; };
+		1B83A7D71FDEAF470013047B /* EditSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7DA1FDEAF470013047B /* ElecSensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSensorViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7DB1FDEAF470013047B /* ElecSuperViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSuperViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7DC1FDEAF470013047B /* ElecDoorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoorViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7DD1FDEAF470013047B /* ElecTvViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecTvViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7DE1FDEAF470013047B /* ElecHornViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecHornViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7DF1FDEAF470013047B /* ElecClothesViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecClothesViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E01FDEAF470013047B /* ElecWindowViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecWindowViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E11FDEAF470013047B /* ElecAirViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E21FDEAF470013047B /* ElecAirLearnViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirLearnViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E31FDEAF470013047B /* ElecCurtainViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecCurtainViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E41FDEAF470013047B /* ElecDoor2ViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoor2ViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E51FDEAF470013047B /* ElecSceneSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSceneSwitchViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E61FDEAF470013047B /* ElecSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSwitchViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E81FDEAF470013047B /* DoorRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7E91FDEAF470013047B /* EditElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7EA1FDEAF470013047B /* AddElectricTypeViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricTypeViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7EB1FDEAF470013047B /* AddElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7ED1FDEAF470013047B /* ChangeAccountEmailViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountEmailViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7EE1FDEAF470013047B /* ChangeAccountPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7EF1FDEAF470013047B /* AccountInfoViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7F01FDEAF470013047B /* ChangeAccountAddressViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountAddressViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7F11FDEAF470013047B /* ChangeAccountNameViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7F51FDEAF470013047B /* VoiceReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReachability.swift; sourceTree = "<group>"; };
+		1B83A7F61FDEAF470013047B /* VoiceUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserInfo.swift; sourceTree = "<group>"; };
+		1B83A7F71FDEAF470013047B /* VoiceConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConfWifiViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7F81FDEAF470013047B /* SmartConfigClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartConfigClient.framework; sourceTree = "<group>"; };
+		1B83A7F91FDEAF470013047B /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		1B83A7FA1FDEAF470013047B /* MasterConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterConfWifiViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7FB1FDEAF470013047B /* RegisterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7FC1FDEAF470013047B /* SetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7FD1FDEAF470013047B /* ResetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7FE1FDEAF470013047B /* FindPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7FF1FDEAF470013047B /* LoginViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtrl.swift; sourceTree = "<group>"; };
 		1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocket.swift; sourceTree = "<group>"; };
 		1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zfzn2.db; sourceTree = "<group>"; };
 		1BA52DEA1F13C78600CD9D37 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
@@ -1053,117 +1164,6 @@
 		1BEA099C1FA429D300BA28D3 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA099D1FA429D300BA28D3 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEEAF141DD9AE6900E17617 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1BF1AEAD1FAF0A5800A8E27E /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
-		1BF1AEAE1FAF0A5800A8E27E /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
-		1BF1AEB01FAF0A5800A8E27E /* AddElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectric.swift; sourceTree = "<group>"; };
-		1BF1AEB11FAF0A5800A8E27E /* AddElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddElectric.xib; sourceTree = "<group>"; };
-		1BF1AEB21FAF0A5800A8E27E /* DeleteElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteElectric.swift; sourceTree = "<group>"; };
-		1BF1AEB31FAF0A5800A8E27E /* DeleteElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteElectric.xib; sourceTree = "<group>"; };
-		1BF1AEB41FAF0A5800A8E27E /* MiniElectric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniElectric.swift; sourceTree = "<group>"; };
-		1BF1AEB51FAF0A5800A8E27E /* MiniElectric.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniElectric.xib; sourceTree = "<group>"; };
-		1BF1AEB61FAF0A5800A8E27E /* MiniSceneAndArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniSceneAndArea.swift; sourceTree = "<group>"; };
-		1BF1AEB71FAF0A5800A8E27E /* MiniSceneAndArea.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniSceneAndArea.xib; sourceTree = "<group>"; };
-		1BF1AEB91FAF0A5800A8E27E /* ETKeyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETKeyButton.swift; sourceTree = "<group>"; };
-		1BF1AEBB1FAF0A5800A8E27E /* AddSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneCell.swift; sourceTree = "<group>"; };
-		1BF1AEBC1FAF0A5800A8E27E /* AddSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSceneCell.xib; sourceTree = "<group>"; };
-		1BF1AEBD1FAF0A5800A8E27E /* AlarmRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRecordCell.swift; sourceTree = "<group>"; };
-		1BF1AEBE1FAF0A5800A8E27E /* AlarmRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmRecordCell.xib; sourceTree = "<group>"; };
-		1BF1AEBF1FAF0A5800A8E27E /* DoorRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordCell.swift; sourceTree = "<group>"; };
-		1BF1AEC01FAF0A5800A8E27E /* DoorRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoorRecordCell.xib; sourceTree = "<group>"; };
-		1BF1AEC11FAF0A5800A8E27E /* EditSceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricCell.swift; sourceTree = "<group>"; };
-		1BF1AEC21FAF0A5800A8E27E /* EditSceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditSceneElectricCell.xib; sourceTree = "<group>"; };
-		1BF1AEC31FAF0A5800A8E27E /* MyAccountImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountImageCell.swift; sourceTree = "<group>"; };
-		1BF1AEC41FAF0A5800A8E27E /* MyAccountImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountImageCell.xib; sourceTree = "<group>"; };
-		1BF1AEC51FAF0A5800A8E27E /* MyAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountInfoCell.swift; sourceTree = "<group>"; };
-		1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountInfoCell.xib; sourceTree = "<group>"; };
-		1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAreaCell.swift; sourceTree = "<group>"; };
-		1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAreaCell.xib; sourceTree = "<group>"; };
-		1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterCell.swift; sourceTree = "<group>"; };
-		1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMasterCell.xib; sourceTree = "<group>"; };
-		1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneCell.swift; sourceTree = "<group>"; };
-		1BF1AECC1FAF0A5800A8E27E /* MySceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneCell.xib; sourceTree = "<group>"; };
-		1BF1AECD1FAF0A5800A8E27E /* MySceneElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricCell.swift; sourceTree = "<group>"; };
-		1BF1AECE1FAF0A5800A8E27E /* MySceneElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricCell.xib; sourceTree = "<group>"; };
-		1BF1AECF1FAF0A5800A8E27E /* MySensorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySensorCell.swift; sourceTree = "<group>"; };
-		1BF1AED01FAF0A5800A8E27E /* MySensorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySensorCell.xib; sourceTree = "<group>"; };
-		1BF1AED11FAF0A5800A8E27E /* MySharedAccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySharedAccountCell.swift; sourceTree = "<group>"; };
-		1BF1AED21FAF0A5800A8E27E /* MySharedAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySharedAccountCell.xib; sourceTree = "<group>"; };
-		1BF1AED31FAF0A5800A8E27E /* SharedAccountInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountInfoCell.swift; sourceTree = "<group>"; };
-		1BF1AED41FAF0A5800A8E27E /* SharedAccountInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedAccountInfoCell.xib; sourceTree = "<group>"; };
-		1BF1AED51FAF0A5800A8E27E /* SharedElectricCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElectricCell.swift; sourceTree = "<group>"; };
-		1BF1AED61FAF0A5800A8E27E /* SharedElectricCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedElectricCell.xib; sourceTree = "<group>"; };
-		1BF1AED81FAF0A5800A8E27E /* MySceneElectricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySceneElectricView.swift; sourceTree = "<group>"; };
-		1BF1AED91FAF0A5800A8E27E /* MySceneElectricView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySceneElectricView.xib; sourceTree = "<group>"; };
-		1BF1AF051FAF0A6E00A8E27E /* AccountInfoViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF061FAF0A6E00A8E27E /* ChangeAccountAddressViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountAddressViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF071FAF0A6E00A8E27E /* ChangeAccountEmailViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountEmailViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF081FAF0A6E00A8E27E /* ChangeAccountNameViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF091FAF0A6E00A8E27E /* ChangeAccountPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAccountPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAreaViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAreaViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF0F1FAF0A6E00A8E27E /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
-		1BF1AF101FAF0A6E00A8E27E /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
-		1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedAreaViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF141FAF0A6E00A8E27E /* SKScNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavViewController.swift; sourceTree = "<group>"; };
-		1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMacros.swift; sourceTree = "<group>"; };
-		1BF1AF171FAF0A6E00A8E27E /* SKLaunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenu.swift; sourceTree = "<group>"; };
-		1BF1AF181FAF0A6E00A8E27E /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
-		1BF1AF191FAF0A6E00A8E27E /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
-		1BF1AF2F1FAF0A6E00A8E27E /* AlarmRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRecordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF301FAF0A6E00A8E27E /* HomePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF331FAF0A6E00A8E27E /* NirKxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NirKxMenu.h; sourceTree = "<group>"; };
-		1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NirKxMenu.m; sourceTree = "<group>"; };
-		1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF371FAF0A6E00A8E27E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterConfWifiViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartConfigClient.framework; sourceTree = "<group>"; };
-		1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		1BF1AF3F1FAF0A6E00A8E27E /* VoiceConfWifiViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceConfWifiViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF401FAF0A6E00A8E27E /* VoiceReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReachability.swift; sourceTree = "<group>"; };
-		1BF1AF411FAF0A6E00A8E27E /* VoiceUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceUserInfo.swift; sourceTree = "<group>"; };
-		1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasswordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterNaviCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAccountViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedElecListViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedListViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF4F1FAF0A6E00A8E27E /* ShareMasterViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMasterViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF511FAF0A6E00A8E27E /* SettingViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF521FAF0A6E00A8E27E /* SwitchCityViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCityViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF541FAF0A6E00A8E27E /* AddSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF551FAF0A6E00A8E27E /* AddSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSceneViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF561FAF0A6E00A8E27E /* EditSceneElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF571FAF0A6E00A8E27E /* EditSceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditSceneViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF581FAF0A6E00A8E27E /* ScenePageViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePageViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF591FAF0A6E00A8E27E /* SceneViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AF5A1FAF0A6E00A8E27E /* ViewPagerIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerIndicator.swift; sourceTree = "<group>"; };
-		1BF1AF5C1FAF0A6E00A8E27E /* SensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA21FAF236900A8E27E /* AddElectricTypeViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricTypeViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA31FAF236900A8E27E /* AddElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA41FAF236900A8E27E /* DoorRecordViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorRecordViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA51FAF236900A8E27E /* EditElectricViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditElectricViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirLearnViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecAirViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecClothesViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFAA1FAF236900A8E27E /* ElecCurtainViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecCurtainViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFAB1FAF236900A8E27E /* ElecDoor2ViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoor2ViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFAC1FAF236900A8E27E /* ElecDoorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecDoorViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecHornViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSceneSwitchViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSensorViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSuperViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecSwitchViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecTvViewCtrl.swift; sourceTree = "<group>"; };
-		1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElecWindowViewCtrl.swift; sourceTree = "<group>"; };
 		1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
 		1BF505F61DB71575002AA286 /* DataControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataControl.swift; sourceTree = "<group>"; };
 		1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCameraViewCtrl.swift; sourceTree = "<group>"; };
@@ -1191,6 +1191,7 @@
 				1BEA098D1FA429D300BA28D3 /* ReactiveCocoa.framework in Frameworks */,
 				1BEA098E1FA429D300BA28D3 /* ReactiveSwift.framework in Frameworks */,
 				1BEA098F1FA429D300BA28D3 /* Result.framework in Frameworks */,
+				1B83A83C1FDEAF480013047B /* SmartConfigClient.framework in Frameworks */,
 				1BEA09901FA429D300BA28D3 /* SDWebImage.framework in Frameworks */,
 				1BEA09911FA429D300BA28D3 /* SocketRocket.framework in Frameworks */,
 				1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */,
@@ -1202,7 +1203,6 @@
 				1B2D70261FCA9888006CA0B5 /* liblibvvonvif_cli.a in Frameworks */,
 				1B6F29FD1E4611D000D19DE9 /* MediaPlayer.framework in Frameworks */,
 				1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */,
-				1BF1AF841FAF0A6F00A8E27E /* SmartConfigClient.framework in Frameworks */,
 				1B2D701E1FCA9888006CA0B5 /* libopus.a in Frameworks */,
 				1B6F29FB1E4611C300D19DE9 /* AudioToolbox.framework in Frameworks */,
 				1B6F29F91E4611BD00D19DE9 /* VideoToolbox.framework in Frameworks */,
@@ -1956,8 +1956,8 @@
 				1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */,
 				1B6F29DB1E460EB800D19DE9 /* zfzn2-Bridging-Header.h */,
 				1BF505F51DB7154A002AA286 /* Data */,
-				1BF1AEAB1FAF0A5800A8E27E /* ViewRewrite */,
-				1BF1AF031FAF0A6E00A8E27E /* ViewCtrl */,
+				1B83A7491FDEAF140013047B /* ViewRewrite */,
+				1B83A7A51FDEAF470013047B /* ViewCtrl */,
 				1B6F29581E460D7500D19DE9 /* Camera */,
 				1B2D6DD81FCA9886006CA0B5 /* EzCam */,
 				1B7667441EF3CA1C007B21B4 /* JdPlay */,
@@ -2334,6 +2334,326 @@
 			path = WebService;
 			sourceTree = "<group>";
 		};
+		1B83A7491FDEAF140013047B /* ViewRewrite */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A74A1FDEAF140013047B /* CollectionCell */,
+				1B83A7531FDEAF140013047B /* UIView */,
+				1B83A7561FDEAF140013047B /* Alert */,
+				1B83A7591FDEAF140013047B /* TabelCell */,
+				1B83A7781FDEAF140013047B /* Other */,
+			);
+			path = ViewRewrite;
+			sourceTree = "<group>";
+		};
+		1B83A74A1FDEAF140013047B /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A74B1FDEAF140013047B /* MiniSceneAndArea.swift */,
+				1B83A74C1FDEAF140013047B /* MiniSceneAndArea.xib */,
+				1B83A74D1FDEAF140013047B /* MiniElectric.swift */,
+				1B83A74E1FDEAF140013047B /* AddElectric.xib */,
+				1B83A74F1FDEAF140013047B /* DeleteElectric.swift */,
+				1B83A7501FDEAF140013047B /* MiniElectric.xib */,
+				1B83A7511FDEAF140013047B /* DeleteElectric.xib */,
+				1B83A7521FDEAF140013047B /* AddElectric.swift */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		1B83A7531FDEAF140013047B /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7541FDEAF140013047B /* MySceneElectricView.xib */,
+				1B83A7551FDEAF140013047B /* MySceneElectricView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		1B83A7561FDEAF140013047B /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7571FDEAF140013047B /* SCLAlertView.swift */,
+				1B83A7581FDEAF140013047B /* SCLExtensions.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		1B83A7591FDEAF140013047B /* TabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A75A1FDEAF140013047B /* MyAccountImageCell.swift */,
+				1B83A75B1FDEAF140013047B /* MySensorCell.xib */,
+				1B83A75C1FDEAF140013047B /* MySceneCell.xib */,
+				1B83A75D1FDEAF140013047B /* DoorRecordCell.xib */,
+				1B83A75E1FDEAF140013047B /* MyMasterCell.xib */,
+				1B83A75F1FDEAF140013047B /* EditSceneElectricCell.swift */,
+				1B83A7601FDEAF140013047B /* MySharedAccountCell.swift */,
+				1B83A7611FDEAF140013047B /* MySceneElectricCell.swift */,
+				1B83A7621FDEAF140013047B /* MyAccountInfoCell.swift */,
+				1B83A7631FDEAF140013047B /* MyAreaCell2.swift */,
+				1B83A7641FDEAF140013047B /* MySceneElectricCell.xib */,
+				1B83A7651FDEAF140013047B /* EditSceneElectricCell.xib */,
+				1B83A7661FDEAF140013047B /* MyMasterCell.swift */,
+				1B83A7671FDEAF140013047B /* SharedAccountInfoCell.xib */,
+				1B83A7681FDEAF140013047B /* SharedAccountInfoCell.swift */,
+				1B83A7691FDEAF140013047B /* AlarmRecordCell.swift */,
+				1B83A76A1FDEAF140013047B /* AddSceneCell.swift */,
+				1B83A76B1FDEAF140013047B /* MySensorCell.swift */,
+				1B83A76C1FDEAF140013047B /* SharedElectricCell.swift */,
+				1B83A76D1FDEAF140013047B /* MyAreaCell.swift */,
+				1B83A76E1FDEAF140013047B /* MyAreaCell2.xib */,
+				1B83A76F1FDEAF140013047B /* MySceneCell.swift */,
+				1B83A7701FDEAF140013047B /* AddSceneCell.xib */,
+				1B83A7711FDEAF140013047B /* AlarmRecordCell.xib */,
+				1B83A7721FDEAF140013047B /* SharedElectricCell.xib */,
+				1B83A7731FDEAF140013047B /* MyAreaCell.xib */,
+				1B83A7741FDEAF140013047B /* MyAccountInfoCell.xib */,
+				1B83A7751FDEAF140013047B /* MySharedAccountCell.xib */,
+				1B83A7761FDEAF140013047B /* DoorRecordCell.swift */,
+				1B83A7771FDEAF140013047B /* MyAccountImageCell.xib */,
+			);
+			path = TabelCell;
+			sourceTree = "<group>";
+		};
+		1B83A7781FDEAF140013047B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7791FDEAF140013047B /* ETKeyButton.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1B83A7A51FDEAF470013047B /* ViewCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7F21FDEAF470013047B /* Login */,
+				1B83A7C01FDEAF470013047B /* OtherMenu */,
+				1B83A7EC1FDEAF470013047B /* AccountCenter */,
+				1B83A7A81FDEAF470013047B /* HomePage */,
+				1B83A7AF1FDEAF470013047B /* AreaPage */,
+				1B83A7D81FDEAF470013047B /* Electric */,
+				1B83A7C31FDEAF470013047B /* LeftView */,
+				1B83A7C71FDEAF470013047B /* Master */,
+				1B83A7D01FDEAF470013047B /* ScenePage */,
+				1B83A7A61FDEAF470013047B /* SensorPage */,
+			);
+			path = ViewCtrl;
+			sourceTree = "<group>";
+		};
+		1B83A7A61FDEAF470013047B /* SensorPage */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7A71FDEAF470013047B /* SensorViewCtrl.swift */,
+			);
+			path = SensorPage;
+			sourceTree = "<group>";
+		};
+		1B83A7A81FDEAF470013047B /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7A91FDEAF470013047B /* HomePageViewCtrl.swift */,
+				1B83A7AA1FDEAF470013047B /* MainTabBarCtrl.swift */,
+				1B83A7AB1FDEAF470013047B /* AlarmRecordViewCtrl.swift */,
+				1B83A7AC1FDEAF470013047B /* NirKxMenu */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		1B83A7AC1FDEAF470013047B /* NirKxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7AD1FDEAF470013047B /* NirKxMenu.m */,
+				1B83A7AE1FDEAF470013047B /* NirKxMenu.h */,
+			);
+			path = NirKxMenu;
+			sourceTree = "<group>";
+		};
+		1B83A7AF1FDEAF470013047B /* AreaPage */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7B01FDEAF470013047B /* AreaViewCtrl.swift */,
+				1B83A7B11FDEAF470013047B /* SelectedAreaViewCtrl.swift */,
+				1B83A7B21FDEAF470013047B /* AddAreaViewCtrl.swift */,
+				1B83A7B31FDEAF470013047B /* EditAreaViewCtrl.swift */,
+				1B83A7B41FDEAF470013047B /* MoveElectricViewCtrl.swift */,
+				1B83A7B51FDEAF470013047B /* ImageCropper */,
+				1B83A7B81FDEAF470013047B /* SKScNavBarController */,
+			);
+			path = AreaPage;
+			sourceTree = "<group>";
+		};
+		1B83A7B51FDEAF470013047B /* ImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7B61FDEAF470013047B /* VPImageCropperViewController.m */,
+				1B83A7B71FDEAF470013047B /* VPImageCropperViewController.h */,
+			);
+			path = ImageCropper;
+			sourceTree = "<group>";
+		};
+		1B83A7B81FDEAF470013047B /* SKScNavBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7B91FDEAF470013047B /* SKMacros.swift */,
+				1B83A7BA1FDEAF470013047B /* Controller */,
+				1B83A7BC1FDEAF470013047B /* Views */,
+			);
+			path = SKScNavBarController;
+			sourceTree = "<group>";
+		};
+		1B83A7BA1FDEAF470013047B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7BB1FDEAF470013047B /* SKScNavViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B83A7BC1FDEAF470013047B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7BD1FDEAF470013047B /* SKScNavBar.swift */,
+				1B83A7BE1FDEAF470013047B /* SKLaunchMenu.swift */,
+				1B83A7BF1FDEAF470013047B /* SKLaunchMenuItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B83A7C01FDEAF470013047B /* OtherMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7C11FDEAF470013047B /* SettingViewCtrl.swift */,
+				1B83A7C21FDEAF470013047B /* SwitchCityViewCtrl.swift */,
+			);
+			path = OtherMenu;
+			sourceTree = "<group>";
+		};
+		1B83A7C31FDEAF470013047B /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7C41FDEAF470013047B /* LeftMenuViewCtrl.swift */,
+				1B83A7C51FDEAF470013047B /* SWRevealViewController.h */,
+				1B83A7C61FDEAF470013047B /* SWRevealViewController.m */,
+			);
+			path = LeftView;
+			sourceTree = "<group>";
+		};
+		1B83A7C71FDEAF470013047B /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7C81FDEAF470013047B /* SharedAccountViewCtrl.swift */,
+				1B83A7C91FDEAF470013047B /* AddMasterViewCtrl.swift */,
+				1B83A7CA1FDEAF470013047B /* MyMasterViewCtrl.swift */,
+				1B83A7CB1FDEAF470013047B /* ShareMasterViewCtrl.swift */,
+				1B83A7CC1FDEAF470013047B /* SharedListViewCtrl.swift */,
+				1B83A7CD1FDEAF470013047B /* EditMasterViewCtrl.swift */,
+				1B83A7CE1FDEAF470013047B /* AddMasterNaviCtrl.swift */,
+				1B83A7CF1FDEAF470013047B /* SharedElecListViewCtrl.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		1B83A7D01FDEAF470013047B /* ScenePage */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7D11FDEAF470013047B /* SceneViewCtrl.swift */,
+				1B83A7D21FDEAF470013047B /* AddSceneElectricViewCtrl.swift */,
+				1B83A7D31FDEAF470013047B /* ScenePageViewCtrl.swift */,
+				1B83A7D41FDEAF470013047B /* EditSceneElectricViewCtrl.swift */,
+				1B83A7D51FDEAF470013047B /* AddSceneViewCtrl.swift */,
+				1B83A7D61FDEAF470013047B /* ViewPagerIndicator.swift */,
+				1B83A7D71FDEAF470013047B /* EditSceneViewCtrl.swift */,
+			);
+			path = ScenePage;
+			sourceTree = "<group>";
+		};
+		1B83A7D81FDEAF470013047B /* Electric */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7D91FDEAF470013047B /* Types */,
+				1B83A7E71FDEAF470013047B /* Func */,
+			);
+			path = Electric;
+			sourceTree = "<group>";
+		};
+		1B83A7D91FDEAF470013047B /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7DB1FDEAF470013047B /* ElecSuperViewCtrl.swift */,
+				1B83A7DA1FDEAF470013047B /* ElecSensorViewCtrl.swift */,
+				1B83A7DC1FDEAF470013047B /* ElecDoorViewCtrl.swift */,
+				1B83A7DD1FDEAF470013047B /* ElecTvViewCtrl.swift */,
+				1B83A7DE1FDEAF470013047B /* ElecHornViewCtrl.swift */,
+				1B83A7DF1FDEAF470013047B /* ElecClothesViewCtrl.swift */,
+				1B83A7E01FDEAF470013047B /* ElecWindowViewCtrl.swift */,
+				1B83A7E11FDEAF470013047B /* ElecAirViewCtrl.swift */,
+				1B83A7E21FDEAF470013047B /* ElecAirLearnViewCtrl.swift */,
+				1B83A7E31FDEAF470013047B /* ElecCurtainViewCtrl.swift */,
+				1B83A7E41FDEAF470013047B /* ElecDoor2ViewCtrl.swift */,
+				1B83A7E51FDEAF470013047B /* ElecSceneSwitchViewCtrl.swift */,
+				1B83A7E61FDEAF470013047B /* ElecSwitchViewCtrl.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		1B83A7E71FDEAF470013047B /* Func */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7E81FDEAF470013047B /* DoorRecordViewCtrl.swift */,
+				1B83A7E91FDEAF470013047B /* EditElectricViewCtrl.swift */,
+				1B83A7EA1FDEAF470013047B /* AddElectricTypeViewCtrl.swift */,
+				1B83A7EB1FDEAF470013047B /* AddElectricViewCtrl.swift */,
+			);
+			path = Func;
+			sourceTree = "<group>";
+		};
+		1B83A7EC1FDEAF470013047B /* AccountCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7ED1FDEAF470013047B /* ChangeAccountEmailViewCtrl.swift */,
+				1B83A7EE1FDEAF470013047B /* ChangeAccountPasswordViewCtrl.swift */,
+				1B83A7EF1FDEAF470013047B /* AccountInfoViewCtrl.swift */,
+				1B83A7F01FDEAF470013047B /* ChangeAccountAddressViewCtrl.swift */,
+				1B83A7F11FDEAF470013047B /* ChangeAccountNameViewCtrl.swift */,
+			);
+			path = AccountCenter;
+			sourceTree = "<group>";
+		};
+		1B83A7F21FDEAF470013047B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7F31FDEAF470013047B /* ConfWifi */,
+				1B83A7FB1FDEAF470013047B /* RegisterViewCtrl.swift */,
+				1B83A7FC1FDEAF470013047B /* SetPasswordViewCtrl.swift */,
+				1B83A7FD1FDEAF470013047B /* ResetPasswordViewCtrl.swift */,
+				1B83A7FE1FDEAF470013047B /* FindPasswordViewCtrl.swift */,
+				1B83A7FF1FDEAF470013047B /* LoginViewCtrl.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1B83A7F31FDEAF470013047B /* ConfWifi */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7F41FDEAF470013047B /* Voice */,
+				1B83A7FA1FDEAF470013047B /* MasterConfWifiViewCtrl.swift */,
+			);
+			path = ConfWifi;
+			sourceTree = "<group>";
+		};
+		1B83A7F41FDEAF470013047B /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				1B83A7F51FDEAF470013047B /* VoiceReachability.swift */,
+				1B83A7F61FDEAF470013047B /* VoiceUserInfo.swift */,
+				1B83A7F71FDEAF470013047B /* VoiceConfWifiViewCtrl.swift */,
+				1B83A7F81FDEAF470013047B /* SmartConfigClient.framework */,
+				1B83A7F91FDEAF470013047B /* Toast.swift */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
 		1B8DCBD51DE5865C000D8DE0 /* Socket */ = {
 			isa = PBXGroup;
 			children = (
@@ -2414,326 +2734,6 @@
 				1BCBE4BF1FD577D0003CB2EA /* RecordViewController.h */,
 			);
 			path = Record;
-			sourceTree = "<group>";
-		};
-		1BF1AEAB1FAF0A5800A8E27E /* ViewRewrite */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AEAC1FAF0A5800A8E27E /* Alert */,
-				1BF1AEAF1FAF0A5800A8E27E /* CollectionCell */,
-				1BF1AEB81FAF0A5800A8E27E /* Other */,
-				1BF1AEBA1FAF0A5800A8E27E /* TabelCell */,
-				1BF1AED71FAF0A5800A8E27E /* UIView */,
-			);
-			path = ViewRewrite;
-			sourceTree = "<group>";
-		};
-		1BF1AEAC1FAF0A5800A8E27E /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AEAD1FAF0A5800A8E27E /* SCLAlertView.swift */,
-				1BF1AEAE1FAF0A5800A8E27E /* SCLExtensions.swift */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
-		1BF1AEAF1FAF0A5800A8E27E /* CollectionCell */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AEB01FAF0A5800A8E27E /* AddElectric.swift */,
-				1BF1AEB11FAF0A5800A8E27E /* AddElectric.xib */,
-				1BF1AEB21FAF0A5800A8E27E /* DeleteElectric.swift */,
-				1BF1AEB31FAF0A5800A8E27E /* DeleteElectric.xib */,
-				1BF1AEB41FAF0A5800A8E27E /* MiniElectric.swift */,
-				1BF1AEB51FAF0A5800A8E27E /* MiniElectric.xib */,
-				1BF1AEB61FAF0A5800A8E27E /* MiniSceneAndArea.swift */,
-				1BF1AEB71FAF0A5800A8E27E /* MiniSceneAndArea.xib */,
-			);
-			path = CollectionCell;
-			sourceTree = "<group>";
-		};
-		1BF1AEB81FAF0A5800A8E27E /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AEB91FAF0A5800A8E27E /* ETKeyButton.swift */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		1BF1AEBA1FAF0A5800A8E27E /* TabelCell */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AEBB1FAF0A5800A8E27E /* AddSceneCell.swift */,
-				1BF1AEBC1FAF0A5800A8E27E /* AddSceneCell.xib */,
-				1BF1AEBD1FAF0A5800A8E27E /* AlarmRecordCell.swift */,
-				1BF1AEBE1FAF0A5800A8E27E /* AlarmRecordCell.xib */,
-				1BF1AEBF1FAF0A5800A8E27E /* DoorRecordCell.swift */,
-				1BF1AEC01FAF0A5800A8E27E /* DoorRecordCell.xib */,
-				1BF1AEC11FAF0A5800A8E27E /* EditSceneElectricCell.swift */,
-				1BF1AEC21FAF0A5800A8E27E /* EditSceneElectricCell.xib */,
-				1BF1AEC31FAF0A5800A8E27E /* MyAccountImageCell.swift */,
-				1BF1AEC41FAF0A5800A8E27E /* MyAccountImageCell.xib */,
-				1BF1AEC51FAF0A5800A8E27E /* MyAccountInfoCell.swift */,
-				1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */,
-				1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */,
-				1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */,
-				1B83A7471FDE89D50013047B /* MyAreaCell2.swift */,
-				1B83A7451FDE89BE0013047B /* MyAreaCell2.xib */,
-				1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */,
-				1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */,
-				1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */,
-				1BF1AECC1FAF0A5800A8E27E /* MySceneCell.xib */,
-				1BF1AECD1FAF0A5800A8E27E /* MySceneElectricCell.swift */,
-				1BF1AECE1FAF0A5800A8E27E /* MySceneElectricCell.xib */,
-				1BF1AECF1FAF0A5800A8E27E /* MySensorCell.swift */,
-				1BF1AED01FAF0A5800A8E27E /* MySensorCell.xib */,
-				1BF1AED11FAF0A5800A8E27E /* MySharedAccountCell.swift */,
-				1BF1AED21FAF0A5800A8E27E /* MySharedAccountCell.xib */,
-				1BF1AED31FAF0A5800A8E27E /* SharedAccountInfoCell.swift */,
-				1BF1AED41FAF0A5800A8E27E /* SharedAccountInfoCell.xib */,
-				1BF1AED51FAF0A5800A8E27E /* SharedElectricCell.swift */,
-				1BF1AED61FAF0A5800A8E27E /* SharedElectricCell.xib */,
-			);
-			path = TabelCell;
-			sourceTree = "<group>";
-		};
-		1BF1AED71FAF0A5800A8E27E /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AED81FAF0A5800A8E27E /* MySceneElectricView.swift */,
-				1BF1AED91FAF0A5800A8E27E /* MySceneElectricView.xib */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		1BF1AF031FAF0A6E00A8E27E /* ViewCtrl */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF041FAF0A6E00A8E27E /* AccountCenter */,
-				1BF1AF0A1FAF0A6E00A8E27E /* AreaPage */,
-				1BF1AFA01FAF236900A8E27E /* Electric */,
-				1BF1AF2E1FAF0A6E00A8E27E /* HomePage */,
-				1BF1AF351FAF0A6E00A8E27E /* LeftView */,
-				1BF1AF391FAF0A6E00A8E27E /* Login */,
-				1BF1AF471FAF0A6E00A8E27E /* Master */,
-				1BF1AF501FAF0A6E00A8E27E /* OtherMenu */,
-				1BF1AF531FAF0A6E00A8E27E /* ScenePage */,
-				1BF1AF5B1FAF0A6E00A8E27E /* SensorPage */,
-			);
-			path = ViewCtrl;
-			sourceTree = "<group>";
-		};
-		1BF1AF041FAF0A6E00A8E27E /* AccountCenter */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF051FAF0A6E00A8E27E /* AccountInfoViewCtrl.swift */,
-				1BF1AF061FAF0A6E00A8E27E /* ChangeAccountAddressViewCtrl.swift */,
-				1BF1AF071FAF0A6E00A8E27E /* ChangeAccountEmailViewCtrl.swift */,
-				1BF1AF081FAF0A6E00A8E27E /* ChangeAccountNameViewCtrl.swift */,
-				1BF1AF091FAF0A6E00A8E27E /* ChangeAccountPasswordViewCtrl.swift */,
-			);
-			path = AccountCenter;
-			sourceTree = "<group>";
-		};
-		1BF1AF0A1FAF0A6E00A8E27E /* AreaPage */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF0E1FAF0A6E00A8E27E /* ImageCropper */,
-				1BF1AF121FAF0A6E00A8E27E /* SKScNavBarController */,
-				1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */,
-				1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */,
-				1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */,
-				1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */,
-				1B83A7431FDE72200013047B /* MoveElectricViewCtrl.swift */,
-			);
-			path = AreaPage;
-			sourceTree = "<group>";
-		};
-		1BF1AF0E1FAF0A6E00A8E27E /* ImageCropper */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF0F1FAF0A6E00A8E27E /* VPImageCropperViewController.h */,
-				1BF1AF101FAF0A6E00A8E27E /* VPImageCropperViewController.m */,
-			);
-			path = ImageCropper;
-			sourceTree = "<group>";
-		};
-		1BF1AF121FAF0A6E00A8E27E /* SKScNavBarController */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF131FAF0A6E00A8E27E /* Controller */,
-				1BF1AF161FAF0A6E00A8E27E /* Views */,
-				1BF1AF151FAF0A6E00A8E27E /* SKMacros.swift */,
-			);
-			path = SKScNavBarController;
-			sourceTree = "<group>";
-		};
-		1BF1AF131FAF0A6E00A8E27E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF141FAF0A6E00A8E27E /* SKScNavViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		1BF1AF161FAF0A6E00A8E27E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF171FAF0A6E00A8E27E /* SKLaunchMenu.swift */,
-				1BF1AF181FAF0A6E00A8E27E /* SKLaunchMenuItem.swift */,
-				1BF1AF191FAF0A6E00A8E27E /* SKScNavBar.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1BF1AF2E1FAF0A6E00A8E27E /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF2F1FAF0A6E00A8E27E /* AlarmRecordViewCtrl.swift */,
-				1BF1AF301FAF0A6E00A8E27E /* HomePageViewCtrl.swift */,
-				1BF1AF311FAF0A6E00A8E27E /* MainTabBarCtrl.swift */,
-				1BF1AF321FAF0A6E00A8E27E /* NirKxMenu */,
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
-		1BF1AF321FAF0A6E00A8E27E /* NirKxMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF331FAF0A6E00A8E27E /* NirKxMenu.h */,
-				1BF1AF341FAF0A6E00A8E27E /* NirKxMenu.m */,
-			);
-			path = NirKxMenu;
-			sourceTree = "<group>";
-		};
-		1BF1AF351FAF0A6E00A8E27E /* LeftView */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF361FAF0A6E00A8E27E /* LeftMenuViewCtrl.swift */,
-				1BF1AF371FAF0A6E00A8E27E /* SWRevealViewController.h */,
-				1BF1AF381FAF0A6E00A8E27E /* SWRevealViewController.m */,
-			);
-			path = LeftView;
-			sourceTree = "<group>";
-		};
-		1BF1AF391FAF0A6E00A8E27E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF3A1FAF0A6E00A8E27E /* ConfWifi */,
-				1BF1AF431FAF0A6E00A8E27E /* LoginViewCtrl.swift */,
-				1BF1AF421FAF0A6E00A8E27E /* FindPasswordViewCtrl.swift */,
-				1BF1AF441FAF0A6E00A8E27E /* RegisterViewCtrl.swift */,
-				1BF1AF451FAF0A6E00A8E27E /* ResetPasswordViewCtrl.swift */,
-				1BF1AF461FAF0A6E00A8E27E /* SetPasswordViewCtrl.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		1BF1AF3A1FAF0A6E00A8E27E /* ConfWifi */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF3B1FAF0A6E00A8E27E /* MasterConfWifiViewCtrl.swift */,
-				1BF1AF3C1FAF0A6E00A8E27E /* Voice */,
-			);
-			path = ConfWifi;
-			sourceTree = "<group>";
-		};
-		1BF1AF3C1FAF0A6E00A8E27E /* Voice */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF3D1FAF0A6E00A8E27E /* SmartConfigClient.framework */,
-				1BF1AF3E1FAF0A6E00A8E27E /* Toast.swift */,
-				1BF1AF3F1FAF0A6E00A8E27E /* VoiceConfWifiViewCtrl.swift */,
-				1BF1AF401FAF0A6E00A8E27E /* VoiceReachability.swift */,
-				1BF1AF411FAF0A6E00A8E27E /* VoiceUserInfo.swift */,
-			);
-			path = Voice;
-			sourceTree = "<group>";
-		};
-		1BF1AF471FAF0A6E00A8E27E /* Master */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF481FAF0A6E00A8E27E /* AddMasterNaviCtrl.swift */,
-				1BF1AF491FAF0A6E00A8E27E /* AddMasterViewCtrl.swift */,
-				1BF1AF4B1FAF0A6E00A8E27E /* MyMasterViewCtrl.swift */,
-				1BF1AF4A1FAF0A6E00A8E27E /* EditMasterViewCtrl.swift */,
-				1BF1AF4C1FAF0A6E00A8E27E /* SharedAccountViewCtrl.swift */,
-				1BF1AF4D1FAF0A6E00A8E27E /* SharedElecListViewCtrl.swift */,
-				1BF1AF4E1FAF0A6E00A8E27E /* SharedListViewCtrl.swift */,
-				1BF1AF4F1FAF0A6E00A8E27E /* ShareMasterViewCtrl.swift */,
-			);
-			path = Master;
-			sourceTree = "<group>";
-		};
-		1BF1AF501FAF0A6E00A8E27E /* OtherMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF511FAF0A6E00A8E27E /* SettingViewCtrl.swift */,
-				1BF1AF521FAF0A6E00A8E27E /* SwitchCityViewCtrl.swift */,
-			);
-			path = OtherMenu;
-			sourceTree = "<group>";
-		};
-		1BF1AF531FAF0A6E00A8E27E /* ScenePage */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF541FAF0A6E00A8E27E /* AddSceneElectricViewCtrl.swift */,
-				1BF1AF551FAF0A6E00A8E27E /* AddSceneViewCtrl.swift */,
-				1BF1AF561FAF0A6E00A8E27E /* EditSceneElectricViewCtrl.swift */,
-				1BF1AF571FAF0A6E00A8E27E /* EditSceneViewCtrl.swift */,
-				1BF1AF581FAF0A6E00A8E27E /* ScenePageViewCtrl.swift */,
-				1BF1AF591FAF0A6E00A8E27E /* SceneViewCtrl.swift */,
-				1BF1AF5A1FAF0A6E00A8E27E /* ViewPagerIndicator.swift */,
-			);
-			path = ScenePage;
-			sourceTree = "<group>";
-		};
-		1BF1AF5B1FAF0A6E00A8E27E /* SensorPage */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AF5C1FAF0A6E00A8E27E /* SensorViewCtrl.swift */,
-			);
-			path = SensorPage;
-			sourceTree = "<group>";
-		};
-		1BF1AFA01FAF236900A8E27E /* Electric */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AFA11FAF236900A8E27E /* Func */,
-				1BF1AFA61FAF236900A8E27E /* Types */,
-			);
-			path = Electric;
-			sourceTree = "<group>";
-		};
-		1BF1AFA11FAF236900A8E27E /* Func */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AFA21FAF236900A8E27E /* AddElectricTypeViewCtrl.swift */,
-				1BF1AFA31FAF236900A8E27E /* AddElectricViewCtrl.swift */,
-				1BF1AFA41FAF236900A8E27E /* DoorRecordViewCtrl.swift */,
-				1BF1AFA51FAF236900A8E27E /* EditElectricViewCtrl.swift */,
-			);
-			path = Func;
-			sourceTree = "<group>";
-		};
-		1BF1AFA61FAF236900A8E27E /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				1BF1AFB01FAF236900A8E27E /* ElecSuperViewCtrl.swift */,
-				1BF1AFA71FAF236900A8E27E /* ElecAirLearnViewCtrl.swift */,
-				1BF1AFA81FAF236900A8E27E /* ElecAirViewCtrl.swift */,
-				1BF1AFA91FAF236900A8E27E /* ElecClothesViewCtrl.swift */,
-				1BF1AFAA1FAF236900A8E27E /* ElecCurtainViewCtrl.swift */,
-				1BF1AFAB1FAF236900A8E27E /* ElecDoor2ViewCtrl.swift */,
-				1BF1AFAC1FAF236900A8E27E /* ElecDoorViewCtrl.swift */,
-				1BF1AFAD1FAF236900A8E27E /* ElecHornViewCtrl.swift */,
-				1BF1AFAE1FAF236900A8E27E /* ElecSceneSwitchViewCtrl.swift */,
-				1BF1AFAF1FAF236900A8E27E /* ElecSensorViewCtrl.swift */,
-				1BF1AFB11FAF236900A8E27E /* ElecSwitchViewCtrl.swift */,
-				1BF1AFB21FAF236900A8E27E /* ElecTvViewCtrl.swift */,
-				1BF1AFB31FAF236900A8E27E /* ElecWindowViewCtrl.swift */,
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		1BF505F51DB7154A002AA286 /* Data */ = {
@@ -2878,25 +2878,28 @@
 			files = (
 				1B2D6F611FCA9888006CA0B5 /* vv_rec_start_2.png in Resources */,
 				1B2D700E1FCA9888006CA0B5 /* pick_bg@2x.png in Resources */,
-				1BF1AEE81FAF0A5800A8E27E /* AlarmRecordCell.xib in Resources */,
 				1B2D6FF91FCA9888006CA0B5 /* TableViewCell_pic_day.xib in Resources */,
 				1B2D6F761FCA9888006CA0B5 /* zx_switch_on.png in Resources */,
 				1B2D6F851FCA9888006CA0B5 /* png_playback_forword.png in Resources */,
+				1B83A77B1FDEAF150013047B /* MiniSceneAndArea.xib in Resources */,
 				1B2D6FA01FCA9888006CA0B5 /* png_wifi3.png in Resources */,
 				1B2D6F9B1FCA9888006CA0B5 /* png_add_o.png in Resources */,
+				1B83A79C1FDEAF160013047B /* AddSceneCell.xib in Resources */,
 				1B2D6FAD1FCA9888006CA0B5 /* item_folder_cell.xib in Resources */,
 				1B2D6FE91FCA9888006CA0B5 /* ViewController_playfish_local.xib in Resources */,
 				1B2D6F981FCA9888006CA0B5 /* png_wifi.png in Resources */,
-				1BF1AEE61FAF0A5800A8E27E /* AddSceneCell.xib in Resources */,
 				1B2D6F671FCA9888006CA0B5 /* key.png in Resources */,
+				1B83A7A01FDEAF160013047B /* MyAccountInfoCell.xib in Resources */,
+				1B83A79E1FDEAF160013047B /* SharedElectricCell.xib in Resources */,
 				1B2D6F5D1FCA9888006CA0B5 /* pic_nopic.png in Resources */,
 				1B2D6F881FCA9888006CA0B5 /* png_circle_red.png in Resources */,
 				1B2D6F6D1FCA9888006CA0B5 /* png_file_blue.png in Resources */,
+				1B83A7801FDEAF150013047B /* DeleteElectric.xib in Resources */,
 				1B2D6F7E1FCA9888006CA0B5 /* wifi-flat.png in Resources */,
 				1B2D70061FCA9888006CA0B5 /* TableViewCell_wifi.xib in Resources */,
+				1B83A7A31FDEAF160013047B /* MyAccountImageCell.xib in Resources */,
 				1B2D6F7F1FCA9888006CA0B5 /* app_deviceEdit_highlighted.png in Resources */,
 				1B2D6F8C1FCA9888006CA0B5 /* zx_return_white.png in Resources */,
-				1BF1AEFE1FAF0A5800A8E27E /* SharedAccountInfoCell.xib in Resources */,
 				1B2D6F531FCA9888006CA0B5 /* png_camera.png in Resources */,
 				1B2D6F781FCA9888006CA0B5 /* png_left_gray.png in Resources */,
 				1B2D6F7B1FCA9888006CA0B5 /* png_carempic_bak.png in Resources */,
@@ -2904,37 +2907,36 @@
 				1B7667EB1EF3CA1C007B21B4 /* JdDeviceInfoTableViewCell.xib in Resources */,
 				1B2D6FE21FCA9888006CA0B5 /* TableViewCell_sensor.xib in Resources */,
 				1B2D6F5A1FCA9888006CA0B5 /* app_reconnect.png in Resources */,
-				1BF1AEEC1FAF0A5800A8E27E /* EditSceneElectricCell.xib in Resources */,
 				1B7667E81EF3CA1C007B21B4 /* CategoryTableViewCell.xib in Resources */,
 				1B2D6FF51FCA9888006CA0B5 /* ViewController_alarm_media_55.xib in Resources */,
 				1B7667C51EF3CA1C007B21B4 /* JdMyDeviceViewController.xib in Resources */,
 				1B2D6FA41FCA9888006CA0B5 /* item_file_cell.xib in Resources */,
-				1BF1AEE11FAF0A5800A8E27E /* MiniElectric.xib in Resources */,
 				1B2D6FD91FCA9888006CA0B5 /* ViewController_gallery.xib in Resources */,
 				1B2D6FCB1FCA9888006CA0B5 /* TableViewCell_cam.xib in Resources */,
 				1B2D6F561FCA9888006CA0B5 /* vv_disabled.png in Resources */,
-				1BF1AEF81FAF0A5800A8E27E /* MySceneElectricCell.xib in Resources */,
 				1B2D6FC71FCA9888006CA0B5 /* ViewController_fishplay.xib in Resources */,
 				1B2D6F951FCA9888006CA0B5 /* png_right_gray.png in Resources */,
 				1B2D6FEC1FCA9888006CA0B5 /* ViewController_playback_local.xib in Resources */,
-				1BF1AF001FAF0A5800A8E27E /* SharedElectricCell.xib in Resources */,
+				1B83A79A1FDEAF160013047B /* MyAreaCell2.xib in Resources */,
 				1B2D6F9E1FCA9888006CA0B5 /* png_wifi1.png in Resources */,
 				1B2D6F5B1FCA9888006CA0B5 /* dev_qrcode.png in Resources */,
 				1B2D6FD51FCA9888006CA0B5 /* ViewController_playback.xib in Resources */,
+				1B83A78A1FDEAF150013047B /* MyMasterCell.xib in Resources */,
+				1B83A77F1FDEAF150013047B /* MiniElectric.xib in Resources */,
 				1B2D6F681FCA9888006CA0B5 /* vv_talk.png in Resources */,
 				1B2D6FAC1FCA9888006CA0B5 /* zxy_FolderViewController.xib in Resources */,
 				1B2D6F571FCA9888006CA0B5 /* photo-gallery-left.png in Resources */,
 				1B2D6F751FCA9888006CA0B5 /* hint_fail.png in Resources */,
 				1B2D6FD31FCA9888006CA0B5 /* query_dateViewController.xib in Resources */,
 				1B2D6F8F1FCA9888006CA0B5 /* cylinder_1.png in Resources */,
-				1BF1AEE31FAF0A5800A8E27E /* MiniSceneAndArea.xib in Resources */,
 				1B2D6F791FCA9888006CA0B5 /* png_sound1_back.png in Resources */,
 				1B2D6FA21FCA9888006CA0B5 /* png_wifi2.png in Resources */,
+				1B83A7821FDEAF150013047B /* MySceneElectricView.xib in Resources */,
 				1B2D6F8B1FCA9888006CA0B5 /* vv_speaking.png in Resources */,
 				1B2D6FFB1FCA9888006CA0B5 /* ViewController_alarm_media.xib in Resources */,
+				1B83A7891FDEAF150013047B /* DoorRecordCell.xib in Resources */,
 				1B2D700F1FCA9888006CA0B5 /* line@2x.png in Resources */,
 				1B2D6FE61FCA9888006CA0B5 /* ViewController_adddev.xib in Resources */,
-				1BF1AEEE1FAF0A5800A8E27E /* MyAccountImageCell.xib in Resources */,
 				1B2D6F6E1FCA9888006CA0B5 /* app_eventList.png in Resources */,
 				1B2D6F9C1FCA9888006CA0B5 /* png_error_white.png in Resources */,
 				1B2D6F9A1FCA9888006CA0B5 /* devqrcode.png in Resources */,
@@ -2946,23 +2948,22 @@
 				1B2D6F651FCA9888006CA0B5 /* vv_recStart_disabled.png in Resources */,
 				1B2D6F7A1FCA9888006CA0B5 /* half_ball.png in Resources */,
 				1B441C2A1DB5133E0009F2E0 /* Assets.xcassets in Resources */,
+				1B83A7901FDEAF150013047B /* MySceneElectricCell.xib in Resources */,
+				1B83A7871FDEAF150013047B /* MySensorCell.xib in Resources */,
 				1B2D6F731FCA9888006CA0B5 /* png_wired.png in Resources */,
+				1B83A7A11FDEAF160013047B /* MySharedAccountCell.xib in Resources */,
+				1B83A7931FDEAF150013047B /* SharedAccountInfoCell.xib in Resources */,
 				1B2D6FE51FCA9888006CA0B5 /* TableViewCell_search_dev.xib in Resources */,
 				1B2D6FC91FCA9888006CA0B5 /* ViewController_main.xib in Resources */,
-				1BF1AF021FAF0A5800A8E27E /* MySceneElectricView.xib in Resources */,
 				1B6F29061E460B1000D19DE9 /* cert.pem in Resources */,
 				1B2D6F581FCA9888006CA0B5 /* png_check_black.png in Resources */,
 				1B2D6F621FCA9888006CA0B5 /* png_circle_red_alarm.png in Resources */,
 				1B2D6F661FCA9888006CA0B5 /* photo-gallery-trashcan.png in Resources */,
 				1B2D6F551FCA9888006CA0B5 /* updown_1.png in Resources */,
-				1BF1AEFA1FAF0A5800A8E27E /* MySensorCell.xib in Resources */,
-				1BF1AEEA1FAF0A5800A8E27E /* DoorRecordCell.xib in Resources */,
 				1B2D6F831FCA9888006CA0B5 /* png_wifi_black.png in Resources */,
 				1B2D6F721FCA9888006CA0B5 /* zx_next_level_gray.png in Resources */,
 				1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */,
 				1B2D6F641FCA9888006CA0B5 /* png_playback_calender.png in Resources */,
-				1BF1AEF01FAF0A5800A8E27E /* MyAccountInfoCell.xib in Resources */,
-				1BF1AEFC1FAF0A5800A8E27E /* MySharedAccountCell.xib in Resources */,
 				1B2D6F631FCA9888006CA0B5 /* png_sound1.png in Resources */,
 				1B2D6F6C1FCA9888006CA0B5 /* Qr-Code.png in Resources */,
 				1B2D6F5C1FCA9888006CA0B5 /* radio-tower.png in Resources */,
@@ -2970,42 +2971,40 @@
 				1B2D6F931FCA9888006CA0B5 /* smartwifi.png in Resources */,
 				1B2D6F541FCA9888006CA0B5 /* half_ball_1.png in Resources */,
 				1B2D6F911FCA9888006CA0B5 /* png_playback_back.png in Resources */,
+				1B83A7881FDEAF150013047B /* MySceneCell.xib in Resources */,
 				1B2D6F891FCA9888006CA0B5 /* img_animate_disarm01_setting.png in Resources */,
 				1B2D6FDE1FCA9888006CA0B5 /* ViewController_cctv.xib in Resources */,
 				1B2D6F701FCA9888006CA0B5 /* photo-gallery-right.png in Resources */,
 				1B2D6F801FCA9888006CA0B5 /* zx_video_green.png in Resources */,
 				1B2D6F7C1FCA9888006CA0B5 /* png_video_orange.png in Resources */,
 				1B2D6F711FCA9888006CA0B5 /* tow_divide.png in Resources */,
-				1BF1AEF21FAF0A5800A8E27E /* MyAreaCell.xib in Resources */,
-				1B83A7461FDE89BE0013047B /* MyAreaCell2.xib in Resources */,
 				1B2D6F921FCA9888006CA0B5 /* btn_qr.png in Resources */,
 				1B2D6F971FCA9888006CA0B5 /* updown.png in Resources */,
+				1B83A79D1FDEAF160013047B /* AlarmRecordCell.xib in Resources */,
 				1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */,
 				1B2D6F7D1FCA9888006CA0B5 /* search.png in Resources */,
 				1B2D6FA31FCA9888006CA0B5 /* ViewController_fishpic.xib in Resources */,
 				1B2D6F821FCA9888006CA0B5 /* png_search.png in Resources */,
 				1B2D70011FCA9888006CA0B5 /* ViewController_camset_detail.xib in Resources */,
 				1B2D700A1FCA9888006CA0B5 /* zxy_fish_playbackViewController_alarm.xib in Resources */,
-				1BF1AEF61FAF0A5800A8E27E /* MySceneCell.xib in Resources */,
 				1BEEAF151DD9AE6900E17617 /* Main.storyboard in Resources */,
-				1BF1AEF41FAF0A5800A8E27E /* MyMasterCell.xib in Resources */,
+				1B83A7911FDEAF150013047B /* EditSceneElectricCell.xib in Resources */,
 				1B2D6F591FCA9888006CA0B5 /* zx_pre_level_gray.png in Resources */,
 				1B2D63881FCA5A95006CA0B5 /* Localizable.strings in Resources */,
 				1B2D6F601FCA9888006CA0B5 /* png_video.png in Resources */,
 				1B2D6F5E1FCA9888006CA0B5 /* png_sound1_orange.png in Resources */,
+				1B83A77D1FDEAF150013047B /* AddElectric.xib in Resources */,
 				1B2D6F861FCA9888006CA0B5 /* photo-gallery-edit-caption.png in Resources */,
 				1B2D6F6A1FCA9888006CA0B5 /* png_nospeak.png in Resources */,
 				1B2D6F901FCA9888006CA0B5 /* png_code.png in Resources */,
 				1B2D6F8A1FCA9888006CA0B5 /* vv_volumnOn.png in Resources */,
 				1B7667ED1EF3CA1C007B21B4 /* JdFailTipView.xib in Resources */,
-				1BF1AEDF1FAF0A5800A8E27E /* DeleteElectric.xib in Resources */,
 				1B2D70071FCA9888006CA0B5 /* zxy_playbackViewController_alarm.xib in Resources */,
 				1B2D6F9F1FCA9888006CA0B5 /* zx_switch_off.png in Resources */,
 				1B2D6FA11FCA9888006CA0B5 /* zx_video_white.png in Resources */,
 				1B2D6F941FCA9888006CA0B5 /* app_remove_highlighted.png in Resources */,
 				1B2D6F8D1FCA9888006CA0B5 /* cylinder.png in Resources */,
 				1B2D6F5F1FCA9888006CA0B5 /* tow_divide_1.png in Resources */,
-				1BF1AEDD1FAF0A5800A8E27E /* AddElectric.xib in Resources */,
 				1B2D6F6F1FCA9888006CA0B5 /* png_search_on.png in Resources */,
 				1B7667C31EF3CA1C007B21B4 /* JdMusicPlayViewController.xib in Resources */,
 				1B2D6FF21FCA9888006CA0B5 /* ViewController_alarm_media_4.xib in Resources */,
@@ -3014,6 +3013,7 @@
 				1B2D6F9D1FCA9888006CA0B5 /* vv_volumnOff_disabled.png in Resources */,
 				1B2D6F4F1FCA9888006CA0B5 /* ViewController_recordset.xib in Resources */,
 				1B2D6F741FCA9888006CA0B5 /* png_delete.png in Resources */,
+				1B83A79F1FDEAF160013047B /* MyAreaCell.xib in Resources */,
 				1B2D6F691FCA9888006CA0B5 /* img_animate_disarm05_setting.png in Resources */,
 				1B2D6F991FCA9888006CA0B5 /* png_wifi4.png in Resources */,
 				1B2D6F771FCA9888006CA0B5 /* vv_recStart.png in Resources */,
@@ -3120,176 +3120,174 @@
 			files = (
 				1B2D70141FCA9888006CA0B5 /* PinyinHelper.m in Sources */,
 				1B2D6FBF1FCA9888006CA0B5 /* mask.c in Sources */,
-				1BF1AEDC1FAF0A5800A8E27E /* AddElectric.swift in Sources */,
 				1B2D6FC51FCA9888006CA0B5 /* ViewController_fishplay.m in Sources */,
+				1B83A8341FDEAF480013047B /* ChangeAccountEmailViewCtrl.swift in Sources */,
 				1B7667E91EF3CA1C007B21B4 /* CHLoadingView.m in Sources */,
-				1BF1AFB51FAF236A00A8E27E /* AddElectricViewCtrl.swift in Sources */,
+				1B83A8141FDEAF480013047B /* SharedAccountViewCtrl.swift in Sources */,
 				1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */,
-				1BF1AF7E1FAF0A6F00A8E27E /* HomePageViewCtrl.swift in Sources */,
+				1B83A8381FDEAF480013047B /* ChangeAccountNameViewCtrl.swift in Sources */,
 				1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */,
-				1BF1AF9B1FAF0A6F00A8E27E /* EditSceneViewCtrl.swift in Sources */,
 				1B504CFA1F13BD6F00C57F17 /* ETData.swift in Sources */,
 				1B7667E61EF3CA1C007B21B4 /* JsonUtils.m in Sources */,
-				1BF1AF9C1FAF0A6F00A8E27E /* ScenePageViewCtrl.swift in Sources */,
-				1BF1AFBB1FAF236A00A8E27E /* ElecCurtainViewCtrl.swift in Sources */,
 				1B2D702B1FCA9888006CA0B5 /* cam_list_manager_req.m in Sources */,
+				1B83A8011FDEAF480013047B /* HomePageViewCtrl.swift in Sources */,
 				1B2D701A1FCA9888006CA0B5 /* vv_req_info.m in Sources */,
-				1BF1AEF31FAF0A5800A8E27E /* MyMasterCell.swift in Sources */,
 				1B6F29B21E460D7500D19DE9 /* UserToken.cpp in Sources */,
 				1B7667C21EF3CA1C007B21B4 /* JdMusicPlayViewController.m in Sources */,
 				1B2D702C1FCA9888006CA0B5 /* cam_list_item.m in Sources */,
+				1B83A81D1FDEAF480013047B /* AddSceneElectricViewCtrl.swift in Sources */,
 				1B7667C41EF3CA1C007B21B4 /* JdMyDeviceViewController.m in Sources */,
 				1B2D6FCC1FCA9888006CA0B5 /* TableViewCell_cam.m in Sources */,
 				1B2D6FBE1FCA9888006CA0B5 /* qrinput.c in Sources */,
 				1B2D70031FCA9888006CA0B5 /* item_wifi.m in Sources */,
-				1BF1AF601FAF0A6F00A8E27E /* ChangeAccountNameViewCtrl.swift in Sources */,
+				1B83A8151FDEAF480013047B /* AddMasterViewCtrl.swift in Sources */,
 				1B6F29E91E46112B00D19DE9 /* AddDeviceViewController.m in Sources */,
-				1BF1AF8F1FAF0A6F00A8E27E /* AddMasterViewCtrl.swift in Sources */,
 				1B2D6FD01FCA9888006CA0B5 /* UIColor+expanded.m in Sources */,
-				1BF1AFC21FAF236A00A8E27E /* ElecSwitchViewCtrl.swift in Sources */,
 				1BCBE4C11FD577D0003CB2EA /* RecordViewController.m in Sources */,
+				1B83A8361FDEAF480013047B /* AccountInfoViewCtrl.swift in Sources */,
 				1B2D700D1FCA9888006CA0B5 /* ScanViewController.m in Sources */,
-				1BF1AFC41FAF236A00A8E27E /* ElecWindowViewCtrl.swift in Sources */,
-				1BF1AF6B1FAF0A6F00A8E27E /* SKScNavBar.swift in Sources */,
+				1B83A7851FDEAF150013047B /* SCLExtensions.swift in Sources */,
 				1B6F29B31E460D7500D19DE9 /* cJSON.cpp in Sources */,
+				1B83A7811FDEAF150013047B /* AddElectric.swift in Sources */,
 				1B2D6FF81FCA9888006CA0B5 /* TableViewCell_pic_info.m in Sources */,
 				1B2D6FED1FCA9888006CA0B5 /* view_player_playbacklocal.m in Sources */,
+				1B83A82A1FDEAF480013047B /* ElecAirViewCtrl.swift in Sources */,
 				1B2D6FCD1FCA9888006CA0B5 /* NSMutableArray+convenience.m in Sources */,
-				1BF1AFBE1FAF236A00A8E27E /* ElecHornViewCtrl.swift in Sources */,
-				1B83A7441FDE72200013047B /* MoveElectricViewCtrl.swift in Sources */,
+				1B83A8401FDEAF480013047B /* SetPasswordViewCtrl.swift in Sources */,
 				1B2D6FBD1FCA9888006CA0B5 /* QRCodeGenerator.m in Sources */,
+				1B83A77A1FDEAF150013047B /* MiniSceneAndArea.swift in Sources */,
 				1B2D70091FCA9888006CA0B5 /* view_player_playback_alarm_fish.m in Sources */,
+				1B83A7991FDEAF160013047B /* MyAreaCell.swift in Sources */,
 				1B2D6FB31FCA9888006CA0B5 /* event_asynimage.m in Sources */,
 				1B6F29B81E460D7500D19DE9 /* LCOpenApi_Reflection.cpp in Sources */,
-				1BF1AF661FAF0A6F00A8E27E /* SelectedAreaViewCtrl.swift in Sources */,
+				1B83A78C1FDEAF150013047B /* MySharedAccountCell.swift in Sources */,
 				1B2D6FB41FCA9888006CA0B5 /* UICustomNavigationControllerViewController.m in Sources */,
 				1B0868DB1DE9675B0045E531 /* ElectricData.swift in Sources */,
 				1B3BB0EF1DFBFD7000361071 /* getgateway.c in Sources */,
+				1B83A8081FDEAF480013047B /* EditAreaViewCtrl.swift in Sources */,
 				1B6F29B51E460D7500D19DE9 /* LCOpenApi_Common.cpp in Sources */,
+				1B83A8161FDEAF480013047B /* MyMasterViewCtrl.swift in Sources */,
+				1B83A7A41FDEAF160013047B /* ETKeyButton.swift in Sources */,
 				1B7667C01EF3CA1C007B21B4 /* JdCategory_DViewController.m in Sources */,
 				1BACDA961DCDF07A00BA85C2 /* SQLTable.swift in Sources */,
-				1BF1AFB41FAF236A00A8E27E /* AddElectricTypeViewCtrl.swift in Sources */,
-				1BF1AF641FAF0A6F00A8E27E /* EditAreaViewCtrl.swift in Sources */,
-				1BF1AEF71FAF0A5800A8E27E /* MySceneElectricCell.swift in Sources */,
 				1B2D6FFC1FCA9888006CA0B5 /* zx_message_cache_item.m in Sources */,
-				1BF1AEE41FAF0A5800A8E27E /* ETKeyButton.swift in Sources */,
+				1B83A82D1FDEAF480013047B /* ElecDoor2ViewCtrl.swift in Sources */,
 				1B2D6FBB1FCA9888006CA0B5 /* qrencode.c in Sources */,
-				1BF1AF951FAF0A6F00A8E27E /* ShareMasterViewCtrl.swift in Sources */,
-				1BF1AF811FAF0A6F00A8E27E /* LeftMenuViewCtrl.swift in Sources */,
 				1B441C231DB5133D0009F2E0 /* AppDelegate.swift in Sources */,
 				1B2D70161FCA9888006CA0B5 /* ChineseToPinyinResource.m in Sources */,
+				1B83A8431FDEAF480013047B /* LoginViewCtrl.swift in Sources */,
 				1B055C8F1E50667100F04851 /* UserBindModeViewController.m in Sources */,
 				1B6F29A71E460D7500D19DE9 /* UIDevice+LeChange.m in Sources */,
-				1BF1AF911FAF0A6F00A8E27E /* MyMasterViewCtrl.swift in Sources */,
-				1BF1AEED1FAF0A5800A8E27E /* MyAccountImageCell.swift in Sources */,
+				1B83A8181FDEAF480013047B /* SharedListViewCtrl.swift in Sources */,
 				1B6F29B61E460D7500D19DE9 /* LCOpenApi_ConstString.cpp in Sources */,
-				1BF1AF691FAF0A6F00A8E27E /* SKLaunchMenu.swift in Sources */,
 				1B2D6FCA1FCA9888006CA0B5 /* ViewController_main.m in Sources */,
+				1B83A8201FDEAF480013047B /* AddSceneViewCtrl.swift in Sources */,
 				1BD1F7571FCA9E4A00AEA502 /* XMLDictionary.m in Sources */,
 				1B2D6FAF1FCA9888006CA0B5 /* UIGridViewCell.m in Sources */,
 				1B2D6FDD1FCA9888006CA0B5 /* zxy_gallery_photoview.m in Sources */,
+				1B83A8281FDEAF480013047B /* ElecClothesViewCtrl.swift in Sources */,
 				1B2D6FBC1FCA9888006CA0B5 /* split.c in Sources */,
 				1B2D6FD61FCA9888006CA0B5 /* ViewController_playback.m in Sources */,
+				1B83A8321FDEAF480013047B /* AddElectricTypeViewCtrl.swift in Sources */,
+				1B83A80B1FDEAF480013047B /* SKMacros.swift in Sources */,
 				1B2D6FAA1FCA9888006CA0B5 /* FGalleryShared.m in Sources */,
-				1BF1AF961FAF0A6F00A8E27E /* SettingViewCtrl.swift in Sources */,
+				1B83A7951FDEAF160013047B /* AlarmRecordCell.swift in Sources */,
+				1B83A8421FDEAF480013047B /* FindPasswordViewCtrl.swift in Sources */,
 				1B7667F01EF3CA1C007B21B4 /* JUIActionButton.m in Sources */,
 				1B6F29A81E460D7500D19DE9 /* VideoPlay.m in Sources */,
-				1BF1AF831FAF0A6F00A8E27E /* MasterConfWifiViewCtrl.swift in Sources */,
 				1B2D6FD11FCA9888006CA0B5 /* NSDate+convenience.m in Sources */,
+				1B83A80F1FDEAF480013047B /* SKLaunchMenuItem.swift in Sources */,
 				1B2D6FEE1FCA9888006CA0B5 /* ViewController_playfish_local.m in Sources */,
+				1B83A8041FDEAF480013047B /* NirKxMenu.m in Sources */,
 				1B2D6FD81FCA9888006CA0B5 /* minutes_item.m in Sources */,
 				1B2D6FDC1FCA9888006CA0B5 /* gallery_photo_manager.m in Sources */,
 				1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */,
 				1B2D6FC11FCA9888006CA0B5 /* rscode.c in Sources */,
+				1B83A8071FDEAF480013047B /* AddAreaViewCtrl.swift in Sources */,
 				1B2D70021FCA9888006CA0B5 /* wired_net_info.m in Sources */,
-				1BF1AF9D1FAF0A6F00A8E27E /* SceneViewCtrl.swift in Sources */,
-				1BF1AEDA1FAF0A5800A8E27E /* SCLAlertView.swift in Sources */,
 				1B7667BC1EF3CA1C007B21B4 /* UIView+Frame.m in Sources */,
-				1BF1AF8A1FAF0A6F00A8E27E /* LoginViewCtrl.swift in Sources */,
 				1B2D6FC41FCA9888006CA0B5 /* AsynImageView.m in Sources */,
+				1B83A83E1FDEAF480013047B /* MasterConfWifiViewCtrl.swift in Sources */,
 				1B2D6FF61FCA9888006CA0B5 /* pic_first_cache.m in Sources */,
+				1B83A8331FDEAF480013047B /* AddElectricViewCtrl.swift in Sources */,
 				1B6F29AE1E460D7500D19DE9 /* LCOpenApi_sha1.cpp in Sources */,
+				1B83A7981FDEAF160013047B /* SharedElectricCell.swift in Sources */,
 				1B2D70001FCA9888006CA0B5 /* ViewController_camset_detail.m in Sources */,
 				1B6F29D91E460E3C00D19DE9 /* RestApiInfo.m in Sources */,
-				1BF1AFB71FAF236A00A8E27E /* EditElectricViewCtrl.swift in Sources */,
 				1B2D6FA91FCA9888006CA0B5 /* FGalleryViewController.m in Sources */,
 				1B2D700C1FCA9888006CA0B5 /* zxy_fish_playbackViewController_alarm.m in Sources */,
 				1B2D6FA61FCA9888006CA0B5 /* item_file_cell.m in Sources */,
-				1BF1AF651FAF0A6F00A8E27E /* VPImageCropperViewController.m in Sources */,
-				1BF1AFBF1FAF236A00A8E27E /* ElecSceneSwitchViewCtrl.swift in Sources */,
-				1BF1AF611FAF0A6F00A8E27E /* ChangeAccountPasswordViewCtrl.swift in Sources */,
 				1B7667E71EF3CA1C007B21B4 /* CategoryTableViewCell.m in Sources */,
 				1B6F29B11E460D7500D19DE9 /* UserBindSms.cpp in Sources */,
-				1BF1AF8D1FAF0A6F00A8E27E /* SetPasswordViewCtrl.swift in Sources */,
 				1B2D6FAE1FCA9888006CA0B5 /* ViewController_fishpic.m in Sources */,
-				1BF1AF991FAF0A6F00A8E27E /* AddSceneViewCtrl.swift in Sources */,
 				1B2D6FF41FCA9888006CA0B5 /* ViewController_alarm_media.m in Sources */,
+				1B83A82F1FDEAF480013047B /* ElecSwitchViewCtrl.swift in Sources */,
 				1B7667BF1EF3CA1C007B21B4 /* JdCategory_CViewController.m in Sources */,
 				1BCBE4C01FD577D0003CB2EA /* RecordPlayViewController.m in Sources */,
 				1B2D70181FCA9888006CA0B5 /* vv_strings.m in Sources */,
+				1B83A80D1FDEAF480013047B /* SKScNavBar.swift in Sources */,
 				1B2D70131FCA9888006CA0B5 /* NSString+PinYin.m in Sources */,
 				1B2D6FC21FCA9888006CA0B5 /* InsetsTextField.m in Sources */,
-				1BF1AF8C1FAF0A6F00A8E27E /* ResetPasswordViewCtrl.swift in Sources */,
+				1B83A8291FDEAF480013047B /* ElecWindowViewCtrl.swift in Sources */,
 				1B2D6FB91FCA9888006CA0B5 /* VideoWnd.m in Sources */,
-				1BF1AFBC1FAF236A00A8E27E /* ElecDoor2ViewCtrl.swift in Sources */,
-				1BF1AEEB1FAF0A5800A8E27E /* EditSceneElectricCell.swift in Sources */,
 				1B2D6FE31FCA9888006CA0B5 /* TableViewCell_sensor.m in Sources */,
 				1B2D6FD71FCA9888006CA0B5 /* view_player_playback_v2.m in Sources */,
 				1B2D6FBA1FCA9888006CA0B5 /* bitstream.c in Sources */,
 				1B055C951E515BB300F04851 /* LiveVideoViewController.m in Sources */,
 				1B2D6FFA1FCA9888006CA0B5 /* zx_alarm_manager.m in Sources */,
-				1BF1AF5E1FAF0A6F00A8E27E /* ChangeAccountAddressViewCtrl.swift in Sources */,
+				1B83A77E1FDEAF150013047B /* DeleteElectric.swift in Sources */,
 				1B3BB0F11DFBFD7000361071 /* MyWifi.m in Sources */,
 				1B2D70151FCA9888006CA0B5 /* HanyuPinyinOutputFormat.m in Sources */,
+				1B83A81F1FDEAF480013047B /* EditSceneElectricViewCtrl.swift in Sources */,
 				1B2D6FFF1FCA9888006CA0B5 /* zx_pic_item.m in Sources */,
 				1B0868DA1DE9675B0045E531 /* AreaData.swift in Sources */,
-				1BF1AEF51FAF0A5800A8E27E /* MySceneCell.swift in Sources */,
 				1B2D6FA81FCA9888006CA0B5 /* FGalleryPhotoView.m in Sources */,
-				1BF1AF941FAF0A6F00A8E27E /* SharedListViewCtrl.swift in Sources */,
-				1BF1AF891FAF0A6F00A8E27E /* FindPasswordViewCtrl.swift in Sources */,
-				1BF1AEE21FAF0A5800A8E27E /* MiniSceneAndArea.swift in Sources */,
-				1BF1AEDB1FAF0A5800A8E27E /* SCLExtensions.swift in Sources */,
+				1B83A7961FDEAF160013047B /* AddSceneCell.swift in Sources */,
+				1B83A7941FDEAF160013047B /* SharedAccountInfoCell.swift in Sources */,
 				1B7667EC1EF3CA1C007B21B4 /* JdFailTipView.m in Sources */,
+				1B83A78D1FDEAF150013047B /* MySceneElectricCell.swift in Sources */,
+				1B83A8251FDEAF480013047B /* ElecDoorViewCtrl.swift in Sources */,
 				1B2D70291FCA9888006CA0B5 /* cam_list_manager_local.m in Sources */,
 				1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */,
+				1B83A8261FDEAF480013047B /* ElecTvViewCtrl.swift in Sources */,
 				1B7667BE1EF3CA1C007B21B4 /* JdCategory_BViewController.m in Sources */,
-				1BF1AF801FAF0A6F00A8E27E /* NirKxMenu.m in Sources */,
+				1B83A8031FDEAF480013047B /* AlarmRecordViewCtrl.swift in Sources */,
+				1B83A78F1FDEAF150013047B /* MyAreaCell2.swift in Sources */,
 				1B2D6FC01FCA9888006CA0B5 /* qrspec.c in Sources */,
 				1B2D6FF11FCA9888006CA0B5 /* TableViewCell_pic_day.m in Sources */,
-				1BF1AF971FAF0A6F00A8E27E /* SwitchCityViewCtrl.swift in Sources */,
-				1BF1AEE91FAF0A5800A8E27E /* DoorRecordCell.swift in Sources */,
 				1B6F29B41E460D7500D19DE9 /* LCOpenApi_ClientSdk.cpp in Sources */,
 				1B2D70171FCA9888006CA0B5 /* PinyinFormatter.m in Sources */,
 				1B7FC36C1E9CC73F00209C41 /* PublicWebService.swift in Sources */,
 				1B2D701C1FCA9888006CA0B5 /* pic_file_manager.m in Sources */,
+				1B83A81E1FDEAF480013047B /* ScenePageViewCtrl.swift in Sources */,
+				1B83A8351FDEAF480013047B /* ChangeAccountPasswordViewCtrl.swift in Sources */,
 				1B6F29B71E460D7500D19DE9 /* LCOpenApi_FreeBuffer.cpp in Sources */,
 				1B2D6FB61FCA9888006CA0B5 /* KDGoalBar.m in Sources */,
-				1BF1AF681FAF0A6F00A8E27E /* SKMacros.swift in Sources */,
 				1B160C251E5871DF002F3BDA /* MessageViewController.m in Sources */,
-				1BF1AFBD1FAF236A00A8E27E /* ElecDoorViewCtrl.swift in Sources */,
-				1BF1AF5D1FAF0A6F00A8E27E /* AccountInfoViewCtrl.swift in Sources */,
-				1BF1AF921FAF0A6F00A8E27E /* SharedAccountViewCtrl.swift in Sources */,
 				1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */,
+				1B83A7861FDEAF150013047B /* MyAccountImageCell.swift in Sources */,
+				1B83A7A21FDEAF160013047B /* DoorRecordCell.swift in Sources */,
 				1BB5E5481E1B9371000B7FD3 /* SceneData.swift in Sources */,
-				1BF1AF6A1FAF0A6F00A8E27E /* SKLaunchMenuItem.swift in Sources */,
 				1B7667EE1EF3CA1C007B21B4 /* JdPlayCtrlBottomView.m in Sources */,
+				1B83A8121FDEAF480013047B /* LeftMenuViewCtrl.swift in Sources */,
+				1B83A8101FDEAF480013047B /* SettingViewCtrl.swift in Sources */,
 				1B6F29DA1E460E3C00D19DE9 /* RestApiService.mm in Sources */,
 				1B2D702A1FCA9888006CA0B5 /* stream_item.m in Sources */,
 				1BFAB33D1E52FA7E00162FC5 /* EditCameraViewCtrl.swift in Sources */,
-				1BF1AEF91FAF0A5800A8E27E /* MySensorCell.swift in Sources */,
+				1B83A8131FDEAF480013047B /* SWRevealViewController.m in Sources */,
 				1B2D6FEB1FCA9888006CA0B5 /* ViewController_playback_local.m in Sources */,
 				1BACDA941DCDF07A00BA85C2 /* MySqlCtrl.swift in Sources */,
-				1BF1AEEF1FAF0A5800A8E27E /* MyAccountInfoCell.swift in Sources */,
 				1B6F29B01E460D7500D19DE9 /* UserBind.cpp in Sources */,
-				1BF1AFBA1FAF236A00A8E27E /* ElecClothesViewCtrl.swift in Sources */,
 				1B7667EA1EF3CA1C007B21B4 /* JdDeviceInfoTableViewCell.m in Sources */,
 				1B2D6FE71FCA9888006CA0B5 /* ViewController_adddev.m in Sources */,
-				1BF1AF7D1FAF0A6F00A8E27E /* AlarmRecordViewCtrl.swift in Sources */,
+				1B83A7971FDEAF160013047B /* MySensorCell.swift in Sources */,
+				1B83A78E1FDEAF150013047B /* MyAccountInfoCell.swift in Sources */,
 				1B7667C11EF3CA1C007B21B4 /* JdCategoryBaseViewController.m in Sources */,
-				1BF1AF8E1FAF0A6F00A8E27E /* AddMasterNaviCtrl.swift in Sources */,
-				1BF1AF621FAF0A6F00A8E27E /* AddAreaViewCtrl.swift in Sources */,
-				1B83A7481FDE89D50013047B /* MyAreaCell2.swift in Sources */,
 				1B2D6FA51FCA9888006CA0B5 /* zxy_FolderViewController.m in Sources */,
+				1B83A7921FDEAF150013047B /* MyMasterCell.swift in Sources */,
+				1B83A8051FDEAF480013047B /* AreaViewCtrl.swift in Sources */,
+				1B83A80E1FDEAF480013047B /* SKLaunchMenu.swift in Sources */,
+				1B83A83B1FDEAF480013047B /* VoiceConfWifiViewCtrl.swift in Sources */,
 				1B2D6FB21FCA9888006CA0B5 /* foler_item.m in Sources */,
 				1B2D6FCF1FCA9888006CA0B5 /* VRGCalendarView.m in Sources */,
 				1B2D6FB01FCA9888006CA0B5 /* UIGridViewRow.m in Sources */,
@@ -3298,84 +3296,86 @@
 				1B2D6FF71FCA9888006CA0B5 /* pic_item.m in Sources */,
 				1B7667EF1EF3CA1C007B21B4 /* JingRoundView.m in Sources */,
 				1B2D6FC31FCA9888006CA0B5 /* LXMRulerView.m in Sources */,
-				1BF1AF9F1FAF0A6F00A8E27E /* SensorViewCtrl.swift in Sources */,
 				1B6F29AF1E460D7500D19DE9 /* AccessToken.cpp in Sources */,
 				1B2D6FEA1FCA9888006CA0B5 /* view_player_playfish_local.m in Sources */,
+				1B83A8391FDEAF480013047B /* VoiceReachability.swift in Sources */,
+				1B83A79B1FDEAF160013047B /* MySceneCell.swift in Sources */,
 				1B0868D31DE9672D0045E531 /* UserData.swift in Sources */,
 				1B6F29B91E460D7500D19DE9 /* LCOpenApi_ReflectionObject.cpp in Sources */,
-				1BF1AFC11FAF236A00A8E27E /* ElecSuperViewCtrl.swift in Sources */,
+				1B83A80A1FDEAF480013047B /* VPImageCropperViewController.m in Sources */,
 				1BF505F71DB71575002AA286 /* DataControl.swift in Sources */,
 				1B2D6FE11FCA9888006CA0B5 /* item_sensor.m in Sources */,
-				1BF1AEFD1FAF0A5800A8E27E /* SharedAccountInfoCell.swift in Sources */,
 				1B2D700B1FCA9888006CA0B5 /* zxy_playbackViewController_alarm.m in Sources */,
-				1BF1AEFB1FAF0A5800A8E27E /* MySharedAccountCell.swift in Sources */,
+				1B83A81C1FDEAF480013047B /* SceneViewCtrl.swift in Sources */,
+				1B83A8191FDEAF480013047B /* EditMasterViewCtrl.swift in Sources */,
+				1B83A82B1FDEAF480013047B /* ElecAirLearnViewCtrl.swift in Sources */,
 				1B2D6FC81FCA9888006CA0B5 /* PopoverView.m in Sources */,
+				1B83A8241FDEAF480013047B /* ElecSuperViewCtrl.swift in Sources */,
 				1B2D6FE41FCA9888006CA0B5 /* TableViewCell_search_dev.m in Sources */,
 				1B2D6FB81FCA9888006CA0B5 /* PulsingHaloLayer.m in Sources */,
-				1BF1AEE71FAF0A5800A8E27E /* AlarmRecordCell.swift in Sources */,
-				1BF1AF861FAF0A6F00A8E27E /* VoiceConfWifiViewCtrl.swift in Sources */,
+				1B83A8021FDEAF480013047B /* MainTabBarCtrl.swift in Sources */,
+				1B83A8091FDEAF480013047B /* MoveElectricViewCtrl.swift in Sources */,
 				1B6F29D81E460E3C00D19DE9 /* DownloadPicture.m in Sources */,
+				1B83A83A1FDEAF480013047B /* VoiceUserInfo.swift in Sources */,
 				1B2D70041FCA9888006CA0B5 /* wifi_manager.m in Sources */,
-				1BF1AF631FAF0A6F00A8E27E /* AreaViewCtrl.swift in Sources */,
+				1B83A8171FDEAF480013047B /* ShareMasterViewCtrl.swift in Sources */,
 				1B2D6FDF1FCA9888006CA0B5 /* ViewController_cctv.m in Sources */,
-				1BF1AEDE1FAF0A5800A8E27E /* DeleteElectric.swift in Sources */,
-				1BF1AF981FAF0A6F00A8E27E /* AddSceneElectricViewCtrl.swift in Sources */,
-				1BF1AFC31FAF236A00A8E27E /* ElecTvViewCtrl.swift in Sources */,
-				1BF1AF931FAF0A6F00A8E27E /* SharedElecListViewCtrl.swift in Sources */,
-				1BF1AF901FAF0A6F00A8E27E /* EditMasterViewCtrl.swift in Sources */,
+				1B83A82E1FDEAF480013047B /* ElecSceneSwitchViewCtrl.swift in Sources */,
+				1B83A78B1FDEAF150013047B /* EditSceneElectricCell.swift in Sources */,
+				1B83A8061FDEAF480013047B /* SelectedAreaViewCtrl.swift in Sources */,
 				1B6F29AC1E460D7500D19DE9 /* LCOpenApi_base64.cpp in Sources */,
-				1BF1AEFF1FAF0A5800A8E27E /* SharedElectricCell.swift in Sources */,
 				1B055C981E529CDD00F04851 /* MyViewController.m in Sources */,
 				1B2D6FAB1FCA9888006CA0B5 /* FGalleryPhoto.m in Sources */,
 				1BACDA951DCDF07A00BA85C2 /* SQLiteDB.swift in Sources */,
 				1B6F29AD1E460D7500D19DE9 /* LCOpenApi_md5.cpp in Sources */,
-				1BF1AFB91FAF236A00A8E27E /* ElecAirViewCtrl.swift in Sources */,
-				1BF1AF9E1FAF0A6F00A8E27E /* ViewPagerIndicator.swift in Sources */,
+				1B83A7841FDEAF150013047B /* SCLAlertView.swift in Sources */,
+				1B83A8211FDEAF480013047B /* ViewPagerIndicator.swift in Sources */,
 				1B2D6F501FCA9888006CA0B5 /* ViewController_recordset.m in Sources */,
 				1B0868D81DE9675B0045E531 /* AccountData.swift in Sources */,
-				1BF1AF5F1FAF0A6F00A8E27E /* ChangeAccountEmailViewCtrl.swift in Sources */,
+				1B83A77C1FDEAF150013047B /* MiniElectric.swift in Sources */,
 				1B7667F21EF3CA1C007B21B4 /* TopAlertView.m in Sources */,
-				1BF1AEF11FAF0A5800A8E27E /* MyAreaCell.swift in Sources */,
-				1BF1AF871FAF0A6F00A8E27E /* VoiceReachability.swift in Sources */,
 				1B2D70191FCA9888006CA0B5 /* OMGToast.mm in Sources */,
+				1B83A7831FDEAF150013047B /* MySceneElectricView.swift in Sources */,
 				1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */,
-				1BF1AF881FAF0A6F00A8E27E /* VoiceUserInfo.swift in Sources */,
+				1B83A80C1FDEAF480013047B /* SKScNavViewController.swift in Sources */,
 				1B2D6FB11FCA9888006CA0B5 /* UIGridView.m in Sources */,
 				1B2D6F511FCA9888006CA0B5 /* ViewController_apmode.m in Sources */,
-				1BF1AF851FAF0A6F00A8E27E /* Toast.swift in Sources */,
 				1B2D70051FCA9888006CA0B5 /* TableViewCell_wifi.m in Sources */,
 				1B2D6FFD1FCA9888006CA0B5 /* pic_cache_list_manager.m in Sources */,
 				1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */,
 				1B2D6FA71FCA9888006CA0B5 /* item_folder_cell.m in Sources */,
-				1BF1AF671FAF0A6F00A8E27E /* SKScNavViewController.swift in Sources */,
 				1B2D6FC61FCA9888006CA0B5 /* VideoWnd_fish.m in Sources */,
 				1B2D6FFE1FCA9888006CA0B5 /* message_cache_list_manager.m in Sources */,
-				1BF1AF7F1FAF0A6F00A8E27E /* MainTabBarCtrl.swift in Sources */,
-				1BF1AF8B1FAF0A6F00A8E27E /* RegisterViewCtrl.swift in Sources */,
 				1B6F29AB1E460D7500D19DE9 /* OpenApiService.mm in Sources */,
-				1BF1AEE51FAF0A5800A8E27E /* AddSceneCell.swift in Sources */,
-				1BF1AEE01FAF0A5800A8E27E /* MiniElectric.swift in Sources */,
+				1B83A8271FDEAF480013047B /* ElecHornViewCtrl.swift in Sources */,
+				1B83A8111FDEAF480013047B /* SwitchCityViewCtrl.swift in Sources */,
+				1B83A83F1FDEAF480013047B /* RegisterViewCtrl.swift in Sources */,
 				1B7667F11EF3CA1C007B21B4 /* JUITableViewSheet.m in Sources */,
-				1BF1AFB61FAF236A00A8E27E /* DoorRecordViewCtrl.swift in Sources */,
-				1BF1AF821FAF0A6F00A8E27E /* SWRevealViewController.m in Sources */,
-				1BF1AF9A1FAF0A6F00A8E27E /* EditSceneElectricViewCtrl.swift in Sources */,
+				1B83A83D1FDEAF480013047B /* Toast.swift in Sources */,
 				1B2D701B1FCA9888006CA0B5 /* share_item.m in Sources */,
 				1B2D6FDA1FCA9888006CA0B5 /* ViewController_gallery.m in Sources */,
 				1B2D70101FCA9888006CA0B5 /* zxy_share_data.m in Sources */,
 				1B2D70081FCA9888006CA0B5 /* view_player_playback_alarm.m in Sources */,
 				1B2D70111FCA9888006CA0B5 /* NSString+PinYin4Cocoa.m in Sources */,
 				1B2D6FCE1FCA9888006CA0B5 /* UIView+convenience.m in Sources */,
-				1BF1AFB81FAF236A00A8E27E /* ElecAirLearnViewCtrl.swift in Sources */,
-				1BF1AF011FAF0A5800A8E27E /* MySceneElectricView.swift in Sources */,
 				1B2D6FE01FCA9888006CA0B5 /* sensors_manager.m in Sources */,
+				1B83A8301FDEAF480013047B /* DoorRecordViewCtrl.swift in Sources */,
+				1B83A82C1FDEAF480013047B /* ElecCurtainViewCtrl.swift in Sources */,
+				1B83A8221FDEAF480013047B /* EditSceneViewCtrl.swift in Sources */,
 				1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */,
 				1B2D6FDB1FCA9888006CA0B5 /* zxy_gallery_photo.m in Sources */,
 				1B2D6FD21FCA9888006CA0B5 /* recordlist_manager.m in Sources */,
-				1BF1AFC01FAF236A00A8E27E /* ElecSensorViewCtrl.swift in Sources */,
+				1B83A8411FDEAF480013047B /* ResetPasswordViewCtrl.swift in Sources */,
 				1B2D6FB51FCA9888006CA0B5 /* ModalAlert.m in Sources */,
 				1B2D6FE81FCA9888006CA0B5 /* item_search.mm in Sources */,
 				1B2D6FB71FCA9888006CA0B5 /* KDGoalBarPercentLayer.m in Sources */,
+				1B83A81B1FDEAF480013047B /* SharedElecListViewCtrl.swift in Sources */,
 				1BACDA971DCDF07A00BA85C2 /* String-Extras.swift in Sources */,
+				1B83A8001FDEAF480013047B /* SensorViewCtrl.swift in Sources */,
+				1B83A8311FDEAF480013047B /* EditElectricViewCtrl.swift in Sources */,
+				1B83A81A1FDEAF480013047B /* AddMasterNaviCtrl.swift in Sources */,
+				1B83A8231FDEAF480013047B /* ElecSensorViewCtrl.swift in Sources */,
+				1B83A8371FDEAF480013047B /* ChangeAccountAddressViewCtrl.swift in Sources */,
 				1B2D6FD41FCA9888006CA0B5 /* query_dateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

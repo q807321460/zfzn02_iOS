@@ -876,6 +876,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
         return (value.mainValue as! String)
     }
     
