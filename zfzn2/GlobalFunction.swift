@@ -261,7 +261,6 @@ func DeleteFile(_ path:String) {
 }
 /**
  全局函数——截取部分图像
- - returns:
  */
 func CutImage(_ image:UIImage, rect:CGRect)->UIImage{
     let subImageRef:CGImage = image.cgImage!.cropping(to: rect)!
@@ -276,7 +275,6 @@ func CutImage(_ image:UIImage, rect:CGRect)->UIImage{
 
 /**
  全局函数——修改电器状态
- - returns:
  */
 func RefreshElectricStates(_ sReceive:String) -> Bool {
     let nStart:Int = sReceive.positionOf("<")

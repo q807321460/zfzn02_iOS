@@ -390,7 +390,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
-    //删除电器，旧的接口，现在已不再使用
+    //删除电器，旧的接口，已弃用
 //    func DeleteElectric(_ masterCode:String, electricIndex:Int, electricSequ:Int, roomIndex:Int) -> String {
 //        let methodName:String = "deleteElectric"
 //        let arrayKey = ["masterCode", "electricIndex", "electricSequ", "roomIndex"]
@@ -863,6 +863,16 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let methodName:String = "deleteSharedUser"
         let arrayKey = ["masterCode", "accountCode"]
         let arrayValue = [masterCode, accountCode]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        return (value.mainValue as! String)
+    }
+    
+    func MoveElectricToAnotherRoom(masterCode:String, electricIndex:Int, roomIndex:Int) -> String {
+        let methodName:String = "moveElectricToAnotherRoom"
+        let arrayKey = ["masterCode", "electricIndex", "roomIndex"]
+        let arrayValue = [masterCode, electricIndex, roomIndex] as [Any]
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")

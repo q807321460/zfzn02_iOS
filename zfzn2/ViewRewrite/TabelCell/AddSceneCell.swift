@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 2017/6/29.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  添加情景模式时，选择情景图片的下拉列表里使用
 
 import UIKit
 

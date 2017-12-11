@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 17/4/10.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  被分享的电器列表里使用
 
 import UIKit
 

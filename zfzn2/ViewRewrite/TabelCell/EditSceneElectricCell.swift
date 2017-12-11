@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 17/1/4.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  情景模式的编辑界面中，切换情景电器的开关模式，以及删除情景电器用
 
 import UIKit
 

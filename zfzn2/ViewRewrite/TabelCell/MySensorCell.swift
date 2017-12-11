@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 2017/6/22.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  第四个模块，传感器列表里使用
 
 import UIKit
 

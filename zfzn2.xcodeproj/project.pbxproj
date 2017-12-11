@@ -308,6 +308,9 @@
 		1B7FC36C1E9CC73F00209C41 /* PublicWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */; };
 		1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B7FC36D1E9DBA9700209C41 /* address.plist */; };
 		1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8305481DD017890070FDD3 /* MyWebService.swift */; };
+		1B83A7441FDE72200013047B /* MoveElectricViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7431FDE72200013047B /* MoveElectricViewCtrl.swift */; };
+		1B83A7461FDE89BE0013047B /* MyAreaCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B83A7451FDE89BE0013047B /* MyAreaCell2.xib */; };
+		1B83A7481FDE89D50013047B /* MyAreaCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7471FDE89D50013047B /* MyAreaCell2.swift */; };
 		1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */; };
 		1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */; };
 		1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */; };
@@ -1011,6 +1014,9 @@
 		1B7FC36B1E9CC73F00209C41 /* PublicWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicWebService.swift; sourceTree = "<group>"; };
 		1B7FC36D1E9DBA9700209C41 /* address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address.plist; sourceTree = "<group>"; };
 		1B8305481DD017890070FDD3 /* MyWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWebService.swift; sourceTree = "<group>"; };
+		1B83A7431FDE72200013047B /* MoveElectricViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveElectricViewCtrl.swift; sourceTree = "<group>"; };
+		1B83A7451FDE89BE0013047B /* MyAreaCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAreaCell2.xib; sourceTree = "<group>"; };
+		1B83A7471FDE89D50013047B /* MyAreaCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreaCell2.swift; sourceTree = "<group>"; };
 		1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocket.swift; sourceTree = "<group>"; };
 		1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zfzn2.db; sourceTree = "<group>"; };
 		1BA52DEA1F13C78600CD9D37 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
@@ -2471,6 +2477,8 @@
 				1BF1AEC61FAF0A5800A8E27E /* MyAccountInfoCell.xib */,
 				1BF1AEC71FAF0A5800A8E27E /* MyAreaCell.swift */,
 				1BF1AEC81FAF0A5800A8E27E /* MyAreaCell.xib */,
+				1B83A7471FDE89D50013047B /* MyAreaCell2.swift */,
+				1B83A7451FDE89BE0013047B /* MyAreaCell2.xib */,
 				1BF1AEC91FAF0A5800A8E27E /* MyMasterCell.swift */,
 				1BF1AECA1FAF0A5800A8E27E /* MyMasterCell.xib */,
 				1BF1AECB1FAF0A5800A8E27E /* MySceneCell.swift */,
@@ -2534,8 +2542,9 @@
 				1BF1AF121FAF0A6E00A8E27E /* SKScNavBarController */,
 				1BF1AF0B1FAF0A6E00A8E27E /* AddAreaViewCtrl.swift */,
 				1BF1AF0C1FAF0A6E00A8E27E /* AreaViewCtrl.swift */,
-				1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */,
 				1BF1AF111FAF0A6E00A8E27E /* SelectedAreaViewCtrl.swift */,
+				1BF1AF0D1FAF0A6E00A8E27E /* EditAreaViewCtrl.swift */,
+				1B83A7431FDE72200013047B /* MoveElectricViewCtrl.swift */,
 			);
 			path = AreaPage;
 			sourceTree = "<group>";
@@ -2968,6 +2977,7 @@
 				1B2D6F7C1FCA9888006CA0B5 /* png_video_orange.png in Resources */,
 				1B2D6F711FCA9888006CA0B5 /* tow_divide.png in Resources */,
 				1BF1AEF21FAF0A5800A8E27E /* MyAreaCell.xib in Resources */,
+				1B83A7461FDE89BE0013047B /* MyAreaCell2.xib in Resources */,
 				1B2D6F921FCA9888006CA0B5 /* btn_qr.png in Resources */,
 				1B2D6F971FCA9888006CA0B5 /* updown.png in Resources */,
 				1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */,
@@ -3146,6 +3156,7 @@
 				1B2D6FED1FCA9888006CA0B5 /* view_player_playbacklocal.m in Sources */,
 				1B2D6FCD1FCA9888006CA0B5 /* NSMutableArray+convenience.m in Sources */,
 				1BF1AFBE1FAF236A00A8E27E /* ElecHornViewCtrl.swift in Sources */,
+				1B83A7441FDE72200013047B /* MoveElectricViewCtrl.swift in Sources */,
 				1B2D6FBD1FCA9888006CA0B5 /* QRCodeGenerator.m in Sources */,
 				1B2D70091FCA9888006CA0B5 /* view_player_playback_alarm_fish.m in Sources */,
 				1B2D6FB31FCA9888006CA0B5 /* event_asynimage.m in Sources */,
@@ -3277,6 +3288,7 @@
 				1B7667C11EF3CA1C007B21B4 /* JdCategoryBaseViewController.m in Sources */,
 				1BF1AF8E1FAF0A6F00A8E27E /* AddMasterNaviCtrl.swift in Sources */,
 				1BF1AF621FAF0A6F00A8E27E /* AddAreaViewCtrl.swift in Sources */,
+				1B83A7481FDE89D50013047B /* MyAreaCell2.swift in Sources */,
 				1B2D6FA51FCA9888006CA0B5 /* zxy_FolderViewController.m in Sources */,
 				1B2D6FB21FCA9888006CA0B5 /* foler_item.m in Sources */,
 				1B2D6FCF1FCA9888006CA0B5 /* VRGCalendarView.m in Sources */,

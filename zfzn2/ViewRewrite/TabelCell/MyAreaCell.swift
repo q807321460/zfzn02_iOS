@@ -3,7 +3,7 @@
 //
 //  Created by Hanwen Kong on 17/1/5.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//  这个是用于在情景模式中添加具体电器时使用的自定义TableCell类，同时该Table中集成了一个自定义的Cell类
+//  这个是用于在情景模式中添加具体电器时使用的自定义TableCell类，同时该Table中集成了一个自定义的Cell类，可以控制展开和折叠（名字不太好起。。。）
 
 import UIKit
 

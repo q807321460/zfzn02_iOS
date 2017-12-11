@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 17/4/5.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  被分享的账户界面中使用
 
 import UIKit
 

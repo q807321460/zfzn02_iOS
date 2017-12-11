@@ -421,7 +421,7 @@ class ElectricInfoData:NSObject {
     var m_sOrderInfo:String = ""//在开关中，标记是多键开关中的哪一个
     var m_sElectricState:String = "00"//电器状态
     var m_sStateInfo:String = ""//状态信息
-    //设置一个用于删除时的标志变量
+    //设置一个用于删除时的标志变量，判断该电器是否处于选中状态
     var m_bSelected:Bool = false
 }
 

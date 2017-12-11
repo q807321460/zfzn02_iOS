@@ -18,8 +18,9 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     @IBOutlet weak var m_eAreaName: UITextField!
     @IBOutlet weak var m_imageArea: UIImageView!
     @IBOutlet weak var m_collectionElectric: UICollectionView!
-    @IBOutlet weak var m_btnDeleteArea: UIButton!
     @IBOutlet weak var m_btnDeleteElectric: UIButton!
+    @IBOutlet weak var m_btnMoveElectricTo: UIButton!
+    @IBOutlet weak var m_btnDeleteArea: UIButton!
     var m_nAreaListFoot:Int!
     var m_nBeginIndexPath: IndexPath?
     var m_nIndexPath: IndexPath?
@@ -35,9 +36,11 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(EditAreaViewCtrl.OnSelectImage(_:)))//将图片当做按钮来处理
         m_imageArea.addGestureRecognizer(tapGR)//添加交互
         m_btnDeleteElectric.layer.cornerRadius = 5.0
-        m_btnDeleteElectric.layer.masksToBounds = true//允许圆角
+        m_btnDeleteElectric.layer.masksToBounds = true
+        m_btnMoveElectricTo.layer.cornerRadius = 5.0
+        m_btnMoveElectricTo.layer.masksToBounds = true
         m_btnDeleteArea.layer.cornerRadius = 5.0
-        m_btnDeleteArea.layer.masksToBounds = true//允许圆角
+        m_btnDeleteArea.layer.masksToBounds = true
         //设置与collection相关的参数
         m_collectionElectric.register(DeleteElectric.self, forCellWithReuseIdentifier: "deleteElectric")
         m_collectionElectric.register(UINib(nibName: "DeleteElectric", bundle: nil), forCellWithReuseIdentifier: "deleteElectric")
@@ -125,6 +128,25 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
             })
             alertView.showInfo("提示", subTitle: "该操作不可撤销，是否继续？", duration: 0)//时间间隔为0时不会自动退出
         })
+    }
+    
+    @IBAction func OnMoveElectricTo(_ sender: Any) {
+        //如果有任意一个电器被选中，则将bHavingSelected置为ture
+        var bHavingSelected:Bool = false
+        for i in 0..<gDC.mAreaList[self.m_nAreaListFoot].mElectricList.count {
+            if gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_bSelected == true {
+                bHavingSelected = true
+                break
+            }
+        }
+        if bHavingSelected == false {//如果遍历发现并没有选中任何的电器，则弹出提示信息
+            ShowInfoDispatch("提示", content: "请先选中电器再进行移动操作", duration: 1.0)
+            return
+        }
+        let mainStory = UIStoryboard(name: "Main", bundle: nil)
+        let nextView = mainStory.instantiateViewController(withIdentifier: "moveElectricViewCtrl") as! MoveElectricViewCtrl
+        nextView.m_nAreaListFoot = self.m_nAreaListFoot
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     @IBAction func OnDelete(_ sender: AnyObject) {
