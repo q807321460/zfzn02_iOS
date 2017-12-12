@@ -67,7 +67,7 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     }
     
     @IBAction func OnDeleteElectric(_ sender: AnyObject) {
-        if (gDC.m_bRemote != true) {
+        if (gDC.m_bRemote == true) {
             ShowNoticeDispatch("提示", content: "远程状态下不允许删除电器", duration: 1.0)
             return
         }

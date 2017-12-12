@@ -39,7 +39,6 @@
 #import <IQKeyboardManager.h>
 #import <SDWebImageManager.h>
 #import <UIImageView+WebCache.h>
-//#import <UIView+Toast.h>
 #import <SocketRocket.h>
 #import <SRWebSocket.h>
 //语音主机配网相关
@@ -48,35 +47,13 @@
 #import <ifaddrs.h>
 
 //以下是ezCam模块使用的头文件
-#import "UICustomNavigationControllerViewController.h"
-#import "zxy_share_data.h"
-#import "ppview_cli.h"
-#import "ppview_cli_v2.h"
-#import "cam_list_manager_local.h"
-#import "cam_list_item.h"
-#import "ViewController_main.h"
-//
-//#import <Availability.h>
-//#ifndef __IPHONE_5_0
-//#warning "This project uses features only available in iOS SDK 5.0 and later."
-//#endif
-
-//#import "CPlayer_fish_jpg.h"
-//#import "CTalk.h"
-//#import "display_point.h"
-//#import "libvvonvif_def.h"
+//#import "UICustomNavigationControllerViewController.h"
+//#import "zxy_share_data.h"
 //#import "ppview_cli.h"
 //#import "ppview_cli_v2.h"
-//#import "time_item.h"
-//#import "vv_cam_item.h"
-//#import "vv_dev_item.h"
-//#import "vv_local_player.h"
-//#import "vv_playback_player.h"
-//#import "vv_real_player.h"
-//#import "item_search.h"
-//#import "TableViewCell_search_dev.h"
-
-
+//#import "cam_list_manager_local.h"
+//#import "cam_list_item.h"
+//#import "ViewController_main.h"
 
 ////以下都是红卫星的头文件，第一部分是自己用的
 //#import "JSSaveUserMessage.h"

@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {//, GCDAsyncSocketDelegat
     var m_bBlockRotation:Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         InitPlistData()//初始化plist文件数据，用于确定一些简单的设置
-        g_SQLiteDB = SQLiteDB.shared//获得该类的单例
-        g_SQLiteDB.openDB()
+//        g_SQLiteDB = SQLiteDB.shared//获得该类的单例
+//        g_SQLiteDB.openDB()
         MyWebService.sharedInstance.InitURLSession()//初始化服务器对象，用于和远程webservice通信
         PublicWebService.sharedInstance.InitURLSession()//初始化服务器对象，用于和远程webservice通信
         //初始化tcp和udp的连接

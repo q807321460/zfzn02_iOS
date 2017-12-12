@@ -26,7 +26,6 @@ class LeftMenuViewCtrl: MyViewController {
     @IBOutlet weak var m_vSetting: UIView!
     @IBOutlet weak var m_labelSetting: UILabel!
    
-
     @IBOutlet weak var m_labelAccountCode: UILabel!
     @IBOutlet weak var m_labelAccountName: UILabel!
     @IBOutlet weak var m_labelLocalVersion: UILabel!
@@ -81,10 +80,12 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vSetting.frame.contains(point)) {
             m_vSetting.backgroundColor = gDC.m_colorTouching
             m_labelSetting.backgroundColor = gDC.m_colorTouching
-        }else if (m_vEzCam.frame.contains(point)) {
-            m_vEzCam.backgroundColor = gDC.m_colorTouching
-            m_labelEzCam.backgroundColor = gDC.m_colorTouching
-        }else if (m_vJdPlay.frame.contains(point)) {
+        }
+//        else if (m_vEzCam.frame.contains(point)) {
+//            m_vEzCam.backgroundColor = gDC.m_colorTouching
+//            m_labelEzCam.backgroundColor = gDC.m_colorTouching
+//        }
+        else if (m_vJdPlay.frame.contains(point)) {
             m_vJdPlay.backgroundColor = gDC.m_colorTouching
             m_labelJdPlay.backgroundColor = gDC.m_colorTouching
         }
@@ -111,10 +112,12 @@ class LeftMenuViewCtrl: MyViewController {
         }else if (m_vJdPlay.frame.contains(point)){
             m_vJdPlay.backgroundColor = gDC.m_colorTouching
             m_labelJdPlay.backgroundColor = gDC.m_colorTouching
-        }else if (m_vEzCam.frame.contains(point)) {
-            m_vEzCam.backgroundColor = gDC.m_colorTouching
-            m_labelEzCam.backgroundColor = gDC.m_colorTouching
-        }else if (m_vSetting.frame.contains(point)) {
+        }
+//        else if (m_vEzCam.frame.contains(point)) {
+//            m_vEzCam.backgroundColor = gDC.m_colorTouching
+//            m_labelEzCam.backgroundColor = gDC.m_colorTouching
+//        }
+        else if (m_vSetting.frame.contains(point)) {
             m_vSetting.backgroundColor = gDC.m_colorTouching
             m_labelSetting.backgroundColor = gDC.m_colorTouching
         }else {}
@@ -159,8 +162,8 @@ class LeftMenuViewCtrl: MyViewController {
         m_labelManualSync.backgroundColor = UIColor.white
         m_vJdPlay.backgroundColor = UIColor.white
         m_labelJdPlay.backgroundColor = UIColor.white
-        m_vEzCam.backgroundColor = UIColor.white
-        m_labelEzCam.backgroundColor = UIColor.white
+//        m_vEzCam.backgroundColor = UIColor.white
+//        m_labelEzCam.backgroundColor = UIColor.white
         m_vSetting.backgroundColor = UIColor.white
         m_labelSetting.backgroundColor = UIColor.white
     }
@@ -229,17 +232,17 @@ class LeftMenuViewCtrl: MyViewController {
     }
     
     func OnEzCam() {
-        let camManager:cam_list_manager_local = cam_list_manager_local.getInstance()
-        let cli:ppview_cli = ppview_cli.getInstance()
-        let cli2:ppview_cli_v2 = ppview_cli_v2.getInstance()
-        let shareData:zxy_share_data = zxy_share_data.getInstance()
-        cli.setAppInfo(nil, devurl: nil, eventurl: nil, appid: nil, vendorpass: nil, with_p2p_svr: "nat.vveye.net", with_p2p_port: 8000, with_secret: "")
-        let sTcerPath = Bundle.main.path(forResource: "ppview", ofType: "cer")
-        cli2.setAppInfo(shareData.m_push_key, vendorpass: shareData.m_push_pass, pushsvr: shareData.push_svr, development: true, with_cer_path: sTcerPath, cer_type: 0)
-        camManager.read_camlist_file()
-        let nextView = ViewController_main.init(nibName: "ViewController_main", bundle: nil)
-        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: nextView)
-        self.present(naviCtrl, animated: true, completion: nil)
+//        let camManager:cam_list_manager_local = cam_list_manager_local.getInstance()
+//        let cli:ppview_cli = ppview_cli.getInstance()
+//        let cli2:ppview_cli_v2 = ppview_cli_v2.getInstance()
+//        let shareData:zxy_share_data = zxy_share_data.getInstance()
+//        cli.setAppInfo(nil, devurl: nil, eventurl: nil, appid: nil, vendorpass: nil, with_p2p_svr: "nat.vveye.net", with_p2p_port: 8000, with_secret: "")
+//        let sTcerPath = Bundle.main.path(forResource: "ppview", ofType: "cer")
+//        cli2.setAppInfo(shareData.m_push_key, vendorpass: shareData.m_push_pass, pushsvr: shareData.push_svr, development: true, with_cer_path: sTcerPath, cer_type: 0)
+//        camManager.read_camlist_file()
+//        let nextView = ViewController_main.init(nibName: "ViewController_main", bundle: nil)
+//        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: nextView)
+//        self.present(naviCtrl, animated: true, completion: nil)
     }
     
     //监听网路状态改变
