@@ -25,7 +25,6 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //konnn
         g_notiCenter.addObserver(self, selector:#selector(EditElectricViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
         m_eElectricName.text = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricName
         m_tableSceneSelected.bounces = false
@@ -94,7 +93,7 @@ class EditElectricViewCtrl: UIViewController, UITableViewDelegate, UITableViewDa
             ShowNoticeDispatch("提示", content: "请输入有效的新电器名", duration: 0.8)
             return
         }
-        //向web发行修改指令，konnn
+        //向web发行修改指令
         if gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nElectricType == 15 {
             var sElectricOrder:String! = ""
             if m_switchDoorState.isOn == true {

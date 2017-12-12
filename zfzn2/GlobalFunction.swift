@@ -456,7 +456,7 @@ func GetLechageTokenGlobal(_ sPhoneNumber:String, isShowLoading:Bool) {
         viewLoading.showInfo("提示", subTitle: "加载中...", duration: 0)
         UIDevice.getLechangeToken(sPhoneNumber)
         viewLoading.hideView()//取消显示正在验证的字样
-        print("【konnn】gDC.m_sCameraToken——\(gDC.m_sCameraToken)")
+        print("gDC.m_sCameraToken——\(gDC.m_sCameraToken)")
     }else {
         UIDevice.getLechangeToken(sPhoneNumber)
     }

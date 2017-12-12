@@ -67,7 +67,7 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     }
     
     @IBAction func OnDeleteElectric(_ sender: AnyObject) {
-        if (gDC.m_bRemote == true) {
+        if (gDC.m_bRemote != true) {
             ShowNoticeDispatch("提示", content: "远程状态下不允许删除电器", duration: 1.0)
             return
         }
@@ -94,7 +94,7 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
                             //如果删除的是摄像头的话，需要和当前账户解绑，解绑需要调用乐橙提供的api
                             if gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_nElectricType == 8 {
                                 let sPhoneNumber = gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sExtras//该摄像头的拥有者的手机号
-                                GetLechageTokenGlobal(sPhoneNumber, isShowLoading: false)//获取指定手机号的token，konnn
+                                GetLechageTokenGlobal(sPhoneNumber, isShowLoading: false)//获取指定手机号的token
                                 UIDevice.unbindLechangeCamera(gDC.mAreaList[self.m_nAreaListFoot].mElectricList[i].m_sElectricCode)
                                 if gDC.m_sUnbindSuccess == "true" {
                                     let webReturn:String = MyWebService.sharedInstance.DeleteElectric1(

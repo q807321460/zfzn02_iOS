@@ -16,7 +16,6 @@ typedef NS_ENUM(NSInteger, RecordType) {
 };
 
 @interface RecordViewController : MyViewController {
-    //konnn
     LCOpenSDK_Api* m_hc;
     NSString* m_strAccessToken;
     

@@ -81,10 +81,6 @@
     self.m_listView.allowsSelection = YES;
     self.m_listView.bounces = NO;
     
-    //konnn
-//    self.automaticallyAdjustsScrollViewInsets = false;//保证顶部不留白
-//    m_listView.tableFooterView = [UIView init];
-    
     [self.view addSubview:self.m_listView];
 
     
@@ -144,17 +140,6 @@
     m_strDevSelected = [NSString stringWithString:deviceId];
     m_devChnSelected = chn;
     m_recordType = type;
-    //konnn
-//    NSString* cerPath = [[NSBundle mainBundle] pathForResource:@"cert" ofType:@"pem"];
-//    m_hc = [[LCOpenSDK_Api shareMyInstance] initOpenApi:@"openapi.lechange.cn" port:443 CA_PATH:cerPath];
-    
-//    NSString* cerPath = [[NSBundle mainBundle] pathForResource:@"cert" ofType:@"pem"];
-//    m_hc = [[LCOpenSDK_Api shareMyInstance] initOpenApi:@"openapi.lechange.cn" port:443 CA_PATH:cerPath];
-//    m_strAccessToken = [NSString stringWithString:token];
-//    RestApiService* restApiService = [RestApiService shareMyInstance];
-//    if (nil != m_hc) {
-//        [restApiService initComponent:m_hc Token:m_strAccessToken];
-//    }
 }
 
 - (NSString*)timeTransformFormatter:(NSString*)time

@@ -30,7 +30,6 @@
 {
     [super viewWillAppear:animated];
     bview.hidden = NO;
-
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -138,7 +138,9 @@
     }
     
     loadView = [CHLoadingView showWithView:self.view];
-   [mPresenter getMusicResource:self.model];
+    
+    //konnn 问题出在这里
+    [mPresenter getMusicResource:self.model];
 }
 
 
