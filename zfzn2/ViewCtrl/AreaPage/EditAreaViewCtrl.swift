@@ -30,6 +30,10 @@ class EditAreaViewCtrl: UIViewController, UINavigationControllerDelegate, UIImag
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //将所有电器的选中状态取消掉
+        for electric in gDC.mAreaList[m_nAreaListFoot].mElectricList {
+            electric.m_bSelected = false
+        }
         m_eAreaName.text = gDC.mAreaList[m_nAreaListFoot].m_sAreaName
         m_imageArea.image = gDC.mAreaList[m_nAreaListFoot].m_imageArea
         m_imageArea.isUserInteractionEnabled = true//设置允许交互属性

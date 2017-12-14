@@ -19,9 +19,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.050</string>
+	<string>1.7.057</string>
 	<key>CFBundleVersion</key>
-	<string>1.7.9</string>
+	<string>1.7.10</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>

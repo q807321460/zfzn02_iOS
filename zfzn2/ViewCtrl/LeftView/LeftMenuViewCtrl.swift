@@ -189,7 +189,6 @@ class LeftMenuViewCtrl: MyViewController {
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
             gDC.m_bRemote = false
             MySocket.sharedInstance.OpenTcpSocekt()
-//            WebSocket.sharedInstance.CloseWebSocket()
         }else {
             ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.5)
             MyWebService.sharedInstance.OpenPolling()
@@ -219,16 +218,17 @@ class LeftMenuViewCtrl: MyViewController {
     }
 
     func OnJdPlay() {
-        JdPlayManagerInit()
-        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
-        conn = Reachability.forInternetConnection()
-        conn?.startNotifier()
-        UpdateInterfaceWithReachability(conn!)
-        
-        let jdCtrl:JdMyDeviceViewController = JdMyDeviceViewController()
-        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: jdCtrl)
-        naviCtrl.navigationBar.isHidden = true
-        self.present(naviCtrl, animated: true, completion: nil)
+        ShowInfoDispatch("提示", content: "该功能维护中...", duration: 1.0)
+//        JdPlayManagerInit()
+//        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
+//        conn = Reachability.forInternetConnection()
+//        conn?.startNotifier()
+//        UpdateInterfaceWithReachability(conn!)
+//
+//        let jdCtrl:JdMyDeviceViewController = JdMyDeviceViewController()
+//        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: jdCtrl)
+//        naviCtrl.navigationBar.isHidden = true
+//        self.present(naviCtrl, animated: true, completion: nil)
     }
     
     func OnEzCam() {
