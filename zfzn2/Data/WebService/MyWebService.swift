@@ -891,6 +891,9 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
     }
     
     func ForbidSync() {
+        if (gDC.m_bSyncing == true) {
+            return
+        }
         gDC.m_bSyncing = true
         m_timerForbidSync = Timer.scheduledTimer(timeInterval: 3.0, target:self, selector: #selector(MyWebService.ResetSync), userInfo: nil, repeats: false)
     }
@@ -949,6 +952,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
         gDC.mElectricData.UpdateElectricState(dictsElectricState)
         gDC.m_bSyncing = false
+        print("结束同步...")
         return 1
     }
     

@@ -90,10 +90,10 @@
 //    [self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
-//- (IBAction)onSearch:(id)sender
-//{
-//    self.m_queryView.hidden = NO;
-//}
+- (IBAction)onSearch:(id)sender
+{
+    self.m_queryView.hidden = NO;
+}
 - (void)onClick:(id)sender
 {
     m_wholePic.hidden = YES;

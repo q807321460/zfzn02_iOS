@@ -4,7 +4,7 @@
 //
 //  Created by Hanwen Kong on 17/3/14.
 //  Copyright © 2017年 Hanwen Kong. All rights reserved.
-//
+//  所有电器界面的父界面
 
 import UIKit
 

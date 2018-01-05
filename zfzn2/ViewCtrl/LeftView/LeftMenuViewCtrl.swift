@@ -218,17 +218,17 @@ class LeftMenuViewCtrl: MyViewController {
     }
 
     func OnJdPlay() {
-        ShowInfoDispatch("提示", content: "该功能维护中...", duration: 1.0)
-//        JdPlayManagerInit()
-//        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
-//        conn = Reachability.forInternetConnection()
-//        conn?.startNotifier()
-//        UpdateInterfaceWithReachability(conn!)
-//
-//        let jdCtrl:JdMyDeviceViewController = JdMyDeviceViewController()
-//        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: jdCtrl)
-//        naviCtrl.navigationBar.isHidden = true
-//        self.present(naviCtrl, animated: true, completion: nil)
+//        ShowInfoDispatch("提示", content: "该功能维护中...", duration: 0.5)
+        JdPlayManagerInit()
+        NotificationCenter.default.addObserver(self, selector: #selector(LeftMenuViewCtrl.NetworkStateChange), name: NSNotification.Name.reachabilityChanged, object: nil)
+        conn = Reachability.forInternetConnection()
+        conn?.startNotifier()
+        UpdateInterfaceWithReachability(conn!)
+
+        let jdCtrl:JdMyDeviceViewController = JdMyDeviceViewController()
+        let naviCtrl:UINavigationController = UINavigationController.init(rootViewController: jdCtrl)
+        naviCtrl.navigationBar.isHidden = true
+        self.present(naviCtrl, animated: true, completion: nil)
     }
     
     func OnEzCam() {

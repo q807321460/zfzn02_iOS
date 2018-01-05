@@ -59,12 +59,9 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     @IBAction func OnExcute(_ sender: AnyObject) {
-//        MySocket.sharedInstance.CheckLocalConnection()
         if gDC.m_bRemote == false {//本地socket控制
-            //现在需要一条指令来控制
             MySocket.sharedInstance.OperateElectric("<********TH**\(gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex)*******00>")
         }else {
-            //接口是有，但是无法控制
             MyWebService.sharedInstance.UpdateElectricOrder(gDC.mUserInfo.m_sMasterCode, electricCode: "********", order: "TH", orderInfo: "**\(gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex)*******")
         }
     }
@@ -105,7 +102,6 @@ class ScenePageViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //这里不需要做出任何响应
         tableView.deselectRow(at: indexPath, animated: false)
     }
     

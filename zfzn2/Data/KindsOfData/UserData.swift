@@ -56,7 +56,17 @@ class UserData: NSObject {
             }
             gDC.mUserList.append(userInfo)
         }
-        gDC.mUserInfo = gDC.mUserList[0]//默认为最新使用的user
+        var bFlag = false
+        for i in 0..<gDC.mUserList.count {
+            if (gDC.mUserList[i].m_sMasterCode == gDC.mUserInfo.m_sMasterCode) {
+                gDC.mUserInfo = gDC.mUserList[i]
+                bFlag = true
+                break
+            }
+        }
+        if (bFlag == false) {
+            gDC.mUserInfo = gDC.mUserList[0]//默认为最新使用的user
+        }
     }
     
     //根据是否拥有管理员权限来更新当前用户

@@ -290,7 +290,8 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if gDC.mAccountInfo.m_sAccountCode != "" {
             let filePathAccount = GetFileFullPath("account_setting/", fileName: "\(gDC.mAccountInfo.m_sAccountCode).plist")
             let dictAccountPlist:NSMutableDictionary? = NSMutableDictionary.init(contentsOfFile: filePathAccount)//根据plist文件路径读取到数据字典
-            gDC.m_sLastMasterCode = dictAccountPlist?.object(forKey: "last_master") as! String//最近一次登录时使用的主节点编号，新手机则为空
+//            gDC.m_sLastMasterCode = dictAccountPlist?.object(forKey: "last_master") as! String//最近一次登录时使用的主节点编号，新手机则为空
+            gDC.mUserInfo.m_sMasterCode = dictAccountPlist?.object(forKey: "last_master") as! String//最近一次登录时使用的主节点编号，新手机则为空
             let bRememberPassword = dictAccountPlist?.object(forKey: "is_remember_password") as! Bool
             //获取当前账号密码
             if bRememberPassword == false {

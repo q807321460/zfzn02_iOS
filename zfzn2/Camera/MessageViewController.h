@@ -53,7 +53,7 @@
 //- (void)onSearch:(id)sender;
 - (void)onClick:(id)sender;
 - (void)onDelete:(id)sender;
-//- (IBAction)onSearch:(id)sender;
+- (IBAction)onSearch:(id)sender;
 - (IBAction)onCancel:(id)sender;
 - (IBAction)onQuery:(id)sender;
 - (IBAction)onValueChange:(id)sender;

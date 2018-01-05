@@ -148,7 +148,7 @@
 		1B83A8101FDEAF480013047B /* SettingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C11FDEAF470013047B /* SettingViewCtrl.swift */; };
 		1B83A8111FDEAF480013047B /* SwitchCityViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C21FDEAF470013047B /* SwitchCityViewCtrl.swift */; };
 		1B83A8121FDEAF480013047B /* LeftMenuViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C41FDEAF470013047B /* LeftMenuViewCtrl.swift */; };
-		1B83A8131FDEAF480013047B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C61FDEAF470013047B /* SWRevealViewController.m */; };
+		1B83A8131FDEAF480013047B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C61FDEAF470013047B /* SWRevealViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		1B83A8141FDEAF480013047B /* SharedAccountViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C81FDEAF470013047B /* SharedAccountViewCtrl.swift */; };
 		1B83A8151FDEAF480013047B /* AddMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7C91FDEAF470013047B /* AddMasterViewCtrl.swift */; };
 		1B83A8161FDEAF480013047B /* MyMasterViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7CA1FDEAF470013047B /* MyMasterViewCtrl.swift */; };
@@ -2156,7 +2156,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HanwenKong.zfzn2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HanwenKong.zfzn2-local";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2236,7 +2236,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HanwenKong.zfzn2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HanwenKong.zfzn2-local";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
