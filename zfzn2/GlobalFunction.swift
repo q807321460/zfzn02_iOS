@@ -14,7 +14,8 @@ import Photos
  *  全局函数——仅测试用
  */
 func TempFunc() {
-    
+    print(MyWebService.sharedInstance.GetMasterVersion())
+    print(MyWebService.sharedInstance.GetMasterVersionBy(masterCode: "AA00FFD9"))
 }
 
 /**swift

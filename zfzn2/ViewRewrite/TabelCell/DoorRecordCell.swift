@@ -11,6 +11,8 @@ import UIKit
 class DoorRecordCell: UITableViewCell {
 
     @IBOutlet weak var m_labelOpenTime: UILabel!
+    @IBOutlet weak var m_labelOpenStyle: UILabel! // such as: APP开锁，直接开锁
+    @IBOutlet weak var m_labelOpenPerson: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

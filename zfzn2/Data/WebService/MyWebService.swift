@@ -869,6 +869,7 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
+    // 将电器移动到其他区域
     func MoveElectricToAnotherRoom(masterCode:String, electricIndex:Int, roomIndex:Int) -> String {
         let methodName:String = "moveElectricToAnotherRoom"
         let arrayKey = ["masterCode", "electricIndex", "roomIndex"]
@@ -877,6 +878,37 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")
         ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
+    // 通知服务器是由哪个账号打开的门锁
+    func UpdateDoorOpenPerson(electricCode:String, accountCode:String) -> String {
+        let methodName:String = "updateDoorOpenPerson"
+        let arrayKey = ["electricCode", "accountCode"]
+        let arrayValue = [electricCode, accountCode]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        return (value.mainValue as! String)
+    }
+    
+    // 获取当前最新的主机版本号
+    func GetMasterVersion() -> String {
+        let methodName:String = "getMasterVersion"
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName)
+        value = GetSessionReturn(methodName, returnType: "string")
+        return (value.mainValue as! String)
+    }
+    
+    // 获取指定编号的主机的当前版本号
+    func GetMasterVersionBy(masterCode:String) -> String {
+        let methodName:String = "getMasterVersionBy"
+        let arrayKey = ["masterCode"]
+        let arrayValue = [masterCode]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
         return (value.mainValue as! String)
     }
     

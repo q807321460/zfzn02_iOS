@@ -73,13 +73,24 @@ class DoorRecordViewCtrl: UIViewController, UITableViewDelegate, UITableViewData
     
     //每行的高度
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 66
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = m_nRecordCount - indexPath.row - 1//实现由近到远的显示顺序
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorRecordCell", for: indexPath) as! DoorRecordCell
         cell.m_labelOpenTime.text = m_arrayJSON[row]["openTime"].string
+        let byPerson:String! = m_arrayJSON[row]["byPerson"].string
+        if (byPerson == "****" || byPerson == "1***" || byPerson == "") {
+            cell.m_labelOpenStyle.text = "未知"
+            cell.m_labelOpenPerson.text = ""
+        }else if (byPerson.count == 11) {
+            cell.m_labelOpenStyle.text = "APP开锁"
+            cell.m_labelOpenPerson.text = "开锁人: " + byPerson
+        }else {
+            cell.m_labelOpenStyle.text = "普通开锁"
+            cell.m_labelOpenPerson.text = "开锁人: " + byPerson
+        }
         return cell
     }
     
