@@ -10,15 +10,19 @@ import UIKit
 class EditMasterViewCtrl: UIViewController {
 
     @IBOutlet weak var m_eMasterName: UITextField!
-    @IBOutlet weak var m_eMasterCode: UITextField!
-    @IBOutlet weak var m_eMasterIP: UITextField!
+    @IBOutlet weak var m_labelMasterCode: UILabel!
+    @IBOutlet weak var m_labelMasterIP: UILabel!
+    @IBOutlet weak var m_labelMasterVersion: UILabel!
+    @IBOutlet weak var m_labelMasterLatestVersion: UILabel!
+    //    @IBOutlet weak var m_eMasterCode: UITextField!
+//    @IBOutlet weak var m_eMasterIP: UITextField!
+
 //    @IBOutlet weak var m_btnSave: UIButton!
     @IBOutlet weak var m_btnAbandonAdmin: UIButton!//放弃管理员权限
     @IBOutlet weak var m_btnShareMaster: UIButton!
     @IBOutlet weak var m_btnShareList: UIButton!
     @IBOutlet weak var m_btnGetAdmin: UIButton!//获取管理员权限
     @IBOutlet weak var m_btnGetAdminAccount: UIButton!//获取管理员账号
-    @IBOutlet weak var m_layoutHeight: NSLayoutConstraint!
     var m_nUserListFoot:Int!
     var m_sMasterCode:String! = ""
     var m_viewSearching:SCLAlertView! = nil
@@ -28,13 +32,13 @@ class EditMasterViewCtrl: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         m_eMasterName.clearButtonMode=UITextFieldViewMode.always  //一直显示清除按钮
-        m_eMasterCode.isUserInteractionEnabled = false
-        m_eMasterIP.isUserInteractionEnabled = false
         m_eMasterName.text = gDC.mUserList[m_nUserListFoot].m_sUserName
-        m_eMasterCode.text = gDC.mUserList[m_nUserListFoot].m_sMasterCode
-        m_eMasterIP.text = gDC.mUserList[m_nUserListFoot].m_sUserIP
-//        m_btnSave.layer.cornerRadius = 5.0
-//        m_btnSave.layer.masksToBounds = true
+        m_labelMasterCode.text = "主机编号：" + gDC.mUserList[m_nUserListFoot].m_sMasterCode
+        m_labelMasterIP.text = "主机IP：" + gDC.mUserList[m_nUserListFoot].m_sUserIP
+        let masterVersion:String = MyWebService.sharedInstance.GetMasterVersionBy(masterCode: gDC.mUserList[m_nUserListFoot].m_sMasterCode)
+        m_labelMasterVersion.text = "主机当前版本：" + masterVersion
+        let masterLatestVersion:String = MyWebService.sharedInstance.GetMasterVersion()
+        m_labelMasterLatestVersion.text = "主机最新版本：" + masterLatestVersion
         m_btnAbandonAdmin.layer.cornerRadius = 5.0
         m_btnAbandonAdmin.layer.masksToBounds = true
         m_btnShareMaster.layer.cornerRadius = 5.0
@@ -210,8 +214,8 @@ class EditMasterViewCtrl: UIViewController {
                 return
             }
             self.m_eMasterName.text = gDC.mUserList[self.m_nUserListFoot].m_sUserName
-            self.m_eMasterCode.text = gDC.mUserList[self.m_nUserListFoot].m_sMasterCode
-            self.m_eMasterIP.text = gDC.mUserList[self.m_nUserListFoot].m_sUserIP
+            self.m_labelMasterCode.text = "主机编号：" + gDC.mUserList[self.m_nUserListFoot].m_sMasterCode
+            self.m_labelMasterIP.text = "主机IP：" + gDC.mUserList[self.m_nUserListFoot].m_sUserIP
             self.RefreshButton()
         }
     }
