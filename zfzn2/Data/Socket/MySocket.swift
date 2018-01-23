@@ -157,7 +157,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         }
     }
     
-    //配网
+    // 配网
     func ConfWifi(sWifi:String, sPassWord:String) {
         m_socketTcp?.disconnect()
         do { try m_socketTcp?.connect(toHost: "192.168.4.1", onPort: 8899) }
@@ -168,7 +168,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         m_socketTcp?.write(data, withTimeout: -1, tag: 0)
     }
     
-    //获得主节点Code，在这里首次执行sendSocket的连接
+    // 获得主节点Code，在这里首次执行sendSocket的连接
     @discardableResult func GetMasterCode(_ ip:String, style:Int) -> String {
         m_socketTcp?.disconnect()
         do { try m_socketTcp?.connect(toHost: ip, onPort: 8899) }
@@ -216,7 +216,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         return (m_sArrayTcpReturn, m_sArrayUdpReturn)
     }
 
-    //从本地主机获取所有电器状态
+    //从本地主机获取所有电器状态 - deprecated
     func GetElectricStatesAll(_ ip:String) {
         for _ in 0..<3 {
             let sCmd = "230000000003000023\r\n"
@@ -256,7 +256,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
                     }else {
                         sReturn = (m_sTcpMasterReturn as NSString).substring(with: NSMakeRange(1, 12))
                     }
-                    if sReturn == gDC.mUserInfo.m_sMasterCode {//有可能接收到的是主机编号......
+                    if sReturn == gDC.mUserInfo.m_sMasterCode { // 有可能接收到的是主机编号......
                         print("接收到的编号是有问题的——\(sReturn)")
                         return ""
                     }else {
@@ -271,7 +271,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         return ""
     }
     
-    //用于控制电器
+    // 用于控制电器
     func OperateElectric(_ sendString:String) {
         let sCmd:String = ModifyMarkBit(sendString)
         let data:Data = sCmd.data(using: String.Encoding.utf8)!
@@ -294,8 +294,8 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
                 alertView.showNotice("提示", subTitle: "已断开本地连接", duration: 1.5)
             })
             gDC.m_bRemote = true
-            g_notiCenter.post(name: Notification.Name(rawValue: "RefreshRemoteState"), object: self)
-            MyWebService.sharedInstance.OpenPolling()//开启web的轮询,如果已经开启则不需要继续开启
+            g_notiCenter.post(name: Notification.Name(rawValue: "RefreshRemoteState"), object: self) // 告知主界面，修改顶部的本地还是远程的文字显示
+//            MyWebService.sharedInstance.OpenPolling()// 开启web的轮询,如果已经开启则不需要继续开启 - deprecated
 //            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
         }
     }

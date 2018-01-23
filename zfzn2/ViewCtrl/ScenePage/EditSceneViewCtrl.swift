@@ -13,8 +13,8 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var m_labelSceneName: UITextField!
     @IBOutlet weak var m_imageScene: UIImageView!
     @IBOutlet weak var m_tableSceneElectric: UITableView!
-    @IBOutlet weak var m_btnSetTiming: UIButton!
-    @IBOutlet weak var m_btnDelete: UIButton!
+//    @IBOutlet weak var m_btnSetTiming: UIButton!
+//    @IBOutlet weak var m_btnDelete: UIButton!
     var m_nSceneListFoot:Int!
     var m_nSceneElectricListFoot:Int!
     var m_sElectricOrder:String!
@@ -28,11 +28,6 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         m_tableSceneElectric.tableFooterView = UIView()
         m_tableSceneElectric.register(EditSceneElectricCell.self, forCellReuseIdentifier: "editSceneElectricCell")
         m_tableSceneElectric.register(UINib(nibName: "EditSceneElectricCell", bundle: nil), forCellReuseIdentifier: "editSceneElectricCell")
-        
-//        m_btnSetTiming.layer.cornerRadius = 5.0
-//        m_btnSetTiming.layer.masksToBounds = true
-//        m_btnDelete.layer.cornerRadius = 5.0
-//        m_btnDelete.layer.masksToBounds = true
         
         g_notiCenter.addObserver(self, selector:#selector(EditSceneViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }

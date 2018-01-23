@@ -212,6 +212,9 @@
 		1BB5E5481E1B9371000B7FD3 /* SceneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5471E1B9371000B7FD3 /* SceneData.swift */; };
 		1BB5E54A1E1B948C000B7FD3 /* SceneElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */; };
 		1BB62D731E9F652B00DE198A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB62D721E9F652B00DE198A /* MapKit.framework */; };
+		1BC45428201738F300654452 /* THTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC45426201738F200654452 /* THTimePickerView.m */; };
+		1BC4542D2017594600654452 /* WeekDayButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC4542C2017594600654452 /* WeekDayButton.xib */; };
+		1BC4542F201759FF00654452 /* WeekDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC4542E201759FF00654452 /* WeekDayButton.swift */; };
 		1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */; };
 		1BCBE4C01FD577D0003CB2EA /* RecordPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCBE4BC1FD577D0003CB2EA /* RecordPlayViewController.m */; };
 		1BCBE4C11FD577D0003CB2EA /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCBE4BD1FD577D0003CB2EA /* RecordViewController.m */; };
@@ -591,6 +594,10 @@
 		1BB5E5471E1B9371000B7FD3 /* SceneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneData.swift; sourceTree = "<group>"; };
 		1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneElectricData.swift; sourceTree = "<group>"; };
 		1BB62D721E9F652B00DE198A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1BC45426201738F200654452 /* THTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTimePickerView.m; sourceTree = "<group>"; };
+		1BC45427201738F300654452 /* THTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTimePickerView.h; sourceTree = "<group>"; };
+		1BC4542C2017594600654452 /* WeekDayButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekDayButton.xib; sourceTree = "<group>"; };
+		1BC4542E201759FF00654452 /* WeekDayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayButton.swift; sourceTree = "<group>"; };
 		1BC57E6D1E820C3A0083BAFB /* GlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
 		1BCBE4BC1FD577D0003CB2EA /* RecordPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordPlayViewController.m; sourceTree = "<group>"; };
 		1BCBE4BD1FD577D0003CB2EA /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
@@ -1201,6 +1208,8 @@
 			isa = PBXGroup;
 			children = (
 				1B83A7791FDEAF140013047B /* ETKeyButton.swift */,
+				1BC4542C2017594600654452 /* WeekDayButton.xib */,
+				1BC4542E201759FF00654452 /* WeekDayButton.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1451,6 +1460,8 @@
 		1BA1B1E6200651EC00A3E0BF /* THDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
+				1BC45427201738F300654452 /* THTimePickerView.h */,
+				1BC45426201738F200654452 /* THTimePickerView.m */,
 				1BA1B1E7200651EC00A3E0BF /* THDatePickerView.m */,
 				1BA1B1E8200651EC00A3E0BF /* THDatePickerView.h */,
 			);
@@ -1694,6 +1705,7 @@
 				1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */,
 				1BEEAF151DD9AE6900E17617 /* Main.storyboard in Resources */,
 				1B83A7911FDEAF150013047B /* EditSceneElectricCell.xib in Resources */,
+				1BC4542D2017594600654452 /* WeekDayButton.xib in Resources */,
 				1B2D63881FCA5A95006CA0B5 /* Localizable.strings in Resources */,
 				1B83A77D1FDEAF150013047B /* AddElectric.xib in Resources */,
 				1B7667ED1EF3CA1C007B21B4 /* JdFailTipView.xib in Resources */,
@@ -1823,6 +1835,7 @@
 				1B83A8401FDEAF480013047B /* SetPasswordViewCtrl.swift in Sources */,
 				1B83A77A1FDEAF150013047B /* MiniSceneAndArea.swift in Sources */,
 				1B83A7991FDEAF160013047B /* MyAreaCell.swift in Sources */,
+				1BC4542F201759FF00654452 /* WeekDayButton.swift in Sources */,
 				1B6F29B81E460D7500D19DE9 /* LCOpenApi_Reflection.cpp in Sources */,
 				1B83A78C1FDEAF150013047B /* MySharedAccountCell.swift in Sources */,
 				1B0868DB1DE9675B0045E531 /* ElectricData.swift in Sources */,
@@ -1893,6 +1906,7 @@
 				1B83A7A21FDEAF160013047B /* DoorRecordCell.swift in Sources */,
 				1BB5E5481E1B9371000B7FD3 /* SceneData.swift in Sources */,
 				1B7667EE1EF3CA1C007B21B4 /* JdPlayCtrlBottomView.m in Sources */,
+				1BC45428201738F300654452 /* THTimePickerView.m in Sources */,
 				1B83A8121FDEAF480013047B /* LeftMenuViewCtrl.swift in Sources */,
 				1B83A8101FDEAF480013047B /* SettingViewCtrl.swift in Sources */,
 				1B6F29DA1E460E3C00D19DE9 /* RestApiService.mm in Sources */,

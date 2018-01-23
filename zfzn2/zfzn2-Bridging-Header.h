@@ -16,6 +16,7 @@
 #import "VPImageCropperViewController.h"
 #import "NirKxMenu.h"
 #import "THDatePickerView.h"
+#import "THTimePickerView.h"
 //乐橙相关
 #import "LCOpenSDK_Api.h"
 #import "OpenApiService.h"

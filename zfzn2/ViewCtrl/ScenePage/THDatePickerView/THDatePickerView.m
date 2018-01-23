@@ -113,7 +113,7 @@
     [self.pickerView selectRow:[self.dayArr indexOfObject:self.day] inComponent:2 animated:YES];
     [self.pickerView selectRow:[self.hourArr indexOfObject:self.hour] inComponent:3 animated:YES];
     [self.pickerView selectRow:self.minuteArr.count / 2 inComponent:4 animated:YES];
-    [self.pickerView selectRow:self.secondArr.count / 2 inComponent:5 animated:YES];
+    [self.pickerView selectRow:0 inComponent:5 animated:YES];
     /// 刷新日
     [self refreshDay];
 }
@@ -129,7 +129,7 @@
     NSString *minute = self.minute.length == 3 ? [NSString stringWithFormat:@"%ld", self.minute.integerValue] : [NSString stringWithFormat:@"0%ld", self.minute.integerValue];
     NSString *second = self.second.length == 3 ? [NSString stringWithFormat:@"%ld", self.second.integerValue] : [NSString stringWithFormat:@"0%ld", self.second.integerValue];
     
-    self.selectStr = [NSString stringWithFormat:@"%ld-%@-%@  %@:%@:%@", [self.year integerValue], month, day, hour, minute, second];
+    self.selectStr = [NSString stringWithFormat:@"%ld-%@-%@ %@:%@:%@", [self.year integerValue], month, day, hour, minute, second];
     if ([self.delegate respondsToSelector:@selector(datePickerViewSaveBtnClickDelegate:)]) {
         [self.delegate datePickerViewSaveBtnClickDelegate:self.selectStr];
     }
