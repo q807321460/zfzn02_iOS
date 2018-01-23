@@ -199,6 +199,8 @@
 		1B83A8431FDEAF480013047B /* LoginViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A7FF1FDEAF470013047B /* LoginViewCtrl.swift */; };
 		1B8DCBE61DE5865D000D8DE0 /* MySocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */; };
 		1B8DCBF91DE7125F000D8DE0 /* zfzn2.db in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */; };
+		1BA1B1E9200651ED00A3E0BF /* THDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B1E7200651EC00A3E0BF /* THDatePickerView.m */; };
+		1BA1B1EB2006529400A3E0BF /* SceneTimingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1B1EA2006529400A3E0BF /* SceneTimingViewCtrl.swift */; };
 		1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */; };
 		1BACDA861DCC746100BA85C2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACDA841DCC746100BA85C2 /* libsqlite3.0.tbd */; };
 		1BACDA871DCC746100BA85C2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACDA851DCC746100BA85C2 /* libsqlite3.tbd */; };
@@ -573,6 +575,9 @@
 		1B83A7FF1FDEAF470013047B /* LoginViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewCtrl.swift; sourceTree = "<group>"; };
 		1B8DCBDD1DE5865D000D8DE0 /* MySocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocket.swift; sourceTree = "<group>"; };
 		1B8DCBF81DE7125F000D8DE0 /* zfzn2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zfzn2.db; sourceTree = "<group>"; };
+		1BA1B1E7200651EC00A3E0BF /* THDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDatePickerView.m; sourceTree = "<group>"; };
+		1BA1B1E8200651EC00A3E0BF /* THDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDatePickerView.h; sourceTree = "<group>"; };
+		1BA1B1EA2006529400A3E0BF /* SceneTimingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTimingViewCtrl.swift; sourceTree = "<group>"; };
 		1BA52DEA1F13C78600CD9D37 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		1BA52DEB1F13C78600CD9D37 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		1BACDA841DCC746100BA85C2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -1333,6 +1338,7 @@
 		1B83A7D01FDEAF470013047B /* ScenePage */ = {
 			isa = PBXGroup;
 			children = (
+				1BA1B1E6200651EC00A3E0BF /* THDatePickerView */,
 				1B83A7D11FDEAF470013047B /* SceneViewCtrl.swift */,
 				1B83A7D21FDEAF470013047B /* AddSceneElectricViewCtrl.swift */,
 				1B83A7D31FDEAF470013047B /* ScenePageViewCtrl.swift */,
@@ -1340,6 +1346,7 @@
 				1B83A7D51FDEAF470013047B /* AddSceneViewCtrl.swift */,
 				1B83A7D61FDEAF470013047B /* ViewPagerIndicator.swift */,
 				1B83A7D71FDEAF470013047B /* EditSceneViewCtrl.swift */,
+				1BA1B1EA2006529400A3E0BF /* SceneTimingViewCtrl.swift */,
 			);
 			path = ScenePage;
 			sourceTree = "<group>";
@@ -1440,6 +1447,15 @@
 			name = Socket;
 			path = zfzn2/Data/Socket;
 			sourceTree = SOURCE_ROOT;
+		};
+		1BA1B1E6200651EC00A3E0BF /* THDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1BA1B1E7200651EC00A3E0BF /* THDatePickerView.m */,
+				1BA1B1E8200651EC00A3E0BF /* THDatePickerView.h */,
+			);
+			path = THDatePickerView;
+			sourceTree = "<group>";
 		};
 		1BA52DE91F13C78600CD9D37 /* Format */ = {
 			isa = PBXGroup;
@@ -1829,6 +1845,7 @@
 				1B83A8281FDEAF480013047B /* ElecClothesViewCtrl.swift in Sources */,
 				1B83A8321FDEAF480013047B /* AddElectricTypeViewCtrl.swift in Sources */,
 				1B83A80B1FDEAF480013047B /* SKMacros.swift in Sources */,
+				1BA1B1E9200651ED00A3E0BF /* THDatePickerView.m in Sources */,
 				1B83A7951FDEAF160013047B /* AlarmRecordCell.swift in Sources */,
 				1B83A8421FDEAF480013047B /* FindPasswordViewCtrl.swift in Sources */,
 				1B7667F01EF3CA1C007B21B4 /* JUIActionButton.m in Sources */,
@@ -1890,6 +1907,7 @@
 				1B83A7921FDEAF150013047B /* MyMasterCell.swift in Sources */,
 				1B83A8051FDEAF480013047B /* AreaViewCtrl.swift in Sources */,
 				1B83A80E1FDEAF480013047B /* SKLaunchMenu.swift in Sources */,
+				1BA1B1EB2006529400A3E0BF /* SceneTimingViewCtrl.swift in Sources */,
 				1B83A83B1FDEAF480013047B /* VoiceConfWifiViewCtrl.swift in Sources */,
 				1B7667BD1EF3CA1C007B21B4 /* JdCategory_AViewController.m in Sources */,
 				1B7667EF1EF3CA1C007B21B4 /* JingRoundView.m in Sources */,

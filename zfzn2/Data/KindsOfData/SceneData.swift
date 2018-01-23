@@ -56,7 +56,7 @@ class SceneData: NSObject {
     func UpdateScene(_ dicts:[NSDictionary]) {
         print("向内存中写入scene数据")
         gDC.mSceneList.removeAll()
-        DeleteScene(gDC.mUserInfo.m_sMasterCode)
+//        DeleteScene(gDC.mUserInfo.m_sMasterCode)
         //有返回则写入本地和内存
         for i in 0..<dicts.count-1 {
             let dict:NSDictionary = dicts[i]
@@ -78,6 +78,15 @@ class SceneData: NSObject {
             }
             if (dict.object(forKey: "sceneImg") != nil) {
                 sceneInfo.m_nSceneImageIndex = Int(dict["sceneImg"] as! String)!
+            }
+            if (dict.object(forKey: "detailTiming") != nil) {
+                sceneInfo.m_sDetailTiming = dict["detailTiming"] as! String
+            }
+            if (dict.object(forKey: "weeklyDays") != nil) {
+                sceneInfo.m_sWeeklyDays = dict["weeklyDays"] as! String
+            }
+            if (dict.object(forKey: "daliyTiming") != nil) {
+                sceneInfo.m_sDaliyTiming = dict["daliyTiming"] as! String
             }
             switch sceneInfo.m_nSceneImageIndex {
             case 0:
@@ -108,5 +117,9 @@ class SceneInfoData:NSObject {
     var m_nSceneImageIndex:Int = -1
     var m_imageScene:UIImage!
     var m_sTimeBuild:String = ""
+    var m_sDetailTiming:String = "" // 具体的某个时刻的定时，无法循环
+    var m_sWeeklyDays:String = "" // 每周哪几天定时
+    var m_sDaliyTiming:String = "" // 每天的定时时间
+    
     var mSceneElectricList = [SceneElectricInfoData]()
 }

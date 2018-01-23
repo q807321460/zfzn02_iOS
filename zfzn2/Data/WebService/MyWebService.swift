@@ -35,9 +35,9 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         m_URLNameSpace_zfzn = "\"http://ws.smarthome.zfznjj.com/\""
         m_URLSession = URLSession(configuration: m_URLSessionCfg!, delegate: self, delegateQueue: nil)
         if gDC.m_bUseRemoteService == true {//远程服务器
-            m_URL_zfzn = URL(string: "http://101.201.211.87:8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
+            m_URL_zfzn = URL(string: "http://\(gDC.m_sWebIp):8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
         }else {//本地服务器
-            m_URL_zfzn = URL(string: "http://192.168.0.100:8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
+            m_URL_zfzn = URL(string: "http://\(gDC.m_sLocalIp):8080/zfzn02/services/smarthome?wsdl=SmarthomeWs.wsdl")!
         }
         m_URLRequest_zfzn = NSMutableURLRequest.init(url: m_URL_zfzn!)
         m_URLRequest_zfzn!.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -144,9 +144,9 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
                 sReturn = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
                 xmlDoc = NSDictionary(xmlString: sReturn as String)
 //                print("——————————输出Dictionary格式——————————")
-//                if methodName == "loadElectricFromWs" {
-//                  print("\(xmlDoc)")
-//                }
+                if methodName == "loadSceneFromWs" {
+                  print("\(xmlDoc)")
+                }
 //                print("——————————输出Dictionary格式——————————")
                 value = self.GetReturnValue(methodName, dict: xmlDoc, returnType: returnType)//, arrayKeyRes: arrayKeyRes2
                 bReceiving = false

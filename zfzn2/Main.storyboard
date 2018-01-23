@@ -1136,19 +1136,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ew-1c-kXP">
-                                <rect key="frame" x="24" y="566" width="327" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="C7x-rF-Aw5"/>
-                                </constraints>
-                                <state key="normal" title="删除情景" backgroundImage="按钮_紫色_背景">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnDelete:" destination="H8u-fc-RAH" eventType="touchUpInside" id="1Th-rV-MKn"/>
-                                    <action selector="OnDeleteScene:" destination="EXg-oI-hgo" eventType="touchUpInside" id="qGT-xZ-trG"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1L-fi-La3">
                                 <rect key="frame" x="0.0" y="68" width="375" height="40"/>
                                 <subviews>
@@ -1202,33 +1189,93 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-7f-cck">
-                                <rect key="frame" x="0.0" y="130" width="375" height="428"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="413.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="EXg-oI-hgo" id="WDP-q1-otg"/>
                                     <outlet property="delegate" destination="EXg-oI-hgo" id="sbh-G5-wnp"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o4-u0-sqs">
+                                <rect key="frame" x="168" y="551.5" width="37.5" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2o4-u0-sqs" secondAttribute="height" id="SnI-AN-5H0"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="情景_定时"/>
+                                <connections>
+                                    <action selector="OnTiming:" destination="EXg-oI-hgo" eventType="touchUpInside" id="wU3-hc-P5n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6v-gf-g61">
+                                <rect key="frame" x="277.5" y="551.5" width="37.5" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X6v-gf-g61" secondAttribute="height" id="lIn-uu-Lbl"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="情景_删除"/>
+                                <connections>
+                                    <action selector="OnDeleteScene:" destination="EXg-oI-hgo" eventType="touchUpInside" id="FJE-PF-Iu8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="情景定时" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZQ-Ov-1nV">
+                                <rect key="frame" x="158" y="593" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="删除情景" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYh-8p-QTs">
+                                <rect key="frame" x="267.5" y="593" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-jJ-o4L">
+                                <rect key="frame" x="60" y="551.5" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DKo-jJ-o4L" secondAttribute="height" id="hKr-mW-Reu"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="情景_添加"/>
+                                <connections>
+                                    <action selector="OnAddAction:" destination="EXg-oI-hgo" eventType="touchUpInside" id="9p9-pq-Xhr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加电器" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cN-2C-djN">
+                                <rect key="frame" x="50.5" y="593.5" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5Ew-1c-kXP" firstAttribute="top" secondItem="gdg-7f-cck" secondAttribute="bottom" constant="8" id="3xY-Ku-tvc"/>
                             <constraint firstAttribute="trailing" secondItem="gdg-7f-cck" secondAttribute="trailing" id="3zG-VA-pZx"/>
                             <constraint firstItem="Ojp-sR-Sqx" firstAttribute="leading" secondItem="2Ai-2L-GhI" secondAttribute="leading" id="4C7-2s-TtP"/>
+                            <constraint firstItem="929-E2-SFG" firstAttribute="top" secondItem="VYh-8p-QTs" secondAttribute="bottom" constant="8" id="5nQ-ql-bAh"/>
                             <constraint firstAttribute="trailing" secondItem="P1L-fi-La3" secondAttribute="trailing" id="7ei-AR-fpg"/>
+                            <constraint firstItem="929-E2-SFG" firstAttribute="top" secondItem="TZQ-Ov-1nV" secondAttribute="bottom" constant="8" id="8an-ko-sfn"/>
                             <constraint firstItem="Kcc-VY-p3P" firstAttribute="top" secondItem="P1L-fi-La3" secondAttribute="bottom" constant="2" id="AZJ-ds-k1c"/>
-                            <constraint firstItem="929-E2-SFG" firstAttribute="top" secondItem="5Ew-1c-kXP" secondAttribute="bottom" constant="15" id="Cj1-Ik-VfR"/>
+                            <constraint firstItem="0cN-2C-djN" firstAttribute="top" secondItem="DKo-jJ-o4L" secondAttribute="bottom" constant="4" id="F1A-ZB-aie"/>
                             <constraint firstItem="P1L-fi-La3" firstAttribute="top" secondItem="U10-CH-9fy" secondAttribute="bottom" constant="4" id="LJ6-i5-tRA"/>
                             <constraint firstItem="P1L-fi-La3" firstAttribute="leading" secondItem="2Ai-2L-GhI" secondAttribute="leading" id="O1p-2g-TYD"/>
+                            <constraint firstItem="DKo-jJ-o4L" firstAttribute="leading" secondItem="2Ai-2L-GhI" secondAttribute="leading" constant="60" id="PPn-vU-oo1"/>
                             <constraint firstAttribute="trailing" secondItem="Ojp-sR-Sqx" secondAttribute="trailing" id="Pym-K3-G5v"/>
                             <constraint firstItem="Ojp-sR-Sqx" firstAttribute="top" secondItem="Kcc-VY-p3P" secondAttribute="bottom" id="RMp-z2-dLM"/>
                             <constraint firstItem="gdg-7f-cck" firstAttribute="leading" secondItem="2Ai-2L-GhI" secondAttribute="leading" id="TSc-yl-xhI"/>
+                            <constraint firstItem="2o4-u0-sqs" firstAttribute="width" secondItem="2Ai-2L-GhI" secondAttribute="width" multiplier="1:10" id="Uwt-rP-lys"/>
                             <constraint firstItem="Kcc-VY-p3P" firstAttribute="leading" secondItem="2Ai-2L-GhI" secondAttribute="leading" id="WXi-aF-CPe"/>
-                            <constraint firstItem="5Ew-1c-kXP" firstAttribute="leading" secondItem="2Ai-2L-GhI" secondAttribute="leadingMargin" constant="8" id="bYS-sI-lwb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Ew-1c-kXP" secondAttribute="trailing" constant="8" id="hYD-UV-g9e"/>
+                            <constraint firstItem="VYh-8p-QTs" firstAttribute="top" secondItem="X6v-gf-g61" secondAttribute="bottom" constant="4" id="ZGn-5o-JCh"/>
+                            <constraint firstItem="2o4-u0-sqs" firstAttribute="top" secondItem="gdg-7f-cck" secondAttribute="bottom" constant="8" id="ZNC-Wt-ViK"/>
+                            <constraint firstItem="VYh-8p-QTs" firstAttribute="centerX" secondItem="X6v-gf-g61" secondAttribute="centerX" id="ZgI-kc-Xbe"/>
+                            <constraint firstItem="X6v-gf-g61" firstAttribute="width" secondItem="2Ai-2L-GhI" secondAttribute="width" multiplier="1:10" id="czH-8o-3zG"/>
+                            <constraint firstItem="DKo-jJ-o4L" firstAttribute="width" secondItem="2Ai-2L-GhI" secondAttribute="width" multiplier="1:10" id="iIX-lt-CoP"/>
                             <constraint firstItem="Ojp-sR-Sqx" firstAttribute="top" secondItem="Kcc-VY-p3P" secondAttribute="bottom" id="kv9-m6-eHg"/>
+                            <constraint firstItem="DKo-jJ-o4L" firstAttribute="top" secondItem="2o4-u0-sqs" secondAttribute="top" id="lRl-0K-Nal"/>
+                            <constraint firstItem="TZQ-Ov-1nV" firstAttribute="centerX" secondItem="2o4-u0-sqs" secondAttribute="centerX" id="ljh-WA-DNL"/>
                             <constraint firstItem="gdg-7f-cck" firstAttribute="top" secondItem="Ojp-sR-Sqx" secondAttribute="bottom" constant="1" id="qhA-Vw-fUY"/>
+                            <constraint firstItem="TZQ-Ov-1nV" firstAttribute="top" secondItem="2o4-u0-sqs" secondAttribute="bottom" constant="4" id="qjO-KU-yxi"/>
+                            <constraint firstItem="0cN-2C-djN" firstAttribute="centerX" secondItem="DKo-jJ-o4L" secondAttribute="centerX" id="wcv-9R-5Pj"/>
                             <constraint firstAttribute="trailing" secondItem="Kcc-VY-p3P" secondAttribute="trailing" id="xji-Fc-h8J"/>
+                            <constraint firstAttribute="trailing" secondItem="X6v-gf-g61" secondAttribute="trailing" constant="60" id="yCr-er-XYZ"/>
+                            <constraint firstItem="2o4-u0-sqs" firstAttribute="centerX" secondItem="2Ai-2L-GhI" secondAttribute="centerX" id="za8-PQ-JXX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="编辑情景" id="9ax-iE-8iM">
@@ -1237,23 +1284,20 @@
                                 <action selector="OnBack:" destination="EXg-oI-hgo" id="0e3-ir-Jnm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="添加" id="pNY-CJ-ZZz">
-                            <connections>
-                                <action selector="OnAddAction:" destination="EXg-oI-hgo" id="4Y4-ZQ-tmH"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="m_btnDelete" destination="5Ew-1c-kXP" id="Qcb-Y3-Vvh"/>
+                        <outlet property="m_btnDelete" destination="X6v-gf-g61" id="FGu-Ce-Wna"/>
+                        <outlet property="m_btnSetTiming" destination="2o4-u0-sqs" id="0bz-Oh-ehz"/>
                         <outlet property="m_imageScene" destination="Rlv-YH-IEA" id="Ygf-fl-PEm"/>
                         <outlet property="m_labelSceneName" destination="XxI-cX-q8U" id="zIn-0p-vyT"/>
                         <outlet property="m_tableSceneElectric" destination="gdg-7f-cck" id="FU1-qB-XRA"/>
                         <segue destination="3eE-DA-FvB" kind="show" id="30l-fp-azv"/>
+                        <segue destination="MFF-Cd-bmi" kind="show" id="511-EK-eHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrr-4m-Mdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5945" y="935"/>
+            <point key="canvasLocation" x="5944.8000000000002" y="934.18290854572717"/>
         </scene>
         <!--选择设备-->
         <scene sceneID="ugi-sU-0jz">
@@ -1326,6 +1370,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nzg-5k-RcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6816" y="936"/>
+        </scene>
+        <!--情景定时-->
+        <scene sceneID="1IS-if-ZfE">
+            <objects>
+                <viewController storyboardIdentifier="sceneTimingViewCtrl" id="MFF-Cd-bmi" customClass="SceneTimingViewCtrl" customModule="zfzn2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nnW-dJ-Nf6"/>
+                        <viewControllerLayoutGuide type="bottom" id="eWb-tj-dsP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vrt-Jy-8FA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="情景定时" id="Jgd-OV-5er">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="导航栏_返回" id="zNL-64-3n7">
+                            <connections>
+                                <action selector="OnBack:" destination="MFF-Cd-bmi" id="fRa-aS-N3g"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="VV4-z1-HbG">
+                            <connections>
+                                <action selector="OnSave:" destination="MFF-Cd-bmi" id="Fq9-Tm-U2C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fD8-in-BD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6814" y="1760"/>
         </scene>
         <!--编辑区域-->
         <scene sceneID="tdv-Yt-CcK">
@@ -5312,20 +5386,20 @@
                                         <rect key="frame" x="0.0" y="262" width="375" height="52.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="左侧菜单_我的主机" translatesAutoresizingMaskIntoConstraints="NO" id="7Kg-xb-5r8">
-                                                <rect key="frame" x="20" y="12" width="31.5" height="31"/>
+                                                <rect key="frame" x="20" y="11" width="31.5" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="7Kg-xb-5r8" secondAttribute="height" id="g2U-ZC-9ng"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-ru-Yha">
-                                                <rect key="frame" x="128.5" y="17" width="118" height="21"/>
+                                                <rect key="frame" x="128.5" y="16" width="118" height="21"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4jY-ru-Yha" secondAttribute="height" multiplier="50:9" id="7Rt-Nn-anX"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的主机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5Q-Gd-WIt">
-                                                <rect key="frame" x="128.5" y="17" width="118" height="21"/>
+                                                <rect key="frame" x="128.5" y="16" width="118" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -6007,6 +6081,9 @@
         <image name="左侧菜单_背景" width="261" height="638"/>
         <image name="左侧菜单_背景音乐" width="47" height="46"/>
         <image name="左侧菜单_设置" width="46" height="46"/>
+        <image name="情景_删除" width="80" height="84"/>
+        <image name="情景_定时" width="80" height="80"/>
+        <image name="情景_添加" width="80" height="80"/>
         <image name="情景_自定义" width="36" height="36"/>
         <image name="按钮_紫色_背景" width="500" height="60"/>
         <image name="电器类型_一键开关" width="49" height="50"/>

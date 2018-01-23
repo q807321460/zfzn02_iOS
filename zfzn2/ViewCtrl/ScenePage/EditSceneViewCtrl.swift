@@ -29,10 +29,10 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
         m_tableSceneElectric.register(EditSceneElectricCell.self, forCellReuseIdentifier: "editSceneElectricCell")
         m_tableSceneElectric.register(UINib(nibName: "EditSceneElectricCell", bundle: nil), forCellReuseIdentifier: "editSceneElectricCell")
         
-        m_btnSetTiming.layer.cornerRadius = 5.0
-        m_btnSetTiming.layer.masksToBounds = true
-        m_btnDelete.layer.cornerRadius = 5.0
-        m_btnDelete.layer.masksToBounds = true
+//        m_btnSetTiming.layer.cornerRadius = 5.0
+//        m_btnSetTiming.layer.masksToBounds = true
+//        m_btnDelete.layer.cornerRadius = 5.0
+//        m_btnDelete.layer.masksToBounds = true
         
         g_notiCenter.addObserver(self, selector:#selector(EditSceneViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)
     }
@@ -53,10 +53,14 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
             self.navigationController?.popToRootViewController(animated: true)
         }
     }
-
-//    @IBAction func OnSave(_ sender: AnyObject) {
-//        ShowInfoDispatch("提示", content: "该功能有待完善，敬请期待~", duration: 1.0)
-//    }
+    
+    @IBAction func OnTiming(_ sender: Any) {
+        let mainStory = UIStoryboard(name: "Main",bundle: nil)
+        let nextView = mainStory.instantiateViewController(withIdentifier: "sceneTimingViewCtrl") as! SceneTimingViewCtrl
+        nextView.m_nSceneListFoot = self.m_nSceneListFoot
+        nextView.m_nSceneIndex = self.m_nSceneIndex
+        self.navigationController?.pushViewController(nextView, animated: true)
+    }
     
     @IBAction func OnAddAction(_ sender: AnyObject) {
         let mainStory = UIStoryboard(name: "Main",bundle: nil)
@@ -67,10 +71,6 @@ class EditSceneViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     @IBAction func OnDeleteScene(_ sender: AnyObject) {
-//        if gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex < 4 {
-//            ShowNoticeDispatch("提示", content: "默认情景无法删除", duration: 1.0)
-//            return
-//        }
         DispatchQueue.main.async(execute: {
             let appearance = SCLAlertView.SCLAppearance(showCloseButton: true)
             let alertView = SCLAlertView(appearance: appearance)

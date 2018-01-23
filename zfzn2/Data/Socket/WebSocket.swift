@@ -9,14 +9,14 @@
 import UIKit
 
 class WebSocket: NSObject, SRWebSocketDelegate {
-    let m_urlLocal:String = "http://192.168.0.100:8080/zfzn02/websocket_app/"
-    let m_url:String = "http://101.201.211.87:8080/zfzn02/websocket_app/"
+    let m_urlLocal:String = "http://\(gDC.m_sLocalIp):8080/zfzn02/websocket_app/"
+    let m_url:String = "http://\(gDC.m_sWebIp):8080/zfzn02/websocket_app/"
     var m_bConnected = false
     var m_bPolling:Bool = false
-    var m_timerPolling:Timer!//心跳包定时器，判断本地连接状态
-    var m_timerSync:Timer!//接收到同步的消息后，大约在1秒后才执行同步（因为可能另一个手机的做了好几个操作，比如三键开关的重加，有6步操作）
-    var m_timerForbidSync:Timer!//接收到同步消息后，大约3秒之内不再接收同步消息
-    var m_bSyncing:Bool = false//是否正处于自动同步中，如果是则不同步
+    var m_timerPolling:Timer! // 心跳包定时器，判断本地连接状态
+    var m_timerSync:Timer! // 接收到同步的消息后，大约在1秒后才执行同步（因为可能另一个手机的做了好几个操作，比如三键开关的重加，有6步操作）
+    var m_timerForbidSync:Timer! // 接收到同步消息后，大约3秒之内不再接收同步消息
+    var m_bSyncing:Bool = false // 是否正处于自动同步中，如果是则不同步
     let m_queueSync = DispatchQueue(label: "com.WebSocket.Sync")//自动从服务器同步数据
     
     //使用单例模式
