@@ -912,6 +912,30 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
+    // 更新情景模式的定时 - 单次定时
+    func UpdateSceneDetailTiming(masterCode:String, sceneIndex:Int, detailTiming:String) -> String {
+        let methodName:String = "updateSceneDetailTiming"
+        let arrayKey = ["masterCode", "sceneIndex", "detailTiming"]
+        let arrayValue = [masterCode, sceneIndex, detailTiming] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
+    // 更新情景模式的定时 - 循环定时
+    func UpdateSceneDaliyTiming(masterCode:String, sceneIndex:Int, weeklyDays:String, detailTiming:String) -> String {
+        let methodName:String = "updateSceneDaliyTiming"
+        let arrayKey = ["masterCode", "sceneIndex", "weeklyDays", "detailTiming"]
+        let arrayValue = [masterCode, sceneIndex, weeklyDays, detailTiming] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {
     }

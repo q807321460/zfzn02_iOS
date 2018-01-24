@@ -10,6 +10,9 @@ import UIKit
 
 class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePickerViewDelegate {
 
+    @IBOutlet weak var m_labelTimingType: UILabel!
+    @IBOutlet weak var m_labelTimingInfo: UILabel!
+    @IBOutlet weak var m_labelTimingSelected: UILabel!
     @IBOutlet weak var m_imageDay1: UIImageView!
     @IBOutlet weak var m_imageDay2: UIImageView!
     @IBOutlet weak var m_imageDay3: UIImageView!
@@ -17,37 +20,69 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     @IBOutlet weak var m_imageDay5: UIImageView!
     @IBOutlet weak var m_imageDay6: UIImageView!
     @IBOutlet weak var m_imageDay7: UIImageView!
+    @IBOutlet weak var m_viewDay1: UIView!
+    @IBOutlet weak var m_viewDay2: UIView!
+    @IBOutlet weak var m_viewDay3: UIView!
+    @IBOutlet weak var m_viewDay4: UIView!
+    @IBOutlet weak var m_viewDay5: UIView!
+    @IBOutlet weak var m_viewDay6: UIView!
+    @IBOutlet weak var m_viewDay7: UIView!
+    @IBOutlet weak var m_layoutW1: NSLayoutConstraint!
+    @IBOutlet weak var m_layoutW2: NSLayoutConstraint!
+    @IBOutlet weak var m_layoutW3: NSLayoutConstraint!
     var m_nSceneListFoot:Int = -1
     var m_nSceneIndex:Int = -1
+    let DETAIL_TIMING:Int = 0
+    let DALIY_TIMING:Int = 1
+    let NO_TIMING:Int = 2
     var m_datePicker:THDatePickerView? = nil
     var m_timePicker:THTimePickerView? = nil
-//    m_switchCtrl.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+    var m_bUpdate:Bool = false
+    var m_weekDayList = [Int]()
+    let m_arrayWeekDayInfo = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        m_datePicker = THDatePickerView.init(frame: CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 300))
-        m_datePicker?.delegate = self
-        m_datePicker?.title = "请选择时间"
-        self.view.addSubview(m_datePicker!)
-        m_datePicker?.show()
-        
-        m_timePicker = THTimePickerView.init(frame: CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 300))
-        m_timePicker?.delegate = self
-        m_timePicker?.title = "请选择时间"
-        self.view.addSubview(m_timePicker!)
-        m_timePicker?.show()
+        let width = (self.view.frame.width - 18*2 - 70*4) / 3
+        m_layoutW1.constant = width
+        m_layoutW2.constant = width
+        m_layoutW3.constant = width
+        m_labelTimingSelected.isHidden = true
+        if (gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming != "") {
+            RefreshControls(type: DETAIL_TIMING)
+        } else if (gDC.mSceneList[m_nSceneListFoot].m_sWeeklyDays != "") {
+            RefreshControls(type: DALIY_TIMING)
+        } else {
+            RefreshControls(type: NO_TIMING)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     @IBAction func OnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        if (m_bUpdate == true) {
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: true)
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("确定", action: {
+                () -> Void in
+                self.navigationController?.popViewController(animated: true)
+            })
+            alertView.showInfo("提示", subTitle: "当前改动还没有保存下来，请问是否直接退出？", duration: 0)
+        } else {
+           self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func OnSave(_ sender: Any) {
-        // 调整定时功能后，重新设置定时，这里需要根据当前是否已经存在定时来确定发送的指令格式
+        // 调用远程接口 // 如果成功的话，才执行后面这些指令
+        if (m_labelTimingSelected.text?.count == 8) {
+            
+        } else if (m_labelTimingSelected.text?.count == 19) {
+            let re = MyWebService.sharedInstance.UpdateSceneDetailTiming(masterCode: gDC.mUserInfo.m_sMasterCode, sceneIndex: gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex, detailTiming: m_labelTimingSelected.text!)
+        }
+        m_labelTimingSelected.isHidden = true
+        m_bUpdate = false
     }
     
     @IBAction func OnDay1(_ sender: Any) {
@@ -73,25 +108,122 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     }
     
     @IBAction func OnDetailTiming(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.m_datePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height - 300, width: self.view.frame.size.width, height: 300)
-        })
+        HideWeekDays()
+        m_labelTimingSelected.isHidden = false
+        m_bUpdate = true
+        if (m_datePicker == nil) {
+            m_datePicker = THDatePickerView.init(frame: CGRect.init(x: 0, y: self.view.frame.size.height - 300, width: self.view.frame.size.width, height: 300))
+            m_datePicker?.delegate = self
+            m_datePicker?.title = "请选择时间"
+            self.view.addSubview(m_datePicker!)
+            m_datePicker?.show()
+        } else {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.m_datePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height - 300, width: self.view.frame.size.width, height: 300)
+            })
+        }
     }
     
     @IBAction func OnWeekdaysTiming(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.m_timePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height - 300, width: self.view.frame.size.width, height: 300)
-        })
+        ShowWeekDays()
+        m_labelTimingSelected.isHidden = false
+        m_bUpdate = true
+        if (m_timePicker == nil) {
+            m_timePicker = THTimePickerView.init(frame: CGRect.init(x: 0, y: self.view.frame.size.height - 300, width: self.view.frame.size.width, height: 300))
+            m_timePicker?.delegate = self
+            m_timePicker?.title = "请选择时间"
+            self.view.addSubview(m_timePicker!)
+            m_timePicker?.show()
+        } else {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.m_timePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height - 300, width: self.view.frame.size.width, height: 300)
+            })
+        }
     }
     
+    ////////////////////////////////////////////////////////////////////////////////////
+    // 显示所有的星期控件
+    func ShowWeekDays() {
+        m_viewDay1.isHidden = false
+        m_viewDay2.isHidden = false
+        m_viewDay3.isHidden = false
+        m_viewDay4.isHidden = false
+        m_viewDay5.isHidden = false
+        m_viewDay6.isHidden = false
+        m_viewDay7.isHidden = false
+    }
     
+    // 隐藏所有的星期控件
+    func HideWeekDays() {
+        m_viewDay1.isHidden = true
+        m_viewDay2.isHidden = true
+        m_viewDay3.isHidden = true
+        m_viewDay4.isHidden = true
+        m_viewDay5.isHidden = true
+        m_viewDay6.isHidden = true
+        m_viewDay7.isHidden = true
+    }
+    
+    // 根据当前的星期，刷新check图标的显示
+    func RefreshControls(type:Int) {
+        if (type == DETAIL_TIMING) {
+            m_labelTimingType.text = "单次定时"
+            m_labelTimingInfo.text = gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming
+        } else if (type == DALIY_TIMING) {
+            m_labelTimingType.text = "循环定时"
+            var json:JSON!
+            let sWeekDay = gDC.mSceneList[m_nSceneListFoot].m_sWeeklyDays
+            if let jsonData = sWeekDay.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+                do { json = try JSON(data: jsonData) }
+                catch { print("json error"); return; }
+                m_weekDayList = json.arrayObject as! [Int]
+            }
+            var sInfo = gDC.mSceneList[m_nSceneListFoot].m_sDaliyTiming + "  "
+            for i in 1..<8 {
+                ShowCheckImage(day: i, selected: false)
+            }
+            for i in 0..<m_weekDayList.count {
+                ShowCheckImage(day: m_weekDayList[i], selected: true)
+                sInfo = sInfo + m_arrayWeekDayInfo[m_weekDayList[i] - 1]
+            }
+            m_labelTimingInfo.text = sInfo
+        } else {
+            m_labelTimingType.text = "无定时"
+            m_labelTimingInfo.text = ""
+        }
+        HideWeekDays()
+        m_labelTimingSelected.isHidden = true
+    }
+    
+    func ShowCheckImage(day:Int, selected:Bool) {
+        switch day {
+        case 1:
+            m_imageDay1.isHidden = !selected
+        case 2:
+            m_imageDay2.isHidden = !selected
+        case 3:
+            m_imageDay3.isHidden = !selected
+        case 4:
+            m_imageDay4.isHidden = !selected
+        case 5:
+            m_imageDay5.isHidden = !selected
+        case 6:
+            m_imageDay6.isHidden = !selected
+        case 7:
+            m_imageDay7.isHidden = !selected
+        default:
+            break
+        }
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////
     //pragma mark - THDatePickerViewDelegate
     /**
      保存按钮代理方法
      @param timer 选择的数据
      */
     func datePickerViewSaveBtnClick(_ timer: String!) {
-        print("选择的时间是：" + timer)
+        m_labelTimingSelected.text = timer
         UIView.animate(withDuration: 0.3, animations: {
             self.m_datePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 300)
         })
@@ -101,7 +233,6 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
      取消按钮代理方法
      */
     func datePickerViewCancelBtnClick() {
-        print("取消点击")
         UIView.animate(withDuration: 0.3, animations: {
             self.m_datePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 300)
         })
@@ -112,7 +243,7 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
      @param timer 选择的数据
      */
     func timePickerViewSaveBtnClick(_ timer: String!) {
-        print("选择的时间是：" + timer)
+        m_labelTimingSelected.text = timer
         UIView.animate(withDuration: 0.3, animations: {
             self.m_timePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 300)
         })
@@ -122,10 +253,22 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
      取消按钮代理方法
      */
     func timePickerViewCancelBtnClick() {
-        print("取消点击")
         UIView.animate(withDuration: 0.3, animations: {
             self.m_timePicker?.frame = CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 300)
         })
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    func WebUpdateSceneTiming(_ re:String, sceneIndex:Int, Timing:Int, weeklyDays:Int) {
+        switch re{
+        case "WebError":
+            break
+        case "1":
+//            gDC.
+        default:
+            ShowNoticeDispatch("错误", content: "情景定时更新失败", duration: 0.5)
+            break
+        }
     }
     
 }

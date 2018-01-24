@@ -91,8 +91,8 @@
 
 - (void)show {
     self.hour = [NSString stringWithFormat:@"%ld时", [self.timeArr[0] integerValue]];
-//    self.minute = self.minuteArr[self.minuteArr.count / 2];
-//    self.second = self.secondArr[self.secondArr.count / 2];
+    self.minute = self.minuteArr[self.minuteArr.count / 2];
+    self.second = self.secondArr[self.secondArr.count / 2];
     
     [self.pickerView selectRow:[self.hourArr indexOfObject:self.hour] inComponent:0 animated:YES];
     [self.pickerView selectRow:self.minuteArr.count / 2 inComponent:1 animated:YES];
@@ -137,7 +137,7 @@
     switch (component) {
         case 0: { // 时
             // 如果选择的时小于当前时，就刷新到当前时
-            if ([self.hourArr[row%[self.dataArray[component] count]] integerValue] < [self.timeArr[3] integerValue]) {
+            if ([self.hourArr[row%[self.dataArray[component] count]] integerValue] < [self.timeArr[0] integerValue]) {
                 [pickerView selectRow:[self.dataArray[component] indexOfObject:self.timeArr[component]] inComponent:component animated:YES];
                 // 如果选择的时大于当前时，就直接赋值
             } else {

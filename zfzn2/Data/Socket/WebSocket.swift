@@ -97,7 +97,7 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
         print("【web_socket】接收到消息——\(message as! String)")
         if (message as! String == "Sync") {
-            if (gDC.m_bSyncing == true) {//如果正处于同步中，则忽略这个同步消息
+            if (gDC.m_bSyncing == true) { // 如果正处于同步中，则忽略这个同步消息
                 return
             }
             self.m_timerForbidSync = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(WebSocket.ForbidSync), userInfo: nil, repeats: false)
