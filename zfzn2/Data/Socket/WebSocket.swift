@@ -60,9 +60,9 @@ class WebSocket: NSObject, SRWebSocketDelegate {
     
     //运行心跳包检测
     func RunPolling() {
-        if (gDC.m_bRemote) {//仍然处于远程状态则需要继续尝试websocket连接，否则不连接
+//        if (gDC.m_bRemote) {//仍然处于远程状态则需要继续尝试websocket连接，否则不连接
             ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
-        }
+//        }
     }
     
     //结束心跳包检测
