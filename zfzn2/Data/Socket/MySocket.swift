@@ -84,7 +84,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         m_socketTcp?.isIPv6Enabled = true
         do { try m_socketTcp?.connect(toHost: gDC.mUserInfo.m_sUserIP, onPort: 8899) }
         catch { print("【local_socket】Tcp connectToHost error") }
-        m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
+//        m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//无限等待主机的返回
     }
     
     func SearchLocalMaster() {
@@ -342,13 +342,13 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             m_sTcpMasterReturn = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
             m_bReceiveTimeout = true
         }else if tag == RECEIVE_FROM_MASTER {//只用于接收主机主动返回的数据，一般是手动控制某个电器后返回的新状态
-            var sReceive:String = ""
-            sReceive = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String//TODO：这里发生过闪退
-            print("【local_socket】tcp返回——\(sReceive)")
-            if (RefreshElectricStates(sReceive) == true) {
-                g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
-            }
-            m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//继续等待主机的返回
+//            var sReceive:String = ""
+//            sReceive = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String//TODO：这里发生过闪退
+//            print("【local_socket】tcp返回——\(sReceive)")
+//            if (RefreshElectricStates(sReceive) == true) {
+//                g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
+//            }
+//            m_socketTcp?.readData(withTimeout: -1, tag: RECEIVE_FROM_MASTER)//继续等待主机的返回
         }else{
             print("【local_socket】没有接收到期望的tag，当前tag为\(tag)")
         }
