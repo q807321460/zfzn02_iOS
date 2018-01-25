@@ -1476,7 +1476,7 @@
                                             <constraint firstAttribute="width" secondItem="Wwv-fy-vks" secondAttribute="height" multiplier="1:1" id="WLV-fa-Bys"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-mn-VVC">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-mn-VVC">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dhE-mn-VVC" secondAttribute="height" multiplier="1:1" id="TEN-Dc-tjq"/>
@@ -1526,7 +1526,7 @@
                                             <constraint firstAttribute="width" secondItem="Yx3-NX-xj4" secondAttribute="height" multiplier="1:1" id="iF0-iY-JqS"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="z3a-j4-MhY">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="z3a-j4-MhY">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="z3a-j4-MhY" secondAttribute="height" multiplier="1:1" id="E3a-VJ-30i"/>
@@ -1576,7 +1576,7 @@
                                             <constraint firstAttribute="width" secondItem="xBg-OD-R2n" secondAttribute="height" multiplier="1:1" id="Jik-Q2-K6s"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="RFa-iM-wgd">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="RFa-iM-wgd">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RFa-iM-wgd" secondAttribute="height" multiplier="1:1" id="yEW-Fj-RsF"/>
@@ -1626,7 +1626,7 @@
                                             <constraint firstAttribute="width" secondItem="DEa-5Q-bMy" secondAttribute="height" multiplier="1:1" id="h0Z-5R-4x1"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="HU0-MX-1qg">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="HU0-MX-1qg">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HU0-MX-1qg" secondAttribute="height" multiplier="1:1" id="U41-d7-n5o"/>
@@ -1676,7 +1676,7 @@
                                             <constraint firstAttribute="width" secondItem="Sw8-z4-DuP" secondAttribute="height" multiplier="1:1" id="EUW-GI-tf5"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-ER-Ny5">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-ER-Ny5">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1cC-ER-Ny5" secondAttribute="height" multiplier="1:1" id="aCm-nw-huF"/>
@@ -1726,7 +1726,7 @@
                                             <constraint firstAttribute="width" secondItem="cRW-Xn-PNl" secondAttribute="height" multiplier="1:1" id="ysI-cK-Klg"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="mX7-fg-oM4">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="mX7-fg-oM4">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mX7-fg-oM4" secondAttribute="height" multiplier="1:1" id="xsc-Wu-O1q"/>
@@ -1776,7 +1776,7 @@
                                             <constraint firstAttribute="width" secondItem="PtC-tC-xow" secondAttribute="height" multiplier="1:1" id="8vY-cc-Fiq"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-kI-Z0K">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录_对钩" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-kI-Z0K">
                                         <rect key="frame" x="3" y="7" width="16.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EcE-kI-Z0K" secondAttribute="height" multiplier="1:1" id="rrI-C2-2Pd"/>
@@ -1814,6 +1814,26 @@
                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Z-Iq-ZAq">
+                                <rect key="frame" x="169.5" y="535" width="35" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnSave:" destination="MFF-Cd-bmi" eventType="touchUpInside" id="8QR-Z7-TcX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25I-T9-dh8">
+                                <rect key="frame" x="169.5" y="502" width="35" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleColor" red="0.5450980392" green="0.1529411765" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnDelete:" destination="MFF-Cd-bmi" eventType="touchUpInside" id="doK-77-rpj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1823,6 +1843,7 @@
                             <constraint firstItem="pQa-Tx-Ixb" firstAttribute="leading" secondItem="B2A-dt-lfu" secondAttribute="trailing" constant="20" id="1dS-CV-LTL"/>
                             <constraint firstItem="mwd-Jz-uee" firstAttribute="top" secondItem="AAI-dL-DD0" secondAttribute="bottom" constant="12" id="31Z-4I-BYj"/>
                             <constraint firstItem="pQa-Tx-Ixb" firstAttribute="top" secondItem="B2A-dt-lfu" secondAttribute="top" id="8RW-dV-2DS"/>
+                            <constraint firstItem="a0Z-Iq-ZAq" firstAttribute="centerX" secondItem="Vrt-Jy-8FA" secondAttribute="centerX" id="ApA-8b-kc8"/>
                             <constraint firstItem="Fvc-sD-FOI" firstAttribute="leading" secondItem="Dva-cX-NT9" secondAttribute="trailing" constant="19" id="Ca4-RK-2nq"/>
                             <constraint firstAttribute="trailing" secondItem="GlJ-Bc-1n1" secondAttribute="trailing" constant="18" id="Csp-Rp-KDB"/>
                             <constraint firstItem="exF-0O-B5G" firstAttribute="top" secondItem="mwd-Jz-uee" secondAttribute="bottom" constant="8" id="E6p-KX-ViW"/>
@@ -1830,6 +1851,7 @@
                             <constraint firstItem="Pje-Zn-BJD" firstAttribute="top" secondItem="mo3-Vg-itg" secondAttribute="bottom" constant="20" id="MKj-Pt-S47"/>
                             <constraint firstItem="AAI-dL-DD0" firstAttribute="leading" secondItem="Vrt-Jy-8FA" secondAttribute="leading" constant="18" id="Nfd-yR-EJa"/>
                             <constraint firstItem="POp-NJ-jvM" firstAttribute="top" secondItem="mwd-Jz-uee" secondAttribute="bottom" constant="12" id="OUe-WB-WSe"/>
+                            <constraint firstItem="eWb-tj-dsP" firstAttribute="top" secondItem="a0Z-Iq-ZAq" secondAttribute="bottom" constant="50" id="PyU-KP-YVE"/>
                             <constraint firstItem="v0d-nJ-dSk" firstAttribute="top" secondItem="POp-NJ-jvM" secondAttribute="bottom" constant="20" id="RAi-0G-6U7"/>
                             <constraint firstItem="TWR-Nh-QBP" firstAttribute="leading" secondItem="B2A-dt-lfu" secondAttribute="leading" id="Sn2-dA-0fB"/>
                             <constraint firstItem="Pje-Zn-BJD" firstAttribute="trailing" secondItem="mwd-Jz-uee" secondAttribute="trailing" id="V2a-Ud-UpH"/>
@@ -1837,8 +1859,10 @@
                             <constraint firstItem="TWR-Nh-QBP" firstAttribute="top" secondItem="mo3-Vg-itg" secondAttribute="top" id="buV-Vy-JR7"/>
                             <constraint firstItem="dyg-iJ-M1M" firstAttribute="leading" secondItem="pQa-Tx-Ixb" secondAttribute="leading" id="c3b-b7-NbZ"/>
                             <constraint firstItem="mo3-Vg-itg" firstAttribute="top" secondItem="v0d-nJ-dSk" secondAttribute="bottom" constant="12" id="e7c-4j-iRH"/>
+                            <constraint firstItem="eWb-tj-dsP" firstAttribute="top" secondItem="25I-T9-dh8" secondAttribute="bottom" constant="83" id="fOB-bU-wyR"/>
                             <constraint firstItem="B2A-dt-lfu" firstAttribute="top" secondItem="v0d-nJ-dSk" secondAttribute="top" id="jTS-jR-UG3"/>
                             <constraint firstItem="exF-0O-B5G" firstAttribute="trailing" secondItem="Vrt-Jy-8FA" secondAttribute="trailingMargin" id="lbv-yA-EWQ"/>
+                            <constraint firstItem="25I-T9-dh8" firstAttribute="centerX" secondItem="Vrt-Jy-8FA" secondAttribute="centerX" id="lwK-u6-RF4"/>
                             <constraint firstItem="B2A-dt-lfu" firstAttribute="leading" secondItem="v0d-nJ-dSk" secondAttribute="trailing" constant="20" id="oEZ-If-cU1"/>
                             <constraint firstAttribute="trailing" secondItem="mwd-Jz-uee" secondAttribute="trailing" constant="18" id="oyU-le-OZL"/>
                             <constraint firstItem="GlJ-Bc-1n1" firstAttribute="top" secondItem="AAI-dL-DD0" secondAttribute="top" id="rzs-B4-7Ns"/>
@@ -1855,13 +1879,12 @@
                                 <action selector="OnBack:" destination="MFF-Cd-bmi" id="fRa-aS-N3g"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="VV4-z1-HbG">
-                            <connections>
-                                <action selector="OnSave:" destination="MFF-Cd-bmi" id="Fq9-Tm-U2C"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="m_btnDaliyTiming" destination="exF-0O-B5G" id="XUJ-Ne-nt0"/>
+                        <outlet property="m_btnDelete" destination="25I-T9-dh8" id="YPg-Nh-E1l"/>
+                        <outlet property="m_btnDetailTiming" destination="POp-NJ-jvM" id="7zi-ez-PDu"/>
+                        <outlet property="m_btnSave" destination="a0Z-Iq-ZAq" id="tY9-hU-GKf"/>
                         <outlet property="m_imageDay1" destination="dhE-mn-VVC" id="cHm-Pp-6B4"/>
                         <outlet property="m_imageDay2" destination="z3a-j4-MhY" id="Ke4-2Q-5A9"/>
                         <outlet property="m_imageDay3" destination="RFa-iM-wgd" id="ad9-NU-EhS"/>

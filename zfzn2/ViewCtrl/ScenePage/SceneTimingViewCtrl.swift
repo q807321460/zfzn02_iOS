@@ -9,10 +9,12 @@
 import UIKit
 
 class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePickerViewDelegate {
-
+    
     @IBOutlet weak var m_labelTimingType: UILabel!
     @IBOutlet weak var m_labelTimingInfo: UILabel!
     @IBOutlet weak var m_labelTimingSelected: UILabel!
+    @IBOutlet weak var m_btnDetailTiming: UIButton!
+    @IBOutlet weak var m_btnDaliyTiming: UIButton!
     @IBOutlet weak var m_imageDay1: UIImageView!
     @IBOutlet weak var m_imageDay2: UIImageView!
     @IBOutlet weak var m_imageDay3: UIImageView!
@@ -27,19 +29,24 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     @IBOutlet weak var m_viewDay5: UIView!
     @IBOutlet weak var m_viewDay6: UIView!
     @IBOutlet weak var m_viewDay7: UIView!
+    @IBOutlet weak var m_btnSave: UIButton!
+    @IBOutlet weak var m_btnDelete: UIButton!
     @IBOutlet weak var m_layoutW1: NSLayoutConstraint!
     @IBOutlet weak var m_layoutW2: NSLayoutConstraint!
     @IBOutlet weak var m_layoutW3: NSLayoutConstraint!
-    var m_nSceneListFoot:Int = -1
-    var m_nSceneIndex:Int = -1
+    
     let DETAIL_TIMING:Int = 0
     let DALIY_TIMING:Int = 1
     let NO_TIMING:Int = 2
+    
+    var m_nSceneListFoot:Int = -1
+    var m_nSceneIndex:Int = -1
     var m_datePicker:THDatePickerView? = nil
     var m_timePicker:THTimePickerView? = nil
     var m_bUpdate:Bool = false
-    var m_weekDayList = [Int]()
-    let m_arrayWeekDayInfo = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+    var m_weeklyDayList = [Int]()
+    let m_arrayWeeklyDayInfo = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let width = (self.view.frame.width - 18*2 - 70*4) / 3
@@ -47,12 +54,12 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
         m_layoutW2.constant = width
         m_layoutW3.constant = width
         m_labelTimingSelected.isHidden = true
-        if (gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming != "") {
-            RefreshControls(type: DETAIL_TIMING)
+        if (gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming == "") {
+            RefreshControls(type: NO_TIMING)
         } else if (gDC.mSceneList[m_nSceneListFoot].m_sWeeklyDays != "") {
             RefreshControls(type: DALIY_TIMING)
         } else {
-            RefreshControls(type: NO_TIMING)
+            RefreshControls(type: DETAIL_TIMING)
         }
     }
 
@@ -77,12 +84,23 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     @IBAction func OnSave(_ sender: Any) {
         // 调用远程接口 // 如果成功的话，才执行后面这些指令
         if (m_labelTimingSelected.text?.count == 8) {
-            
+            // 生成weeklyDays
+            let sWeeklyDays = CreateWeeklyDays()
+            if (sWeeklyDays == "[]") {
+                ShowNoticeDispatch("错误", content: "请选中一个或多个星期值", duration: 0.8)
+                return
+            }
+            let re = MyWebService.sharedInstance.UpdateSceneDaliyTiming(masterCode: gDC.mUserInfo.m_sMasterCode, sceneIndex: gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex, weeklyDays: sWeeklyDays, daliyTiming: m_labelTimingSelected.text!)
+            WebUpdateSceneTiming(re, sceneFoot: m_nSceneListFoot, Timing: m_labelTimingSelected.text!, weeklyDays: sWeeklyDays)
         } else if (m_labelTimingSelected.text?.count == 19) {
             let re = MyWebService.sharedInstance.UpdateSceneDetailTiming(masterCode: gDC.mUserInfo.m_sMasterCode, sceneIndex: gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex, detailTiming: m_labelTimingSelected.text!)
+            WebUpdateSceneTiming(re, sceneFoot: m_nSceneListFoot, Timing: m_labelTimingSelected.text!, weeklyDays: "")
         }
-        m_labelTimingSelected.isHidden = true
-        m_bUpdate = false
+    }
+    
+    @IBAction func OnDelete(_ sender: Any) {
+        let re = MyWebService.sharedInstance.DeleteSceneTiming(masterCode: gDC.mUserInfo.m_sMasterCode, sceneIndex: gDC.mSceneList[m_nSceneListFoot].m_nSceneIndex)
+        WebUpdateSceneTiming(re, sceneFoot: m_nSceneListFoot, Timing: "", weeklyDays: "")
     }
     
     @IBAction func OnDay1(_ sender: Any) {
@@ -108,7 +126,13 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     }
     
     @IBAction func OnDetailTiming(_ sender: Any) {
-        HideWeekDays()
+        if (m_bUpdate) {
+            return
+        }
+        m_btnDetailTiming.isHidden = true
+        m_btnDaliyTiming.isHidden = true
+        m_btnSave.isHidden = false
+        m_btnDelete.isHidden = true
         m_labelTimingSelected.isHidden = false
         m_bUpdate = true
         if (m_datePicker == nil) {
@@ -125,7 +149,14 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     }
     
     @IBAction func OnWeekdaysTiming(_ sender: Any) {
-        ShowWeekDays()
+        if (m_bUpdate) {
+            return
+        }
+        ShowWeeklyDays()
+        m_btnDetailTiming.isHidden = true
+        m_btnDaliyTiming.isHidden = true
+        m_btnSave.isHidden = false
+        m_btnDelete.isHidden = true
         m_labelTimingSelected.isHidden = false
         m_bUpdate = true
         if (m_timePicker == nil) {
@@ -143,7 +174,7 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     
     ////////////////////////////////////////////////////////////////////////////////////
     // 显示所有的星期控件
-    func ShowWeekDays() {
+    func ShowWeeklyDays() {
         m_viewDay1.isHidden = false
         m_viewDay2.isHidden = false
         m_viewDay3.isHidden = false
@@ -154,7 +185,7 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     }
     
     // 隐藏所有的星期控件
-    func HideWeekDays() {
+    func HideWeeklyDays() {
         m_viewDay1.isHidden = true
         m_viewDay2.isHidden = true
         m_viewDay3.isHidden = true
@@ -169,30 +200,37 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
         if (type == DETAIL_TIMING) {
             m_labelTimingType.text = "单次定时"
             m_labelTimingInfo.text = gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming
+            m_btnDelete.isHidden = false
         } else if (type == DALIY_TIMING) {
             m_labelTimingType.text = "循环定时"
             var json:JSON!
-            let sWeekDay = gDC.mSceneList[m_nSceneListFoot].m_sWeeklyDays
-            if let jsonData = sWeekDay.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+            let sWeeklyDay = gDC.mSceneList[m_nSceneListFoot].m_sWeeklyDays
+            if let jsonData = sWeeklyDay.data(using: String.Encoding.utf8, allowLossyConversion: false) {
                 do { json = try JSON(data: jsonData) }
                 catch { print("json error"); return; }
-                m_weekDayList = json.arrayObject as! [Int]
+                m_weeklyDayList = json.arrayObject as! [Int]
             }
             var sInfo = gDC.mSceneList[m_nSceneListFoot].m_sDaliyTiming + "  "
             for i in 1..<8 {
                 ShowCheckImage(day: i, selected: false)
             }
-            for i in 0..<m_weekDayList.count {
-                ShowCheckImage(day: m_weekDayList[i], selected: true)
-                sInfo = sInfo + m_arrayWeekDayInfo[m_weekDayList[i] - 1]
+            for i in 0..<m_weeklyDayList.count {
+                ShowCheckImage(day: m_weeklyDayList[i], selected: true)
+                sInfo = sInfo + m_arrayWeeklyDayInfo[m_weeklyDayList[i] - 1] + " "
             }
             m_labelTimingInfo.text = sInfo
+            m_btnDelete.isHidden = false
         } else {
             m_labelTimingType.text = "无定时"
             m_labelTimingInfo.text = ""
+            m_btnDelete.isHidden = true
         }
-        HideWeekDays()
+        HideWeeklyDays()
+        m_btnDetailTiming.isHidden = false
+        m_btnDaliyTiming.isHidden = false
+        m_btnSave.isHidden = true
         m_labelTimingSelected.isHidden = true
+        m_bUpdate = false
     }
     
     func ShowCheckImage(day:Int, selected:Bool) {
@@ -214,6 +252,37 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
         default:
             break
         }
+    }
+    
+    func CreateWeeklyDays() -> String {
+        var arrayDays = [Int]()
+        if (m_imageDay1.isHidden == false) {
+            arrayDays.append(1)
+        }
+        if (m_imageDay2.isHidden == false) {
+            arrayDays.append(2)
+        }
+        if (m_imageDay3.isHidden == false) {
+            arrayDays.append(3)
+        }
+        if (m_imageDay4.isHidden == false) {
+            arrayDays.append(4)
+        }
+        if (m_imageDay5.isHidden == false) {
+            arrayDays.append(5)
+        }
+        if (m_imageDay6.isHidden == false) {
+            arrayDays.append(6)
+        }
+        if (m_imageDay7.isHidden == false) {
+            arrayDays.append(7)
+        }
+        var sWeeklyDay:String = "["
+        for i in 0..<arrayDays.count - 1 {
+            sWeeklyDay = sWeeklyDay + String(arrayDays[i]) + ","
+        }
+        sWeeklyDay = sWeeklyDay + String(arrayDays[arrayDays.count - 1]) + "]"
+        return sWeeklyDay
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
@@ -259,12 +328,20 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
-    func WebUpdateSceneTiming(_ re:String, sceneIndex:Int, Timing:Int, weeklyDays:Int) {
+    func WebUpdateSceneTiming(_ re:String, sceneFoot:Int, Timing:String, weeklyDays:String) {
         switch re{
         case "WebError":
             break
         case "1":
-//            gDC.
+            gDC.mSceneData.UpdateSceneTiming(sceneFoot: sceneFoot, Timing: Timing, weeklyDays: weeklyDays)
+            if (Timing != "" && weeklyDays == "") {
+                RefreshControls(type: DETAIL_TIMING)
+            } else if (Timing != "" && weeklyDays != "") {
+                RefreshControls(type: DALIY_TIMING)
+            } else {
+                RefreshControls(type: NO_TIMING)
+            }
+            ShowInfoDispatch("提示", content: "情景定时更新成功", duration: 0.5)
         default:
             ShowNoticeDispatch("错误", content: "情景定时更新失败", duration: 0.5)
             break

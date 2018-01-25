@@ -925,10 +925,22 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
     }
     
     // 更新情景模式的定时 - 循环定时
-    func UpdateSceneDaliyTiming(masterCode:String, sceneIndex:Int, weeklyDays:String, detailTiming:String) -> String {
+    func UpdateSceneDaliyTiming(masterCode:String, sceneIndex:Int, weeklyDays:String, daliyTiming:String) -> String {
         let methodName:String = "updateSceneDaliyTiming"
-        let arrayKey = ["masterCode", "sceneIndex", "weeklyDays", "detailTiming"]
-        let arrayValue = [masterCode, sceneIndex, weeklyDays, detailTiming] as [Any]
+        let arrayKey = ["masterCode", "sceneIndex", "weeklyDays", "daliyTiming"]
+        let arrayValue = [masterCode, sceneIndex, weeklyDays, daliyTiming] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
+    // 删除情景定时
+    func DeleteSceneTiming(masterCode:String, sceneIndex:Int) -> String {
+        let methodName:String = "deleteSceneTiming"
+        let arrayKey = ["masterCode", "sceneIndex"]
+        let arrayValue = [masterCode, sceneIndex] as [Any]
         var value:(mainValue:AnyObject, bEmpty:Bool)!
         SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
         value = GetSessionReturn(methodName, returnType: "string")

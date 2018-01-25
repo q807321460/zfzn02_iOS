@@ -106,6 +106,22 @@ class SceneData: NSObject {
         }
     }
  
+    func UpdateSceneTiming(sceneFoot:Int, Timing:String, weeklyDays:String) {
+        if (Timing == "") { // no timing
+            gDC.mSceneList[sceneFoot].m_sDetailTiming = ""
+            gDC.mSceneList[sceneFoot].m_sWeeklyDays = ""
+            gDC.mSceneList[sceneFoot].m_sDaliyTiming = ""
+        } else if (weeklyDays == "") { // detail timing
+            gDC.mSceneList[sceneFoot].m_sDetailTiming = Timing
+            gDC.mSceneList[sceneFoot].m_sWeeklyDays = ""
+            gDC.mSceneList[sceneFoot].m_sDaliyTiming = ""
+        } else { // daliy timing
+            gDC.mSceneList[sceneFoot].m_sDetailTiming = ""
+            gDC.mSceneList[sceneFoot].m_sWeeklyDays = weeklyDays
+            gDC.mSceneList[sceneFoot].m_sDaliyTiming = Timing
+        }
+    }
+    
 }
 
 class SceneInfoData:NSObject {
