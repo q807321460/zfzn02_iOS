@@ -105,7 +105,7 @@
     self.day = [NSString stringWithFormat:@"%ld日", [self.timeArr[2] integerValue]];
     self.hour = [NSString stringWithFormat:@"%ld时", [self.timeArr[3] integerValue]];
     self.minute = self.minuteArr[self.minuteArr.count / 2];
-    self.second = self.secondArr[self.secondArr.count / 2];
+    self.second = 0;
     
     [self.pickerView selectRow:[self.yearArr indexOfObject:self.year] inComponent:0 animated:YES];
     /// 重新格式化转一下，是因为如果是09月/日/时，数据源是9月/日/时,就会出现崩溃

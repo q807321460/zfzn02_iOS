@@ -48,7 +48,7 @@ let g_sElectric_type_tv_learn = "09"//学习型空调
     let m_arrayElectricLabel:NSArray = ["插座", "一键开关", "两键开关", "三键开关", "四键开关", "门锁", "窗帘", "窗户", "摄像头", "空调", "情景开关", "机械手", "电视", "温度计", "水浸", "门磁", "燃气报警", "壁挂红外", "警号", "烟雾报警", "晾衣架", "学习型空调", "中央空调", "新门锁", "学习型电视"]
     let m_arraySensorState:NSDictionary = ["00": "普通", "01": "报警", "02": "防拆", "03": "报警+防拆", "04": "电量低", "05": "报警+电量低", "06": "防拆+电量低", "07": "报警+防拆+电量低"]
     
-    let m_appVersion = "1.7.059" //每次更新版本，记得要修改这里的版本号
+    let m_appVersion = "1.7.070" //每次更新版本，记得要修改这里的版本号
     
     let m_sLocalIp:String = "192.168.0.200"
     let m_sWebIp:String = "101.201.211.87"
@@ -76,7 +76,7 @@ let g_sElectric_type_tv_learn = "09"//学习型空调
     var m_dbVersionOld:Int = -1 // 因为更新软件时，沙盒中的数据库等没有变化，因此需要判断先前的版本是多少
     var m_bUseProgramSQL:Bool = true     // 是否使用本地工程内数据库，该变量只有在调试时使用，基本用不上了
     var m_bTestRemote:Bool = false        // 是否在本地服务器下测试远程控制，这个在上传时一定要记得修改回false
-    var m_bUseRemoteService:Bool = false   //【醒目】是否使用远程服务器，若不然使用本地服务器，这个在上传时一定要记得修改回true
+    var m_bUseRemoteService:Bool = true   //【醒目】是否使用远程服务器，若不然使用本地服务器，这个在上传时一定要记得修改回true
     var m_bRemote:Bool = true            //是否处于远程状态
     var m_sLastMasterCode:String!          //上一次登录的主机编码（确定是否为本地主机）
     

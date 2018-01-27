@@ -144,9 +144,9 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
                 sReturn = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
                 xmlDoc = NSDictionary(xmlString: sReturn as String)
 //                print("——————————输出Dictionary格式——————————")
-                if methodName == "loadSceneFromWs" {
-                  print("\(xmlDoc)")
-                }
+//                if methodName == "loadSceneFromWs" {
+//                  print("\(xmlDoc)")
+//                }
 //                print("——————————输出Dictionary格式——————————")
                 value = self.GetReturnValue(methodName, dict: xmlDoc, returnType: returnType)//, arrayKeyRes: arrayKeyRes2
                 bReceiving = false

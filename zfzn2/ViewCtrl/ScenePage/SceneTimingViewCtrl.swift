@@ -54,7 +54,7 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
         m_layoutW2.constant = width
         m_layoutW3.constant = width
         m_labelTimingSelected.isHidden = true
-        if (gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming == "") {
+        if (gDC.mSceneList[m_nSceneListFoot].m_sDetailTiming == "" && gDC.mSceneList[m_nSceneListFoot].m_sDaliyTiming == "") {
             RefreshControls(type: NO_TIMING)
         } else if (gDC.mSceneList[m_nSceneListFoot].m_sWeeklyDays != "") {
             RefreshControls(type: DALIY_TIMING)
@@ -332,14 +332,16 @@ class SceneTimingViewCtrl: UIViewController, THDatePickerViewDelegate, THTimePic
         switch re{
         case "WebError":
             break
+        case "0":
+            ShowNoticeDispatch("错误", content: "主机与服务器的连接有误，情景定时更新失败", duration: 0.8)
         case "1":
             gDC.mSceneData.UpdateSceneTiming(sceneFoot: sceneFoot, Timing: Timing, weeklyDays: weeklyDays)
-            if (Timing != "" && weeklyDays == "") {
-                RefreshControls(type: DETAIL_TIMING)
-            } else if (Timing != "" && weeklyDays != "") {
+            if (Timing == "" && weeklyDays == "") {
+                RefreshControls(type: NO_TIMING)
+            } else if (weeklyDays != "") {
                 RefreshControls(type: DALIY_TIMING)
             } else {
-                RefreshControls(type: NO_TIMING)
+                RefreshControls(type: DETAIL_TIMING)
             }
             ShowInfoDispatch("提示", content: "情景定时更新成功", duration: 0.5)
         default:

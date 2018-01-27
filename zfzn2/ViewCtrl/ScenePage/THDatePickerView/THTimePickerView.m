@@ -92,7 +92,7 @@
 - (void)show {
     self.hour = [NSString stringWithFormat:@"%ld时", [self.timeArr[0] integerValue]];
     self.minute = self.minuteArr[self.minuteArr.count / 2];
-    self.second = self.secondArr[self.secondArr.count / 2];
+    self.second = 0;
     
     [self.pickerView selectRow:[self.hourArr indexOfObject:self.hour] inComponent:0 animated:YES];
     [self.pickerView selectRow:self.minuteArr.count / 2 inComponent:1 animated:YES];
