@@ -16,6 +16,7 @@
 		1B0868DB1DE9675B0045E531 /* ElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0868D71DE9675B0045E531 /* ElectricData.swift */; };
 		1B160C251E5871DF002F3BDA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B160C241E5871DF002F3BDA /* MessageViewController.m */; };
 		1B2D63881FCA5A95006CA0B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D638A1FCA5A95006CA0B5 /* Localizable.strings */; };
+		1B34191F20560C7500577303 /* CentralAir.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34191E20560C7500577303 /* CentralAir.xib */; };
 		1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3520D71F99E84B006002C0 /* WebSocket.swift */; };
 		1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */; };
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
@@ -271,6 +272,7 @@
 		1B160C241E5871DF002F3BDA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		1B2D63891FCA5A95006CA0B5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1B2D638B1FCA5ABD006CA0B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1B34191E20560C7500577303 /* CentralAir.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralAir.xib; sourceTree = "<group>"; };
 		1B3520D71F99E84B006002C0 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = zfzn2/Data/Socket/WebSocket.swift; sourceTree = SOURCE_ROOT; };
 		1B3BB0E31DFBFD7000361071 /* GCDAsyncTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncTcpSocket.h; sourceTree = "<group>"; };
 		1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncTcpSocket.m; sourceTree = "<group>"; };
@@ -1200,6 +1202,7 @@
 				1B83A7751FDEAF140013047B /* MySharedAccountCell.xib */,
 				1B83A7761FDEAF140013047B /* DoorRecordCell.swift */,
 				1B83A7771FDEAF140013047B /* MyAccountImageCell.xib */,
+				1B34191E20560C7500577303 /* CentralAir.xib */,
 			);
 			path = TabelCell;
 			sourceTree = "<group>";
@@ -1220,6 +1223,7 @@
 				1B83A7F21FDEAF470013047B /* Login */,
 				1B83A7C01FDEAF470013047B /* OtherMenu */,
 				1B83A7EC1FDEAF470013047B /* AccountCenter */,
+				1B83A7A81FDEAF470013047B /* HomePage */,
 				1B83A7AF1FDEAF470013047B /* AreaPage */,
 				1B83A7D81FDEAF470013047B /* Electric */,
 				1B83A7C31FDEAF470013047B /* LeftView */,
@@ -1263,7 +1267,6 @@
 			children = (
 				1B83A7B01FDEAF470013047B /* AreaViewCtrl.swift */,
 				1B83A7B11FDEAF470013047B /* SelectedAreaViewCtrl.swift */,
-				1B83A7A81FDEAF470013047B /* HomePage */,
 				1B83A7B21FDEAF470013047B /* AddAreaViewCtrl.swift */,
 				1B83A7B31FDEAF470013047B /* EditAreaViewCtrl.swift */,
 				1B83A7B41FDEAF470013047B /* MoveElectricViewCtrl.swift */,
@@ -1699,6 +1702,7 @@
 				1B83A7A11FDEAF160013047B /* MySharedAccountCell.xib in Resources */,
 				1B83A7931FDEAF150013047B /* SharedAccountInfoCell.xib in Resources */,
 				1B6F29061E460B1000D19DE9 /* cert.pem in Resources */,
+				1B34191F20560C7500577303 /* CentralAir.xib in Resources */,
 				1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */,
 				1B83A7881FDEAF150013047B /* MySceneCell.xib in Resources */,
 				1B83A79D1FDEAF160013047B /* AlarmRecordCell.xib in Resources */,
@@ -1748,7 +1752,7 @@
 		};
 		C7A79335DB6675088F311EFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -1759,7 +1763,7 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-zfzn2-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
@@ -2046,6 +2050,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3DK3TZXK6A;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2099,6 +2104,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3DK3TZXK6A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
