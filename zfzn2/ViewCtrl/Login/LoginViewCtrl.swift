@@ -22,9 +22,9 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var m_viewLoading:SCLAlertView! = nil
     var m_timer:Timer?//定时器
     var m_sArrayAccount = [String]()//用于从数据库中读取本机登录过的账户
-    var m_currentLocation:CLLocation!//保存获取到的本地位置
+//    var m_currentLocation:CLLocation!//保存获取到的本地位置
     //用于定位服务管理类，它能够给我们提供位置信息和高度信息，也可以监控设备进入或离开某个区域，还可以获得设备的运行方向
-    let mLocationManager:CLLocationManager = CLLocationManager()
+//    let mLocationManager:CLLocationManager = CLLocationManager()
     var mProvinceList = NSMutableArray()
     var mCityLists = [NSMutableArray]()
     var mCityList = NSMutableArray()
@@ -63,12 +63,12 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
             m_layoutTableViewHeight.constant = CGFloat(4) * 40
         }
         m_tableAccountList.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")//设置重用ID
-        //读取当前位置？
-        mLocationManager.delegate = self
-        mLocationManager.requestWhenInUseAuthorization()
-        mLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters//精度为100米
-//        mLocationManager.desiredAccuracy = kCLLocationAccuracyBest//设备使用电池供电时最高的精度
-        mLocationManager.distanceFilter = kCLLocationAccuracyKilometer//精确到1000米,距离过滤器，定义了设备移动后获得位置信息的最小距离
+        //读取当前位置？注释掉这里后登陆前就不会提示权限的获取问题了
+//        mLocationManager.delegate = self
+//        mLocationManager.requestWhenInUseAuthorization()
+//        mLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters//精度为100米
+////        mLocationManager.desiredAccuracy = kCLLocationAccuracyBest//设备使用电池供电时最高的精度
+//        mLocationManager.distanceFilter = kCLLocationAccuracyKilometer//精确到1000米,距离过滤器，定义了设备移动后获得位置信息的最小距离
         
         ReadPlistData()
         ReadAccountPlistData()
@@ -342,66 +342,66 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
-    func GetCurrentCity(){
-        InitAddressPlist()
-        //获取沙盒中的plist数据并读取
-        let sFilePath:String = DataFilePath("address.plist")
-        let arrayAll = NSMutableArray.init(contentsOfFile: sFilePath)!
-        for i in 0..<arrayAll.count {
-            let dict = arrayAll[i] as! NSDictionary
-            mProvinceList.add(dict["provinceName"]! as! String)
-            let arrayCity = dict["cityList"]! as! NSMutableArray
-            mCityLists.append(arrayCity)
-        }
-        mLocationManager.startUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if locations.count > 0 {
-            mLocationManager.stopUpdatingLocation()//停止查找，防止耗电
-            m_currentLocation = locations.last
-            print(m_currentLocation.coordinate.longitude)
-            print(m_currentLocation.coordinate.latitude)
-            let geocoder: CLGeocoder = CLGeocoder()
-            geocoder.reverseGeocodeLocation(m_currentLocation, completionHandler: { (placemark: [CLPlacemark]?, error: Error?) in
-                if (error == nil) {//转换成功，解析获取到的各个信息
-                    let array = placemark! as NSArray
-                    let mark = array.firstObject as! CLPlacemark
-                    var sCity: String = (mark.addressDictionary! as NSDictionary).value(forKey: "City") as! String
-                    //去掉“市”和“省”字眼
-                    sCity = sCity.replacingOccurrences(of: "市", with: "")
-                    //判断在plist中是否存在同样的城市名，如果不存在则还是使用默认值
-                    var bFind:Bool! = false
-                    for var i in 0..<self.mProvinceList.count {
-                        for j in 0..<self.mCityLists[i].count {
-                            if self.mCityLists[i][j] as! String == sCity {//说明这个地名是支持获取天气的
-                                gDC.m_sProvinceName = self.mProvinceList[i] as! String
-                                gDC.m_sCityName = sCity
-                                bFind = true
-                                i = self.mProvinceList.count
-                                gDC.m_bFirstGetWeather = true
-                                g_notiCenter.post(name: Notification.Name(rawValue: "RefreshWeather"), object: self)//成功获取到当前定位的城市后，向主界面发送响应，让主界面重新获取天气信息并刷新显示
-                                //重置plist中的部分值
-                                let fullPath = GetFileFullPath("account_setting/", fileName: "\(gDC.mAccountInfo.m_sAccountCode).plist")
-                                let dict = NSMutableDictionary.init(contentsOfFile: fullPath)
-                                dict?.setObject(gDC.m_sProvinceName, forKey: "province" as NSCopying)
-                                dict?.setObject(gDC.m_sCityName, forKey: "city" as NSCopying)
-                                dict?.write(toFile: fullPath, atomically: true)
-                                break
-                            }
-                        }
-                    }
-                    if bFind == false {
-                        ShowNoticeDispatch("提示", content: "定位失败，请在设置中手动编辑当前城市", duration: 1.2)
-                    }
-                }
-            })
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-    }
+//    func GetCurrentCity(){
+//        InitAddressPlist()
+//        //获取沙盒中的plist数据并读取
+//        let sFilePath:String = DataFilePath("address.plist")
+//        let arrayAll = NSMutableArray.init(contentsOfFile: sFilePath)!
+//        for i in 0..<arrayAll.count {
+//            let dict = arrayAll[i] as! NSDictionary
+//            mProvinceList.add(dict["provinceName"]! as! String)
+//            let arrayCity = dict["cityList"]! as! NSMutableArray
+//            mCityLists.append(arrayCity)
+//        }
+//        mLocationManager.startUpdatingLocation()
+//    }
+//
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if locations.count > 0 {
+//            mLocationManager.stopUpdatingLocation()//停止查找，防止耗电
+//            m_currentLocation = locations.last
+//            print(m_currentLocation.coordinate.longitude)
+//            print(m_currentLocation.coordinate.latitude)
+//            let geocoder: CLGeocoder = CLGeocoder()
+//            geocoder.reverseGeocodeLocation(m_currentLocation, completionHandler: { (placemark: [CLPlacemark]?, error: Error?) in
+//                if (error == nil) {//转换成功，解析获取到的各个信息
+//                    let array = placemark! as NSArray
+//                    let mark = array.firstObject as! CLPlacemark
+//                    var sCity: String = (mark.addressDictionary! as NSDictionary).value(forKey: "City") as! String
+//                    //去掉“市”和“省”字眼
+//                    sCity = sCity.replacingOccurrences(of: "市", with: "")
+//                    //判断在plist中是否存在同样的城市名，如果不存在则还是使用默认值
+//                    var bFind:Bool! = false
+//                    for var i in 0..<self.mProvinceList.count {
+//                        for j in 0..<self.mCityLists[i].count {
+//                            if self.mCityLists[i][j] as! String == sCity {//说明这个地名是支持获取天气的
+//                                gDC.m_sProvinceName = self.mProvinceList[i] as! String
+//                                gDC.m_sCityName = sCity
+//                                bFind = true
+//                                i = self.mProvinceList.count
+//                                gDC.m_bFirstGetWeather = true
+//                                g_notiCenter.post(name: Notification.Name(rawValue: "RefreshWeather"), object: self)//成功获取到当前定位的城市后，向主界面发送响应，让主界面重新获取天气信息并刷新显示
+//                                //重置plist中的部分值
+//                                let fullPath = GetFileFullPath("account_setting/", fileName: "\(gDC.mAccountInfo.m_sAccountCode).plist")
+//                                let dict = NSMutableDictionary.init(contentsOfFile: fullPath)
+//                                dict?.setObject(gDC.m_sProvinceName, forKey: "province" as NSCopying)
+//                                dict?.setObject(gDC.m_sCityName, forKey: "city" as NSCopying)
+//                                dict?.write(toFile: fullPath, atomically: true)
+//                                break
+//                            }
+//                        }
+//                    }
+//                    if bFind == false {
+//                        ShowNoticeDispatch("提示", content: "定位失败，请在设置中手动编辑当前城市", duration: 1.2)
+//                    }
+//                }
+//            })
+//        }
+//    }
+//
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print(error)
+//    }
     
     ////////////////////////////////////////////////////////////////////////////////////
     //点击登录后从webservice接收到的消息

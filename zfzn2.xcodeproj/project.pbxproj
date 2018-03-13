@@ -16,7 +16,8 @@
 		1B0868DB1DE9675B0045E531 /* ElectricData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0868D71DE9675B0045E531 /* ElectricData.swift */; };
 		1B160C251E5871DF002F3BDA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B160C241E5871DF002F3BDA /* MessageViewController.m */; };
 		1B2D63881FCA5A95006CA0B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D638A1FCA5A95006CA0B5 /* Localizable.strings */; };
-		1B34191F20560C7500577303 /* CentralAir.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34191E20560C7500577303 /* CentralAir.xib */; };
+		1B34191F20560C7500577303 /* CentralAirCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34191E20560C7500577303 /* CentralAirCell.xib */; };
+		1B3419232056185D00577303 /* CentralAirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3419222056185D00577303 /* CentralAirCell.swift */; };
 		1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3520D71F99E84B006002C0 /* WebSocket.swift */; };
 		1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */; };
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
@@ -272,7 +273,8 @@
 		1B160C241E5871DF002F3BDA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		1B2D63891FCA5A95006CA0B5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1B2D638B1FCA5ABD006CA0B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1B34191E20560C7500577303 /* CentralAir.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralAir.xib; sourceTree = "<group>"; };
+		1B34191E20560C7500577303 /* CentralAirCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralAirCell.xib; sourceTree = "<group>"; };
+		1B3419222056185D00577303 /* CentralAirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralAirCell.swift; sourceTree = "<group>"; };
 		1B3520D71F99E84B006002C0 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = zfzn2/Data/Socket/WebSocket.swift; sourceTree = SOURCE_ROOT; };
 		1B3BB0E31DFBFD7000361071 /* GCDAsyncTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncTcpSocket.h; sourceTree = "<group>"; };
 		1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncTcpSocket.m; sourceTree = "<group>"; };
@@ -1172,37 +1174,38 @@
 		1B83A7591FDEAF140013047B /* TabelCell */ = {
 			isa = PBXGroup;
 			children = (
-				1B83A75A1FDEAF140013047B /* MyAccountImageCell.swift */,
-				1B83A75B1FDEAF140013047B /* MySensorCell.xib */,
-				1B83A75C1FDEAF140013047B /* MySceneCell.xib */,
-				1B83A75D1FDEAF140013047B /* DoorRecordCell.xib */,
-				1B83A75E1FDEAF140013047B /* MyMasterCell.xib */,
-				1B83A75F1FDEAF140013047B /* EditSceneElectricCell.swift */,
-				1B83A7601FDEAF140013047B /* MySharedAccountCell.swift */,
-				1B83A7611FDEAF140013047B /* MySceneElectricCell.swift */,
-				1B83A7621FDEAF140013047B /* MyAccountInfoCell.swift */,
-				1B83A7631FDEAF140013047B /* MyAreaCell2.swift */,
-				1B83A7641FDEAF140013047B /* MySceneElectricCell.xib */,
-				1B83A7651FDEAF140013047B /* EditSceneElectricCell.xib */,
-				1B83A7661FDEAF140013047B /* MyMasterCell.swift */,
-				1B83A7671FDEAF140013047B /* SharedAccountInfoCell.xib */,
-				1B83A7681FDEAF140013047B /* SharedAccountInfoCell.swift */,
-				1B83A7691FDEAF140013047B /* AlarmRecordCell.swift */,
 				1B83A76A1FDEAF140013047B /* AddSceneCell.swift */,
-				1B83A76B1FDEAF140013047B /* MySensorCell.swift */,
-				1B83A76C1FDEAF140013047B /* SharedElectricCell.swift */,
-				1B83A76D1FDEAF140013047B /* MyAreaCell.swift */,
-				1B83A76E1FDEAF140013047B /* MyAreaCell2.xib */,
-				1B83A76F1FDEAF140013047B /* MySceneCell.swift */,
 				1B83A7701FDEAF140013047B /* AddSceneCell.xib */,
+				1B83A7691FDEAF140013047B /* AlarmRecordCell.swift */,
 				1B83A7711FDEAF140013047B /* AlarmRecordCell.xib */,
-				1B83A7721FDEAF140013047B /* SharedElectricCell.xib */,
-				1B83A7731FDEAF140013047B /* MyAreaCell.xib */,
-				1B83A7741FDEAF140013047B /* MyAccountInfoCell.xib */,
-				1B83A7751FDEAF140013047B /* MySharedAccountCell.xib */,
+				1B3419222056185D00577303 /* CentralAirCell.swift */,
+				1B34191E20560C7500577303 /* CentralAirCell.xib */,
 				1B83A7761FDEAF140013047B /* DoorRecordCell.swift */,
+				1B83A75D1FDEAF140013047B /* DoorRecordCell.xib */,
+				1B83A75F1FDEAF140013047B /* EditSceneElectricCell.swift */,
+				1B83A7651FDEAF140013047B /* EditSceneElectricCell.xib */,
+				1B83A75A1FDEAF140013047B /* MyAccountImageCell.swift */,
 				1B83A7771FDEAF140013047B /* MyAccountImageCell.xib */,
-				1B34191E20560C7500577303 /* CentralAir.xib */,
+				1B83A7621FDEAF140013047B /* MyAccountInfoCell.swift */,
+				1B83A7741FDEAF140013047B /* MyAccountInfoCell.xib */,
+				1B83A76D1FDEAF140013047B /* MyAreaCell.swift */,
+				1B83A7731FDEAF140013047B /* MyAreaCell.xib */,
+				1B83A7631FDEAF140013047B /* MyAreaCell2.swift */,
+				1B83A76E1FDEAF140013047B /* MyAreaCell2.xib */,
+				1B83A7661FDEAF140013047B /* MyMasterCell.swift */,
+				1B83A75E1FDEAF140013047B /* MyMasterCell.xib */,
+				1B83A76F1FDEAF140013047B /* MySceneCell.swift */,
+				1B83A75C1FDEAF140013047B /* MySceneCell.xib */,
+				1B83A7611FDEAF140013047B /* MySceneElectricCell.swift */,
+				1B83A7641FDEAF140013047B /* MySceneElectricCell.xib */,
+				1B83A76B1FDEAF140013047B /* MySensorCell.swift */,
+				1B83A75B1FDEAF140013047B /* MySensorCell.xib */,
+				1B83A7601FDEAF140013047B /* MySharedAccountCell.swift */,
+				1B83A7751FDEAF140013047B /* MySharedAccountCell.xib */,
+				1B83A7681FDEAF140013047B /* SharedAccountInfoCell.swift */,
+				1B83A7671FDEAF140013047B /* SharedAccountInfoCell.xib */,
+				1B83A76C1FDEAF140013047B /* SharedElectricCell.swift */,
+				1B83A7721FDEAF140013047B /* SharedElectricCell.xib */,
 			);
 			path = TabelCell;
 			sourceTree = "<group>";
@@ -1702,7 +1705,7 @@
 				1B83A7A11FDEAF160013047B /* MySharedAccountCell.xib in Resources */,
 				1B83A7931FDEAF150013047B /* SharedAccountInfoCell.xib in Resources */,
 				1B6F29061E460B1000D19DE9 /* cert.pem in Resources */,
-				1B34191F20560C7500577303 /* CentralAir.xib in Resources */,
+				1B34191F20560C7500577303 /* CentralAirCell.xib in Resources */,
 				1B7FC36E1E9DBA9700209C41 /* address.plist in Resources */,
 				1B83A7881FDEAF150013047B /* MySceneCell.xib in Resources */,
 				1B83A79D1FDEAF160013047B /* AlarmRecordCell.xib in Resources */,
@@ -1838,6 +1841,7 @@
 				1B83A82A1FDEAF480013047B /* ElecAirViewCtrl.swift in Sources */,
 				1B83A8401FDEAF480013047B /* SetPasswordViewCtrl.swift in Sources */,
 				1B83A77A1FDEAF150013047B /* MiniSceneAndArea.swift in Sources */,
+				1B3419232056185D00577303 /* CentralAirCell.swift in Sources */,
 				1B83A7991FDEAF160013047B /* MyAreaCell.swift in Sources */,
 				1BC4542F201759FF00654452 /* WeekDayButton.swift in Sources */,
 				1B6F29B81E460D7500D19DE9 /* LCOpenApi_Reflection.cpp in Sources */,
