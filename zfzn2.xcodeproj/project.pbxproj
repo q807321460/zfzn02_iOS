@@ -18,6 +18,9 @@
 		1B2D63881FCA5A95006CA0B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D638A1FCA5A95006CA0B5 /* Localizable.strings */; };
 		1B34191F20560C7500577303 /* CentralAirCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B34191E20560C7500577303 /* CentralAirCell.xib */; };
 		1B3419232056185D00577303 /* CentralAirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3419222056185D00577303 /* CentralAirCell.swift */; };
+		1B3419272057732100577303 /* ElecCentralAirViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3419262057732100577303 /* ElecCentralAirViewCtrl.swift */; };
+		1B341929205A9E7000577303 /* ElecCentralAirData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B341928205A9E6F00577303 /* ElecCentralAirData.swift */; };
+		1B34192D205BF9F400577303 /* AddCentralAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B34192C205BF9F400577303 /* AddCentralAir.swift */; };
 		1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3520D71F99E84B006002C0 /* WebSocket.swift */; };
 		1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */; };
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
@@ -275,6 +278,9 @@
 		1B2D638B1FCA5ABD006CA0B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B34191E20560C7500577303 /* CentralAirCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CentralAirCell.xib; sourceTree = "<group>"; };
 		1B3419222056185D00577303 /* CentralAirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralAirCell.swift; sourceTree = "<group>"; };
+		1B3419262057732100577303 /* ElecCentralAirViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecCentralAirViewCtrl.swift; sourceTree = "<group>"; };
+		1B341928205A9E6F00577303 /* ElecCentralAirData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecCentralAirData.swift; sourceTree = "<group>"; };
+		1B34192C205BF9F400577303 /* AddCentralAir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCentralAir.swift; sourceTree = "<group>"; };
 		1B3520D71F99E84B006002C0 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = zfzn2/Data/Socket/WebSocket.swift; sourceTree = SOURCE_ROOT; };
 		1B3BB0E31DFBFD7000361071 /* GCDAsyncTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncTcpSocket.h; sourceTree = "<group>"; };
 		1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncTcpSocket.m; sourceTree = "<group>"; };
@@ -697,6 +703,7 @@
 				1B504CF91F13BD6F00C57F17 /* ETData.swift */,
 				1BB5E5471E1B9371000B7FD3 /* SceneData.swift */,
 				1BB5E5491E1B948C000B7FD3 /* SceneElectricData.swift */,
+				1B341928205A9E6F00577303 /* ElecCentralAirData.swift */,
 			);
 			path = KindsOfData;
 			sourceTree = "<group>";
@@ -1391,6 +1398,7 @@
 				1B83A7E41FDEAF470013047B /* ElecDoor2ViewCtrl.swift */,
 				1B83A7E51FDEAF470013047B /* ElecSceneSwitchViewCtrl.swift */,
 				1B83A7E61FDEAF470013047B /* ElecSwitchViewCtrl.swift */,
+				1B3419262057732100577303 /* ElecCentralAirViewCtrl.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -1402,6 +1410,7 @@
 				1B83A7E91FDEAF470013047B /* EditElectricViewCtrl.swift */,
 				1B83A7EA1FDEAF470013047B /* AddElectricTypeViewCtrl.swift */,
 				1B83A7EB1FDEAF470013047B /* AddElectricViewCtrl.swift */,
+				1B34192C205BF9F400577303 /* AddCentralAir.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -1832,6 +1841,7 @@
 				1B83A81D1FDEAF480013047B /* AddSceneElectricViewCtrl.swift in Sources */,
 				1B7667C41EF3CA1C007B21B4 /* JdMyDeviceViewController.m in Sources */,
 				1B83A8151FDEAF480013047B /* AddMasterViewCtrl.swift in Sources */,
+				1B341929205A9E7000577303 /* ElecCentralAirData.swift in Sources */,
 				1B6F29E91E46112B00D19DE9 /* AddDeviceViewController.m in Sources */,
 				1BCBE4C11FD577D0003CB2EA /* RecordViewController.m in Sources */,
 				1B83A8361FDEAF480013047B /* AccountInfoViewCtrl.swift in Sources */,
@@ -1901,6 +1911,7 @@
 				1BC57E6E1E820C3A0083BAFB /* GlobalFunction.swift in Sources */,
 				1B83A8261FDEAF480013047B /* ElecTvViewCtrl.swift in Sources */,
 				1B7667BE1EF3CA1C007B21B4 /* JdCategory_BViewController.m in Sources */,
+				1B34192D205BF9F400577303 /* AddCentralAir.swift in Sources */,
 				1B83A8031FDEAF480013047B /* AlarmRecordViewCtrl.swift in Sources */,
 				1B83A78F1FDEAF150013047B /* MyAreaCell2.swift in Sources */,
 				1B6F29B41E460D7500D19DE9 /* LCOpenApi_ClientSdk.cpp in Sources */,
@@ -1951,6 +1962,7 @@
 				1B83A8171FDEAF480013047B /* ShareMasterViewCtrl.swift in Sources */,
 				1B83A82E1FDEAF480013047B /* ElecSceneSwitchViewCtrl.swift in Sources */,
 				1B83A78B1FDEAF150013047B /* EditSceneElectricCell.swift in Sources */,
+				1B3419272057732100577303 /* ElecCentralAirViewCtrl.swift in Sources */,
 				1B83A8061FDEAF480013047B /* SelectedAreaViewCtrl.swift in Sources */,
 				1B6F29AC1E460D7500D19DE9 /* LCOpenApi_base64.cpp in Sources */,
 				1B055C981E529CDD00F04851 /* MyViewController.m in Sources */,

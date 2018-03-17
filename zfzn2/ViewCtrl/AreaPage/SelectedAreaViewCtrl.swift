@@ -226,6 +226,12 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
             }else if nElectricType==24 {//学习型电视
 
             }
+            else if nElectricType==25 {//中央空调
+                let nextView = sb.instantiateViewController(withIdentifier: "elecCentralAirViewCtrl") as! ElecCentralAirViewCtrl
+                nextView.m_nAreaListFoot = m_nAreaListFoot
+                nextView.m_nElectricListFoot = electricFoot
+                self.navigationController?.pushViewController(nextView , animated: true)
+            }
         }
     }
 
