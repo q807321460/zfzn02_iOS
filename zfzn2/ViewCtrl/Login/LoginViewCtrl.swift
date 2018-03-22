@@ -196,8 +196,10 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
             self.m_viewLoading = SCLAlertView(appearance: appearance)
             self.m_viewLoading.showInfo("提示", subTitle: " 正在加载用户数据......", duration: 0)
         })
+        PrintTime("before LoadAccount")
         let dictsAccount = MyWebService.sharedInstance.LoadAccount(gDC.mAccountInfo.m_sAccountCode, accountTime: "")
         gDC.mAccountData.UpdateAccount(dictsAccount)
+        PrintTime("before LoadUser")
         let dictsUser = MyWebService.sharedInstance.LoadUser(gDC.mAccountInfo.m_sAccountCode, userTime: "")
         if (dictsUser.count <= 1) {//说明之前删除完所有的user，需要重新添加
             print("从登录界面到添加主机界面")
@@ -207,9 +209,17 @@ class LoginViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }else {
             gDC.mUserData.UpdateUser(dictsUser)
         }
+        PrintTime("before LoadDetailDataFromWs")
         MyWebService.sharedInstance.LoadDetailDataFromWs()
-        MySocket.sharedInstance.SearchLocalMaster()
+        PrintTime("before SearchLocalMaster")
+        
+        let queue = DispatchQueue(label: "tk.bourne.ipQueue", attributes: []);
+        queue.async(execute: {
+            MySocket.sharedInstance.SearchLocalMaster() // 这一步太慢了，一定不能放在主线程中完成
+        })
+        PrintTime("before LoadOtherData")
         LoadOtherData()
+        PrintTime("Login Finish")
     }
     
     //读取各种列表数据，修改整体plist文件数据

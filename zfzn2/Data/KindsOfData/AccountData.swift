@@ -11,7 +11,6 @@ import Foundation
 //专门写函数的类
 class AccountData: NSObject {
     func UpdateAccount(_ dicts:[NSDictionary]) {
-        print("向内存中写入account数据")
         let dict:NSDictionary = dicts[0]//最多只有一组数据
         let accountInfo = AccountInfoData()//保证切换账号时数据的正确性
         //空的数据，web不会传下来，所以最好每个数据都进行判断

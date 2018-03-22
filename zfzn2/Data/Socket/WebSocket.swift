@@ -102,14 +102,14 @@ class WebSocket: NSObject, SRWebSocketDelegate {
             }
             self.m_timerForbidSync = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(WebSocket.ForbidSync), userInfo: nil, repeats: false)
             self.m_timerSync = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(WebSocket.AutomaticSync), userInfo: nil, repeats: false)
-        }else if ((message as! String).subStringTo(1) == "<") {//说明是电器状态的更新
+        } else if ((message as! String).subStringTo(1) == "<") {//说明是电器状态的更新
 //            if (gDC.m_bRemote == false) {//如果当前是本地连接状态，则自动忽略接收的websocket消息
 //                return
 //            }
             if (RefreshElectricStates(message as! String) == true) {
                 g_notiCenter.post(name: Notification.Name(rawValue: "RefreshElectricStates"), object: self)//向所有注册过观测器的界面发送消息
             }
-        }else {
+        } else {
             print("【web_socket】接收到其他的消息")
         }
     }

@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {//, GCDAsyncSocketDelegat
         MySocket.sharedInstance.InitUdpSocket()
         MySocket.sharedInstance.InitTcpSocket()
 //        MySocket.sharedInstance.InitSendTcpSocket()
-        MySocket.sharedInstance.OpenPolling()
+//        MySocket.sharedInstance.OpenPolling()
         //初始化websocket连接
         WebSocket.sharedInstance.InitWebSocket()
         //测试函数

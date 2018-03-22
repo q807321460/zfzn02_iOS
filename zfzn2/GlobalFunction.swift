@@ -284,7 +284,7 @@ func RefreshElectricStates(_ sReceive:String) -> Bool {
     //正常的结构是：
     //1、接收到主机主动返回的有效数据——030036C9Z603********00，22位，旧电器使用的是短地址，电器编号为8位
     //2、接收到主机主动返回的有效数据——030036C94E0BZ603********00，26位，新电器使用的是长地址，电器编号为12位
-    if (nLen == 23 || nLen == 27) == false {
+    if (nLen == 23 || nLen >= 27) == false {
         return false
     }
     if nStart != -1 {
@@ -296,10 +296,19 @@ func RefreshElectricStates(_ sReceive:String) -> Bool {
             sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 8))
             sElectricState = (sReturn as NSString).substring(with: NSMakeRange(8, 2))
             sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(10, 10))
-        }else if sReturn.count == 26 {
+        } else if sReturn.count == 26 {
             sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 12))
             sElectricState = (sReturn as NSString).substring(with: NSMakeRange(12, 2))
             sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(14, 10))
+        } else {
+            sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 12))
+            let sBegin = (sElectricCode as NSString).substring(with: NSMakeRange(0, 4))
+            if sBegin == "1100"{
+                 sElectricState = (sReturn as NSString).substring(with: NSMakeRange(12, 2))
+                 sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(14, nEnd-14))
+            }else{
+               return false
+            }
         }
         gDC.mElectricData.ChangeElectricState(sElectricCode, electricState: sElectricState, stateInfo: sStateInfo)
         return true
@@ -463,22 +472,66 @@ func GetLechageTokenGlobal(_ sPhoneNumber:String, isShowLoading:Bool) {
     }
 }
 
-//func IsValidMasterCode(_ masterCode: String) -> Bool {
-//    for ch in masterCode {
-//        if (ch>="0"&&ch<="9") || (ch>="a"&&ch<="z") || (ch>="A"&&ch<="Z") {//如果满足三个条件任意一个，可以认为符号没有问题
-//            continue
-//        }else {
-//            return false
-//        }
-//    }
-//    return true
-//}
+// 输出当前时间，精确到毫秒
+func PrintTime(_ tag:String) {
+    let date = Date()
+    let timeFormatter = DateFormatter()
+    timeFormatter.dateFormat = "HH:mm:ss.SSS" // (格式可俺按自己需求修整)
+    let strNowTime = timeFormatter.string(from: date)
+    print("【PrintTime】" + tag + "：" + strNowTime)
+}
+
+// 通过16进制的字符串转化为int值
+func GetPercentByString(_ sStateInfo:String) ->Int {
+    let s0:String = (sStateInfo as NSString).substring(with: NSMakeRange(0, 1))
+    let s1:String = (sStateInfo as NSString).substring(with: NSMakeRange(1, 1))
+    var n0:Int = -1
+    var n1:Int = -1
+    if s0 >= "0" && s0 <= "9" {
+        n0 = Int(s0)!
+    }else {
+        return 0
+    }
+    if s1 >= "0" && s1 <= "9" {
+        n1 = Int(s1)!
+    }else if s1 == "A" {
+        n1 = 10
+    }else if s1 == "B" {
+        n1 = 11
+    }else if s1 == "C" {
+        n1 = 12
+    }else if s1 == "D" {
+        n1 = 13
+    }else if s1 == "E" {
+        n1 = 14
+    }else if s1 == "F" {
+        n1 = 15
+    }else {
+        return 0
+    }
+    let nPercent:Int = 16*n0 + n1
+    return nPercent
+}
+
+// 通过int值的16进制表示转化为字符串格式
+func GetStringByPercent(_ percent:Int) ->String {
+    var str:String!
+    if percent < 16 {
+        str = "0" + String(format: "%X", percent)
+    }else {
+        str = String(format: "%X", percent)
+    }
+    while str.count < 10 {
+        str = str + "*"
+    }
+    return str
+}
 
 /**
  扩展函数——对图像缩放
  */
 extension UIImage {
-    //重置图片大小
+    // 重置图片大小
     func ReSizeImage(_ reSize:CGSize)->UIImage {
         UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.main.scale);
         self.draw(in: CGRect(x: 0, y: 0, width: reSize.width, height: reSize.height));
@@ -487,7 +540,7 @@ extension UIImage {
         return reSizeImage;
     }
     
-    //等比例缩放
+    // 等比例缩放
     func ScaleImage(_ scaleSize:CGFloat)->UIImage {
         let reSize = CGSize(width: self.size.width * scaleSize, height: self.size.height * scaleSize)
         return ReSizeImage(reSize)

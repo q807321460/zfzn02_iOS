@@ -93,17 +93,21 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         let sResult:String = GetMasterCode(gDC.mUserInfo.m_sUserIP, style: GET_MASTER_CODE)
         print("根据上一次登录使用的ip值，搜索到的主节点编号为：\(sResult)")
         if gDC.mUserInfo.m_sMasterCode == sResult {
-            ShowInfoDispatch("成功", content: "本地连接成功", duration: 0.8)
+            ShowInfoDispatch("成功", content: "本地连接成功", duration: 0.5)
             gDC.m_bRemote = false
             MySocket.sharedInstance.OpenTcpSocekt()//05.02添加
             let dictsElectricState = MyWebService.sharedInstance.GetElectricStateByUser(gDC.mAccountInfo.m_sAccountCode, masterCode: gDC.mUserInfo.m_sMasterCode)
             gDC.mElectricData.UpdateElectricState(dictsElectricState)
-            //            WebSocket.sharedInstance.CloseWebSocket()
         }else {
-            ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.8)
+            ShowNoticeDispatch("提示", content: "本地连接失败", duration: 0.5)
             MyWebService.sharedInstance.OpenPolling()
             gDC.m_bRemote = true
         }
+        // 这一步消息发送，一定要放在主线程中完成
+        DispatchQueue.main.async(execute: {
+            g_notiCenter.post(name: Notification.Name(rawValue: "RefreshRemoteState"), object: self)
+        })
+        MySocket.sharedInstance.OpenPolling()
         //不论是否本地连接，都要开启websocket服务
         WebSocket.sharedInstance.CloseWebSocket()
         WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
@@ -173,7 +177,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         m_socketTcp?.disconnect()
         do { try m_socketTcp?.connect(toHost: ip, onPort: 8899) }
         catch { print("connectToHost error");return "" }
-        SetTimeOut(3)
+        SetTimeOut(2)
         let sCmd = "<00000000U0**********A9>\r\n"
         print("【local_socket】tcp发送——\(sCmd) 目标IP——\(ip)")
         let data:Data = sCmd.data(using: String.Encoding.utf8)!
@@ -202,9 +206,7 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
         let sRouterIP:String! = GetRouterAddress()
         //利用点号将ip分成4段，将最后一段改为255
         let splitedArray = sRouterIP.components(separatedBy: ".")
-        print("拆分后的数组：\(splitedArray)")
         let sRouterUdpIP:String! = splitedArray[0] + "." + splitedArray[1] + "." + splitedArray[2] + ".255"
-        print("当前路由广播IP：\(sRouterUdpIP)")
         SetTimeOut(3)
         m_socketUdp?.send(data, toHost: sRouterUdpIP, port: 48899, withTimeout: -1, tag: 0)
         InitAndStartTimer(m_dTimeOut)//初始化超时等的设置
@@ -295,8 +297,6 @@ class MySocket:NSObject, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate {
             })
             gDC.m_bRemote = true
             g_notiCenter.post(name: Notification.Name(rawValue: "RefreshRemoteState"), object: self) // 告知主界面，修改顶部的本地还是远程的文字显示
-//            MyWebService.sharedInstance.OpenPolling()// 开启web的轮询,如果已经开启则不需要继续开启 - deprecated
-//            WebSocket.sharedInstance.ConnectToWebSocket(masterCode: gDC.mUserInfo.m_sMasterCode)
         }
     }
     

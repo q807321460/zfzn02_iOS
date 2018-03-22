@@ -47,7 +47,7 @@ class HomePageViewCtrl: UIViewController, UICollectionViewDataSource, UICollecti
         m_imageAccountLogo.layer.cornerRadius = btnHeight/2
         m_imageAccountLogo.layer.masksToBounds = true
         //显示是否在线
-        RefreshRemoteState()
+//        m_labelOnLine.text = "-搜索中"
         
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.RefreshRemoteState),name: NSNotification.Name(rawValue: "RefreshRemoteState"), object: nil)
         g_notiCenter.addObserver(self, selector:#selector(HomePageViewCtrl.SyncData),name: NSNotification.Name(rawValue: "SyncData"), object: nil)

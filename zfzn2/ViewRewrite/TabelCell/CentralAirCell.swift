@@ -11,13 +11,7 @@ import UIKit
 class CentralAirCell: UITableViewCell {
 
    @IBOutlet weak var m_buttonBox: UIButton!
-  @IBAction func Oncheckbox(_ sender: UIButton) {
-        if m_imagecheck.isHidden == false {
-            m_imagecheck.isHidden = true
-        }else{
-            m_imagecheck.isHidden = false
-        }
-    }
+
     @IBOutlet weak var m_imagecheck: UIImageView!
     @IBOutlet weak var m_imageState: UIImageView!
     @IBOutlet weak var m_labelErrorcode: UILabel!
@@ -27,6 +21,9 @@ class CentralAirCell: UITableViewCell {
     @IBOutlet weak var m_labelPattern: UILabel!
     @IBOutlet weak var m_labelSwitch: UILabel!
     @IBOutlet weak var m_labelNumber: UILabel!
+    
+    var delegate:CheckedCentralAirCellDelegate!
+   // var m_nCentralAirElectricListFoot:Int!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,5 +33,17 @@ class CentralAirCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    @IBAction func Oncheckbox(_ sender: UIButton) {
+        if m_imagecheck.isHidden == false {
+            m_imagecheck.isHidden = true
+        }else{
+            m_imagecheck.isHidden = false
+        }
+        self.delegate.didCheckCentralAir(m_imagecheck.isHidden/* , CentralAirElectricListFoot: m_nCentralAirElectricListFoot*/)
+    }
 
+}
+@objc
+public protocol CheckedCentralAirCellDelegate {
+    func didCheckCentralAir(_ isHidden:Bool/*, CentralAirElectricListFoot:Int*/)
 }

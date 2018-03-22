@@ -71,7 +71,7 @@ class ElecSwitchViewCtrl: ElecSuperViewCtrl {
 
     func RefreshState() {
         switch gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_nElectricType {
-        case 0:
+        case 0: 
             //ZV：开，ZW：关
             let state:String = gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricState
             if state=="ZV" {

@@ -33,7 +33,6 @@ class UserData: NSObject {
     
     //通过web返回的数据同步本地user数据
     func UpdateUser(_ dicts:[NSDictionary]) {
-        print("向内存中写入user数据")
         gDC.mUserList.removeAll()
         for i in 0..<dicts.count-1 {
             let dict:NSDictionary = dicts[i]

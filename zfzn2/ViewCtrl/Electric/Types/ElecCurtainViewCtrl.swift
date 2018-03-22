@@ -55,7 +55,7 @@ class ElecCurtainViewCtrl: ElecSuperViewCtrl {
         if sStateInfo.count < 2 {//这是不允许出现的情况
             sStateInfo = "00"
         }else {
-            sStateInfo = (sStateInfo as NSString).substring(with: NSMakeRange(0, 2))
+            sStateInfo = (sStateInfo as NSString).substring(with: NSMakeRange(0, 2)) 
         }
         let nPercent:Int = GetPercentByString(sStateInfo)
         if nPercent == 0 {//完全关闭时显示关状态图片
@@ -98,52 +98,6 @@ class ElecCurtainViewCtrl: ElecSuperViewCtrl {
         Open()
     }
     
-    //通过int值的16进制表示转化为字符串格式
-    func GetStringByPercent(_ percent:Int) ->String {
-        var str:String!
-        if percent < 16 {
-            str = "0" + String(format: "%X", percent)
-        }else {
-            str = String(format: "%X", percent)
-        }
-        while str.count < 10 {
-            str = str + "*"
-        }
-        return str
-    }
-    
-    //通过16进制的字符串转化为int值
-    func GetPercentByString(_ sStateInfo:String) ->Int {
-        let s0:String = (sStateInfo as NSString).substring(with: NSMakeRange(0, 1))
-        let s1:String = (sStateInfo as NSString).substring(with: NSMakeRange(1, 1))
-        var n0:Int = -1
-        var n1:Int = -1
-        if s0 >= "0" && s0 <= "9" {
-            n0 = Int(s0)!
-        }else {
-            return 0
-        }
-        if s1 >= "0" && s1 <= "9" {
-            n1 = Int(s1)!
-        }else if s1 == "A" {
-            n1 = 10
-        }else if s1 == "B" {
-            n1 = 11
-        }else if s1 == "C" {
-            n1 = 12
-        }else if s1 == "D" {
-            n1 = 13
-        }else if s1 == "E" {
-            n1 = 14
-        }else if s1 == "F" {
-            n1 = 15
-        }else {
-            return 0
-        }
-        let nPercent:Int = 16*n0 + n1
-        return nPercent
-    }
-
     ////////////////////////////////////////////////////////////////////////////////////
     func RefreshElectricStates() {
         RefreshState()

@@ -35,7 +35,6 @@ class AreaData: NSObject {
     }
     
     func UpdateArea(_ dicts:[NSDictionary]) {
-        print("向内存中写入area数据")
         gDC.mAreaList.removeAll()
         DeleteAreaByMaster(gDC.mUserInfo.m_sMasterCode)
         for i in 0..<dicts.count-1 {
