@@ -13,7 +13,6 @@ class CentralAirCell: UITableViewCell {
    @IBOutlet weak var m_buttonBox: UIButton!
 
     @IBOutlet weak var m_imagecheck: UIImageView!
-    @IBOutlet weak var m_imageState: UIImageView!
     @IBOutlet weak var m_labelErrorcode: UILabel!
     @IBOutlet weak var m_labelRoomtemperature: UILabel!
     @IBOutlet weak var m_labelSettemperature: UILabel!
@@ -23,7 +22,7 @@ class CentralAirCell: UITableViewCell {
     @IBOutlet weak var m_labelNumber: UILabel!
     
     var delegate:CheckedCentralAirCellDelegate!
-   // var m_nCentralAirElectricListFoot:Int!
+    var m_nCentralAirElectricListFoot:Int!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,17 +32,24 @@ class CentralAirCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    @IBAction func Oncheckbox(_ sender: UIButton) {
+    
+    @IBAction func CentralAirRename(_ sender: Any) {//重命名按钮
+        self.delegate.didRenameCentralAir(CentralAirElectricListFoot: m_nCentralAirElectricListFoot)
+    }
+    
+    
+    @IBAction func Oncheckbox(_ sender: UIButton) {//选中框按钮
         if m_imagecheck.isHidden == false {
             m_imagecheck.isHidden = true
         }else{
             m_imagecheck.isHidden = false
         }
-        self.delegate.didCheckCentralAir(m_imagecheck.isHidden/* , CentralAirElectricListFoot: m_nCentralAirElectricListFoot*/)
+        self.delegate.didCheckCentralAir(m_imagecheck.isHidden , CentralAirElectricListFoot: m_nCentralAirElectricListFoot)
     }
 
 }
 @objc
 public protocol CheckedCentralAirCellDelegate {
-    func didCheckCentralAir(_ isHidden:Bool/*, CentralAirElectricListFoot:Int*/)
+    func didCheckCentralAir(_ isHidden:Bool, CentralAirElectricListFoot:Int)
+    func didRenameCentralAir(CentralAirElectricListFoot:Int)
 }

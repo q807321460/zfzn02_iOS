@@ -947,6 +947,41 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         ForbidSync()
         return (value.mainValue as! String)
     }
+    //添加中央空调
+    func AddCentralAir(masterCode:String,electricIndex:Int,airCode:String,airName:String) -> String{
+        let methodName:String = "addCentralAir"
+        let arrayKey = ["masterCode", "electricIndex", "airCode","airName"]
+        let arrayValue = [masterCode, electricIndex, airCode, airName] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
+    //删除中央空调
+    func DeleteCentralAir(masterCode:String,electricIndex:Int,airCode:String,airName:String) -> String{
+        let methodName:String = "deleteCentralAir"
+        let arrayKey = ["masterCode", "electricIndex", "airCode","airName"]
+        let arrayValue = [masterCode, electricIndex, airCode, airName] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
+    //修改中央空调房间名
+    func UpdateCentralAirName(masterCode:String,electricIndex:Int,airCode:String,newAirName:String) -> String{
+        let methodName:String = "updateCentralAirName"
+        let arrayKey = ["masterCode", "electricIndex", "airCode","newAirName"]
+        let arrayValue = [masterCode, electricIndex, airCode, newAirName] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
     
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {

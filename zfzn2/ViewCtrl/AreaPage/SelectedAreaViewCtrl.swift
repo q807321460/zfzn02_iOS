@@ -318,6 +318,25 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
                             cell.m_imageElectric.image = UIImage(named: "电器_三键开关_右开")
                         }
                     }
+                case 6:
+                    var sStateInfo:String = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sStateInfo
+                     if sStateInfo.count < 2 {//这是不允许出现的情况
+                        sStateInfo = "00"
+                     }else {
+                        sStateInfo = (sStateInfo as NSString).substring(with: NSMakeRange(0, 2))
+                     }
+                     if sStateInfo == "00" {
+                        cell.m_imageElectric.image = UIImage(named: "电器类型_窗帘")
+                     }else {
+                        cell.m_imageElectric.image = UIImage(named: "电器类型_窗帘_开")
+                    }
+                case 7:
+                    let state:String = gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sElectricState
+                    if state=="ZW" {
+                        cell.m_imageElectric.image = UIImage(named: "电器类型_窗户")
+                    }else {
+                        cell.m_imageElectric.image = UIImage(named: "电器类型_窗户_开")
+                    }
                 //TODO：注意这里的四键开关还没有做出来
                 case 10:
                     //Z0：都关，Z1：仅←开，Z2：仅↑开，Z3：仅←↑开，Z4：仅→开，Z5：←→开，Z6：↑→开，Z7：都开

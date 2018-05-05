@@ -296,7 +296,8 @@ func RefreshElectricStates(_ sReceive:String) -> Bool {
             sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 8))
             sElectricState = (sReturn as NSString).substring(with: NSMakeRange(8, 2))
             sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(10, 10))
-        } else if sReturn.count == 26 {
+        } else{
+            if sReturn.count == 26 {
             sElectricCode = (sReturn as NSString).substring(with: NSMakeRange(0, 12))
             sElectricState = (sReturn as NSString).substring(with: NSMakeRange(12, 2))
             sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(14, 10))
@@ -305,10 +306,11 @@ func RefreshElectricStates(_ sReceive:String) -> Bool {
             let sBegin = (sElectricCode as NSString).substring(with: NSMakeRange(0, 4))
             if sBegin == "1100"{
                  sElectricState = (sReturn as NSString).substring(with: NSMakeRange(12, 2))
-                 sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(14, nEnd-14))
+                 sStateInfo = (sReturn as NSString).substring(with: NSMakeRange(14, nEnd-15))
             }else{
                return false
             }
+        }
         }
         gDC.mElectricData.ChangeElectricState(sElectricCode, electricState: sElectricState, stateInfo: sStateInfo)
         return true

@@ -69,6 +69,18 @@ class ElecSuperViewCtrl: UIViewController {
         }
     }
     
+    func CentralAir() {
+        if gDC.m_bTestRemote == true {//强制使用远程web控制
+            MyWebService.sharedInstance.UpdateElectricOrder(gDC.mUserInfo.m_sMasterCode, electricCode:gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode, order:gDC.m_sOrderSign+gDC.m_sCentralAir, orderInfo:m_sElectricOrder)
+        }else {
+            if gDC.m_bRemote == false {//本地socket控制
+                MySocket.sharedInstance.OperateElectric("<\(gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode)\(gDC.m_sOrderSign)\(gDC.m_sCentralAir)\(m_sElectricOrder)00>")
+            }else {//远程web控制
+                MyWebService.sharedInstance.UpdateElectricOrder(gDC.mUserInfo.m_sMasterCode, electricCode:gDC.mAreaList[m_nAreaListFoot].mElectricList[m_nElectricListFoot].m_sElectricCode, order:gDC.m_sOrderSign+gDC.m_sCentralAir, orderInfo:m_sElectricOrder)
+            }
+        }
+    }
+    
     func SyncData() {
         DispatchQueue.main.async {
             self.navigationController?.popToRootViewController(animated: true)

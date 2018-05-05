@@ -49,7 +49,7 @@ let g_sElectric_type_air_center2 = "1100" //中央空调2
     let m_arrayElectricLabel:NSArray = ["插座", "一键开关", "两键开关", "三键开关", "四键开关", "门锁", "窗帘", "窗户", "摄像头", "空调", "情景开关", "机械手", "电视", "温度计", "水浸", "门磁", "燃气报警", "壁挂红外", "警号", "烟雾报警", "晾衣架", "学习型空调", "中央空调", "新门锁", "学习型电视", "中央空调"]
     let m_arraySensorState:NSDictionary = ["00": "普通", "01": "报警", "02": "防拆", "03": "报警+防拆", "04": "电量低", "05": "报警+电量低", "06": "防拆+电量低", "07": "报警+防拆+电量低"]
     
-    let m_appVersion = "1.7.072" //每次更新版本，记得要修改这里的版本号
+    let m_appVersion = "1.8.001" //每次更新版本，记得要修改这里的版本号
     
     let m_sLocalIp:String = "192.168.0.108"
     let m_sWebIp:String = "101.201.211.87"
@@ -57,6 +57,7 @@ let g_sElectric_type_air_center2 = "1100" //中央空调2
     let m_sOrderSign:String = "X", m_sAddSign:String = "Y", m_sStateSign:String = "Z"
     let m_sOrderClose:String = "G", m_sOrderOpen:String = "H", m_sOrderStop:String = "I"
     let m_sStateClose:String = "W", m_sStateOpen:String = "V", m_sStateStop:String = "U"
+    let m_sCentralAir:String = "S"
     let m_colorFont = UIColor(red: 128/255.0, green: 128/255.0, blue: 128/255.0, alpha: 1)//主页label使用的颜色
     let m_colorPurple = UIColor(red: 139/255, green: 39/255, blue: 114/255, alpha: 1)//紫色，整个app的主色调
     let m_colorTouching = UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1)//手指按下时菜单使用的背景色

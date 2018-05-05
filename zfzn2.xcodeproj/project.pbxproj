@@ -22,6 +22,7 @@
 		1B341929205A9E7000577303 /* ElecCentralAirData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B341928205A9E6F00577303 /* ElecCentralAirData.swift */; };
 		1B34192D205BF9F400577303 /* AddCentralAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B34192C205BF9F400577303 /* AddCentralAir.swift */; };
 		1B3520D81F99E84B006002C0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3520D71F99E84B006002C0 /* WebSocket.swift */; };
+		1B38C355209AD2550086933D /* RenameCentralAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C354209AD2550086933D /* RenameCentralAir.swift */; };
 		1B3BB0ED1DFBFD7000361071 /* GCDAsyncTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */; };
 		1B3BB0EE1DFBFD7000361071 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E61DFBFD7000361071 /* GCDAsyncUdpSocket.m */; };
 		1B3BB0EF1DFBFD7000361071 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BB0E71DFBFD7000361071 /* getgateway.c */; };
@@ -282,6 +283,7 @@
 		1B341928205A9E6F00577303 /* ElecCentralAirData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecCentralAirData.swift; sourceTree = "<group>"; };
 		1B34192C205BF9F400577303 /* AddCentralAir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCentralAir.swift; sourceTree = "<group>"; };
 		1B3520D71F99E84B006002C0 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = zfzn2/Data/Socket/WebSocket.swift; sourceTree = SOURCE_ROOT; };
+		1B38C354209AD2550086933D /* RenameCentralAir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameCentralAir.swift; sourceTree = "<group>"; };
 		1B3BB0E31DFBFD7000361071 /* GCDAsyncTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncTcpSocket.h; sourceTree = "<group>"; };
 		1B3BB0E41DFBFD7000361071 /* GCDAsyncTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncTcpSocket.m; sourceTree = "<group>"; };
 		1B3BB0E51DFBFD7000361071 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -1411,6 +1413,7 @@
 				1B83A7EA1FDEAF470013047B /* AddElectricTypeViewCtrl.swift */,
 				1B83A7EB1FDEAF470013047B /* AddElectricViewCtrl.swift */,
 				1B34192C205BF9F400577303 /* AddCentralAir.swift */,
+				1B38C354209AD2550086933D /* RenameCentralAir.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -1831,6 +1834,7 @@
 				1B7667E91EF3CA1C007B21B4 /* CHLoadingView.m in Sources */,
 				1B83A8141FDEAF480013047B /* SharedAccountViewCtrl.swift in Sources */,
 				1B83054C1DD017890070FDD3 /* MyWebService.swift in Sources */,
+				1B38C355209AD2550086933D /* RenameCentralAir.swift in Sources */,
 				1B83A8381FDEAF480013047B /* ChangeAccountNameViewCtrl.swift in Sources */,
 				1BA52DEE1F13C78600CD9D37 /* SwiftyJSON.swift in Sources */,
 				1B504CFA1F13BD6F00C57F17 /* ETData.swift in Sources */,
