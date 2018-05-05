@@ -142,7 +142,10 @@ class MyMasterViewCtrl: UIViewController, UITableViewDelegate, UITableViewDataSo
         })
         //开始各种读取工作
         MyWebService.sharedInstance.LoadDetailDataFromWs()
-        MySocket.sharedInstance.SearchLocalMaster()
+        let queue = DispatchQueue(label: "tk.bourne.ipQueue2", attributes: []);
+        queue.async(execute: {
+            MySocket.sharedInstance.SearchLocalMaster() // 这一步太慢了，一定不能放在主线程中完成
+        })
         //重新刷新区域界面
         gDC.m_bRefreshAreaList = true
         gDC.m_nSelectAreaSequ = 0
