@@ -187,6 +187,10 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
             print("添加中央空调")
             nextView.m_nElectricType = 25
             self.navigationController?.pushViewController(nextView, animated: true)
+       case 26:
+            print("添加灯带")
+            nextView.m_nElectricType = 26
+            self.navigationController?.pushViewController(nextView, animated: true)
         default:
             break
         }

@@ -232,6 +232,12 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
                 nextView.m_nElectricListFoot = electricFoot
                 self.navigationController?.pushViewController(nextView , animated: true)
             }
+            else if nElectricType==26 {//灯带
+                let nextView = sb.instantiateViewController(withIdentifier: "elecLampbandViewCtrl") as! ElecLampbandViewCtrl
+                nextView.m_nAreaListFoot = m_nAreaListFoot
+                nextView.m_nElectricListFoot = electricFoot
+                self.navigationController?.pushViewController(nextView , animated: true)
+            }
         }
     }
 

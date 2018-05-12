@@ -225,6 +225,7 @@
 		1BCBE4C01FD577D0003CB2EA /* RecordPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCBE4BC1FD577D0003CB2EA /* RecordPlayViewController.m */; };
 		1BCBE4C11FD577D0003CB2EA /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCBE4BD1FD577D0003CB2EA /* RecordViewController.m */; };
 		1BD1F7571FCA9E4A00AEA502 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */; };
+		1BDA50F5209DEFD200B3FD6E /* ElecLampbandViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA50F4209DEFD200B3FD6E /* ElecLampbandViewCtrl.swift */; };
 		1BEA09861FA429D300BA28D3 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09921FA429D300BA28D3 /* AFNetworking.framework */; };
 		1BEA09871FA429D300BA28D3 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */; };
 		1BEA09881FA429D300BA28D3 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEA09941FA429D300BA28D3 /* Masonry.framework */; };
@@ -617,6 +618,7 @@
 		1BCBE4BF1FD577D0003CB2EA /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		1BD1F7551FCA9E4A00AEA502 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		1BD1F7561FCA9E4A00AEA502 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		1BDA50F4209DEFD200B3FD6E /* ElecLampbandViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecLampbandViewCtrl.swift; sourceTree = "<group>"; };
 		1BE482241EADEE8C004C756E /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		1BEA09921FA429D300BA28D3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEA09931FA429D300BA28D3 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1401,6 +1403,7 @@
 				1B83A7E51FDEAF470013047B /* ElecSceneSwitchViewCtrl.swift */,
 				1B83A7E61FDEAF470013047B /* ElecSwitchViewCtrl.swift */,
 				1B3419262057732100577303 /* ElecCentralAirViewCtrl.swift */,
+				1BDA50F4209DEFD200B3FD6E /* ElecLampbandViewCtrl.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -1865,6 +1868,7 @@
 				1B83A8081FDEAF480013047B /* EditAreaViewCtrl.swift in Sources */,
 				1B6F29B51E460D7500D19DE9 /* LCOpenApi_Common.cpp in Sources */,
 				1B83A8161FDEAF480013047B /* MyMasterViewCtrl.swift in Sources */,
+				1BDA50F5209DEFD200B3FD6E /* ElecLampbandViewCtrl.swift in Sources */,
 				1B83A7A41FDEAF160013047B /* ETKeyButton.swift in Sources */,
 				1B7667C01EF3CA1C007B21B4 /* JdCategory_DViewController.m in Sources */,
 				1BACDA961DCDF07A00BA85C2 /* SQLTable.swift in Sources */,
