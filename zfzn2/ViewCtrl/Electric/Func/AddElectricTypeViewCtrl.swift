@@ -191,6 +191,10 @@ class AddElectricTypeViewCtrl: UIViewController, UICollectionViewDataSource, UIC
             print("添加灯带")
             nextView.m_nElectricType = 26
             self.navigationController?.pushViewController(nextView, animated: true)
+       case 27:
+            print("添加双控开关")
+            nextView.m_nElectricType = 27
+            self.navigationController?.pushViewController(nextView, animated: true)
         default:
             break
         }

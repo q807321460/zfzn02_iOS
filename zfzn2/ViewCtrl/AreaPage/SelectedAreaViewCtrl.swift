@@ -238,6 +238,12 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
                 nextView.m_nElectricListFoot = electricFoot
                 self.navigationController?.pushViewController(nextView , animated: true)
             }
+            else if nElectricType==27{//双控开关
+                let nextView = sb.instantiateViewController(withIdentifier: "elecDoubleSwitchViewCtrl") as! ElecDoubleSwitchViewCtrl
+                nextView.m_nAreaListFoot = m_nAreaListFoot
+                nextView.m_nElectricListFoot = electricFoot
+                self.navigationController?.pushViewController(nextView , animated: true)
+            }
         }
     }
 

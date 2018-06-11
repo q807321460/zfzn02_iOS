@@ -242,6 +242,7 @@
 		1BF3CFC81F8DFA4800D2B9F4 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */; };
 		1BF505F71DB71575002AA286 /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505F61DB71575002AA286 /* DataControl.swift */; };
 		1BFAB33D1E52FA7E00162FC5 /* EditCameraViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */; };
+		1BFADF2820B66A05003C5937 /* ElecDoubleSwitchViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFADF2720B66A05003C5937 /* ElecDoubleSwitchViewCtrl.swift */; };
 		FA3FCC83D022825AD65CB2DE /* Pods_zfzn2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD817351FACF333AE193758 /* Pods_zfzn2.framework */; };
 /* End PBXBuildFile section */
 
@@ -636,6 +637,7 @@
 		1BF3CFC71F8DFA4800D2B9F4 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
 		1BF505F61DB71575002AA286 /* DataControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataControl.swift; sourceTree = "<group>"; };
 		1BFAB33C1E52FA7E00162FC5 /* EditCameraViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCameraViewCtrl.swift; sourceTree = "<group>"; };
+		1BFADF2720B66A05003C5937 /* ElecDoubleSwitchViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElecDoubleSwitchViewCtrl.swift; sourceTree = "<group>"; };
 		1FD817351FACF333AE193758 /* Pods_zfzn2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zfzn2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB99EA49CA0375C31D73042F /* Pods-zfzn2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zfzn2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zfzn2/Pods-zfzn2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1404,6 +1406,7 @@
 				1B83A7E61FDEAF470013047B /* ElecSwitchViewCtrl.swift */,
 				1B3419262057732100577303 /* ElecCentralAirViewCtrl.swift */,
 				1BDA50F4209DEFD200B3FD6E /* ElecLampbandViewCtrl.swift */,
+				1BFADF2720B66A05003C5937 /* ElecDoubleSwitchViewCtrl.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -1857,6 +1860,7 @@
 				1B83A7811FDEAF150013047B /* AddElectric.swift in Sources */,
 				1B83A82A1FDEAF480013047B /* ElecAirViewCtrl.swift in Sources */,
 				1B83A8401FDEAF480013047B /* SetPasswordViewCtrl.swift in Sources */,
+				1BFADF2820B66A05003C5937 /* ElecDoubleSwitchViewCtrl.swift in Sources */,
 				1B83A77A1FDEAF150013047B /* MiniSceneAndArea.swift in Sources */,
 				1B3419232056185D00577303 /* CentralAirCell.swift in Sources */,
 				1B83A7991FDEAF160013047B /* MyAreaCell.swift in Sources */,

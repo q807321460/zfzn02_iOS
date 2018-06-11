@@ -9,9 +9,11 @@
 import UIKit
 
 class ElecLampbandViewCtrl: ElecSuperViewCtrl {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +22,7 @@ class ElecLampbandViewCtrl: ElecSuperViewCtrl {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
