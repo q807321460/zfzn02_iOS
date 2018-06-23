@@ -225,20 +225,17 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
                 self.navigationController?.pushViewController(nextView , animated: true)
             }else if nElectricType==24 {//学习型电视
 
-            }
-            else if nElectricType==25 {//中央空调
+            }else if nElectricType==25 {//中央空调
                 let nextView = sb.instantiateViewController(withIdentifier: "elecCentralAirViewCtrl") as! ElecCentralAirViewCtrl
                 nextView.m_nAreaListFoot = m_nAreaListFoot
                 nextView.m_nElectricListFoot = electricFoot
                 self.navigationController?.pushViewController(nextView , animated: true)
-            }
-            else if nElectricType==26 {//灯带
+            }else if nElectricType==26 {//灯带
                 let nextView = sb.instantiateViewController(withIdentifier: "elecLampbandViewCtrl") as! ElecLampbandViewCtrl
                 nextView.m_nAreaListFoot = m_nAreaListFoot
                 nextView.m_nElectricListFoot = electricFoot
                 self.navigationController?.pushViewController(nextView , animated: true)
-            }
-            else if nElectricType==27{//双控开关
+            }else if nElectricType==27{//双控开关
                 let nextView = sb.instantiateViewController(withIdentifier: "elecDoubleSwitchViewCtrl") as! ElecDoubleSwitchViewCtrl
                 nextView.m_nAreaListFoot = m_nAreaListFoot
                 nextView.m_nElectricListFoot = electricFoot
@@ -360,6 +357,14 @@ class SelectedAreaViewCtrl: UIViewController, UICollectionViewDataSource, UIColl
                         cell.m_imageElectric.image = UIImage(named: "电器_四键开关_左下关")
                     }else if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "04" {
                         cell.m_imageElectric.image = UIImage(named: "电器_四键开关_右下关")
+                    }
+                case 27:
+                    if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "01" {
+                            cell.m_imageElectric.image = UIImage(named: "电器_双控开关_左")
+                    }else if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "02" {
+                            cell.m_imageElectric.image = UIImage(named: "电器_双控开关_中")
+                    }else if gDC.mAreaList[m_nAreaListFoot].mElectricList[i].m_sOrderInfo == "03" {
+                            cell.m_imageElectric.image = UIImage(named: "电器_双控开关_右")
                     }
                 default:
                     cell.m_imageElectric.image = UIImage(named: gDC.m_arrayElectricImage[nType] as! String)

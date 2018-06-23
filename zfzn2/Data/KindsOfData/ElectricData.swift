@@ -55,13 +55,13 @@ class ElectricData: NSObject {
             }
         }
         electricIndex = electricIndex + 1
-        if electricType == 2 || electricType == 3 || electricType == 4 || electricType == 10 {
+        if electricType == 2 || electricType == 3 || electricType == 4 || electricType == 10 || electricType == 27 {
             let arrayElectricName = electricName.components(separatedBy: ",")
             var nCount:Int!
             switch electricType {
             case 2:
                 nCount = 2
-            case 3:
+            case 3, 27:
                 nCount = 3
             case 4, 10:
                 nCount = 4

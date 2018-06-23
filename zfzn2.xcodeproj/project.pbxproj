@@ -31,6 +31,7 @@
 		1B441C2A1DB5133E0009F2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B441C291DB5133E0009F2E0 /* Assets.xcassets */; };
 		1B48138C1E0394A10042A57E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B48138B1E0394A00042A57E /* AVFoundation.framework */; };
 		1B504CFA1F13BD6F00C57F17 /* ETData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B504CF91F13BD6F00C57F17 /* ETData.swift */; };
+		1B50A5CC20DB997400806493 /* BindingSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A5CB20DB997400806493 /* BindingSwitch.swift */; };
 		1B5D2B9B1EF4CBC9008DCF1F /* DataControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF505F61DB71575002AA286 /* DataControl.swift */; };
 		1B6F29061E460B1000D19DE9 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1B6F28C61E460B0F00D19DE9 /* cert.pem */; };
 		1B6F29071E460B1000D19DE9 /* libLechangeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6F29051E460B1000D19DE9 /* libLechangeSDK.a */; };
@@ -302,6 +303,7 @@
 		1B441C3E1DB5133E0009F2E0 /* zfzn2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zfzn2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B48138B1E0394A00042A57E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1B504CF91F13BD6F00C57F17 /* ETData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETData.swift; sourceTree = "<group>"; };
+		1B50A5CB20DB997400806493 /* BindingSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingSwitch.swift; sourceTree = "<group>"; };
 		1B6F28C61E460B0F00D19DE9 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		1B6F28C81E460B0F00D19DE9 /* basedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basedef.h; sourceTree = "<group>"; };
 		1B6F28C91E460B0F00D19DE9 /* ConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstString.h; sourceTree = "<group>"; };
@@ -1420,6 +1422,7 @@
 				1B83A7EB1FDEAF470013047B /* AddElectricViewCtrl.swift */,
 				1B34192C205BF9F400577303 /* AddCentralAir.swift */,
 				1B38C354209AD2550086933D /* RenameCentralAir.swift */,
+				1B50A5CB20DB997400806493 /* BindingSwitch.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -1983,6 +1986,7 @@
 				1B83A7841FDEAF150013047B /* SCLAlertView.swift in Sources */,
 				1B83A8211FDEAF480013047B /* ViewPagerIndicator.swift in Sources */,
 				1B0868D81DE9675B0045E531 /* AccountData.swift in Sources */,
+				1B50A5CC20DB997400806493 /* BindingSwitch.swift in Sources */,
 				1B83A77C1FDEAF150013047B /* MiniElectric.swift in Sources */,
 				1B7667F21EF3CA1C007B21B4 /* TopAlertView.m in Sources */,
 				1B83A7831FDEAF150013047B /* MySceneElectricView.swift in Sources */,

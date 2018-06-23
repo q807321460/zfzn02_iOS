@@ -81,6 +81,8 @@ class ElecSuperViewCtrl: UIViewController {
         }
     }
     
+
+    
     func SyncData() {
         DispatchQueue.main.async {
             self.navigationController?.popToRootViewController(animated: true)

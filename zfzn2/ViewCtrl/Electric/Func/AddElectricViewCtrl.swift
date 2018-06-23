@@ -82,6 +82,17 @@ class AddElectricViewCtrl: UIViewController {
             m_eElectricName3.isHidden = false
             m_eElectricName4.isHidden = false
             m_constraintSave.constant = 30.0 + 36.0 + 36.0 + 36.0
+        case 27:
+            m_imageElectricType.image = UIImage(named: "电器类型_双控开关")
+            m_labelElectricType.text = "双控开关"
+            m_labelElectricName.text = "左键："
+            m_labelElectricName2.text = "中键："
+            m_labelElectricName3.text = "右键："
+            m_labelElectricName2.isHidden = false
+            m_labelElectricName3.isHidden = false
+            m_eElectricName2.isHidden = false
+            m_eElectricName3.isHidden = false
+            m_constraintSave.constant = 30.0 + 36.0 + 36.0
         default:
             m_imageElectricType.image = UIImage(named: gDC.m_arrayElectricImage[m_nElectricType] as! String)
             m_labelElectricType.text = gDC.m_arrayElectricLabel[m_nElectricType] as? String
@@ -212,7 +223,7 @@ class AddElectricViewCtrl: UIViewController {
         switch m_nElectricType {
         case 2:
             sElectricName = "\(m_eElectricName.text!),\(m_eElectricName2.text!)"
-        case 3:
+        case 3, 27:
             sElectricName = "\(m_eElectricName.text!),\(m_eElectricName2.text!),\(m_eElectricName3.text!)"
         case 4, 10:
             sElectricName = "\(m_eElectricName.text!),\(m_eElectricName2.text!),\(m_eElectricName3.text!),\(m_eElectricName4.text!)"

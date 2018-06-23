@@ -43,7 +43,7 @@ let g_sElectric_type_lock2 = "1000"//新门锁，这是第23种电器
 let g_sElectric_type_tv_learn = "09"//学习型空调
 let g_sElectric_type_air_center2 = "1100" //中央空调2
 let g_sElectric_type_lampband = "1200"//灯带
-let g_sElectric_type_swift_double = "1300"//双控开关
+let g_sElectric_type_swift_double = "0A01"//双控开关
 
 @objc class DataControl: NSObject {
     let m_arrayElectricTypeCode:NSArray = [g_sElectric_type_socket, g_sElectric_type_swift_one, g_sElectric_type_swift_two, g_sElectric_type_swift_three, g_sElectric_type_swift_four, g_sElectric_type_lock, g_sElectric_type_curtain, g_sElectric_type_window, g_sElectric_type_camera, g_sElectric_type_air, g_sElectric_type_scene_swift, g_sElectric_type_valve, g_sElectric_type_tv, g_sElectric_type_temperature, g_sElectric_type_water, g_sElectric_type_door, g_sElectric_type_gas, g_sElectric_type_wall_ir, g_sElectric_type_horn, g_sElectric_type_smoke, g_sElectric_type_clothes, g_sElectric_type_air_learn, g_sElectric_type_air_center, g_sElectric_type_lock2, g_sElectric_type_tv_learn,g_sElectric_type_air_center2,g_sElectric_type_lampband,g_sElectric_type_swift_double]
@@ -51,7 +51,7 @@ let g_sElectric_type_swift_double = "1300"//双控开关
     let m_arrayElectricLabel:NSArray = ["插座", "一键开关", "两键开关", "三键开关", "四键开关", "门锁", "窗帘", "窗户", "摄像头", "空调", "情景开关", "机械手", "电视", "温度计", "水浸", "门磁", "燃气报警", "壁挂红外", "警号", "烟雾报警", "晾衣架", "学习型空调", "中央空调", "新门锁", "学习型电视", "中央空调", "灯带", "双控开关"]
     let m_arraySensorState:NSDictionary = ["00": "普通", "01": "报警", "02": "防拆", "03": "报警+防拆", "04": "电量低", "05": "报警+电量低", "06": "防拆+电量低", "07": "报警+防拆+电量低"]
     
-    let m_appVersion = "1.8.010" //每次更新版本，记得要修改这里的版本号
+    let m_appVersion = "1.8.011" //每次更新版本，记得要修改这里的版本号
     
     let m_sLocalIp:String = "192.168.0.108"
     let m_sWebIp:String = "101.201.211.87"
@@ -60,6 +60,7 @@ let g_sElectric_type_swift_double = "1300"//双控开关
     let m_sOrderClose:String = "G", m_sOrderOpen:String = "H", m_sOrderStop:String = "I"
     let m_sStateClose:String = "W", m_sStateOpen:String = "V", m_sStateStop:String = "U"
     let m_sCentralAir:String = "S"
+    let m_sStateClear:String = "R"
     let m_colorFont = UIColor(red: 128/255.0, green: 128/255.0, blue: 128/255.0, alpha: 1)//主页label使用的颜色
     let m_colorPurple = UIColor(red: 139/255, green: 39/255, blue: 114/255, alpha: 1)//紫色，整个app的主色调
     let m_colorTouching = UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1)//手指按下时菜单使用的背景色

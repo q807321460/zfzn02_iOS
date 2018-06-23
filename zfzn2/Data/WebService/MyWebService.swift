@@ -983,6 +983,30 @@ class MyWebService: NSObject,URLSessionDelegate,URLSessionDataDelegate {
         return (value.mainValue as! String)
     }
     
+    //绑定双控开关
+    func BindingDuplexSwift(masterCode:String,electricIndex:Int,roomIndex:String,bindingIndex:String) -> String{
+        let methodName:String = "bindingDuplexSwift"
+        let arrayKey = ["masterCode", "electricIndex", "roomIndex","bindingIndex"]
+        let arrayValue = [masterCode, electricIndex, roomIndex, bindingIndex] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
+    //解除绑定双控开关
+    func DeleteDuplexSwift(masterCode:String,electricIndex:Int) -> String{
+        let methodName:String = "deleteDuplexSwift"
+        let arrayKey = ["masterCode", "electricIndex"]
+        let arrayValue = [masterCode, electricIndex] as [Any]
+        var value:(mainValue:AnyObject, bEmpty:Bool)!
+        SetSessionTask(methodName, arrayKey: arrayKey, arrayValue: arrayValue)
+        value = GetSessionReturn(methodName, returnType: "string")
+        ForbidSync()
+        return (value.mainValue as! String)
+    }
+    
     ////////////////////////////////////////////////////////////////////////////////////
     func OpenPolling() {
     }
